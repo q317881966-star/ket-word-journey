@@ -449,17 +449,6 @@ function renderMap() {
     const posInUnit = ((g - 1) % 10) + 1;
     const x = Math.round(Math.sin((posInUnit - 1) * 0.7) * 62);
     let sideBtn = "";
-    if ((posInUnit === 3 || posInUnit === 8) && g < groups) {
-      const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
-      const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
-      const key = STATIONS[stationIdx % STATIONS.length];
-      const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
-      const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
-      // 放在 S 弯道最深处的同侧外沿
-      const side = x >= 0 ? 1 : -1;
-      stationIdx++;
-      sideBtn = `<button class="side-game" ${attr} style="--side:${side}" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
-    }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
         ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
@@ -474,11 +463,23 @@ function renderMap() {
       const stat = DB.profile.specialStats?.[`${unit}-${kind}`];
       const tip = stat ? `${SPECIALS[kind].label} · 上次 ${stat.acc}%` : SPECIALS[kind].label;
       const spx = Math.round(Math.sin((posInUnit - 0.5) * 0.7) * 62);
+      let spBtn = "";
+      if (kind === "recall" || kind === "wrong") {
+        const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
+        const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
+        const key = STATIONS[stationIdx % STATIONS.length];
+        const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
+        const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
+        const side = kind === "recall" ? -1 : 1;
+        stationIdx++;
+        spBtn = `<button class="side-game" ${attr} style="--side:${side}" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
+      }
       html += `<div class="path-row">
         <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" title="${tip}" style="--x:${spx}px">
           <span class="sp-ico">${done ? "✓" : SPECIALS[kind].icon}</span>
           <span class="sp-txt">${SPECIALS[kind].label}</span>
         </button>
+        ${spBtn}
       </div>`;
     }
   }

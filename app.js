@@ -740,16 +740,11 @@ function renderQuestion() {
         <div class="cn">${esc(q.word.meaning)}</div>
       </div>
       <p class="spell-hint">点 🔊 听发音，记住后点下面的按钮</p>
-      <div id="cardVerify" class="card-verify"></div>
-      <div style="text-align:center;margin-top:6px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-        <button class="btn btn-blue btn-sm" id="cardSpeakBtn">🎤 语音输入</button>
-        <button class="btn btn-ghost btn-sm" id="speakBtn">跟读练习</button>
-      </div>`;
-    const canSay = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
-    check.textContent = (canSay && DB.profile.cardSpeech !== false) ? "🎤 点击读出单词" : "我记住了";
+      <div id="cardVerify" class="card-verify"></div>`;
+    check.textContent = DB.profile.cardSpeech !== false ? "🎤 读出单词，我记住了" : "我记住了";
     check.disabled = false; check.className = "btn btn-green btn-block";
     $("#skipBtn").style.display = "block";
-    $("#cardVerify").innerHTML = (canSay && DB.profile.cardSpeech !== false)
+    $("#cardVerify").innerHTML = DB.profile.cardSpeech !== false
       ? `<span class="cv-tip">先点 🔊 听发音，再点下面按钮读出这个单词</span>` : "";
     if (DB.profile.autoAudio) setTimeout(() => playAudio(q.word.id), 120);
     return;
@@ -828,16 +823,7 @@ $("#qbody").addEventListener("click", e => {
   ensureAudio();
   const spk = e.target.closest("[data-spk]");
   if (spk) { playAudio(Number(spk.dataset.spk), spk); return; }
-  if (e.target.closest("#speakBtn")) {
-    const q = session?.queue?.[session.i];
-    if (q?.word) Buddy.showSpeech(q.word);
-    return;
-  }
-  if (e.target.closest("#cardSpeakBtn")) {
-    const q = session?.queue?.[session.i];
-    if (q?.word) cardSpeechVerify(q);
-    return;
-  }
+
 
   // 主动回忆自评
   const gbtn = e.target.closest("[data-grade]");
@@ -885,9 +871,7 @@ $("#checkBtn").addEventListener("click", () => {
   const q = s.queue[s.i];
   if (!q) return;
   if (q.kind === "card") {
-    if (DB.profile.cardSpeech !== false && (window.SpeechRecognition || window.webkitSpeechRecognition)) {
-      return cardSpeechVerify(q);
-    }
+    if (DB.profile.cardSpeech !== false) return cardSpeechVerify(q);
     return advance(true);
   }
 
@@ -1071,16 +1055,11 @@ function cardSpeechVerify(q) {
   const box = $("#cardVerify");
   const check = $("#checkBtn");
   if (!SR) {
-    toast("这台设备暂不支持自动识别，可以用跟读练习录音对比");
-    Buddy.showSpeech(q.word);
-    return;
+    toast("这台设备不支持语音识别，已直接继续");
+    return advance(true);
   }
   if (!box) return advance(true);
-  try { cardSR = new SR(); } catch {
-    toast("语音识别启动失败，可以用跟读练习录音对比");
-    Buddy.showSpeech(q.word);
-    return;
-  }
+  try { cardSR = new SR(); } catch { return advance(true); }
   cardSR.lang = "en-GB";
   cardSR.interimResults = false;
   cardSR.maxAlternatives = 3;
@@ -1116,10 +1095,11 @@ function cardSpeechVerify(q) {
       check.disabled = false;
       check.textContent = "🎤 再读一次";
     } else {
-      box.innerHTML = `<span class="cv-bad">语音识别不可用，点下面继续</span>`;
+      box.innerHTML = `<span class="cv-bad">语音识别不可用，直接继续</span>`;
       check.disabled = false;
       check.textContent = "我记住了";
       DB.profile.cardSpeech = false;
+      setTimeout(() => advance(true), 500);
     }
   };
   cardSR.onend = () => {

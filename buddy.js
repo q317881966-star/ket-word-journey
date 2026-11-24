@@ -655,41 +655,49 @@ const Buddy = (() => {
   /* ---------- 游戏入口图标：三种小绿龙造型 ---------- */
   function gameIcon(mode) {
     const base = `
-      <ellipse cx="24" cy="44" rx="14" ry="3" fill="rgba(0,0,0,.10)"/>
-      <ellipse cx="24" cy="29" rx="16" ry="14.5" fill="#6EDB3A"/>
-      <circle cx="18" cy="27" r="4.4" fill="#fff"/><circle cx="19" cy="28" r="2.2" fill="#26282b"/>
-      <circle cx="30" cy="27" r="4.4" fill="#fff"/><circle cx="31" cy="28" r="2.2" fill="#26282b"/>
-      <ellipse cx="13" cy="34" rx="3" ry="1.8" fill="#ff9fb3" opacity=".6"/>
-      <ellipse cx="35" cy="34" rx="3" ry="1.8" fill="#ff9fb3" opacity=".6"/>
-      <path d="M21 34 q3 3 6 0" stroke="#2f6a00" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+      <ellipse cx="32" cy="68" rx="18" ry="4" fill="rgba(0,0,0,.10)"/>
+      <path d="M14 52 Q2 50 2 38 Q8 44 14 46" fill="#4CAF50"/>
+      <ellipse cx="24" cy="64" rx="7" ry="4" fill="#4CAF50"/>
+      <ellipse cx="40" cy="64" rx="7" ry="4" fill="#4CAF50"/>
+      <ellipse cx="32" cy="48" rx="17" ry="16" fill="#6EDB3A"/>
+      <ellipse cx="32" cy="51" rx="11" ry="10" fill="#D7FFB8"/>
+      <ellipse cx="15" cy="48" rx="4" ry="6" fill="#6EDB3A" transform="rotate(20 15 48)"/>
+      <ellipse cx="49" cy="48" rx="4" ry="6" fill="#6EDB3A" transform="rotate(-20 49 48)"/>
+      <ellipse cx="32" cy="26" rx="15" ry="14" fill="#6EDB3A"/>
+      <path d="M24 14 l3 -7 4 6z" fill="#FFC800"/>
+      <path d="M40 14 l-3 -7 -4 6z" fill="#FFC800"/>
+      <circle cx="26" cy="25" r="4.2" fill="#fff"/><circle cx="27" cy="26" r="2" fill="#26282b"/>
+      <circle cx="38" cy="25" r="4.2" fill="#fff"/><circle cx="39" cy="26" r="2" fill="#26282b"/>
+      <ellipse cx="20" cy="31" rx="2.6" ry="1.5" fill="#ff9fb3" opacity=".65"/>
+      <ellipse cx="44" cy="31" rx="2.6" ry="1.5" fill="#ff9fb3" opacity=".65"/>
+      <path d="M29 32 q3 3 6 0" stroke="#2f6a00" stroke-width="1.4" fill="none" stroke-linecap="round"/>`;
     let prop = "";
     if (mode === "pair") prop = `
-      <rect x="5" y="7" width="12" height="15" rx="2.5" fill="#fff" stroke="#1CB0F6" stroke-width="2" transform="rotate(-10 11 14)"/>
-      <rect x="31" y="5" width="12" height="15" rx="2.5" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(10 37 12)"/>
-      <text x="11" y="18" font-size="8" text-anchor="middle" fill="#1CB0F6" font-weight="bold">A</text>
-      <text x="37" y="16" font-size="8" text-anchor="middle" fill="#58CC02" font-weight="bold">文</text>`;
+      <rect x="3" y="40" width="12" height="15" rx="2.5" fill="#fff" stroke="#1CB0F6" stroke-width="2" transform="rotate(-12 9 47)"/>
+      <text x="9" y="51" font-size="8" text-anchor="middle" fill="#1CB0F6" font-weight="bold">A</text>
+      <rect x="49" y="38" width="12" height="15" rx="2.5" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(12 55 45)"/>
+      <text x="55" y="49" font-size="8" text-anchor="middle" fill="#58CC02" font-weight="bold">文</text>`;
     if (mode === "listen") prop = `
-      <path d="M8 25 a16 16 0 0 1 32 0" fill="none" stroke="#1CB0F6" stroke-width="4" stroke-linecap="round"/>
-      <rect x="4" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
-      <rect x="36" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>`;
-    if (mode === "spell") prop = `
-      <path d="M31 6 l11 7 -15 19 -9 -5z" fill="#FFC800" stroke="#E5A900" stroke-width="1.5"/>
-      <path d="M27 31 l9 5 -3 5 -9 -5z" fill="#F4A261"/>`;
-    if (mode === "listenWrong") prop = `
-      <path d="M8 25 a16 16 0 0 1 32 0" fill="none" stroke="#1CB0F6" stroke-width="4" stroke-linecap="round"/>
-      <rect x="4" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
-      <rect x="36" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
-      <text x="38" y="13" font-size="15" fill="#FF4B4B" font-weight="bold">?</text>`;
-    if (mode === "meaning") prop = `
-      <path d="M5 9 h14 v18 h-14z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(-6 12 18)"/>
-      <path d="M19 9 h14 v18 h-14z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(6 26 18)"/>
-      <text x="39" y="14" font-size="14" fill="#FF4B4B" font-weight="bold">?</text>`;
+      <path d="M17 24 a15 15 0 0 1 30 0" fill="none" stroke="#1CB0F6" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="13" y="22" width="6" height="10" rx="3" fill="#1CB0F6"/>
+      <rect x="45" y="22" width="6" height="10" rx="3" fill="#1CB0F6"/>`;
     if (mode === "daily") prop = `
-      <path d="M33 5 h11 v5 a5.5 5.5 0 0 1 -11 0z" fill="#FFC800" stroke="#E5A900" stroke-width="1.5"/>
-      <rect x="36.5" y="15" width="4" height="6" fill="#E5A900"/>
-      <rect x="32" y="20" width="13" height="3.5" rx="1.75" fill="#E5A900"/>
-      <circle cx="38.5" cy="5" r="1.6" fill="#fff" opacity=".7"/>`;
-    return `<svg viewBox="0 0 48 48" class="bicon">${base}${prop}</svg>`;
+      <path d="M46 4 h12 v5 a6 6 0 0 1 -12 0z" fill="#FFC800" stroke="#E5A900" stroke-width="1.4"/>
+      <rect x="49.5" y="15" width="5" height="6" fill="#E5A900"/>
+      <rect x="45" y="20" width="14" height="3.5" rx="1.75" fill="#E5A900"/>`;
+    if (mode === "spell") prop = `
+      <path d="M45 33 l10 7 -13 18 -8 -5z" fill="#FFC800" stroke="#E5A900" stroke-width="1.4"/>
+      <path d="M41 57 l8 5 -2.5 4.5 -8 -5z" fill="#F4A261"/>`;
+    if (mode === "listenWrong") prop = `
+      <path d="M17 24 a15 15 0 0 1 30 0" fill="none" stroke="#1CB0F6" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="13" y="22" width="6" height="10" rx="3" fill="#1CB0F6"/>
+      <rect x="45" y="22" width="6" height="10" rx="3" fill="#1CB0F6"/>
+      <text x="52" y="14" font-size="14" fill="#FF4B4B" font-weight="bold">?</text>`;
+    if (mode === "meaning") prop = `
+      <path d="M19 40 h11 v15 h-11z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(-6 24 47)"/>
+      <path d="M30 40 h11 v15 h-11z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(6 36 47)"/>
+      <text x="52" y="15" font-size="13" fill="#FF4B4B" font-weight="bold">?</text>`;
+    return `<svg viewBox="0 0 64 72" class="bicon">${base}${prop}</svg>`;
   }
 
   /* ---------- 小工具 ---------- */

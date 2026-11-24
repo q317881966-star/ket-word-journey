@@ -24,6 +24,23 @@
 
 <!-- 顶部状态栏 -->
 <header id="topbar" class="topbar">
+  <button class="user-chip" id="userChip" title="点击修改名字">
+    <span class="user-avatar">
+      <svg viewBox="0 0 48 48" aria-label="ZOE 头像">
+        <circle cx="24" cy="24" r="24" fill="#FFE3C7"/>
+        <path d="M8 27 C8 13 40 13 40 27 L40 36 C40 42 34 45 24 45 C14 45 8 42 8 36z" fill="#6B4A2F"/>
+        <circle cx="24" cy="27" r="13" fill="#FFD9B3"/>
+        <path d="M11 24 C12 14 36 14 37 24 C34 19 30 17 24 17 C18 17 14 19 11 24z" fill="#6B4A2F"/>
+        <circle cx="19" cy="28" r="2.2" fill="#3a2a1a"/><circle cx="29" cy="28" r="2.2" fill="#3a2a1a"/>
+        <circle cx="19.7" cy="27.2" r="0.7" fill="#fff"/><circle cx="29.7" cy="27.2" r="0.7" fill="#fff"/>
+        <ellipse cx="15" cy="32" rx="2.6" ry="1.6" fill="#FF9FB3" opacity=".65"/>
+        <ellipse cx="33" cy="32" rx="2.6" ry="1.6" fill="#FF9FB3" opacity=".65"/>
+        <path d="M21 33.5 q3 3 6 0" stroke="#B5623F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="user-name" id="userName">ZOE</span>
+  </button>
+  <div class="topbar-stats">
   <div class="stat" title="连续打卡">
     <svg viewBox="0 0 24 24" class="flame"><path d="M12 2s5 4.5 5 9a5 5 0 0 1-10 0c0-2 .8-3.5 1.7-4.6C9.4 8.2 10 9.5 10 10.5c0-2.6 2-5.6 2-8.5z" fill="#FF9600"/><path d="M12 8s3 2.6 3 5a3 3 0 0 1-6 0c0-1.2.5-2.2 1.2-3 .2.8.6 1.4 1.1 1.7C11.1 10.4 12 9.2 12 8z" fill="#FFC800"/></svg>
     <b id="streakNum">0</b>
@@ -35,6 +52,7 @@
   <div class="stat" title="星星余额">
     <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.9-5 4.7 1.3 6.7L12 17.3 6 20.5l1.3-6.7-5-4.7 6.8-.9z" fill="#FFC800"/></svg>
     <b id="masterNum">0</b>
+  </div>
   </div>
 </header>
 

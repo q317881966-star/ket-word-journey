@@ -308,6 +308,7 @@ function showPage(name) {
   if (name === "stats") renderStats();
   if (name === "settings") renderSettings();
 }
+$("#userChip").addEventListener("click", () => showPage("settings"));
 $("#tabs").addEventListener("click", e => {
   const b = e.target.closest("button");
   if (b) showPage(b.dataset.page);
@@ -315,6 +316,7 @@ $("#tabs").addEventListener("click", e => {
 
 /* ---------- 首页 ---------- */
 function renderHome() {
+  $("#userName").textContent = DB.profile.name || "ZOE";
   $("#streakNum").textContent = DB.profile.streak;
   $("#xpNum").textContent = DB.profile.totalXp;
   $("#masterNum").textContent = DB.profile.stars || 0;
@@ -1062,6 +1064,7 @@ async function boot() {
   DB.profile.streak = computeStreak();
   Buddy.init();
   applyTheme();
+  $("#userName").textContent = DB.profile.name || "ZOE";
   renderHome();
   showPage("home");
   setTimeout(() => $("#boot").classList.add("hide"), 250);

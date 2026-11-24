@@ -652,6 +652,33 @@ const Buddy = (() => {
     return tips.join("<br>");
   }
 
+  /* ---------- 游戏入口图标：三种小绿龙造型 ---------- */
+  function gameIcon(mode) {
+    const base = `
+      <ellipse cx="24" cy="29" rx="16" ry="14.5" fill="#6EDB3A"/>
+      <circle cx="18" cy="27" r="4.4" fill="#fff"/><circle cx="19" cy="28" r="2.2" fill="#26282b"/>
+      <circle cx="30" cy="27" r="4.4" fill="#fff"/><circle cx="31" cy="28" r="2.2" fill="#26282b"/>
+      <ellipse cx="13" cy="34" rx="3" ry="1.8" fill="#ff9fb3" opacity=".6"/>
+      <ellipse cx="35" cy="34" rx="3" ry="1.8" fill="#ff9fb3" opacity=".6"/>
+      <path d="M21 34 q3 3 6 0" stroke="#2f6a00" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+    let prop = "";
+    if (mode === "pair") prop = `
+      <rect x="5" y="7" width="12" height="15" rx="2.5" fill="#fff" stroke="#1CB0F6" stroke-width="2" transform="rotate(-10 11 14)"/>
+      <rect x="31" y="5" width="12" height="15" rx="2.5" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(10 37 12)"/>
+      <text x="11" y="18" font-size="8" text-anchor="middle" fill="#1CB0F6" font-weight="bold">A</text>
+      <text x="37" y="16" font-size="8" text-anchor="middle" fill="#58CC02" font-weight="bold">文</text>`;
+    if (mode === "listen") prop = `
+      <path d="M8 25 a16 16 0 0 1 32 0" fill="none" stroke="#1CB0F6" stroke-width="4" stroke-linecap="round"/>
+      <rect x="4" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
+      <rect x="36" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>`;
+    if (mode === "daily") prop = `
+      <path d="M33 5 h11 v5 a5.5 5.5 0 0 1 -11 0z" fill="#FFC800" stroke="#E5A900" stroke-width="1.5"/>
+      <rect x="36.5" y="15" width="4" height="6" fill="#E5A900"/>
+      <rect x="32" y="20" width="13" height="3.5" rx="1.75" fill="#E5A900"/>
+      <circle cx="38.5" cy="5" r="1.6" fill="#fff" opacity=".7"/>`;
+    return `<svg viewBox="0 0 48 48" class="bicon">${base}${prop}</svg>`;
+  }
+
   /* ---------- 小工具 ---------- */
   const currentPage = () => document.querySelector(".page.active")?.id.replace("page-", "") || "home";
 
@@ -662,5 +689,6 @@ const Buddy = (() => {
     line: kind => pickLine(LINES[kind] || LINES.idle),
     name: learnerName, addStars,
     avatar: () => dragonSVG(),
+    gameIcon,
   };
 })();

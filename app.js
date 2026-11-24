@@ -54,7 +54,7 @@ function save(now = false) {
 /* ---------- 单词状态 ---------- */
 function stateOf(id) {
   if (!DB.states[id]) {
-    DB.states[id] = { ease: 2.5, interval: 0, due: "", reps: 0, lapses: 0, wrong: 0, status: "new" };
+    DB.states[id] = { ease: 2.5, interval: 0, due: "", reps: 0, lapses: 0, wrong: 0, wrongBy: {}, status: "new" };
   }
   return DB.states[id];
 }
@@ -83,6 +83,12 @@ function gradeWord(id, q) {
   return s;
 }
 
+function recordWrong(id, kind) {
+  const s = stateOf(id);
+  s.wrongBy = s.wrongBy || {};
+  const key = kind === "spell" ? "spell" : kind === "listen" ? "listen" : kind === "reveal" ? "recall" : "meaning";
+  s.wrongBy[key] = (s.wrongBy[key] || 0) + 1;
+}
 function dueWords() {
   const t = today();
   return WORDS.filter(w => {
@@ -100,7 +106,22 @@ function masteredCount() {
   return WORDS.reduce((n, w) => n + (DB.states[w.id]?.status === "mastered" ? 1 : 0), 0);
 }
 function wrongWords() {
-  return WORDS.filter(w => (DB.states[w.id]?.wrong || 0) > 0);
+  return WORDS.filter(w => (DB.states[w.id]?.wrong || 0) > 0)
+    .sort((a, b) => (DB.states[b.id].wrong || 0) - (DB.states[a.id].wrong || 0));
+}
+/** 按错误次数加权抽取：错得越多越容易被抽中 */
+function weightedPick(pool, n) {
+  const items = pool.map(w => ({ w, weight: 1 + (DB.states[w.id]?.wrong || 0) * 2 }));
+  const out = [];
+  while (out.length < n && items.length) {
+    const total = items.reduce((a, x) => a + x.weight, 0);
+    let r = Math.random() * total, idx = 0;
+    for (; idx < items.length; idx++) { r -= items[idx].weight; if (r <= 0) break; }
+    idx = Math.min(idx, items.length - 1);
+    out.push(items[idx].w);
+    items.splice(idx, 1);
+  }
+  return out;
 }
 function groupWords(g) {
   return WORDS.filter(w => w.group === g);
@@ -354,9 +375,13 @@ function renderMap() {
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
     const x = Math.round(Math.sin(g * 0.62) * 74);
-    const gameBtn = (g % 5 === 0 && g < groups)
-      ? `<button class="side-game" style="--sx:${x >= 0 ? -112 : 112}px" title="小游戏">🎮</button>`
-      : "";
+    const GAME_MODES = ["pair", "listen", "daily"];
+    const GAME_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战" };
+    let gameBtn = "";
+    if (g % 5 === 0 && g < groups) {
+      const mode = GAME_MODES[Math.floor(g / 5 - 1) % 3];
+      gameBtn = `<button class="side-game" data-gstart="${mode}" style="--sx:${x >= 0 ? -112 : 112}px" title="${GAME_NAMES[mode]}">${Buddy.gameIcon(mode)}</button>`;
+    }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
         ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
@@ -372,7 +397,8 @@ function renderMap() {
 }
 
 $("#map").addEventListener("click", e => {
-  if (e.target.closest(".side-game")) { Game.openMenu(); return; }
+  const gs = e.target.closest("[data-gstart]");
+  if (gs) { Game.start(gs.dataset.gstart); return; }
   const gm = e.target.closest("[data-gmode]");
   if (gm) { Game.start(gm.dataset.gmode); return; }
   const b = e.target.closest(".pnode");
@@ -409,15 +435,16 @@ function makeChoice(word, dir) {
   const opts = shuffle([answer, ...distill(word, key).map(w => w[key])]);
   return { kind: "choice", word, dir, opts, answer };
 }
+function makeListen(word) {
+  const opts = [word.word, ...distill(word, "word").map(w => w.word)];
+  return { kind: "listen", word, opts: shuffle(opts), answer: word.word };
+}
 const KINDS_REVIEW = ["choice", "choice", "listen", "spell", "reveal", "reveal"];
 function makeReviewQuestion(word) {
   const k = KINDS_REVIEW[Math.floor(Math.random() * KINDS_REVIEW.length)];
   if (k === "reveal") return { kind: "reveal", word };
   if (k === "choice") return makeChoice(word, Math.random() < .5 ? "en2cn" : "cn2en");
-  if (k === "listen") {
-    const opts = [word.word, ...distill(word, "word").map(w => w.word)];
-    return { kind: "listen", word, opts: shuffle(opts), answer: word.word };
-  }
+  if (k === "listen") return makeListen(word);
   return { kind: "spell", word };
 }
 function makeBlock(word, isNew) {
@@ -442,6 +469,11 @@ function startDaily() {
   const queue = [];
   newW.forEach(w => queue.push(...makeBlock(w, true)));
   shuffle(due).forEach(w => queue.push(makeReviewQuestion(w)));
+  // 艾宾浩斯补强：随机插入之前学过的词（排除今日新词和到期词）
+  const dueIds = new Set(due.map(w => w.id));
+  const newIds = new Set(newW.map(w => w.id));
+  const pool = WORDS.filter(w => isLearned(w.id) && !dueIds.has(w.id) && !newIds.has(w.id));
+  weightedPick(pool, 8).forEach(w => queue.push(makeReviewQuestion(w)));
   beginSession(queue, "今日学习", { newIds: newW.map(w => w.id), totalNew: newW.length });
 }
 function startGroup(g) {
@@ -455,11 +487,20 @@ function startGroupReview(g) {
   if (!ws.length) return toast("这一关没有可复习的词");
   beginSession(shuffle(ws).slice(0, 12), `第 ${g} 关复习`);
 }
-function startDrill() {
-  const ws = wrongWords();
-  if (!ws.length) return toast("错词本是空的");
-  beginSession(shuffle(ws).slice(0, 15).map(w => makeReviewQuestion(w)), "强化训练");
+function startDrill(type = "all") {
+  let ws = wrongWords();
+  if (type !== "all") ws = ws.filter(w => (DB.states[w.id]?.wrongBy?.[type] || 0) > 0);
+  if (!ws.length) return toast(type === "all" ? "错词本是空的" : "这一类的错词已经清空啦");
+  const qs = weightedPick(ws, 15).map(w => {
+    if (type === "spell") return { kind: "spell", word: w };
+    if (type === "listen") return makeListen(w);
+    if (type === "meaning") return makeChoice(w, "en2cn");
+    if (type === "recall") return { kind: "reveal", word: w };
+    return makeReviewQuestion(w);
+  });
+  beginSession(qs, type === "all" ? "强化训练" : `错词专项 · ${TYPE_LABEL[type] || ""}`);
 }
+const TYPE_LABEL = { spell: "拼写", listen: "听音", meaning: "词义", recall: "回忆" };
 /** 考前冲刺：错词 + 未来 3 天到期词，混合主动回忆，最多 20 题 */
 function startSprint() {
   const pool = new Map();
@@ -617,6 +658,7 @@ $("#qbody").addEventListener("click", e => {
     if (!s || !q || q.kind !== "reveal") return;
     const g = Number(gbtn.dataset.grade);
     const correct = g > 0;
+    if (!correct) recordWrong(q.word.id, "reveal");
     gradeWord(q.word.id, g);
     if (!(s.newIds || []).includes(q.word.id)) s.reviewed.add(q.word.id);
     s.answered += 1;
@@ -678,6 +720,7 @@ $("#checkBtn").addEventListener("click", () => {
     });
   }
 
+  if (!correct) recordWrong(wordId, q.kind);
   gradeWord(wordId, correct ? (s.retried[wordId] ? 1 : (q.kind === "spell" ? 2 : 1)) : 0);
   if (!(s.newIds || []).includes(wordId)) s.reviewed.add(wordId);   // 复习过的不同词数
   if (correct) s.xp += 10; else s.xp += 2;
@@ -807,22 +850,32 @@ function renderWrong() {
   $("#wrongCount").textContent = list.length;
   $("#drillBtn").disabled = !list.length;
   $("#wrongList").innerHTML = list.length
-    ? list.map(w => `
+    ? list.map(w => {
+      const by = DB.states[w.id].wrongBy || {};
+      const tags = Object.entries(by).filter(([, v]) => v > 0)
+        .map(([k, v]) => `<span class="w-type t-${k}">${TYPE_LABEL[k] || k} ${v}</span>`).join("");
+      return `
       <div class="word-row">
         <div class="w-txt">
           <div><span class="w-en">${esc(w.word)}</span><span class="w-ph">${esc(w.phonetic)}</span></div>
           <div class="w-cn">${esc(w.meaning)}</div>
+          ${tags ? `<div class="w-types">${tags}</div>` : ""}
         </div>
         <span class="w-badge">再对 ${DB.states[w.id].wrong} 次</span>
         <button class="spk" data-spk="${w.id}">🔊</button>
-      </div>`).join("")
+      </div>`;
+    }).join("")
     : `<div class="empty"><span class="emoji">🎯</span>还没有错词<br>答错的单词会自动收录到这里</div>`;
 }
 $("#wrongList").addEventListener("click", e => {
   const b = e.target.closest("[data-spk]");
   if (b) playAudio(Number(b.dataset.spk), b);
 });
-$("#drillBtn").onclick = startDrill;
+$("#drillBtn").onclick = () => startDrill("all");
+$("#drillTypes")?.addEventListener("click", e => {
+  const b = e.target.closest("[data-drill]");
+  if (b) startDrill(b.dataset.drill);
+});
 $("#sprintBtn").onclick = startSprint;
 
 /* ---------- 统计 ---------- */

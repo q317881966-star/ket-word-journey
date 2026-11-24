@@ -161,6 +161,7 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
   background: var(--blue-l); font-size: 24px; z-index: 2;
 }
 .side-game:active { transform: translateX(var(--sx, 0px)) scale(.94); }
+.side-game .bicon { width: 76%; height: 76%; display: block; margin: 0 auto; }
 .pnode {
   width: 84px; height: 84px; border-radius: 50%; position: relative;
   display: grid; place-items: center; font-size: 26px; font-weight: 900;
@@ -284,6 +285,20 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .map-end { text-align: center; color: var(--ink-3); font-size: 14px; padding: 26px 0 10px; }
 .map-more { text-align: center; color: var(--ink-3); font-size: 13px; padding: 18px 0 6px; }
 .map-more b { color: var(--ink-2); }
+
+/* 错题分类 */
+.w-types { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.w-type { font-size: 10px; font-weight: 900; padding: 2px 7px; border-radius: 99px; }
+.w-type.t-spell { background: #fff3cc; color: #a07a00; }
+.w-type.t-listen { background: var(--blue-l); color: var(--blue-d); }
+.w-type.t-meaning { background: var(--green-l); color: var(--green-d); }
+.w-type.t-recall { background: #f3e8ff; color: #7c4dff; }
+.drill-types { display: flex; gap: 8px; margin-top: 10px; }
+.drill-types button {
+  flex: 1; padding: 10px 4px; border-radius: 12px; border: 2px solid var(--line);
+  border-bottom-width: 4px; background: var(--card); font-size: 13px; font-weight: 900;
+}
+.drill-types button:active { transform: translateY(2px); border-bottom-width: 2px; }
 
 /* ---------- 单词列表 ---------- */
 .word-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }

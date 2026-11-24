@@ -420,7 +420,24 @@ const Buddy = (() => {
     if (a === b) return 100;
     return Math.max(0, Math.round((1 - levenshtein(a, b) / Math.max(a.length, b.length)) * 100));
   }
-  const scoreStars = sc => sc >= 90 ? 5 : sc >= 75 ? 4 : sc >= 55 ? 3 : sc >= 35 ? 2 : 1;
+  const HOMOPHONES = [
+    ["meat","meet"],["see","sea"],["write","right"],["their","there"],["two","too","to"],
+    ["hear","here"],["know","no"],["new","knew"],["weather","whether"],["buy","by","bye"],
+    ["son","sun"],["week","weak"],["wear","where"],["pair","pear"],["flower","flour"],
+    ["eight","ate"],["one","won"],["red","read"],["blue","blew"],["board","bored"],
+    ["brake","break"],["cell","sell"],["cent","sent"],["dear","deer"],["fair","fare"],
+    ["hair","hare"],["hour","our"],["knight","night"],["mail","male"],["peace","piece"],
+    ["plain","plane"],["sail","sale"],["steal","steel"],["tail","tale"],["wait","weight"],
+    ["which","witch"],["whole","hole"],["wood","would"],["hi","high"],["for","four"],
+    ["so","sew"],["bee","be"],["eye","i"],["made","maid"],["mind","mined"],
+  ];
+  function sameSound(a, b) {
+    const x = normSpeech(a), y = normSpeech(b);
+    if (!x || !y) return false;
+    if (x === y) return true;
+    return HOMOPHONES.some(g => g.includes(x) && g.includes(y));
+  }
+  const scoreStars = sc => sc >= 88 ? 5 : sc >= 72 ? 4 : sc >= 55 ? 3 : sc >= 35 ? 2 : 1;
   const scoreLevel = sc => sc >= 90 ? "great" : sc >= 70 ? "good" : "try";
   function scorePraise(sc, heard) {
     if (!heard) return "没听清你说的，嘴巴离麦克风近一点再读一次～";
@@ -492,9 +509,13 @@ const Buddy = (() => {
         sr.onresult = e => {
           handled = true;
           const alts = [...e.results[0]].map(r => r.transcript);
-          let best = { t: "", s: -1 };
-          alts.forEach(t => { const sc = similarity(t, word.word); if (sc > best.s) best = { t, s: sc }; });
-          showScore(best.t, best.s);
+          let best = { t: "", s: -1, homo: false };
+          alts.forEach(t => {
+            const homo = sameSound(t, word.word);
+            const sc = homo ? 100 : similarity(t, word.word);
+            if (sc > best.s) best = { t, s: sc, homo };
+          });
+          showScore(best.t, best.s, best.homo);
         };
         sr.onerror = err => {
           if (handled) return;
@@ -502,7 +523,7 @@ const Buddy = (() => {
           if (err.error === "no-speech") {
             status.textContent = "没听到声音，靠近麦克风再按一次～";
           } else {
-            status.textContent = "系统识别暂时不可用，已切换到录音回放模式";
+            status.textContent = "这次没识别出来，可以再按一次，或者点下面的回放对比";
             fallback();
           }
         };
@@ -512,15 +533,19 @@ const Buddy = (() => {
         try { sr.start(); } catch { fallback(); }
       };
 
-      function showScore(heard, score) {
+      function showScore(heard, score, homo) {
         const stars = scoreStars(score);
         const got = rewardSpeech(stars);
         sfx(score >= 70 ? "ok" : "bad");
+        const starStr = "⭐".repeat(stars) + "☆".repeat(5 - stars);
+        const praise = homo && heard && normSpeech(heard) !== normSpeech(word.word)
+          ? "发音很准！系统听成了同音词 " + esc(heard)
+          : scorePraise(score, heard);
         $("#speechResult").innerHTML = `
           <div class="speech-result">
-            <div class="score-badge" data-level="${scoreLevel(score)}">${score}<small>分</small></div>
+            <div class="score-stars" data-level="${scoreLevel(score)}">${starStr}</div>
+            <p class="enc">${praise}</p>
             <p class="said">我听到的是：<b>${heard ? esc(heard) : "（没听清）"}</b></p>
-            <p class="enc">${scorePraise(score, heard)}</p>
             <p class="fine">${got ? `获得 ⭐ ${got} 颗星星` : "今天的跟读星星已经拿满啦，明天继续"}</p>
             <button class="btn btn-blue btn-sm" id="speechRetry">🔁 再读一次</button>
           </div>`;

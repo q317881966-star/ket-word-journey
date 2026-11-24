@@ -659,7 +659,12 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .score-badge[data-level="great"] { background: var(--green-l); color: var(--green-d); box-shadow: 0 0 0 6px rgba(88,204,2,.15); }
 .score-badge[data-level="good"] { background: var(--blue-l); color: var(--blue-d); box-shadow: 0 0 0 6px rgba(28,176,246,.15); }
 .score-badge[data-level="try"] { background: var(--yellow); color: #6b4d00; }
-.speech-result .said { font-size: 15px; color: var(--ink-2); margin: 12px 0 4px; }
+.score-stars {
+  font-size: 30px; letter-spacing: 3px; line-height: 1.2; margin: 6px 0 2px;
+  animation: pop .45s cubic-bezier(.2,1.6,.4,1);
+}
+.score-stars[data-level="try"] { filter: grayscale(.15); }
+.speech-result .said { font-size: 15px; color: var(--ink-2); margin: 8px 0 4px; }
 .speech-result .said b { color: var(--ink); }
 .speech-result .enc { font-size: 16px; font-weight: 900; margin: 4px 0 8px; }
 .speech-result .btn { margin: 8px auto 0; }

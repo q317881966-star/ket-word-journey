@@ -29,7 +29,7 @@ function freshDB() {
     profile: {
       streak: 0, longest: 0, lastActive: null, totalXp: 0,
       dailyNew: 10, reviewCap: 80, autoAudio: true,
-      sfx: true, voice: true, theme: "auto", specialDone: {}, created: today(),
+      sfx: true, voice: true, theme: "auto", specialDone: {}, specialStats: {}, created: today(),
     },
   };
 }
@@ -54,16 +54,18 @@ function save(now = false) {
 /* ---------- 单词状态 ---------- */
 function stateOf(id) {
   if (!DB.states[id]) {
-    DB.states[id] = { ease: 2.5, interval: 0, due: "", reps: 0, lapses: 0, wrong: 0, wrongBy: {}, status: "new" };
+    DB.states[id] = { ease: 2.5, interval: 0, due: "", reps: 0, lapses: 0, wrong: 0, wrongBy: {}, status: "new", firstSeen: "", lastSeen: "" };
   }
   return DB.states[id];
 }
 const isLearned = id => !!DB.states[id] && DB.states[id].status !== "new";
 
 /** SM-2 变体：q=0 忘了 / 1 一般 / 2 秒答 */
-function gradeWord(id, q) {
+function gradeWord(id, q, noAdvance = false) {
   const s = stateOf(id);
   const t = today();
+  if (!s.firstSeen) s.firstSeen = t;
+  s.lastSeen = t;
   if (q === 0) {
     s.lapses += 1;
     s.wrong = 2;                       // 进错词本，需答对两次移出
@@ -71,6 +73,11 @@ function gradeWord(id, q) {
     s.interval = 1;
     s.reps = 0;
     s.status = "learning";
+    s.due = addDays(t, 1);
+  } else if (noAdvance) {
+    // 特殊关里提前练到「还没到期」的词：只记正确，不推进间隔，避免打乱遗忘曲线
+    if (s.wrong > 0) s.wrong -= 1;
+    if (s.status === "new") { s.status = "review"; s.due = addDays(t, 1); }
   } else {
     if (s.wrong > 0) s.wrong -= 1;
     s.reps += 1;
@@ -78,8 +85,8 @@ function gradeWord(id, q) {
     else s.interval = Math.min(180, Math.round(s.interval * s.ease * (q === 2 ? 1.3 : 1)));
     if (q === 2) s.ease = Math.min(3.0, s.ease + 0.05);
     s.status = s.interval >= 21 && s.reps >= 3 ? "mastered" : "review";
+    s.due = addDays(t, Math.max(1, s.interval));
   }
-  s.due = addDays(t, Math.max(1, s.interval));
   return s;
 }
 
@@ -353,22 +360,41 @@ function startSpecial(kind, unit) {
   const learned = unitWords.filter(w => isLearned(w.id));
   const allWrong = wrongWords();
   const uniq = arr => [...new Map(arr.map(w => [w.id, w])).values()];
+  const t = today();
+  const horizon = addDays(t, 2);
   let pool = [];
-  let label = SPECIALS[kind].label;
+  let qn = 15;
+  const label = SPECIALS[kind].label;
 
-  if (kind === "wrong") {
-    // 错题优先，不足 15 题时用到期词 / 已学词补足
-    pool = uniq([...allWrong, ...dueWords(), ...learned, ...unitWords]);
-  } else if (kind === "recall") {
-    pool = learned.length ? learned : unitWords;
-  } else if (kind === "intensive") {
-    pool = uniq([...allWrong, ...dueWords(), ...learned, ...unitWords]);
+  if (kind === "recall") {
+    // 只练「已学、还没到期、至少隔一天」的词，避免刚学完立刻回忆
+    pool = learned.filter(w => {
+      const st = DB.states[w.id];
+      return st && st.firstSeen && st.firstSeen < t && (!st.due || st.due > t);
+    });
+    if (!pool.length) pool = learned.filter(w => DB.states[w.id]?.firstSeen && DB.states[w.id].firstSeen < t);
+    if (!pool.length) pool = learned.length ? learned : unitWords;
+  } else if (kind === "wrong") {
+    // 只练错词；错词太少时最多补 5 个，避免变成普通复习
+    pool = allWrong;
+    qn = Math.min(15, Math.max(8, allWrong.length * 2));
+    if (pool.length < qn) {
+      const extra = uniq([...dueWords(), ...learned]).filter(w => !pool.some(x => x.id === w.id));
+      pool = [...pool, ...extra.slice(0, Math.min(5, qn - pool.length))];
+    }
+    if (!pool.length) pool = uniq([...dueWords(), ...learned, ...unitWords]);
   } else {
-    pool = uniq([...learned, ...allWrong, ...unitWords]);
+    // 强化训练：未来 2 天内到期的词优先，再补错词/已学词
+    pool = uniq([...dueWords(), ...WORDS.filter(w => {
+      const st = DB.states[w.id];
+      return st && st.status !== "new" && st.due && st.due > t && st.due <= horizon;
+    })]);
+    if (pool.length < 15) pool = uniq([...pool, ...allWrong, ...learned]);
+    if (!pool.length) pool = unitWords;
   }
   if (!pool.length) return toast("这一单元还没有可复习的词");
 
-  const picked = weightedPick(pool, 15);
+  const picked = weightedPick(pool, Math.min(qn, pool.length));
   const qs = picked.map(w => {
     if (kind === "recall") return { kind: "reveal", word: w };
     if (kind === "wrong") {
@@ -429,11 +455,10 @@ function renderMap() {
       const key = STATIONS[stationIdx % STATIONS.length];
       const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
       const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
-      // 放在 S 弯道最深处的对侧凹位
-      const side = x >= 0 ? -1 : 1;
-      const sx = side * 134;
+      // 放在 S 弯道最深处的同侧外沿
+      const side = x >= 0 ? 1 : -1;
       stationIdx++;
-      sideBtn = `<button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
+      sideBtn = `<button class="side-game" ${attr} style="--side:${side}" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
     }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
@@ -446,9 +471,11 @@ function renderMap() {
     if (SPECIAL_POS[posInUnit]) {
       const kind = SPECIAL_POS[posInUnit];
       const done = DB.profile.specialDone?.[`${unit}-${kind}`];
+      const stat = DB.profile.specialStats?.[`${unit}-${kind}`];
+      const tip = stat ? `${SPECIALS[kind].label} · 上次 ${stat.acc}%` : SPECIALS[kind].label;
       const spx = Math.round(Math.sin((posInUnit - 0.5) * 0.7) * 62);
       html += `<div class="path-row">
-        <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" style="--x:${spx}px">
+        <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" title="${tip}" style="--x:${spx}px">
           <span class="sp-ico">${done ? "✓" : SPECIALS[kind].icon}</span>
           <span class="sp-txt">${SPECIALS[kind].label}</span>
         </button>
@@ -603,7 +630,7 @@ function beginSession(queue, title, meta = {}) {
     total: queue.length,
     reviewed: new Set(), newSeen: new Set(),
     correct: 0, answered: 0, xp: 0,
-    firstTry: {}, retried: {},
+    firstTry: {}, retried: {}, recheck: new Set(),
     ...meta,
   };
   $("#lesson").classList.add("open");
@@ -731,7 +758,15 @@ $("#qbody").addEventListener("click", e => {
     const g = Number(gbtn.dataset.grade);
     const correct = g > 0;
     if (!correct) recordWrong(q.word.id, "reveal");
-    gradeWord(q.word.id, g);
+    const rst = DB.states[q.word.id];
+    const rnoAdv = !!s.special && rst && rst.due && rst.due > today();
+    gradeWord(q.word.id, g, rnoAdv);
+    // 回忆关：自评「记住了」的词，隔几题再抽查一次，验证不是短期印象
+    if (g === 2 && s.special?.kind === "recall" && !s.recheck.has(q.word.id)) {
+      s.recheck.add(q.word.id);
+      s.queue.splice(Math.min(s.i + 4, s.queue.length), 0, { kind: "reveal", word: q.word, recheck: true });
+      s.total = s.queue.length;
+    }
     if (!(s.newIds || []).includes(q.word.id)) s.reviewed.add(q.word.id);
     s.answered += 1;
     if (correct) s.correct += 1;
@@ -793,7 +828,9 @@ $("#checkBtn").addEventListener("click", () => {
   }
 
   if (!correct) recordWrong(wordId, q.kind);
-  gradeWord(wordId, correct ? (s.retried[wordId] ? 1 : (q.kind === "spell" ? 2 : 1)) : 0);
+  const st = DB.states[wordId];
+  const noAdv = !!s.special && st && st.due && st.due > today();
+  gradeWord(wordId, correct ? (s.retried[wordId] ? 1 : (q.kind === "spell" ? 2 : 1)) : 0, noAdv);
   if (!(s.newIds || []).includes(wordId)) s.reviewed.add(wordId);   // 复习过的不同词数
   if (correct) s.xp += 10; else s.xp += 2;
 
@@ -898,6 +935,11 @@ function finishSession() {
   if (s.special) {
     DB.profile.specialDone = DB.profile.specialDone || {};
     DB.profile.specialDone[`${s.special.unit}-${s.special.kind}`] = true;
+    DB.profile.specialStats = DB.profile.specialStats || {};
+    DB.profile.specialStats[`${s.special.unit}-${s.special.kind}`] = {
+      acc: s.answered ? Math.round(s.correct / s.answered * 100) : 0,
+      date: today(),
+    };
     save(true);
   }
   confetti();

@@ -370,13 +370,13 @@ function startSpecial(kind, unit) {
     // 只练「已学、还没到期、至少隔一天」的词，避免刚学完立刻回忆
     pool = learned.filter(w => {
       const st = DB.states[w.id];
-      return st && st.firstSeen && st.firstSeen < t && (!st.due || st.due > t);
+      return st && !st.manual && st.firstSeen && st.firstSeen < t && (!st.due || st.due > t);
     });
     if (!pool.length) pool = learned.filter(w => DB.states[w.id]?.firstSeen && DB.states[w.id].firstSeen < t);
     if (!pool.length) pool = learned.length ? learned : unitWords;
   } else if (kind === "wrong") {
     // 只练错词；错词太少时最多补 5 个，避免变成普通复习
-    pool = allWrong;
+    pool = allWrong.filter(w => !isManualMastered(w));
     qn = Math.min(15, Math.max(8, allWrong.length * 2));
     if (pool.length < qn) {
       const extra = uniq([...dueWords(), ...learned]).filter(w => !pool.some(x => x.id === w.id));
@@ -387,7 +387,7 @@ function startSpecial(kind, unit) {
     // 强化训练：未来 2 天内到期的词优先，再补错词/已学词
     pool = uniq([...dueWords(), ...WORDS.filter(w => {
       const st = DB.states[w.id];
-      return st && st.status !== "new" && st.due && st.due > t && st.due <= horizon;
+      return st && !st.manual && st.status !== "new" && st.due && st.due > t && st.due <= horizon;
     })]);
     if (pool.length < 15) pool = uniq([...pool, ...allWrong, ...learned]);
     if (!pool.length) pool = unitWords;
@@ -607,7 +607,7 @@ function startDaily() {
   // 艾宾浩斯补强：随机插入之前学过的词（排除今日新词和到期词）
   const dueIds = new Set(due.map(w => w.id));
   const newIds = new Set(newW.map(w => w.id));
-  const pool = WORDS.filter(w => isLearned(w.id) && !dueIds.has(w.id) && !newIds.has(w.id));
+  const pool = WORDS.filter(w => isLearned(w.id) && !isManualMastered(w) && !dueIds.has(w.id) && !newIds.has(w.id));
   weightedPick(pool, 8).forEach(w => queue.push(makeReviewQuestion(w)));
   beginSession(queue, "今日学习", { newIds: newW.map(w => w.id), totalNew: newW.length });
 }
@@ -888,14 +888,72 @@ $("#checkBtn").addEventListener("click", () => {
 });
 
 $("#skipBtn").addEventListener("click", () => {
-  const q = session.queue[session.i];
+  const q = session?.queue?.[session.i];
   if (!q || q.kind === "card") return;
-  gradeWord(q.word.id, 0);
-  markDay(0);
-  if (!(session.newIds || []).includes(q.word.id)) session.reviewed.add(q.word.id);
+  showSkipChoice(q);
+});
+
+function showSkipChoice(q) {
+  const overlay = document.createElement("div");
+  overlay.className = "skip-overlay";
+  overlay.innerHTML = `
+    <div class="skip-card">
+      <div class="skip-word">${esc(q.word.word)}<small>${esc(q.word.meaning)}</small></div>
+      <p>这个单词现在的状态是？</p>
+      <button class="btn btn-red btn-block" data-skip="unknown">😵 记不住</button>
+      <button class="btn btn-green btn-block" data-skip="known">😎 完全掌握了</button>
+      <button class="btn btn-ghost btn-block" data-skip="cancel">取消</button>
+    </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelectorAll("[data-skip]").forEach(b => {
+    b.onclick = () => {
+      overlay.remove();
+      const val = b.dataset.skip;
+      if (val === "cancel" || !session) return;
+      resolveSkip(q, val === "known");
+    };
+  });
+}
+
+function resolveSkip(q, known) {
+  const id = q.word.id;
+  if (known) {
+    const st = stateOf(id);
+    st.status = "mastered";
+    st.manual = true;                 // 手动标记，后续不抽到
+    st.interval = 180;
+    st.due = addDays(today(), 180);
+    st.reps = Math.max(st.reps, 3);
+    st.ease = Math.max(st.ease, 2.6);
+    st.wrong = 0;
+    save();
+    toast(`「${q.word.word}」已放进已掌握词库`);
+  } else {
+    gradeWord(id, 0);
+    recordWrong(id, q.kind === "reveal" ? "recall" : q.kind);
+    markDay(0);
+  }
+  if (!(session.newIds || []).includes(id)) session.reviewed.add(id);
   session.answered += 1;
   advance(false, true);
-});
+}
+
+/* ---------- 已掌握词库 ---------- */
+const isManualMastered = w => !!DB.states[w.id]?.manual;
+function renderKnown() {
+  const list = WORDS.filter(isManualMastered);
+  $("#knownCount").textContent = `${list.length} 个`;
+  $("#knownList").innerHTML = list.length
+    ? list.slice(0, 40).map(w => `
+      <div class="word-row">
+        <div class="w-txt">
+          <div><span class="w-en">${esc(w.word)}</span><span class="w-ph">${esc(w.phonetic)}</span></div>
+          <div class="w-cn">${esc(w.meaning)}</div>
+        </div>
+        <button class="spk" data-spk="${w.id}">🔊</button>
+      </div>`).join("") + (list.length > 40 ? `<p class="fine">还有 ${list.length - 40} 个…</p>` : "")
+    : `<div class="empty"><span class="emoji">📚</span>还没有手动标记为「完全掌握」的词</div>`;
+}
 
 function isCorrect(q) {
   if (q.kind === "spell" || q.kind === "listenSpell") return norm($("#spellInput").value) === norm(q.word.word);
@@ -1028,6 +1086,10 @@ function renderWrong() {
     }).join("")
     : `<div class="empty"><span class="emoji">🎯</span>还没有错词<br>答错的单词会自动收录到这里</div>`;
 }
+$("#knownList").addEventListener("click", e => {
+  const b = e.target.closest("[data-spk]");
+  if (b) playAudio(Number(b.dataset.spk), b);
+});
 $("#wrongList").addEventListener("click", e => {
   const b = e.target.closest("[data-spk]");
   if (b) playAudio(Number(b.dataset.spk), b);
@@ -1066,6 +1128,7 @@ function renderStats() {
     </div>`;
 
   renderHeatmap();
+  renderKnown();
 }
 
 function renderHeatmap() {

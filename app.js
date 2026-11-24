@@ -213,8 +213,21 @@ function tone(freq, dur, type = "sine", vol = .06, delay = 0) {
   o.connect(g); g.connect(actx.destination);
   o.start(t); o.stop(t + dur + .03);
 }
+const SFX_FILES = { ok: "audio/sfx/ok.wav", bad: "audio/sfx/bad.wav", done: "audio/sfx/done.wav", tap: "audio/sfx/tap.wav" };
 function sfx(kind) {
   if (!DB?.profile?.sfx) return;
+  const src = SFX_FILES[kind];
+  if (src) {
+    try {
+      const a = new Audio(src);
+      a.volume = .9;
+      a.play().catch(() => webSfx(kind));
+      return;
+    } catch {}
+  }
+  webSfx(kind);
+}
+function webSfx(kind) {
   ensureAudio(); if (!actx) return;
   if (kind === "ok") {
     // 清亮的三连上行音：配对成功 / 答对

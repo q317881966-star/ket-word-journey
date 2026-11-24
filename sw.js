@@ -1,4 +1,4 @@
-const VERSION = "ket-v10";
+const VERSION = "ket-v11";
 const CORE = [
   "./", "index.html", "style.css", "app.js", "buddy.js", "game.js", "words.json",
   "manifest.webmanifest", "fonts/nunito-latin.woff2",

@@ -29,7 +29,7 @@ function freshDB() {
     profile: {
       streak: 0, longest: 0, lastActive: null, totalXp: 0,
       dailyNew: 10, reviewCap: 80, autoAudio: true,
-      sfx: true, theme: "auto", created: today(),
+      sfx: true, voice: true, theme: "auto", created: today(),
     },
   };
 }
@@ -145,6 +145,32 @@ function speak(text) {
   u.lang = "en-GB"; u.rate = .9;
   speechSynthesis.cancel();
   speechSynthesis.speak(u);
+}
+
+/* ---------- 中文语音鼓励 ---------- */
+let zhVoice = null;
+function pickZhVoice() {
+  if (!("speechSynthesis" in window)) return;
+  const vs = speechSynthesis.getVoices();
+  zhVoice = vs.find(v => /zh[-_]CN|zh[-_]Hans|Chinese/i.test(v.lang + v.name)) || null;
+}
+if ("speechSynthesis" in window) {
+  pickZhVoice();
+  speechSynthesis.addEventListener?.("voiceschanged", pickZhVoice);
+}
+function sayZh(text) {
+  if (!DB?.profile?.voice || !text || !("speechSynthesis" in window)) return;
+  try {
+    speechSynthesis.cancel();
+    if (!zhVoice) pickZhVoice();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "zh-CN";
+    u.rate = 1.05;
+    u.pitch = 1.08;
+    u.volume = 1;
+    if (zhVoice) u.voice = zhVoice;
+    speechSynthesis.speak(u);
+  } catch {}
 }
 
 /* ---------- 音效（Web Audio 合成，无需音频文件） ---------- */
@@ -660,10 +686,12 @@ function showFeedback(ok, q) {
   sfx(ok ? "ok" : "bad");
   const fb = $("#feedback");
   fb.className = `feedback ${ok ? "good" : "bad"} show`;
-  $("#fbTitle").textContent = Buddy.line(ok ? "correct" : "wrong");
+  const line = Buddy.line(ok ? "correct" : "wrong");
+  $("#fbTitle").textContent = ok ? "答对了！" : "再看一眼";
   $("#fbAnswer").textContent = ok
     ? (q.kind === "card" ? "" : `${q.word.word} · ${q.word.meaning}`)
     : `${q.word.word}${q.word.phonetic ? " " + q.word.phonetic : ""} · ${q.word.meaning}`;
+  sayZh(line);
   const check = $("#checkBtn");
   check.textContent = "继续";
   check.className = "btn btn-blue btn-block";
@@ -826,6 +854,7 @@ function renderSettings() {
   $("#reviewCapVal").textContent = p.reviewCap;
   $("#autoAudio").checked = p.autoAudio;
   $("#sfxOn").checked = p.sfx;
+  $("#voiceOn").checked = p.voice !== false;
   $("#learnerName").value = p.name || "ZOE";
   $$("#themeSeg button").forEach(b => b.classList.toggle("on", b.dataset.theme === (p.theme || "auto")));
   updateOfflineState();
@@ -865,6 +894,10 @@ $("#autoAudio").addEventListener("change", e => { DB.profile.autoAudio = e.targe
 $("#sfxOn").addEventListener("change", e => {
   DB.profile.sfx = e.target.checked; save(true);
   if (e.target.checked) { ensureAudio(); sfx("ok"); }
+});
+$("#voiceOn").addEventListener("change", e => {
+  DB.profile.voice = e.target.checked; save(true);
+  if (e.target.checked) sayZh("语音鼓励已打开");
 });
 $("#learnerName").addEventListener("input", e => {
   DB.profile.name = e.target.value.trim() || "ZOE";

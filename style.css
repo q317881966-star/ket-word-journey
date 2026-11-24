@@ -521,7 +521,21 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .speech-word small { font-size: 15px; color: var(--blue-d); font-weight: 700; margin-left: 8px; }
 .speech-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .speech-actions .btn { flex: 1; min-width: 120px; }
-.speech-status { font-size: 13px; color: var(--ink-2); margin: 12px 0; font-weight: 800; }
+.speech-status { font-size: 13px; color: var(--ink-2); margin: 12px 0; font-weight: 800; min-height: 18px; }
+.speech-result { text-align: center; margin-top: 4px; }
+.score-badge {
+  width: 98px; height: 98px; border-radius: 50%; display: inline-grid; place-items: center;
+  font-size: 32px; font-weight: 900; background: var(--bg-2); color: var(--ink);
+  animation: pop .45s cubic-bezier(.2,1.6,.4,1);
+}
+.score-badge small { font-size: 12px; font-weight: 800; margin-left: 2px; }
+.score-badge[data-level="great"] { background: var(--green-l); color: var(--green-d); box-shadow: 0 0 0 6px rgba(88,204,2,.15); }
+.score-badge[data-level="good"] { background: var(--blue-l); color: var(--blue-d); box-shadow: 0 0 0 6px rgba(28,176,246,.15); }
+.score-badge[data-level="try"] { background: var(--yellow); color: #6b4d00; }
+.speech-result .said { font-size: 15px; color: var(--ink-2); margin: 12px 0 4px; }
+.speech-result .said b { color: var(--ink); }
+.speech-result .enc { font-size: 16px; font-weight: 900; margin: 4px 0 8px; }
+.speech-result .btn { margin: 8px auto 0; }
 
 /* ---------- 家长周报 ---------- */
 .report {
@@ -554,6 +568,43 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .unlock-card h3 { font-size: 24px; margin: 0 0 6px; }
 .unlock-card p { color: var(--ink-2); font-size: 14px; margin: 0; }
 .unlock-reward { display: inline-block; margin: 14px 0 18px; padding: 6px 16px; border-radius: 99px; background: var(--yellow); color: #6b4d00; font-weight: 900; }
+
+/* ---------- 游戏菜单 / 排行榜 ---------- */
+.game-menu {
+  position: fixed; inset: 0; z-index: 85; background: rgba(0,0,0,.42);
+  display: flex; align-items: flex-end; justify-content: center; padding: 18px;
+}
+.gm-card {
+  width: min(460px, 100%); max-height: 88vh; overflow-y: auto;
+  background: var(--card); border-radius: 26px; padding: 20px;
+  animation: slideUp .25s ease both;
+}
+.gm-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.gm-head h2 { margin: 0; font-size: 21px; }
+.gm-mode {
+  display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px;
+  margin-bottom: 10px; border: 2px solid var(--line); border-bottom-width: 4px;
+  border-radius: 16px; background: var(--card); text-align: left;
+}
+.gm-mode:active { transform: translateY(2px); border-bottom-width: 2px; }
+.gm-ico { font-size: 28px; }
+.gm-meta { flex: 1; min-width: 0; }
+.gm-meta b { display: block; font-size: 16px; }
+.gm-meta small { font-size: 12px; color: var(--ink-2); }
+.gm-arrow { font-size: 24px; color: var(--ink-3); }
+.daily-board { margin-top: 8px; border-top: 2px solid var(--bg-2); padding-top: 14px; }
+.board-title { font-size: 14px; font-weight: 900; color: var(--ink-2); margin-bottom: 8px; }
+.board-row {
+  display: flex; align-items: center; gap: 10px; padding: 9px 2px;
+  font-size: 14px; border-bottom: 1px solid var(--bg-2);
+}
+.board-rank { width: 30px; font-size: 17px; }
+.board-date { flex: 1; color: var(--ink-2); }
+.board-score { font-weight: 900; }
+.board-pairs { width: 54px; text-align: right; color: var(--ink-3); font-size: 12px; }
+.go-score { display: inline-block; font-size: 30px; font-weight: 900; color: var(--blue-d); margin: 0 0 8px; }
+.gcard.audio { background: var(--blue-l); border-color: var(--blue); }
+.gcard.audio span { font-size: 34px; filter: grayscale(0); }
 
 /* ---------- 单词配对 ---------- */
 .game-entry {

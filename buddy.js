@@ -393,87 +393,198 @@ const Buddy = (() => {
     if (currentPage() === "buddy") render();
   }
 
-  /* ---------- 跟读录音 ---------- */
-  let mediaRecorder = null, chunks = [], recordedUrl = null, currentSpeechWord = null;
+  /* ---------- 跟读发音评测 ---------- */
+  const SRClass = () => window.SpeechRecognition || window.webkitSpeechRecognition;
+  let mediaRecorder = null, chunks = [], recordedUrl = null;
+  let sr = null;
+
+  const normSpeech = s => (s || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+  function levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    if (!m) return n; if (!n) return m;
+    let prev = Array.from({ length: n + 1 }, (_, i) => i);
+    for (let i = 1; i <= m; i++) {
+      const cur = [i];
+      for (let j = 1; j <= n; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      }
+      prev = cur;
+    }
+    return prev[n];
+  }
+  function similarity(said, target) {
+    const a = normSpeech(said), b = normSpeech(target);
+    if (!a) return 0;
+    if (a === b) return 100;
+    return Math.max(0, Math.round((1 - levenshtein(a, b) / Math.max(a.length, b.length)) * 100));
+  }
+  const scoreStars = sc => sc >= 90 ? 5 : sc >= 75 ? 4 : sc >= 55 ? 3 : sc >= 35 ? 2 : 1;
+  const scoreLevel = sc => sc >= 90 ? "great" : sc >= 70 ? "good" : "try";
+  function scorePraise(sc, heard) {
+    if (!heard) return "没听清你说的，嘴巴离麦克风近一点再读一次～";
+    if (sc >= 100) return "完美！和标准音一模一样！";
+    if (sc >= 90) return "太标准了，发音很棒！";
+    if (sc >= 75) return "很棒，已经很接近了！";
+    if (sc >= 55) return "不错，再清楚一点就更好了";
+    if (sc >= 35) return "我听到的是这样，靠近麦克风再试一次吧～";
+    return "可能没听清，慢一点、大声一点再读一次～";
+  }
+
+  /** 跟读奖励：每天最多 30 星，防止刷星 */
+  function rewardSpeech(stars) {
+    const p = DB.profile, t = today();
+    p.counters.speak = (p.counters.speak || 0) + 1;
+    p.speakDaily = p.speakDaily || { date: "", count: 0, stars: 0 };
+    if (p.speakDaily.date !== t) p.speakDaily = { date: t, count: 0, stars: 0 };
+    const canReward = p.speakDaily.stars < 30;
+    if (canReward) { addStars(stars); p.speakDaily.stars += stars; }
+    save();
+    checkAchievements();
+    return canReward ? stars : 0;
+  }
 
   function showSpeech(word) {
-    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
-      toast("这台设备不支持录音");
-      return;
-    }
-    currentSpeechWord = word;
-    const old = $("#speechPanel");
-    if (old) old.remove();
+    const hasSR = !!SRClass();
+    const canRec = !!navigator.mediaDevices?.getUserMedia && !!window.MediaRecorder;
+    if (!hasSR && !canRec) return toast("这台设备不支持语音功能");
+
+    $("#speechPanel")?.remove();
     const panel = document.createElement("div");
     panel.id = "speechPanel";
     panel.className = "speech-panel";
     panel.innerHTML = `
       <div class="speech-head">
-        <b>🎤 跟读练习</b>
+        <b>🎤 跟读评测</b>
         <button class="icon-btn" id="speechClose">✕</button>
       </div>
       <div class="speech-word">${esc(word.word)} <small>${esc(word.phonetic)}</small></div>
       <div class="speech-actions">
         <button class="btn btn-blue btn-sm" id="speechListen">🔊 听标准音</button>
-        <button class="btn btn-green btn-sm" id="speechRec">🎤 按住说</button>
+        <button class="btn btn-green btn-sm" id="speechRec">${hasSR ? "🎤 按住读" : "🎤 按住录音"}</button>
       </div>
-      <div class="speech-status" id="speechStatus">先听一遍，再按住麦克风跟读</div>
+      <div class="speech-status" id="speechStatus">${hasSR ? "按住麦克风，清楚地读出这个单词，松开后自动打分" : "按住麦克风读一遍，再回放对比"}</div>
+      <div id="speechResult"></div>
       <div class="speech-actions" id="speechPlayRow" hidden>
         <button class="btn btn-ghost btn-sm" id="speechPlay">▶ 回放我的</button>
-        <button class="btn btn-green btn-sm" id="speechGood">👍 很像</button>
+        <button class="btn btn-green btn-sm" id="speechGood">👍 读得不错</button>
         <button class="btn btn-ghost btn-sm" id="speechAgain">🔁 再来</button>
       </div>`;
     $("#qbody").appendChild(panel);
     panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-    $("#speechClose").onclick = () => { stopRec(); panel.remove(); };
+    const status = $("#speechStatus");
+    const recBtn = $("#speechRec");
+    $("#speechClose").onclick = () => { stopAll(); panel.remove(); };
     $("#speechListen").onclick = () => playAudio(word.id);
-    $("#speechAgain").onclick = () => { recordedUrl = null; $("#speechPlayRow").hidden = true; $("#speechStatus").textContent = "再按一次麦克风，大胆读出来～"; };
-    $("#speechPlay").onclick = () => {
-      if (!recordedUrl) return;
-      const a = new Audio(recordedUrl);
-      a.play().catch(() => toast("回放失败"));
-    };
-    $("#speechGood").onclick = () => {
-      DB.profile.counters.speak = (DB.profile.counters.speak || 0) + 1;
-      addStars(3);
-      save();
-      checkAchievements();
-      $("#speechStatus").textContent = "太棒了！奖励 3 颗星星 ⭐";
-      sfx("ok");
-    };
 
-    const rec = $("#speechRec");
-    const start = async (e) => {
-      e.preventDefault();
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        chunks = [];
-        mediaRecorder = new MediaRecorder(stream);
-        mediaRecorder.ondataavailable = ev => ev.data.size && chunks.push(ev.data);
-        mediaRecorder.onstop = () => {
-          stream.getTracks().forEach(t => t.stop());
-          if (!chunks.length) return;
-          const blob = new Blob(chunks, { type: mediaRecorder.mimeType || "audio/webm" });
-          if (recordedUrl) URL.revokeObjectURL(recordedUrl);
-          recordedUrl = URL.createObjectURL(blob);
-          $("#speechPlayRow").hidden = false;
-          $("#speechStatus").textContent = "录好啦！回放听听，像不像？";
-          rec.textContent = "🎤 按住说";
+    /* --- 方式一：系统语音识别打分 --- */
+    if (hasSR) {
+      const startSR = () => {
+        try {
+          sr = new (SRClass())();
+        } catch { return fallback(); }
+        sr.lang = "en-GB";
+        sr.interimResults = false;
+        sr.maxAlternatives = 3;
+        let handled = false;
+        sr.onresult = e => {
+          handled = true;
+          const alts = [...e.results[0]].map(r => r.transcript);
+          let best = { t: "", s: -1 };
+          alts.forEach(t => { const sc = similarity(t, word.word); if (sc > best.s) best = { t, s: sc }; });
+          showScore(best.t, best.s);
         };
-        mediaRecorder.start();
-        rec.textContent = "🔴 松开结束";
-        $("#speechStatus").textContent = "正在录音…";
-        setTimeout(() => { if (mediaRecorder?.state === "recording") stopRec(); }, 6000);
-      } catch {
-        toast("需要允许麦克风权限");
+        sr.onerror = err => {
+          if (handled) return;
+          handled = true;
+          if (err.error === "no-speech") {
+            status.textContent = "没听到声音，靠近麦克风再按一次～";
+          } else {
+            status.textContent = "系统识别暂时不可用，已切换到录音回放模式";
+            fallback();
+          }
+        };
+        sr.onend = () => { recBtn.textContent = hasSR ? "🎤 按住读" : "🎤 按住录音"; };
+        status.textContent = "正在听…读完松开";
+        recBtn.textContent = "🔴 松开结束";
+        try { sr.start(); } catch { fallback(); }
+      };
+
+      function showScore(heard, score) {
+        const stars = scoreStars(score);
+        const got = rewardSpeech(stars);
+        sfx(score >= 70 ? "ok" : "bad");
+        $("#speechResult").innerHTML = `
+          <div class="speech-result">
+            <div class="score-badge" data-level="${scoreLevel(score)}">${score}<small>分</small></div>
+            <p class="said">我听到的是：<b>${heard ? esc(heard) : "（没听清）"}</b></p>
+            <p class="enc">${scorePraise(score, heard)}</p>
+            <p class="fine">${got ? `获得 ⭐ ${got} 颗星星` : "今天的跟读星星已经拿满啦，明天继续"}</p>
+            <button class="btn btn-blue btn-sm" id="speechRetry">🔁 再读一次</button>
+          </div>`;
+        status.textContent = "";
+        $("#speechRetry").onclick = () => {
+          $("#speechResult").innerHTML = "";
+          status.textContent = "按住麦克风，再读一次";
+        };
       }
-    };
-    rec.addEventListener("pointerdown", start);
-    rec.addEventListener("pointerup", stopRec);
-    rec.addEventListener("pointerleave", stopRec);
+
+      recBtn.addEventListener("pointerdown", e => { e.preventDefault(); startSR(); });
+      recBtn.addEventListener("pointerup", () => { try { sr?.stop(); } catch {} });
+      recBtn.addEventListener("pointerleave", () => { try { sr?.stop(); } catch {} });
+      return;
+    }
+
+    /* --- 方式二：降级为录音回放 --- */
+    fallback();
+
+    function fallback() {
+      recBtn.textContent = "🎤 按住录音";
+      $("#speechPlayRow").hidden = true;
+      $("#speechAgain").onclick = () => { recordedUrl = null; $("#speechPlayRow").hidden = true; status.textContent = "再按一次麦克风，大胆读出来～"; };
+      $("#speechPlay").onclick = () => {
+        if (!recordedUrl) return;
+        new Audio(recordedUrl).play().catch(() => toast("回放失败"));
+      };
+      $("#speechGood").onclick = () => {
+        const got = rewardSpeech(3);
+        status.textContent = got ? "太棒了！奖励 3 颗星星 ⭐" : "今天的跟读星星已经拿满啦";
+        sfx("ok");
+      };
+      if (recBtn.dataset.bound) return;
+      recBtn.dataset.bound = "1";
+      const start = async (e) => {
+        e.preventDefault();
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          chunks = [];
+          mediaRecorder = new MediaRecorder(stream);
+          mediaRecorder.ondataavailable = ev => ev.data.size && chunks.push(ev.data);
+          mediaRecorder.onstop = () => {
+            stream.getTracks().forEach(t => t.stop());
+            if (!chunks.length) return;
+            const blob = new Blob(chunks, { type: mediaRecorder.mimeType || "audio/webm" });
+            if (recordedUrl) URL.revokeObjectURL(recordedUrl);
+            recordedUrl = URL.createObjectURL(blob);
+            $("#speechPlayRow").hidden = false;
+            status.textContent = "录好啦！回放听听，也可以直接点「读得不错」";
+            recBtn.textContent = "🎤 按住录音";
+          };
+          mediaRecorder.start();
+          recBtn.textContent = "🔴 松开结束";
+          status.textContent = "正在录音…";
+          setTimeout(() => { if (mediaRecorder?.state === "recording") stopAll(); }, 6000);
+        } catch {
+          toast("需要允许麦克风权限");
+        }
+      };
+      recBtn.addEventListener("pointerdown", start);
+      recBtn.addEventListener("pointerup", stopAll);
+      recBtn.addEventListener("pointerleave", stopAll);
+    }
   }
-  function stopRec() {
+  function stopAll() {
+    try { sr?.stop(); } catch {}
     if (mediaRecorder?.state === "recording") mediaRecorder.stop();
   }
 

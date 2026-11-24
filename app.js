@@ -29,7 +29,7 @@ function freshDB() {
     profile: {
       streak: 0, longest: 0, lastActive: null, totalXp: 0,
       dailyNew: 10, reviewCap: 80, autoAudio: true,
-      sfx: true, voice: true, theme: "auto", specialDone: {}, specialStats: {}, created: today(),
+      sfx: true, voice: true, cardSpeech: true, theme: "auto", specialDone: {}, specialStats: {}, created: today(),
     },
   };
 }
@@ -93,8 +93,10 @@ function gradeWord(id, q, noAdvance = false) {
 function recordWrong(id, kind) {
   const s = stateOf(id);
   s.wrongBy = s.wrongBy || {};
-  const key = kind === "spell" ? "spell" : kind === "listen" ? "listen" : kind === "reveal" ? "recall" : "meaning";
+  const map = { spell: "spell", listen: "listen", reveal: "recall", pronounce: "pronounce" };
+  const key = map[kind] || "meaning";
   s.wrongBy[key] = (s.wrongBy[key] || 0) + 1;
+  if (key === "pronounce") s.wrong = Math.max(s.wrong || 0, 2); // 发音错也要进错词本
 }
 function dueWords() {
   const t = today();
@@ -668,7 +670,7 @@ function startDrill(type = "all") {
   });
   beginSession(qs, type === "all" ? "强化训练" : `错词专项 · ${TYPE_LABEL[type] || ""}`);
 }
-const TYPE_LABEL = { spell: "拼写", listen: "听音", meaning: "词义", recall: "回忆" };
+const TYPE_LABEL = { spell: "拼写", listen: "听音", meaning: "词义", recall: "回忆", pronounce: "发音" };
 /** 考前冲刺：错词 + 未来 3 天到期词，混合主动回忆，最多 20 题 */
 function startSprint() {
   const pool = new Map();
@@ -738,9 +740,14 @@ function renderQuestion() {
         <div class="cn">${esc(q.word.meaning)}</div>
       </div>
       <p class="spell-hint">点 🔊 听发音，记住后点下面的按钮</p>
+      <div id="cardVerify" class="card-verify"></div>
       <div style="text-align:center;margin-top:6px"><button class="btn btn-blue btn-sm" id="speakBtn">🎤 跟读练习</button></div>`;
-    check.textContent = "我记住了"; check.disabled = false; check.className = "btn btn-green btn-block";
-    $("#skipBtn").style.display = "none";
+    const canSay = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+    check.textContent = (canSay && DB.profile.cardSpeech !== false) ? "🎤 点击读出单词" : "我记住了";
+    check.disabled = false; check.className = "btn btn-green btn-block";
+    $("#skipBtn").style.display = "block";
+    $("#cardVerify").innerHTML = (canSay && DB.profile.cardSpeech !== false)
+      ? `<span class="cv-tip">先点 🔊 听发音，再点下面按钮读出这个单词</span>` : "";
     if (DB.profile.autoAudio) setTimeout(() => playAudio(q.word.id), 120);
     return;
   }
@@ -869,7 +876,12 @@ $("#checkBtn").addEventListener("click", () => {
   const s = session;
   const q = s.queue[s.i];
   if (!q) return;
-  if (q.kind === "card") return advance(true);
+  if (q.kind === "card") {
+    if (DB.profile.cardSpeech !== false && (window.SpeechRecognition || window.webkitSpeechRecognition)) {
+      return cardSpeechVerify(q);
+    }
+    return advance(true);
+  }
 
   // 主动回忆：第一次点击只翻开答案，由下面三个自评按钮判分
   if (q.kind === "reveal" && !s.revealed) {
@@ -1044,6 +1056,69 @@ function markDay(correct) {
   save();
 }
 
+/* ---------- 新词卡片语音验证 ---------- */
+let cardSR = null;
+function cardSpeechVerify(q) {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const box = $("#cardVerify");
+  const check = $("#checkBtn");
+  if (!box) return advance(true);
+  try { cardSR = new SR(); } catch { return advance(true); }
+  cardSR.lang = "en-GB";
+  cardSR.interimResults = false;
+  cardSR.maxAlternatives = 3;
+  let handled = false;
+  check.disabled = true;
+  check.textContent = "正在听…";
+  box.innerHTML = `<span class="cv-tip">🎤 正在听，请读出这个单词…</span>`;
+  cardSR.onresult = e => {
+    handled = true;
+    const alts = [...e.results[0]].map(r => r.transcript).filter(Boolean);
+    const heard = alts[0] || "";
+    const best = alts.map(t => Buddy.matchPronunciation(t, q.word.word)).sort((a, b) => b.score - a.score)[0] || { ok: false };
+    if (best.ok) {
+      box.innerHTML = `<span class="cv-ok">✓ ${heard ? "听到：" + esc(heard) : "通过"}，记住啦！</span>`;
+      sfx("ok");
+      speakKind("correct");
+      check.disabled = true;
+      setTimeout(() => advance(true), 450);
+    } else {
+      recordWrong(q.word.id, "pronounce");
+      save();
+      box.innerHTML = `<span class="cv-bad">我听到的是「${esc(heard || "没听清")}」，再读一次吧</span>`;
+      check.disabled = false;
+      check.textContent = "🎤 再读一次";
+      sfx("bad");
+    }
+  };
+  cardSR.onerror = err => {
+    if (handled) return;
+    handled = true;
+    if (err.error === "no-speech") {
+      box.innerHTML = `<span class="cv-bad">没听到声音，靠近麦克风再点一次</span>`;
+      check.disabled = false;
+      check.textContent = "🎤 再读一次";
+    } else {
+      box.innerHTML = `<span class="cv-bad">语音识别不可用，点下面继续</span>`;
+      check.disabled = false;
+      check.textContent = "我记住了";
+      DB.profile.cardSpeech = false;
+    }
+  };
+  cardSR.onend = () => {
+    if (!handled) {
+      box.innerHTML = `<span class="cv-bad">没有听到完整的单词，再试一次</span>`;
+      check.disabled = false;
+      check.textContent = "🎤 再读一次";
+    }
+  };
+  try { cardSR.start(); } catch {
+    check.disabled = false;
+    check.textContent = "我记住了";
+    DB.profile.cardSpeech = false;
+  }
+}
+
 /* ---------- 结束 ---------- */
 function finishSession() {
   const s = session;
@@ -1195,6 +1270,7 @@ function renderSettings() {
   $("#autoAudio").checked = p.autoAudio;
   $("#sfxOn").checked = p.sfx;
   $("#voiceOn").checked = p.voice !== false;
+  $("#cardSpeechOn").checked = p.cardSpeech !== false;
   $("#learnerName").value = p.name || "ZOE";
   $$("#themeSeg button").forEach(b => b.classList.toggle("on", b.dataset.theme === (p.theme || "auto")));
   updateOfflineState();
@@ -1234,6 +1310,9 @@ $("#autoAudio").addEventListener("change", e => { DB.profile.autoAudio = e.targe
 $("#sfxOn").addEventListener("change", e => {
   DB.profile.sfx = e.target.checked; save(true);
   if (e.target.checked) { ensureAudio(); sfx("ok"); }
+});
+$("#cardSpeechOn").addEventListener("change", e => {
+  DB.profile.cardSpeech = e.target.checked; save(true);
 });
 $("#voiceOn").addEventListener("change", e => {
   DB.profile.voice = e.target.checked; save(true);

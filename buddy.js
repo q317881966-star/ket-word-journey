@@ -736,5 +736,10 @@ const Buddy = (() => {
     name: learnerName, addStars,
     avatar: () => dragonSVG(),
     gameIcon,
+    matchPronunciation: (heard, target) => {
+      const homo = sameSound(heard, target);
+      const sc = homo ? 100 : similarity(heard, target);
+      return { ok: homo || sc >= 70, score: sc, homo };
+    },
   };
 })();

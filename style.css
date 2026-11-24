@@ -325,6 +325,7 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .w-type.t-listen { background: var(--blue-l); color: var(--blue-d); }
 .w-type.t-meaning { background: var(--green-l); color: var(--green-d); }
 .w-type.t-recall { background: #f3e8ff; color: #7c4dff; }
+.w-type.t-pronounce { background: #ffe1e1; color: #c93434; }
 .drill-types { display: flex; gap: 8px; margin-top: 10px; }
 .drill-types button {
   flex: 1; padding: 10px 4px; border-radius: 12px; border: 2px solid var(--line);
@@ -639,6 +640,10 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .chest-card .btn-sm { padding: 6px 14px; font-size: 13px; }
 
 /* ---------- 跟读面板 ---------- */
+.card-verify { text-align: center; margin-top: 8px; font-size: 13px; font-weight: 800; min-height: 18px; }
+.cv-tip { color: var(--ink-2); }
+.cv-ok { color: var(--green-d); }
+.cv-bad { color: var(--red-d); }
 .speech-panel {
   margin-top: 14px; padding: 16px; border: 2px solid var(--blue); border-radius: 18px;
   background: var(--blue-l); animation: fadeUp .25s ease both;

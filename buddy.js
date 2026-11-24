@@ -35,6 +35,7 @@ const Buddy = (() => {
     { id: "review200", icon: "🔁", name: "复习达人", desc: "累计复习 200 次", reward: 100, need: () => (DB.profile.counters.review || 0) >= 200 },
     { id: "chest7", icon: "🎁", name: "开箱达人", desc: "开满 7 次宝箱", reward: 80, need: () => (DB.profile.counters.chest || 0) >= 7 },
     { id: "speak10", icon: "🎤", name: "小小播音员", desc: "跟读 10 次", reward: 50, need: () => (DB.profile.counters.speak || 0) >= 10 },
+    { id: "match100", icon: "🧩", name: "配对高手", desc: "累计配对 100 对", reward: 100, need: () => (DB.profile.counters.gamePairs || 0) >= 100 },
   ];
 
   const LINES = {

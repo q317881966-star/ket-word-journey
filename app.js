@@ -266,6 +266,7 @@ function renderHome() {
 
   renderMap();
   Buddy.renderChest();
+  Game.renderEntry();
 }
 
 function renderMap() {

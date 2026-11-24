@@ -44,6 +44,11 @@
   <section id="page-home" class="page active">
     <div id="todayCard"></div>
     <div id="chest"></div>
+    <div id="gameEntry" class="game-entry">
+      <div class="ge-art">🎮</div>
+      <div class="ge-txt"><b>单词配对</b><span id="gameSub">限时 60 秒，配对 8 个单词</span></div>
+      <button class="btn btn-blue btn-sm" id="playGame">开玩</button>
+    </div>
     <div class="section-title"><span>闯关地图</span><small id="mapHint"></small></div>
     <div id="map" class="map"></div>
     <div class="map-end">🏁 终点：1612 词全部掌握</div>
@@ -175,6 +180,22 @@
   <button id="resDone" class="btn btn-green btn-block">收下奖励</button>
 </div>
 
+<!-- 单词配对 -->
+<div id="game" class="game">
+  <header class="game-head">
+    <button id="gameQuit" class="icon-btn" aria-label="退出">✕</button>
+    <div class="game-title">单词配对</div>
+    <div class="game-timer" id="gameTimer">60</div>
+  </header>
+  <div class="game-stats">
+    <span id="gameProgress">0 / 8 对</span>
+    <span id="gameCombo" class="combo"></span>
+  </div>
+  <div class="game-hint">先点一张英文卡，再点它对应的中文</div>
+  <div id="gameGrid" class="game-grid"></div>
+  <div id="gameOver" class="game-over"></div>
+</div>
+
 <div id="toast" class="toast"></div>
 
 <!-- 家长周报 -->
@@ -186,6 +207,7 @@
   <div id="reportBody" class="report-body"></div>
 </div>
 
+<script src="game.js"></script>
 <script src="buddy.js"></script>
 
 <script src="app.js"></script>

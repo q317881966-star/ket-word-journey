@@ -108,17 +108,12 @@ const Game = (() => {
     const cfg = MODES[mode] || MODES.pair;
     const ws = pickWords(PAIRS, mode);
     if (ws.length < 4) return toast("先学几个单词再来玩吧");
-    const cards = [];
-    ws.forEach(w => {
-      if (mode === "listen") {
-        cards.push({ pid: w.id, kind: "audio", text: "🔊" });
-      } else {
-        cards.push({ pid: w.id, kind: "en", text: w.word });
-      }
-      cards.push({ pid: w.id, kind: "cn", text: w.meaning });
-    });
+    const left = ws.map(w => mode === "listen"
+      ? { pid: w.id, kind: "audio", text: "🔊" }
+      : { pid: w.id, kind: "en", text: w.word });
+    const right = ws.map(w => ({ pid: w.id, kind: "cn", text: w.meaning }));
     G = {
-      mode, cards: shuffle(cards), total: ws.length, sel: [], matched: 0,
+      mode, cards: [...shuffle(left), ...shuffle(right)], total: ws.length, sel: [], matched: 0,
       time: cfg.time, combo: 0, maxCombo: 0, over: false, timer: null, locked: false,
     };
     $("#game").classList.add("open");
@@ -142,10 +137,13 @@ const Game = (() => {
   }
 
   function renderGrid() {
-    $("#gameGrid").innerHTML = G.cards.map((c, i) => `
-      <button class="gcard ${c.kind}" data-i="${i}">
-        <span>${esc(c.text)}</span>
-      </button>`).join("");
+    const cell = i => {
+      const c = G.cards[i];
+      return `<button class="gcard ${c.kind}" data-i="${i}"><span>${esc(c.text)}</span></button>`;
+    };
+    const left = Array.from({ length: G.total }, (_, k) => cell(k)).join("");
+    const right = Array.from({ length: G.total }, (_, k) => cell(k + G.total)).join("");
+    $("#gameGrid").innerHTML = `<div class="gcol">${left}</div><div class="gcol">${right}</div>`;
   }
 
   function updateHUD() {

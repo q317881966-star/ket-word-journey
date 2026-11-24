@@ -180,8 +180,7 @@ const Game = (() => {
     if (isPair) {
       setTimeout(() => {
         A.matched = card.matched = true;
-        paint(a, "matched");
-        paint(i, "matched");
+        [a, i].forEach(k => { unpaint(k, "sel"); paint(k, "matched"); });
         G.matched += 1;
         G.combo += 1;
         G.maxCombo = Math.max(G.maxCombo, G.combo);

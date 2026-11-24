@@ -167,7 +167,10 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .unit-head.u3 span { background: #f3e8ff; color: #7c4dff; }
 .unit-head.u4 span { background: var(--red-l); color: var(--bad-ink); }
 
-.path-row { height: 90px; display: flex; justify-content: center; align-items: center; position: relative; }
+.path-row {
+  height: 90px; display: flex; justify-content: center; align-items: center; position: relative;
+  content-visibility: auto; contain-intrinsic-size: 90px;
+}
 .side-game {
   position: absolute; left: 50%; top: 50%;
   width: clamp(140px, 26vw, 200px);

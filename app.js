@@ -153,15 +153,37 @@ function markActive() {
   p.longest = Math.max(p.longest, p.streak);
 }
 
-/* ---------- 音频 ---------- */
+/* ---------- 音频（缓存复用，减少卡顿） ---------- */
 let currentAudio = null;
+const wordAudioCache = new Map();
+function getWordAudio(id) {
+  const key = `audio/${id}.mp3`;
+  let a = wordAudioCache.get(key);
+  if (!a) {
+    a = new Audio(key);
+    a.preload = "auto";
+    wordAudioCache.set(key, a);
+    if (wordAudioCache.size > 80) {
+      const oldest = wordAudioCache.keys().next().value;
+      wordAudioCache.delete(oldest);
+    }
+  }
+  return a;
+}
+function preloadQueueAudio() {
+  if (!session) return;
+  session.queue.slice(session.i + 1, session.i + 5).forEach(q => {
+    if (q?.word) getWordAudio(q.word.id);
+  });
+}
 function playAudio(id, btn) {
   const w = WORDS.find(x => x.id === id);
   if (!w) return;
   if (currentAudio) { currentAudio.pause(); currentAudio = null; }
   if (btn) btn.classList.add("playing");
   const done = () => btn && btn.classList.remove("playing");
-  const a = new Audio(`audio/${id}.mp3`);
+  const a = getWordAudio(id);
+  try { a.currentTime = 0; } catch {}
   currentAudio = a;
   a.onended = done; a.onerror = () => { done(); speak(w.word); };
   a.play().catch(() => { done(); speak(w.word); });
@@ -204,6 +226,7 @@ function sayZh(text) {
 /* ---------- 预生成的可爱语音 ---------- */
 const VOICE_BANK = { correct: 16, wrong: 8, finish: 3, chest: 3, levelup: 2, game: 4 };
 const lastVoice = {};
+const voiceCache = {};
 let currentVoice = null;
 function speakKind(kind, fallback) {
   if (!DB?.profile?.voice) return;
@@ -215,7 +238,10 @@ function speakKind(kind, fallback) {
   try {
     if (currentVoice) { currentVoice.pause(); currentVoice = null; }
     if ("speechSynthesis" in window) speechSynthesis.cancel();
-    const a = new Audio(`audio/voice/${kind}-${i}.mp3`);
+    const src = `audio/voice/${kind}-${i}.mp3`;
+    let a = voiceCache[src];
+    if (!a) { a = new Audio(src); a.preload = "auto"; voiceCache[src] = a; }
+    a.currentTime = 0;
     currentVoice = a;
     a.onended = () => { if (currentVoice === a) currentVoice = null; };
     a.play().catch(() => sayZh(fallback || ""));
@@ -242,13 +268,20 @@ function tone(freq, dur, type = "sine", vol = .06, delay = 0) {
   o.start(t); o.stop(t + dur + .03);
 }
 const SFX_FILES = { ok: "audio/sfx/ok-v2.wav", bad: "audio/sfx/bad-v2.wav", done: "audio/sfx/done-v2.wav", tap: "audio/sfx/tap-v2.wav" };
+const sfxCache = {};
 function sfx(kind) {
   if (!DB?.profile?.sfx) return;
   const src = SFX_FILES[kind];
   if (src) {
     try {
-      const a = new Audio(src);
-      a.volume = .9;
+      let a = sfxCache[src];
+      if (!a) {
+        a = new Audio(src);
+        a.preload = "auto";
+        a.volume = .9;
+        sfxCache[src] = a;
+      }
+      a.currentTime = 0;
       a.play().catch(() => webSfx(kind));
       return;
     } catch {}
@@ -691,6 +724,7 @@ function renderQuestion() {
   body.scrollTop = 0;
   body.classList.toggle("center", q.kind === "card");
 
+  preloadQueueAudio();
   if (q.kind === "card") {
     body.innerHTML = `
       <p class="q-prompt">新单词</p>
@@ -1291,7 +1325,14 @@ async function boot() {
   showPage("home");
   setTimeout(() => $("#boot").classList.add("hide"), 250);
   if (DB.profile.autoAudio) preloadNextAudio();
-  ["correct-1", "wrong-1"].forEach(f => { const a = new Audio(); a.src = `audio/voice/${f}.mp3`; a.preload = "auto"; });
+  // 预加载常用音效与语音，避免第一次播放延迟
+  Object.values(SFX_FILES).forEach(src => {
+    if (!sfxCache[src]) { const a = new Audio(src); a.preload = "auto"; sfxCache[src] = a; }
+  });
+  ["correct-1", "wrong-1", "finish-1", "chest-1", "levelup-1", "game-1"].forEach(k => {
+    const src = `audio/voice/${k}.mp3`;
+    if (!voiceCache[src]) { const a = new Audio(src); a.preload = "auto"; voiceCache[src] = a; }
+  });
 }
 
 function computeStreak() {

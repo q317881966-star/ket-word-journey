@@ -401,6 +401,7 @@ function renderMap() {
   const curGroup = cur === Infinity ? null : cur;
 
   let html = "";
+  let stationIdx = 0;
   for (let g = 1; g <= groups; g++) {
     if ((g - 1) % 10 === 0) {
       const unit = Math.ceil(g / 10);
@@ -422,22 +423,26 @@ function renderMap() {
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
     const x = Math.round(Math.sin(g * 0.62) * 74);
-    const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
-    const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
-    let gameBtn = "";
+    let stationRow = "";
     if (g % 3 === 0 && g < groups) {
-      const key = STATIONS[Math.floor(g / 3 - 1) % STATIONS.length];
+      const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
+      const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
+      const key = STATIONS[stationIdx % STATIONS.length];
       const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
       const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
-      gameBtn = `<button class="side-game" ${attr} style="--sx:${x >= 0 ? -118 : 118}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
+      const sx = stationIdx % 2 === 0 ? -92 : 92;
+      stationIdx++;
+      stationRow = `<div class="path-row station-row">
+        <button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>
+      </div>`;
     }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
         ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
         ${learned && !anyDue ? "✓" : g}
       </button>
-      ${gameBtn}
-    </div>`;
+    </div>
+    ${stationRow}`;
     const posInUnit = ((g - 1) % 10) + 1;
     const unit = Math.ceil(g / 10);
     if (SPECIAL_POS[posInUnit]) {

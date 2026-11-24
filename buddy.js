@@ -655,6 +655,7 @@ const Buddy = (() => {
   /* ---------- 游戏入口图标：三种小绿龙造型 ---------- */
   function gameIcon(mode) {
     const base = `
+      <ellipse cx="24" cy="44" rx="14" ry="3" fill="rgba(0,0,0,.10)"/>
       <ellipse cx="24" cy="29" rx="16" ry="14.5" fill="#6EDB3A"/>
       <circle cx="18" cy="27" r="4.4" fill="#fff"/><circle cx="19" cy="28" r="2.2" fill="#26282b"/>
       <circle cx="30" cy="27" r="4.4" fill="#fff"/><circle cx="31" cy="28" r="2.2" fill="#26282b"/>

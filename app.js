@@ -174,8 +174,9 @@ function sayZh(text) {
 }
 
 /* ---------- 预生成的可爱语音 ---------- */
-const VOICE_BANK = { correct: 7, wrong: 7, chest: 2, levelup: 2, game: 3 };
+const VOICE_BANK = { correct: 16, wrong: 8, finish: 3, chest: 3, levelup: 2, game: 4 };
 const lastVoice = {};
+let currentVoice = null;
 function speakKind(kind, fallback) {
   if (!DB?.profile?.voice) return;
   const n = VOICE_BANK[kind];
@@ -184,7 +185,11 @@ function speakKind(kind, fallback) {
   if (n > 1 && i === lastVoice[kind]) i = (i % n) + 1;
   lastVoice[kind] = i;
   try {
+    if (currentVoice) { currentVoice.pause(); currentVoice = null; }
+    if ("speechSynthesis" in window) speechSynthesis.cancel();
     const a = new Audio(`audio/voice/${kind}-${i}.mp3`);
+    currentVoice = a;
+    a.onended = () => { if (currentVoice === a) currentVoice = null; };
     a.play().catch(() => sayZh(fallback || ""));
   } catch { sayZh(fallback || ""); }
 }
@@ -770,6 +775,7 @@ function finishSession() {
   $("#result").classList.add("open");
   confetti();
   sfx("done");
+  if (s.title === "今日学习") speakKind("finish");
   Buddy.onSessionEnd(s);
   session = null;
   renderHome();

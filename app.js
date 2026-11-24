@@ -299,99 +299,83 @@ function renderHome() {
   $("#masterNum").textContent = DB.profile.stars || 0;
 
   const due = dueWords().length;
-  const newNeeded = Math.max(0, DB.profile.dailyNew - todayNewDone());
+  const doneNew = Math.min(todayNewDone(), DB.profile.dailyNew);
   const dailyDone = todayNewDone() >= DB.profile.dailyNew && due === 0;
-  const total = learnedCount();
-  const pct = Math.round(total / WORDS.length * 100);
 
-  $("#todayCard").innerHTML = `
-    <div class="home-buddy" id="homeBuddy" role="button">
-      <div class="hb-art">${Buddy.avatar()}</div>
-      <div class="hb-line">${esc(Buddy.line("idle"))}</div>
-      <div class="hb-stars">⭐ ${DB.profile.stars || 0}</div>
-    </div>
-    <div class="today ${dailyDone ? "done" : ""}">
-      <h2>${dailyDone ? "今日任务完成 🎉" : "今天的学习"}</h2>
-      <p class="sub">${dailyDone ? "想多练几组？点下面的按钮继续复习。" : "完成新词和到期复习，就能守住连胜。"}</p>
-      <div class="goals">
-        <div class="goal ${newNeeded === 0 ? "full" : ""}">
-          <div class="g-ico">✨</div>
-          <div class="g-txt"><b>${Math.min(todayNewDone(), DB.profile.dailyNew)}/${DB.profile.dailyNew}</b><span>新词</span></div>
-        </div>
-        <div class="goal ${due === 0 ? "full" : ""}" data-due role="button" title="点此只做复习">
-          <div class="g-ico">🔁</div>
-          <div class="g-txt"><b>${due}</b><span>${due ? "到期复习 · 点击开练" : "到期复习"}</span></div>
-        </div>
-        <div class="ring" style="background:conic-gradient(var(--green) ${pct * 3.6}deg, var(--bg-2) 0)">
-          <i>${pct}%</i>
-        </div>
+  $("#todayBar").innerHTML = `
+    <div class="today-bar ${dailyDone ? "done" : ""}">
+      <div class="tb-art" id="homeBuddy" role="button">${Buddy.avatar()}</div>
+      <div class="tb-main">
+        <b>${dailyDone ? "今天完成啦 🎉" : `今天 ${doneNew}/${DB.profile.dailyNew} 个新词`}</b>
+        <span>${due ? `🔁 ${due} 个到期复习` : "🔁 没有到期复习"} · 🔥 ${DB.profile.streak} 天</span>
       </div>
-      <button id="startDaily" class="btn ${dailyDone ? "btn-blue" : "btn-green"} btn-block">
-        ${dailyDone ? "再练一轮" : "开始今日学习"}
-      </button>
+      <button class="btn ${dailyDone ? "btn-blue" : "btn-green"} btn-sm" id="startDaily">${dailyDone ? "再练" : "开始"}</button>
     </div>`;
   $("#startDaily").onclick = () => startDaily();
-  $("#todayCard").querySelector(".goal[data-due]")?.addEventListener("click", startDueReview);
-  $("#homeBuddy")?.addEventListener("click", () => showPage("buddy"));
+  $("#homeBuddy").onclick = () => showPage("buddy");
 
   renderMap();
   Buddy.renderChest();
-  Game.renderEntry();
+}
+
+function gameStation() {
+  return `<div class="game-station">
+    <button data-gmode="pair"><span>🔤</span>配对</button>
+    <button data-gmode="listen"><span>🔊</span>听音</button>
+    <button data-gmode="daily"><span>🏆</span>挑战</button>
+  </div>`;
 }
 
 function renderMap() {
   const map = $("#map");
+  const groups = Math.ceil(WORDS.length / 10);
   const cur = WORDS.filter(w => !isLearned(w.id)).reduce((g, w) => Math.min(g, w.group), Infinity);
   const curGroup = cur === Infinity ? null : cur;
-  const groups = Math.ceil(WORDS.length / 10);
-  const maxG = curGroup ? Math.min(groups, curGroup + 6) : groups;
-  $("#mapHint").textContent = `已学 ${learnedCount()} / ${WORDS.length}`;
 
   let html = "";
-  const perRow = 3;
-  for (let row = 0; row * perRow < maxG; row++) {
-    const rev = row % 2 === 1;
-    const nums = [0, 1, 2].map(i => row * perRow + i + 1);
-    const order = rev ? [...nums].reverse() : nums;   // 视觉顺序：蛇形折返
-    html += `<div class="map-row">`;
-    order.forEach((g, idx) => {
-      if (g > maxG) {
-        html += `<span class="node ghost"></span>`;
-      } else {
-        const ws = groupWords(g);
-        const learned = ws.every(w => isLearned(w.id));
-        const anyDue = ws.some(w => {
-          const s = DB.states[w.id];
-          return s && s.status !== "new" && s.due && s.due <= today();
-        });
-        const isCur = g === curGroup;
-        let cls = "node";
-        if (learned && !anyDue) cls += " done";
-        else if (learned && anyDue) cls += " reviewdue";
-        else if (isCur) cls += " current";
-        else if (g > (curGroup ?? groups)) cls += " locked";
-        const label = learned && !anyDue ? "✓" : g;
-        html += `<button class="${cls}" data-group="${g}">
-          ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
-          ${label}
-        </button>`;
-      }
-      if (idx < 2) html += `<span class="link${order[idx + 1] > maxG ? " ghost" : ""}"></span>`;
-    });
-    html += `</div>`;
-    // 蛇形转弯处的竖向连接
-    if ((row + 1) * perRow < maxG) {
-      html += `<div class="vconn ${(row + 1) % 2 === 1 ? "right" : "left"}"></div>`;
+  for (let g = 1; g <= groups; g++) {
+    if ((g - 1) % 10 === 0) {
+      const unit = Math.ceil(g / 10);
+      html += `<div class="unit-head u${(unit - 1) % 5}">
+        <span>第 ${unit} 单元</span>
+        <small>第 ${(g - 1) * 10 + 1}–${Math.min(g * 10, WORDS.length)} 个单词</small>
+      </div>`;
     }
-  }
-  if (maxG < groups) {
-    html += `<div class="map-more">🔒 后面还有 <b>${groups - maxG}</b> 关，学完当前关卡自动解锁</div>`;
+    const ws = groupWords(g);
+    const learned = ws.every(w => isLearned(w.id));
+    const anyDue = ws.some(w => {
+      const s = DB.states[w.id];
+      return s && s.status !== "new" && s.due && s.due <= today();
+    });
+    const isCur = g === curGroup;
+    let cls = "pnode";
+    if (learned && !anyDue) cls += " done";
+    else if (learned && anyDue) cls += " reviewdue";
+    else if (isCur) cls += " current";
+    else if (g > (curGroup ?? groups)) cls += " locked";
+    const x = Math.round(Math.sin(g * 0.62) * 74);
+    const gameBtn = (g % 5 === 0 && g < groups)
+      ? `<button class="side-game" style="--sx:${x >= 0 ? -112 : 112}px" title="小游戏">🎮</button>`
+      : "";
+    html += `<div class="path-row">
+      <button class="${cls}" data-group="${g}" style="--x:${x}px">
+        ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
+        ${learned && !anyDue ? "✓" : g}
+      </button>
+      ${gameBtn}
+    </div>`;
   }
   map.innerHTML = html;
+
+  const el = map.querySelector(".pnode.current");
+  if (el && curGroup > 12) setTimeout(() => el.scrollIntoView({ block: "center" }), 80);
 }
 
 $("#map").addEventListener("click", e => {
-  const b = e.target.closest(".node");
+  if (e.target.closest(".side-game")) { Game.openMenu(); return; }
+  const gm = e.target.closest("[data-gmode]");
+  if (gm) { Game.start(gm.dataset.gmode); return; }
+  const b = e.target.closest(".pnode");
   if (!b) return;
   const g = Number(b.dataset.group);
   if (b.classList.contains("locked")) return toast("先完成前面的关卡");

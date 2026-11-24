@@ -300,15 +300,14 @@ const Game = (() => {
 
   /* ---------- 事件 ---------- */
   function bind() {
-    document.getElementById("gameGrid").addEventListener("click", e => {
+    document.getElementById("gameGrid")?.addEventListener("click", e => {
       const c = e.target.closest(".gcard");
       if (c) onCard(Number(c.dataset.i));
     });
-    document.getElementById("gameQuit").addEventListener("click", () => {
+    document.getElementById("gameQuit")?.addEventListener("click", () => {
       if (G && !G.over && G.matched > 0 && !confirm("退出这一局？本局成绩不会保存。")) return;
       close();
     });
-    document.getElementById("playGame").addEventListener("click", openMenu);
   }
   document.addEventListener("DOMContentLoaded", bind);
 

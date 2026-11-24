@@ -125,7 +125,85 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .icon-btn { font-size: 26px; color: var(--ink-3); width: 44px; height: 44px; border-radius: 12px; }
 .icon-btn:active { background: var(--bg-2); }
 
-/* ---------- 首页伙伴条 ---------- */
+/* ---------- 多邻国式路径首页 ---------- */
+.today-bar {
+  display: flex; align-items: center; gap: 12px; margin: 2px 0 0; padding: 8px 14px;
+  border: 2px solid var(--line); border-radius: 18px; background: var(--card);
+  box-shadow: var(--shadow);
+}
+.today-bar .tb-art { width: 46px; flex: none; cursor: pointer; }
+.today-bar .tb-art svg { width: 100%; height: auto; animation: bob 2.8s ease-in-out infinite; }
+.today-bar .tb-main { flex: 1; min-width: 0; }
+.today-bar .tb-main b { display: block; font-size: 16px; }
+.today-bar .tb-main span { font-size: 12px; color: var(--ink-2); }
+.today-bar .btn-sm { flex: none; }
+
+.path { max-width: 520px; margin: 0 auto; padding: 0 8px 70px; }
+.unit-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 20px 16px 6px;
+}
+.unit-head span {
+  font-size: 17px; font-weight: 900; padding: 5px 14px; border-radius: 12px;
+  background: var(--green-l); color: var(--green-d);
+}
+.unit-head small { font-size: 12px; color: var(--ink-3); }
+.unit-head.u1 span { background: var(--blue-l); color: var(--blue-d); }
+.unit-head.u2 span { background: #fff3cc; color: #a07a00; }
+.unit-head.u3 span { background: #f3e8ff; color: #7c4dff; }
+.unit-head.u4 span { background: var(--red-l); color: var(--bad-ink); }
+
+.path-row { height: 96px; display: flex; justify-content: center; align-items: center; position: relative; }
+.side-game {
+  position: absolute; left: 50%; top: 50%; width: 54px; height: 54px;
+  margin: -27px 0 0 -27px; transform: translateX(var(--sx, 0px));
+  border-radius: 16px; border: 2px solid var(--blue); border-bottom-width: 4px;
+  background: var(--blue-l); font-size: 24px; z-index: 2;
+}
+.side-game:active { transform: translateX(var(--sx, 0px)) scale(.94); }
+.pnode {
+  width: 84px; height: 84px; border-radius: 50%; position: relative;
+  display: grid; place-items: center; font-size: 26px; font-weight: 900;
+  background: var(--bg-2); color: var(--ink-3);
+  box-shadow: 0 6px 0 var(--node-shadow);
+  transform: translateX(var(--x, 0px));
+  transition: transform .12s;
+}
+.pnode:active { transform: translateX(var(--x, 0px)) scale(.94); }
+.pnode.locked { opacity: .72; }
+.pnode.done { background: var(--green); color: #fff; box-shadow: 0 6px 0 var(--green-d); }
+.pnode.reviewdue { background: var(--blue); color: #fff; box-shadow: 0 6px 0 var(--blue-d); }
+.pnode.current {
+  background: var(--green); color: #fff;
+  box-shadow: 0 6px 0 var(--green-d), 0 0 0 8px rgba(88,204,2,.18);
+  animation: pulse 2s infinite;
+}
+.pnode.current.reviewdue {
+  background: var(--blue);
+  box-shadow: 0 6px 0 var(--blue-d), 0 0 0 8px rgba(28,176,246,.18);
+}
+.pnode .bubble {
+  position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+  background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 4px 10px;
+  font-size: 12px; font-weight: 900; white-space: nowrap; box-shadow: var(--shadow); color: var(--ink);
+}
+.pnode .bubble::after {
+  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 7px solid transparent; border-top-color: var(--line);
+}
+.game-station {
+  display: flex; justify-content: center; gap: 10px;
+  margin: 4px auto 16px; max-width: 400px; padding: 0 16px;
+}
+.game-station button {
+  flex: 1; height: 56px; border-radius: 14px; border: 2px solid var(--line); border-bottom-width: 4px;
+  background: var(--card); font-weight: 900; font-size: 13px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+}
+.game-station button span { font-size: 20px; }
+.game-station button:active { transform: translateY(2px); border-bottom-width: 2px; }
+
+/* ---------- 首页伙伴条（旧版保留） ---------- */
 .home-buddy {
   display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding: 8px 14px;
   border: 2px solid var(--line); border-radius: 16px; background: var(--card);
@@ -502,14 +580,16 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 
 /* ---------- 宝箱 ---------- */
 .chest-card {
-  display: flex; align-items: center; gap: 14px; margin-top: 14px; padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px; margin-top: 8px; padding: 7px 14px;
   border-radius: 18px; border: 2px solid var(--yellow); background: linear-gradient(135deg, #fff6cc, var(--card));
   animation: fadeUp .3s ease both;
 }
-.chest-art { font-size: 40px; animation: bob 1.6s ease-in-out infinite; }
+.chest-art { font-size: 26px; animation: bob 1.6s ease-in-out infinite; }
 .chest-txt { flex: 1; }
-.chest-txt b { display: block; font-size: 16px; }
-.chest-txt span { font-size: 12px; color: var(--ink-2); }
+.chest-txt { display: flex; align-items: baseline; gap: 8px; }
+.chest-txt b { font-size: 14px; }
+.chest-txt span { font-size: 11px; color: var(--ink-2); }
+.chest-card .btn-sm { padding: 6px 14px; font-size: 13px; }
 
 /* ---------- 跟读面板 ---------- */
 .speech-panel {

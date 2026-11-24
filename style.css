@@ -211,8 +211,7 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .pnode.special.done { opacity: .85; }
 .sp-wrong { background: #ffd9d9; color: #b42e2e; box-shadow: 0 5px 0 #e8a6a6; }
 .sp-recall { background: #efe0ff; color: #6c3fd0; box-shadow: 0 5px 0 #c9a8f0; }
-.sp-d7 { background: var(--blue-l); color: var(--blue-d); box-shadow: 0 5px 0 #a8d8f0; }
-.sp-d10 { background: #fff0bf; color: #96700a; box-shadow: 0 5px 0 #e0c46a; }
+.sp-intensive { background: #ffe6bf; color: #a85e00; box-shadow: 0 5px 0 #e0b070; }
 
 .game-station {
   display: flex; justify-content: center; gap: 10px;

@@ -342,12 +342,11 @@ function renderHome() {
 }
 
 const SPECIALS = {
-  wrong:  { label: "错题复习", icon: "📕", cls: "sp-wrong" },
-  recall: { label: "回忆复习", icon: "🧠", cls: "sp-recall" },
-  day7:   { label: "7 天回顾", icon: "📅", cls: "sp-d7" },
-  day10:  { label: "10 天回顾", icon: "🏆", cls: "sp-d10" },
+  recall:    { label: "回忆复习", icon: "🧠", cls: "sp-recall" },
+  wrong:     { label: "错题复习", icon: "📕", cls: "sp-wrong" },
+  intensive: { label: "强化训练", icon: "💪", cls: "sp-intensive" },
 };
-const SPECIAL_POS = { 3: "wrong", 5: "recall", 7: "day7", 10: "day10" };
+const SPECIAL_POS = { 3: "recall", 7: "wrong", 10: "intensive" };
 
 function startSpecial(kind, unit) {
   const unitWords = WORDS.filter(w => Math.ceil(w.group / 10) === unit);
@@ -362,9 +361,8 @@ function startSpecial(kind, unit) {
     pool = uniq([...allWrong, ...dueWords(), ...learned, ...unitWords]);
   } else if (kind === "recall") {
     pool = learned.length ? learned : unitWords;
-  } else if (kind === "day7") {
-    pool = uniq([...dueWords(), ...learned, ...allWrong]);
-    if (!pool.length) pool = unitWords;
+  } else if (kind === "intensive") {
+    pool = uniq([...allWrong, ...dueWords(), ...learned, ...unitWords]);
   } else {
     pool = uniq([...learned, ...allWrong, ...unitWords]);
   }
@@ -422,9 +420,10 @@ function renderMap() {
     else if (learned && anyDue) cls += " reviewdue";
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
-    const x = Math.round(Math.sin(g * 0.62) * 62);
+    const posInUnit = ((g - 1) % 10) + 1;
+    const x = Math.round(Math.sin((posInUnit - 1) * 0.7) * 62);
     let sideBtn = "";
-    if (g % 3 === 0 && g < groups) {
+    if ((posInUnit === 2 || posInUnit === 5) && g < groups) {
       const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
       const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
       const key = STATIONS[stationIdx % STATIONS.length];
@@ -445,12 +444,11 @@ function renderMap() {
       </button>
       ${sideBtn}
     </div>`;
-    const posInUnit = ((g - 1) % 10) + 1;
     const unit = Math.ceil(g / 10);
     if (SPECIAL_POS[posInUnit]) {
       const kind = SPECIAL_POS[posInUnit];
       const done = DB.profile.specialDone?.[`${unit}-${kind}`];
-      const spx = Math.round(Math.sin((g + 0.55) * 0.62) * 62);
+      const spx = Math.round(Math.sin((posInUnit - 0.5) * 0.7) * 62);
       html += `<div class="path-row">
         <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" style="--x:${spx}px">
           <span class="sp-ico">${done ? "✓" : SPECIALS[kind].icon}</span>

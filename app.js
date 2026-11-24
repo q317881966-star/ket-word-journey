@@ -423,35 +423,38 @@ function renderMap() {
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
     const x = Math.round(Math.sin(g * 0.62) * 74);
-    let stationRow = "";
+    let sideBtn = "";
     if (g % 3 === 0 && g < groups) {
       const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
       const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
       const key = STATIONS[stationIdx % STATIONS.length];
       const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
       const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
-      const sx = stationIdx % 2 === 0 ? -92 : 92;
+      // 优先一左一右交替；该侧会撞到节点时自动换到对侧
+      let side = stationIdx % 2 === 0 ? -1 : 1;
+      const nodeSide = x >= 0 ? 1 : -1;
+      if (side === nodeSide && Math.abs(x) > 28) side = -side;
+      const sx = side * 128;
       stationIdx++;
-      stationRow = `<div class="path-row station-row">
-        <button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>
-      </div>`;
+      sideBtn = `<button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
     }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
         ${isCur ? `<span class="bubble">${anyDue ? "复习" : "开始"}</span>` : ""}
         ${learned && !anyDue ? "✓" : g}
       </button>
-    </div>
-    ${stationRow}`;
+      ${sideBtn}
+    </div>`;
     const posInUnit = ((g - 1) % 10) + 1;
     const unit = Math.ceil(g / 10);
     if (SPECIAL_POS[posInUnit]) {
       const kind = SPECIAL_POS[posInUnit];
       const done = DB.profile.specialDone?.[`${unit}-${kind}`];
-      html += `<div class="path-row special-row">
-        <button class="snode ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}">
-          <span class="s-ico">${done ? "✓" : SPECIALS[kind].icon}</span>
-          <span class="s-label">${SPECIALS[kind].label}</span>
+      const spx = Math.round(Math.sin((g + 0.55) * 0.62) * 74);
+      html += `<div class="path-row">
+        <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" style="--x:${spx}px">
+          <span class="sp-ico">${done ? "✓" : SPECIALS[kind].icon}</span>
+          <span class="sp-txt">${SPECIALS[kind].label}</span>
         </button>
       </div>`;
     }

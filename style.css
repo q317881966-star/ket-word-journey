@@ -163,10 +163,9 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .unit-head.u4 span { background: var(--red-l); color: var(--bad-ink); }
 
 .path-row { height: 96px; display: flex; justify-content: center; align-items: center; position: relative; }
-.station-row { height: 88px; }
 .side-game {
-  position: absolute; left: 50%; top: 50%; width: 90px; height: 90px;
-  margin: -45px 0 0 -45px; transform: translateX(var(--sx, 0px));
+  position: absolute; left: 50%; top: 50%; width: 112px; height: 112px;
+  margin: -56px 0 0 -56px; transform: translateX(var(--sx, 0px));
   border: none; background: transparent; box-shadow: none; z-index: 2;
 }
 .side-game:active { transform: translateX(var(--sx, 0px)) scale(.94); }
@@ -201,22 +200,19 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
   content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   border: 7px solid transparent; border-top-color: var(--line);
 }
-/* 单元特殊复习关 */
-.special-row { height: 112px; }
-.snode {
-  width: 104px; height: 104px; border-radius: 30px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-  font-weight: 900; position: relative; border: none;
-  box-shadow: 0 5px 0 rgba(0,0,0,.10);
+/* 单元特殊复习关：圆形，并入 S 路径 */
+.pnode.special {
+  width: 88px; height: 88px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
+  font-size: 9px;
 }
-.snode .s-ico { font-size: 28px; line-height: 1; }
-.snode .s-label { font-size: 11px; }
-.snode.done { opacity: .82; }
-.snode:active { transform: scale(.95); }
-.sp-wrong { background: #ffe1e1; color: #c93434; }
-.sp-recall { background: #f3e8ff; color: #7c4dff; }
-.sp-d7 { background: var(--blue-l); color: var(--blue-d); }
-.sp-d10 { background: #fff3cc; color: #a07a00; }
+.pnode.special .sp-ico { font-size: 24px; line-height: 1; }
+.pnode.special .sp-txt { font-size: 9px; margin-top: 1px; }
+.pnode.special.done { opacity: .85; }
+.sp-wrong { background: #ffd9d9; color: #b42e2e; box-shadow: 0 5px 0 #e8a6a6; }
+.sp-recall { background: #efe0ff; color: #6c3fd0; box-shadow: 0 5px 0 #c9a8f0; }
+.sp-d7 { background: var(--blue-l); color: var(--blue-d); box-shadow: 0 5px 0 #a8d8f0; }
+.sp-d10 { background: #fff0bf; color: #96700a; box-shadow: 0 5px 0 #e0c46a; }
 
 .game-station {
   display: flex; justify-content: center; gap: 10px;

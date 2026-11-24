@@ -5,7 +5,7 @@ const Game = (() => {
     listen: { name: "听音配对", desc: "听发音 ↔ 中文，75 秒", time: 75, icon: "🔊" },
     daily:  { name: "每日挑战", desc: "每天固定词组，一天一次", time: 75, icon: "🏆" },
   };
-  const PAIRS = 8;
+  const PAIRS = 6;
   let G = null;
 
   function ensureProfile() {

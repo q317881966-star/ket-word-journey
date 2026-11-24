@@ -646,7 +646,7 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
   border-radius: 16px; border: 2px solid var(--line); border-bottom-width: 4px;
   background: var(--bg-2); color: var(--ink);
   display: flex; align-items: center; justify-content: center; text-align: center;
-  padding: 4px 10px; flex: 0 0 auto; height: clamp(56px, 8.5vh, 80px); width: 100%;
+  padding: 4px 10px; flex: 0 0 auto; height: clamp(62px, 11.5vh, 100px); width: 100%;
   font-size: clamp(14px, 2.8vw, 20px); font-weight: 800; line-height: 1.2;
   overflow: hidden; transition: transform .08s, background .15s, border-color .15s;
   touch-action: manipulation;

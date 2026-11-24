@@ -169,7 +169,6 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 
 .path-row {
   height: 90px; display: flex; justify-content: center; align-items: center; position: relative;
-  content-visibility: auto; contain-intrinsic-size: 90px;
 }
 .side-game {
   position: absolute; left: 50%; top: 50%;

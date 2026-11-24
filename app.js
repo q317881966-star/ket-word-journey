@@ -422,7 +422,7 @@ function renderMap() {
     else if (learned && anyDue) cls += " reviewdue";
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
-    const x = Math.round(Math.sin(g * 0.62) * 74);
+    const x = Math.round(Math.sin(g * 0.62) * 62);
     let sideBtn = "";
     if (g % 3 === 0 && g < groups) {
       const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
@@ -433,8 +433,8 @@ function renderMap() {
       // 优先一左一右交替；该侧会撞到节点时自动换到对侧
       let side = stationIdx % 2 === 0 ? -1 : 1;
       const nodeSide = x >= 0 ? 1 : -1;
-      if (side === nodeSide && Math.abs(x) > 28) side = -side;
-      const sx = side * 128;
+      if (side === nodeSide && Math.abs(x) > 34) side = -side;
+      const sx = side * 138;
       stationIdx++;
       sideBtn = `<button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
     }
@@ -450,7 +450,7 @@ function renderMap() {
     if (SPECIAL_POS[posInUnit]) {
       const kind = SPECIAL_POS[posInUnit];
       const done = DB.profile.specialDone?.[`${unit}-${kind}`];
-      const spx = Math.round(Math.sin((g + 0.55) * 0.62) * 74);
+      const spx = Math.round(Math.sin((g + 0.55) * 0.62) * 62);
       html += `<div class="path-row">
         <button class="pnode special ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}" style="--x:${spx}px">
           <span class="sp-ico">${done ? "✓" : SPECIALS[kind].icon}</span>

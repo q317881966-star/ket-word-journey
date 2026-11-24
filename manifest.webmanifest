@@ -1,0 +1,16 @@
+{
+  "name": "KET 闯关 · 1612 词",
+  "short_name": "KET 闯关",
+  "description": "每天 10 个新词，艾宾浩斯 + SM-2 复习，多邻国式闯关背单词",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#58cc02",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

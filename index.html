@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>KET 闯关 · 1612 词</title>
+<meta name="theme-color" content="#58CC02">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="KET 闯关">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 加载 -->
+<div id="boot" class="boot">
+  <div class="boot-logo">K</div>
+  <div class="boot-bar"><i></i></div>
+  <p>正在载入 1612 个单词…</p>
+</div>
+
+<!-- 顶部状态栏 -->
+<header id="topbar" class="topbar">
+  <div class="stat" title="连续打卡">
+    <svg viewBox="0 0 24 24" class="flame"><path d="M12 2s5 4.5 5 9a5 5 0 0 1-10 0c0-2 .8-3.5 1.7-4.6C9.4 8.2 10 9.5 10 10.5c0-2.6 2-5.6 2-8.5z" fill="#FF9600"/><path d="M12 8s3 2.6 3 5a3 3 0 0 1-6 0c0-1.2.5-2.2 1.2-3 .2.8.6 1.4 1.1 1.7C11.1 10.4 12 9.2 12 8z" fill="#FFC800"/></svg>
+    <b id="streakNum">0</b>
+  </div>
+  <div class="stat" title="经验值">
+    <svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#FFC800"/></svg>
+    <b id="xpNum">0</b>
+  </div>
+  <div class="stat" title="已掌握">
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.9-5 4.7 1.3 6.7L12 17.3 6 20.5l1.3-6.7-5-4.7 6.8-.9z" fill="#FFC800"/></svg>
+    <b id="masterNum">0</b>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- 学习页 -->
+  <section id="page-home" class="page active">
+    <div id="todayCard"></div>
+    <div class="section-title"><span>闯关地图</span><small id="mapHint"></small></div>
+    <div id="map" class="map"></div>
+    <div class="map-end">🏁 终点：1612 词全部掌握</div>
+  </section>
+
+  <!-- 错词本 -->
+  <section id="page-wrong" class="page">
+    <h1 class="page-title">错词本 <span id="wrongCount" class="pill">0</span></h1>
+    <p class="page-sub">答错过的词会自动进来，答对 2 次移出。</p>
+    <button id="drillBtn" class="btn btn-red btn-block">开始强化训练</button>
+    <button id="sprintBtn" class="btn btn-blue btn-block">考前冲刺 · 20 题</button>
+    <div id="wrongList" class="word-list"></div>
+  </section>
+
+  <!-- 统计 -->
+  <section id="page-stats" class="page">
+    <h1 class="page-title">学习统计</h1>
+    <div id="statCards" class="stat-cards"></div>
+    <div class="section-title"><span>掌握度</span></div>
+    <div id="masterRing" class="ring-wrap"></div>
+    <div class="section-title"><span>打卡记录</span></div>
+    <div id="heatmap" class="heatmap"></div>
+    <div id="heatLegend" class="heat-legend"></div>
+  </section>
+
+  <!-- 设置 -->
+  <section id="page-settings" class="page">
+    <h1 class="page-title">设置</h1>
+    <div class="card">
+      <label class="row">
+        <span>每天新词数</span>
+        <input id="dailyNew" type="range" min="5" max="30" step="5" value="10">
+        <b id="dailyNewVal">10</b>
+      </label>
+      <label class="row">
+        <span>每日复习上限</span>
+        <input id="reviewCap" type="range" min="20" max="150" step="10" value="80">
+        <b id="reviewCapVal">80</b>
+      </label>
+      <label class="row">
+        <span>点按自动发音</span>
+        <input id="autoAudio" type="checkbox" class="switch">
+      </label>
+      <label class="row">
+        <span>答题音效</span>
+        <input id="sfxOn" type="checkbox" class="switch">
+      </label>
+      <label class="row">
+        <span>外观</span>
+        <div class="seg" id="themeSeg">
+          <button data-theme="auto">跟随系统</button>
+          <button data-theme="light">浅色</button>
+          <button data-theme="dark">深色</button>
+        </div>
+      </label>
+      <div class="row">
+        <span>离线缓存</span>
+        <b id="offlineState" class="offline-badge">检测中</b>
+      </div>
+      <p id="offlineHint" class="fine" style="text-align:left;padding:0 0 12px"></p>
+    </div>
+    <div class="card">
+      <button id="exportBtn" class="btn btn-blue btn-block">导出进度备份</button>
+      <button id="importBtn" class="btn btn-ghost btn-block">导入进度备份</button>
+      <input id="importFile" type="file" accept="application/json" hidden>
+    </div>
+    <div class="card">
+      <button id="resetBtn" class="btn btn-ghost btn-block danger">清空全部进度</button>
+      <p class="fine">数据只存在这台 iPad 的浏览器里。建议每周导出一次备份。</p>
+    </div>
+  </section>
+</main>
+
+<!-- 底部导航 -->
+<nav id="tabs" class="tabs">
+  <button data-page="home" class="active"><span>🗺️</span>学习</button>
+  <button data-page="wrong"><span>📕</span>错词</button>
+  <button data-page="stats"><span>📊</span>统计</button>
+  <button data-page="settings"><span>⚙️</span>设置</button>
+</nav>
+
+<!-- 答题层 -->
+<div id="lesson" class="lesson">
+  <header class="lesson-head">
+    <button id="quitBtn" class="icon-btn" aria-label="退出">✕</button>
+    <div class="lesson-bar"><i id="lessonBar"></i></div>
+    <div class="hearts" id="lessonCounter"></div>
+  </header>
+  <div id="qbody" class="qbody"></div>
+  <footer class="lesson-foot">
+    <div id="feedback" class="feedback"><div class="fb-inner"><b id="fbTitle"></b><span id="fbAnswer"></span></div></div>
+    <button id="checkBtn" class="btn btn-green btn-block" disabled>检查</button>
+    <button id="skipBtn" class="btn btn-ghost btn-block">跳过</button>
+  </footer>
+</div>
+
+<!-- 结算 -->
+<div id="result" class="result">
+  <div class="res-glow"></div>
+  <div class="res-badge">🏆</div>
+  <h1 id="resTitle">今日打卡完成！</h1>
+  <div class="res-grid">
+    <div><b id="resXp">0</b><span>XP</span></div>
+    <div><b id="resAcc">0%</b><span>正确率</span></div>
+    <div><b id="resNew">0</b><span>新词</span></div>
+    <div><b id="resRev">0</b><span>复习</span></div>
+  </div>
+  <div class="res-streak">🔥 连续打卡 <b id="resStreak">1</b> 天</div>
+  <button id="resDone" class="btn btn-green btn-block">收下奖励</button>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

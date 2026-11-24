@@ -1,0 +1,11286 @@
+[
+ {
+  "id": 1,
+  "word": "meat",
+  "phonetic": "[miːt]",
+  "meaning": "肉",
+  "group": 1
+ },
+ {
+  "id": 2,
+  "word": "wake",
+  "phonetic": "[weɪk]",
+  "meaning": "v.醒来",
+  "group": 1
+ },
+ {
+  "id": 3,
+  "word": "coach",
+  "phonetic": "[kəʊtʃ]",
+  "meaning": "n. 教练",
+  "group": 1
+ },
+ {
+  "id": 4,
+  "word": "student",
+  "phonetic": "[ˈstjuːdnt]",
+  "meaning": "学生",
+  "group": 1
+ },
+ {
+  "id": 5,
+  "word": "fun",
+  "phonetic": "[fʌn]",
+  "meaning": "有趣的事；玩笑",
+  "group": 1
+ },
+ {
+  "id": 6,
+  "word": "a.m.",
+  "phonetic": "[əm]",
+  "meaning": "上午",
+  "group": 1
+ },
+ {
+  "id": 7,
+  "word": "prepare",
+  "phonetic": "[prɪˈpeər]",
+  "meaning": "v. 使做好准备；把...预备好",
+  "group": 1
+ },
+ {
+  "id": 8,
+  "word": "police station",
+  "phonetic": "[pə'liːs 'steɪʃən]",
+  "meaning": "警察局",
+  "group": 1
+ },
+ {
+  "id": 9,
+  "word": "explore",
+  "phonetic": "[ɪkˈsplɔːr]",
+  "meaning": "v.探索；探测",
+  "group": 1
+ },
+ {
+  "id": 10,
+  "word": "blue",
+  "phonetic": "[bluː]",
+  "meaning": "adj.蓝色的",
+  "group": 1
+ },
+ {
+  "id": 11,
+  "word": "pull",
+  "phonetic": "[pʊl]",
+  "meaning": "v.（向某个方向）拖，拉动",
+  "group": 2
+ },
+ {
+  "id": 12,
+  "word": "shelf",
+  "phonetic": "[ʃelf]",
+  "meaning": "n.架子；搁板(复shelves)",
+  "group": 2
+ },
+ {
+  "id": 13,
+  "word": "drink",
+  "phonetic": "[drɪŋk]",
+  "meaning": "v.&n.喝;饮料",
+  "group": 2
+ },
+ {
+  "id": 14,
+  "word": "plant",
+  "phonetic": "[plɑːnt]",
+  "meaning": "n.植物",
+  "group": 2
+ },
+ {
+  "id": 15,
+  "word": "cover",
+  "phonetic": "[ˈkʌvər]",
+  "meaning": "n.盖子；罩；封面",
+  "group": 2
+ },
+ {
+  "id": 16,
+  "word": "clothes",
+  "phonetic": "[kləʊðz; kləʊz]",
+  "meaning": "n.衣服",
+  "group": 2
+ },
+ {
+  "id": 17,
+  "word": "garden",
+  "phonetic": "[ˈɡɑːdn]",
+  "meaning": "花园；园子",
+  "group": 2
+ },
+ {
+  "id": 18,
+  "word": "blog",
+  "phonetic": "[blɒɡ]",
+  "meaning": "博客",
+  "group": 2
+ },
+ {
+  "id": 19,
+  "word": "bus",
+  "phonetic": "[bʌs]",
+  "meaning": "n.公交车",
+  "group": 2
+ },
+ {
+  "id": 20,
+  "word": "manager",
+  "phonetic": "[ˈmænɪdʒər]",
+  "meaning": "n.（企业）的经理",
+  "group": 2
+ },
+ {
+  "id": 21,
+  "word": "make-up",
+  "phonetic": "[ˈmeɪk ʌp]",
+  "meaning": "n.化妆",
+  "group": 3
+ },
+ {
+  "id": 22,
+  "word": "shopping",
+  "phonetic": "[ˈʃɒpɪŋ]",
+  "meaning": "n购物",
+  "group": 3
+ },
+ {
+  "id": 23,
+  "word": "steal",
+  "phonetic": "[stiːl]",
+  "meaning": "v.偷，窃取",
+  "group": 3
+ },
+ {
+  "id": 24,
+  "word": "geography",
+  "phonetic": "[dʒiˈɒɡrəfi]",
+  "meaning": "n.地理(学)",
+  "group": 3
+ },
+ {
+  "id": 25,
+  "word": "order",
+  "phonetic": "[ˈɔːdər]",
+  "meaning": "n.订货，订购",
+  "group": 3
+ },
+ {
+  "id": 26,
+  "word": "baby",
+  "phonetic": "[ˈbeɪbi]",
+  "meaning": "n.婴儿",
+  "group": 3
+ },
+ {
+  "id": 27,
+  "word": "next to",
+  "phonetic": "",
+  "meaning": "紧挨着的",
+  "group": 3
+ },
+ {
+  "id": 28,
+  "word": "internet",
+  "phonetic": "[ˈɪntənet]",
+  "meaning": "n.互联网，因特网",
+  "group": 3
+ },
+ {
+  "id": 29,
+  "word": "build",
+  "phonetic": "[bɪld]",
+  "meaning": "v.建筑；建造(built, built)",
+  "group": 3
+ },
+ {
+  "id": 30,
+  "word": "village",
+  "phonetic": "[ˈvɪlɪdʒ]",
+  "meaning": "n.村庄；村镇",
+  "group": 3
+ },
+ {
+  "id": 31,
+  "word": "among",
+  "phonetic": "[əˈmʌŋ]",
+  "meaning": "prep.在......中间；在(三个以上)之间",
+  "group": 4
+ },
+ {
+  "id": 32,
+  "word": "tour guide",
+  "phonetic": "[tʊə ɡaid]",
+  "meaning": "导游",
+  "group": 4
+ },
+ {
+  "id": 33,
+  "word": "model",
+  "phonetic": "[ˈmɒdl]",
+  "meaning": "n.模型；范例；模范；模特",
+  "group": 4
+ },
+ {
+  "id": 34,
+  "word": "sailing",
+  "phonetic": "[ˈseɪlɪŋ]",
+  "meaning": "n.帆船运动，航行",
+  "group": 4
+ },
+ {
+  "id": 35,
+  "word": "mobile",
+  "phonetic": "[ˈməʊbaɪl]",
+  "meaning": "可移动的；非固定的",
+  "group": 4
+ },
+ {
+  "id": 36,
+  "word": "Miss",
+  "phonetic": "[mɪs]",
+  "meaning": "想念；错过",
+  "group": 4
+ },
+ {
+  "id": 37,
+  "word": "wake up",
+  "phonetic": "[ˈweɪk ˌʌp]",
+  "meaning": "醒来",
+  "group": 4
+ },
+ {
+  "id": 38,
+  "word": "versus",
+  "phonetic": "[ˈvɜːrsəs]",
+  "meaning": "prep. 对，对抗；与......相对，与......相比",
+  "group": 4
+ },
+ {
+  "id": 39,
+  "word": "north",
+  "phonetic": "[nɔːθ]",
+  "meaning": "北方",
+  "group": 4
+ },
+ {
+  "id": 40,
+  "word": "transport",
+  "phonetic": "[ˈtrænspɔːt]",
+  "meaning": "n.交通车辆，运输工具",
+  "group": 4
+ },
+ {
+  "id": 41,
+  "word": "congratulations",
+  "phonetic": "[kənˌgrætjʊˈleɪʃənz]",
+  "meaning": "n.[pl.]祝贺，恭贺",
+  "group": 5
+ },
+ {
+  "id": 42,
+  "word": "bicycle",
+  "phonetic": "[ˈbaɪsɪkl]",
+  "meaning": "n.自行车",
+  "group": 5
+ },
+ {
+  "id": 43,
+  "word": "wash",
+  "phonetic": "[wɒʃ]",
+  "meaning": "v.洗",
+  "group": 5
+ },
+ {
+  "id": 44,
+  "word": "team",
+  "phonetic": "[tiːm]",
+  "meaning": "n.队，组",
+  "group": 5
+ },
+ {
+  "id": 45,
+  "word": "pack",
+  "phonetic": "[pæk]",
+  "meaning": "包装；装箱",
+  "group": 5
+ },
+ {
+  "id": 46,
+  "word": "again",
+  "phonetic": "[əˈɡen; əˈɡeɪn]",
+  "meaning": "adv.再一次;又一次",
+  "group": 5
+ },
+ {
+  "id": 47,
+  "word": "your",
+  "phonetic": "[jɔːr; jər]",
+  "meaning": "pron.你的；你们的",
+  "group": 5
+ },
+ {
+  "id": 48,
+  "word": "club",
+  "phonetic": "[klʌb]",
+  "meaning": "n. 俱乐部",
+  "group": 5
+ },
+ {
+  "id": 49,
+  "word": "he",
+  "phonetic": "[hi; iː; i; hiː]",
+  "meaning": "pron.他",
+  "group": 5
+ },
+ {
+  "id": 50,
+  "word": "busy",
+  "phonetic": "[ˈbɪzi]",
+  "meaning": "adj.忙碌的;无暇的",
+  "group": 5
+ },
+ {
+  "id": 51,
+  "word": "police officer",
+  "phonetic": "",
+  "meaning": "警察",
+  "group": 6
+ },
+ {
+  "id": 52,
+  "word": "kilometre",
+  "phonetic": "[kɪləmiːtər]",
+  "meaning": "n.千米(公里)",
+  "group": 6
+ },
+ {
+  "id": 53,
+  "word": "office",
+  "phonetic": "[ˈɒfɪs]",
+  "meaning": "办公室",
+  "group": 6
+ },
+ {
+  "id": 54,
+  "word": "sound",
+  "phonetic": "[saʊnd]",
+  "meaning": "v.听起来；发出声音",
+  "group": 6
+ },
+ {
+  "id": 55,
+  "word": "foreign",
+  "phonetic": "[ˈfɒrən]",
+  "meaning": "adj.外国的",
+  "group": 6
+ },
+ {
+  "id": 56,
+  "word": "anymore",
+  "phonetic": "[enɪ'mɔː]",
+  "meaning": "adv. （常用于否定句和疑问句末）再也（不）; （不）再",
+  "group": 6
+ },
+ {
+  "id": 57,
+  "word": "bee",
+  "phonetic": "[biː]",
+  "meaning": "n.蜜蜂",
+  "group": 6
+ },
+ {
+  "id": 58,
+  "word": "cereal",
+  "phonetic": "[ˈsɪəriəl]",
+  "meaning": "谷类食物",
+  "group": 6
+ },
+ {
+  "id": 59,
+  "word": "excellent",
+  "phonetic": "[ˈeksələnt]",
+  "meaning": "adj.优秀的",
+  "group": 6
+ },
+ {
+  "id": 60,
+  "word": "home",
+  "phonetic": "[həʊm]",
+  "meaning": "n.家，活动本部.adv到家；在家",
+  "group": 6
+ },
+ {
+  "id": 61,
+  "word": "light",
+  "phonetic": "[laɪt]",
+  "meaning": "adj. 轻的",
+  "group": 7
+ },
+ {
+  "id": 62,
+  "word": "physics",
+  "phonetic": "[ˈfɪzɪks]",
+  "meaning": "物理；物理学",
+  "group": 7
+ },
+ {
+  "id": 63,
+  "word": "details",
+  "phonetic": "[ˈdiːteɪlz]",
+  "meaning": "n.细节",
+  "group": 7
+ },
+ {
+  "id": 64,
+  "word": "front",
+  "phonetic": "[frʌnt]",
+  "meaning": "前面",
+  "group": 7
+ },
+ {
+  "id": 65,
+  "word": "half",
+  "phonetic": "[hɑːf]",
+  "meaning": "n.&pron.一半;半数",
+  "group": 7
+ },
+ {
+  "id": 66,
+  "word": "orange",
+  "phonetic": "[ˈɒrɪndʒ]",
+  "meaning": "adj.橙色的",
+  "group": 7
+ },
+ {
+  "id": 67,
+  "word": "storm",
+  "phonetic": "[stɔːm]",
+  "meaning": "n.风暴，暴(风)雨(雪)",
+  "group": 7
+ },
+ {
+  "id": 68,
+  "word": "live",
+  "phonetic": "[lɪv; laɪv]",
+  "meaning": "v.居住；生活",
+  "group": 7
+ },
+ {
+  "id": 69,
+  "word": "cafe",
+  "phonetic": "[ˈkæfeɪ]",
+  "meaning": "n.咖啡馆",
+  "group": 7
+ },
+ {
+  "id": 70,
+  "word": "photographer",
+  "phonetic": "[fəˈtɒɡrəfər]",
+  "meaning": "n.拍照者，摄影师",
+  "group": 7
+ },
+ {
+  "id": 71,
+  "word": "petrol station",
+  "phonetic": "",
+  "meaning": "n. 加油站",
+  "group": 8
+ },
+ {
+  "id": 72,
+  "word": "day",
+  "phonetic": "[deɪ]",
+  "meaning": "n.(一)天，(一)日；白天",
+  "group": 8
+ },
+ {
+  "id": 73,
+  "word": "different",
+  "phonetic": "[ˈdɪfrənt]",
+  "meaning": "不同的",
+  "group": 8
+ },
+ {
+  "id": 74,
+  "word": "place",
+  "phonetic": "[pleɪs]",
+  "meaning": "n.地点;位置",
+  "group": 8
+ },
+ {
+  "id": 75,
+  "word": "instead",
+  "phonetic": "[ɪnˈsted]",
+  "meaning": "adv.代替，顶替",
+  "group": 8
+ },
+ {
+  "id": 76,
+  "word": "come",
+  "phonetic": "[kʌm]",
+  "meaning": "v.来，来到(came,come)",
+  "group": 8
+ },
+ {
+  "id": 77,
+  "word": "ask",
+  "phonetic": "[ɑːsk]",
+  "meaning": "v.问，询问；请求，要求",
+  "group": 8
+ },
+ {
+  "id": 78,
+  "word": "all the time",
+  "phonetic": "",
+  "meaning": "一直；总是",
+  "group": 8
+ },
+ {
+  "id": 79,
+  "word": "level",
+  "phonetic": "[ˈlevl]",
+  "meaning": "n.水平线；水平",
+  "group": 8
+ },
+ {
+  "id": 80,
+  "word": "between",
+  "phonetic": "[bɪˈtwiːn]",
+  "meaning": "prep.介于...之间",
+  "group": 8
+ },
+ {
+  "id": 81,
+  "word": "toe",
+  "phonetic": "[təʊ]",
+  "meaning": "n.脚趾",
+  "group": 9
+ },
+ {
+  "id": 82,
+  "word": "horrible",
+  "phonetic": "[ˈhɒrəbl]",
+  "meaning": "adj.令人恐惧的；恐怖的",
+  "group": 9
+ },
+ {
+  "id": 83,
+  "word": "blouse",
+  "phonetic": "[blaʊz]",
+  "meaning": "女衬衫",
+  "group": 9
+ },
+ {
+  "id": 84,
+  "word": "such",
+  "phonetic": "[sʌtʃ]",
+  "meaning": "det.&pron.这样的(人或物)",
+  "group": 9
+ },
+ {
+  "id": 85,
+  "word": "banana",
+  "phonetic": "[bəˈnɑːnə]",
+  "meaning": "n.香蕉",
+  "group": 9
+ },
+ {
+  "id": 86,
+  "word": "name",
+  "phonetic": "[neɪm]",
+  "meaning": "v.命名，名叫",
+  "group": 9
+ },
+ {
+  "id": 87,
+  "word": "garlic",
+  "phonetic": "[ˈɡɑːlɪk]",
+  "meaning": "n. 大蒜",
+  "group": 9
+ },
+ {
+  "id": 88,
+  "word": "second",
+  "phonetic": "['sekənd]",
+  "meaning": "第二",
+  "group": 9
+ },
+ {
+  "id": 89,
+  "word": "wet",
+  "phonetic": "[wet]",
+  "meaning": "adj.湿的，潮的；多雨的",
+  "group": 9
+ },
+ {
+  "id": 90,
+  "word": "click",
+  "phonetic": "[klɪk]",
+  "meaning": "vi.&vt.点击",
+  "group": 9
+ },
+ {
+  "id": 91,
+  "word": "delicious",
+  "phonetic": "[dɪˈlɪʃəs]",
+  "meaning": "美味的",
+  "group": 10
+ },
+ {
+  "id": 92,
+  "word": "toast",
+  "phonetic": "[təʊst]",
+  "meaning": "n.烤面包（片），吐司",
+  "group": 10
+ },
+ {
+  "id": 93,
+  "word": "somebody",
+  "phonetic": "[ˈsʌmbədi]",
+  "meaning": "pron.某人；有人",
+  "group": 10
+ },
+ {
+  "id": 94,
+  "word": "golf",
+  "phonetic": "[ɡɒlf]",
+  "meaning": "高尔夫球运动",
+  "group": 10
+ },
+ {
+  "id": 95,
+  "word": "finish",
+  "phonetic": "[ˈfɪnɪʃ]",
+  "meaning": "v. 结束",
+  "group": 10
+ },
+ {
+  "id": 96,
+  "word": "pear",
+  "phonetic": "[peər]",
+  "meaning": "梨",
+  "group": 10
+ },
+ {
+  "id": 97,
+  "word": "until",
+  "phonetic": "[ənˈtɪl]",
+  "meaning": "conj.直到...为止",
+  "group": 10
+ },
+ {
+  "id": 98,
+  "word": "enough",
+  "phonetic": "[ɪˈnʌf]",
+  "meaning": "足够的（地）",
+  "group": 10
+ },
+ {
+  "id": 99,
+  "word": "software",
+  "phonetic": "[ˈsɒftweər]",
+  "meaning": "n.软件",
+  "group": 10
+ },
+ {
+  "id": 100,
+  "word": "person",
+  "phonetic": "[ˈpɜːsn]",
+  "meaning": "n. 人",
+  "group": 10
+ },
+ {
+  "id": 101,
+  "word": "weekday",
+  "phonetic": "[ˈwiːkdeɪ]",
+  "meaning": "n.工作日",
+  "group": 11
+ },
+ {
+  "id": 102,
+  "word": "tyre",
+  "phonetic": "[ˈtaiə]",
+  "meaning": "n.轮胎，车胎",
+  "group": 11
+ },
+ {
+  "id": 103,
+  "word": "get married",
+  "phonetic": "[ɡet ˈmærid]",
+  "meaning": "结婚",
+  "group": 11
+ },
+ {
+  "id": 104,
+  "word": "both",
+  "phonetic": "[bəʊθ]",
+  "meaning": "adv.两个都",
+  "group": 11
+ },
+ {
+  "id": 105,
+  "word": "describe",
+  "phonetic": "[dɪˈskraɪb]",
+  "meaning": "v.描写，叙述",
+  "group": 11
+ },
+ {
+  "id": 106,
+  "word": "evening",
+  "phonetic": "[ˈiːvnɪŋ]",
+  "meaning": "n.傍晚，晚上",
+  "group": 11
+ },
+ {
+  "id": 107,
+  "word": "can not",
+  "phonetic": "",
+  "meaning": "不能",
+  "group": 11
+ },
+ {
+  "id": 108,
+  "word": "long",
+  "phonetic": "[lɒŋ]",
+  "meaning": "adj.(时间)长的，(距离)远的",
+  "group": 11
+ },
+ {
+  "id": 109,
+  "word": "through",
+  "phonetic": "[θruː]",
+  "meaning": "prep.通过，穿过",
+  "group": 11
+ },
+ {
+  "id": 110,
+  "word": "down",
+  "phonetic": "[daʊn]",
+  "meaning": "adv.&prep.(坐、躺、倒)下;向下;沿着",
+  "group": 11
+ },
+ {
+  "id": 111,
+  "word": "rice",
+  "phonetic": "[raɪs]",
+  "meaning": "n.稻；米；米饭",
+  "group": 12
+ },
+ {
+  "id": 112,
+  "word": "chicken",
+  "phonetic": "[ˈtʃɪkɪn]",
+  "meaning": "n.鸡；鸡肉",
+  "group": 12
+ },
+ {
+  "id": 113,
+  "word": "dessert",
+  "phonetic": "[dɪˈzɜːt]",
+  "meaning": "n（饭后）甜点；甜食",
+  "group": 12
+ },
+ {
+  "id": 114,
+  "word": "lion",
+  "phonetic": "[ˈlaɪən]",
+  "meaning": "狮子",
+  "group": 12
+ },
+ {
+  "id": 115,
+  "word": "agree",
+  "phonetic": "[əˈɡriː]",
+  "meaning": "v.同意",
+  "group": 12
+ },
+ {
+  "id": 116,
+  "word": "shampoo",
+  "phonetic": "[ʃæmˈpuː]",
+  "meaning": "n. 洗发；洗发精vt. 洗发",
+  "group": 12
+ },
+ {
+  "id": 117,
+  "word": "racket",
+  "phonetic": "[ˈrækit]",
+  "meaning": "n.球拍",
+  "group": 12
+ },
+ {
+  "id": 118,
+  "word": "baseball",
+  "phonetic": "[ˈbeɪsbɔːl]",
+  "meaning": "n.棒球",
+  "group": 12
+ },
+ {
+  "id": 119,
+  "word": "list",
+  "phonetic": "[lɪst]",
+  "meaning": "n.清单",
+  "group": 12
+ },
+ {
+  "id": 120,
+  "word": "away",
+  "phonetic": "[əˈweɪ]",
+  "meaning": "离开",
+  "group": 12
+ },
+ {
+  "id": 121,
+  "word": "south",
+  "phonetic": "[saʊθ]",
+  "meaning": "南方",
+  "group": 13
+ },
+ {
+  "id": 122,
+  "word": "equipment",
+  "phonetic": "[ɪˈkwɪpmənt]",
+  "meaning": "n.设备；器材",
+  "group": 13
+ },
+ {
+  "id": 123,
+  "word": "join",
+  "phonetic": "[dʒɔɪn]",
+  "meaning": "参加；加入",
+  "group": 13
+ },
+ {
+  "id": 124,
+  "word": "man",
+  "phonetic": "[mæn]",
+  "meaning": "n.男人;人",
+  "group": 13
+ },
+ {
+  "id": 125,
+  "word": "ambulance",
+  "phonetic": "[ˈæmbjələns]",
+  "meaning": "n.救护车",
+  "group": 13
+ },
+ {
+  "id": 126,
+  "word": "cut",
+  "phonetic": "[kʌt]",
+  "meaning": "v.砍;切",
+  "group": 13
+ },
+ {
+  "id": 127,
+  "word": "bookshop",
+  "phonetic": "[ˈbʊkʃɒp]",
+  "meaning": "n.书店",
+  "group": 13
+ },
+ {
+  "id": 128,
+  "word": "favourite",
+  "phonetic": "[ˈfeɪvərɪt]",
+  "meaning": "n.特别喜爱的人(或物) (美favorite)",
+  "group": 13
+ },
+ {
+  "id": 129,
+  "word": "empty",
+  "phonetic": "[ˈempti]",
+  "meaning": "adj.空的",
+  "group": 13
+ },
+ {
+  "id": 130,
+  "word": "okay",
+  "phonetic": "[oʊˈkeɪ]",
+  "meaning": "int. 好，行adj. 可以；对；不错的；安全的adv. 可以；对；很好地n. 同意，批准v. 同意，批准",
+  "group": 13
+ },
+ {
+  "id": 131,
+  "word": "mum",
+  "phonetic": "[mʌm]",
+  "meaning": "n.(口语)妈妈",
+  "group": 14
+ },
+ {
+  "id": 132,
+  "word": "stomach",
+  "phonetic": "[ˈstʌmək]",
+  "meaning": "n.腹部；胃",
+  "group": 14
+ },
+ {
+  "id": 133,
+  "word": "if",
+  "phonetic": "[ɪf]",
+  "meaning": "conj. 是否",
+  "group": 14
+ },
+ {
+  "id": 134,
+  "word": "forget",
+  "phonetic": "[fəˈɡet]",
+  "meaning": "忘记",
+  "group": 14
+ },
+ {
+  "id": 135,
+  "word": "form",
+  "phonetic": "[fɔːm]",
+  "meaning": "v.形成，构成",
+  "group": 14
+ },
+ {
+  "id": 136,
+  "word": "allow",
+  "phonetic": "[əˈlaʊ]",
+  "meaning": "v.允许进入（或出去、通过）",
+  "group": 14
+ },
+ {
+  "id": 137,
+  "word": "mug",
+  "phonetic": "[mʌg]",
+  "meaning": "n.大杯",
+  "group": 14
+ },
+ {
+  "id": 138,
+  "word": "face",
+  "phonetic": "[feɪs]",
+  "meaning": "v.面对",
+  "group": 14
+ },
+ {
+  "id": 139,
+  "word": "yellow",
+  "phonetic": "[ˈjeləʊ]",
+  "meaning": "n.黄色",
+  "group": 14
+ },
+ {
+  "id": 140,
+  "word": "cola",
+  "phonetic": "[ˈkəʊlə]",
+  "meaning": "n. 可乐",
+  "group": 14
+ },
+ {
+  "id": 141,
+  "word": "danger",
+  "phonetic": "[ˈdeɪndʒər]",
+  "meaning": "n.危险",
+  "group": 15
+ },
+ {
+  "id": 142,
+  "word": "cross",
+  "phonetic": "[krɒs]",
+  "meaning": "v.横过；越过",
+  "group": 15
+ },
+ {
+  "id": 143,
+  "word": "pardon",
+  "phonetic": "[ˈpɑːdn]",
+  "meaning": "请再说一遍；抱歉",
+  "group": 15
+ },
+ {
+  "id": 144,
+  "word": "sail",
+  "phonetic": "[seɪl]",
+  "meaning": "v. 航行；起航； n. 帆",
+  "group": 15
+ },
+ {
+  "id": 145,
+  "word": "grandma",
+  "phonetic": "[ˈɡrænmɑː]",
+  "meaning": "n.奶奶；外婆(=grandmother)",
+  "group": 15
+ },
+ {
+  "id": 146,
+  "word": "jumper",
+  "phonetic": "[ˈdʒʌmpər]",
+  "meaning": "n.跳跃者",
+  "group": 15
+ },
+ {
+  "id": 147,
+  "word": "toothache",
+  "phonetic": "[ˈtuːθeɪk]",
+  "meaning": "n.牙痛",
+  "group": 15
+ },
+ {
+  "id": 148,
+  "word": "hair",
+  "phonetic": "[heər]",
+  "meaning": "n.头发;毛发",
+  "group": 15
+ },
+ {
+  "id": 149,
+  "word": "whole",
+  "phonetic": "[həʊl]",
+  "meaning": "adj.整个的，全部的",
+  "group": 15
+ },
+ {
+  "id": 150,
+  "word": "air",
+  "phonetic": "[eər]",
+  "meaning": "n.空气",
+  "group": 15
+ },
+ {
+  "id": 151,
+  "word": "and",
+  "phonetic": "[ənd; ən; n; ænd]",
+  "meaning": "conj.和；又；而",
+  "group": 16
+ },
+ {
+  "id": 152,
+  "word": "food",
+  "phonetic": "[fuːd]",
+  "meaning": "n.食物，食品",
+  "group": 16
+ },
+ {
+  "id": 153,
+  "word": "great",
+  "phonetic": "[ɡreɪt]",
+  "meaning": "adj.伟大的；重要的；(口语)好极了，很好",
+  "group": 16
+ },
+ {
+  "id": 154,
+  "word": "husband",
+  "phonetic": "[ˈhʌzbənd]",
+  "meaning": "n. 丈夫",
+  "group": 16
+ },
+ {
+  "id": 155,
+  "word": "bedroom",
+  "phonetic": "[ˈbedruːm; ˈbedrʊm]",
+  "meaning": "卧室",
+  "group": 16
+ },
+ {
+  "id": 156,
+  "word": "slowly",
+  "phonetic": "[ˈsləʊli]",
+  "meaning": "adv.慢慢地，缓慢地",
+  "group": 16
+ },
+ {
+  "id": 157,
+  "word": "honey",
+  "phonetic": "[ˈhʌni]",
+  "meaning": "n.蜂蜜",
+  "group": 16
+ },
+ {
+  "id": 158,
+  "word": "help",
+  "phonetic": "[help]",
+  "meaning": "n. & v.帮助，帮忙",
+  "group": 16
+ },
+ {
+  "id": 159,
+  "word": "music",
+  "phonetic": "[ˈmjuːzɪk]",
+  "meaning": "n.音乐;乐曲",
+  "group": 16
+ },
+ {
+  "id": 160,
+  "word": "she",
+  "phonetic": "[ʃi; ʃiː]",
+  "meaning": "pron她",
+  "group": 16
+ },
+ {
+  "id": 161,
+  "word": "tidy up",
+  "phonetic": "",
+  "meaning": "收拾妥，整理好",
+  "group": 17
+ },
+ {
+  "id": 162,
+  "word": "clock",
+  "phonetic": "[klɒk]",
+  "meaning": "n.钟",
+  "group": 17
+ },
+ {
+  "id": 163,
+  "word": "when",
+  "phonetic": "[wen]",
+  "meaning": "conj. 当...的时候",
+  "group": 17
+ },
+ {
+  "id": 164,
+  "word": "word",
+  "phonetic": "[wɜːd]",
+  "meaning": "n.词，单词；话",
+  "group": 17
+ },
+ {
+  "id": 165,
+  "word": "quarter",
+  "phonetic": "[ˈkwɔːtər]",
+  "meaning": "n.一刻钟;四分之一",
+  "group": 17
+ },
+ {
+  "id": 166,
+  "word": "look",
+  "phonetic": "[lʊk]",
+  "meaning": "v.看；观看；看起来",
+  "group": 17
+ },
+ {
+  "id": 167,
+  "word": "parent",
+  "phonetic": "[ˈpeərənt]",
+  "meaning": "n. 父或母",
+  "group": 17
+ },
+ {
+  "id": 168,
+  "word": "hill",
+  "phonetic": "[hɪl]",
+  "meaning": "n.小山",
+  "group": 17
+ },
+ {
+  "id": 169,
+  "word": "nice",
+  "phonetic": "[naɪs]",
+  "meaning": "adj.令人愉快的；好的；漂亮的",
+  "group": 17
+ },
+ {
+  "id": 170,
+  "word": "get up",
+  "phonetic": "[ɡet ʌp]",
+  "meaning": "起床;站起",
+  "group": 17
+ },
+ {
+  "id": 171,
+  "word": "mom",
+  "phonetic": "[mɒm]",
+  "meaning": "n. (=mum)妈妈",
+  "group": 18
+ },
+ {
+  "id": 172,
+  "word": "pretty",
+  "phonetic": "[ˈprɪti]",
+  "meaning": "漂亮的",
+  "group": 18
+ },
+ {
+  "id": 173,
+  "word": "radio",
+  "phonetic": "[ˈreɪdiəʊ]",
+  "meaning": "收音机",
+  "group": 18
+ },
+ {
+  "id": 174,
+  "word": "traffic",
+  "phonetic": "[ˈtræfɪk]",
+  "meaning": "n.交通",
+  "group": 18
+ },
+ {
+  "id": 175,
+  "word": "mother",
+  "phonetic": "[ˈmʌðər]",
+  "meaning": "n.母亲",
+  "group": 18
+ },
+ {
+  "id": 176,
+  "word": "helicopter",
+  "phonetic": "[ˈhelɪkɒptər]",
+  "meaning": "n.直升机",
+  "group": 18
+ },
+ {
+  "id": 177,
+  "word": "homework",
+  "phonetic": "[ˈhəʊmwɜːk]",
+  "meaning": "家庭作业",
+  "group": 18
+ },
+ {
+  "id": 178,
+  "word": "east",
+  "phonetic": "[iːst]",
+  "meaning": "东方",
+  "group": 18
+ },
+ {
+  "id": 179,
+  "word": "pale",
+  "phonetic": "[peɪl]",
+  "meaning": "adj.苍白的",
+  "group": 18
+ },
+ {
+  "id": 180,
+  "word": "chat",
+  "phonetic": "[tʃæt]",
+  "meaning": "n．& v.聊天，闲谈",
+  "group": 18
+ },
+ {
+  "id": 181,
+  "word": "nurse",
+  "phonetic": "[nɜːs]",
+  "meaning": "n.护士；保育员",
+  "group": 19
+ },
+ {
+  "id": 182,
+  "word": "answer",
+  "phonetic": "[ˈɑːnsər]",
+  "meaning": "v.回答；答复；回(信)",
+  "group": 19
+ },
+ {
+  "id": 183,
+  "word": "study",
+  "phonetic": "[ˈstʌdi]",
+  "meaning": "v.&n.学习;研究",
+  "group": 19
+ },
+ {
+  "id": 184,
+  "word": "turn off",
+  "phonetic": "[tɜ:n ɒf]",
+  "meaning": "关掉",
+  "group": 19
+ },
+ {
+  "id": 185,
+  "word": "star",
+  "phonetic": "[stɑːr]",
+  "meaning": "n.星，恒星",
+  "group": 19
+ },
+ {
+  "id": 186,
+  "word": "supper",
+  "phonetic": "[ˈsʌpər]",
+  "meaning": "n.晚餐，晚饭",
+  "group": 19
+ },
+ {
+  "id": 187,
+  "word": "price",
+  "phonetic": "[praɪs]",
+  "meaning": "n.价格",
+  "group": 19
+ },
+ {
+  "id": 188,
+  "word": "apple",
+  "phonetic": "[ˈæpl]",
+  "meaning": "n.苹果",
+  "group": 19
+ },
+ {
+  "id": 189,
+  "word": "choose",
+  "phonetic": "[tʃuːz]",
+  "meaning": "v.选择，挑选",
+  "group": 19
+ },
+ {
+  "id": 190,
+  "word": "slow",
+  "phonetic": "[sləʊ]",
+  "meaning": "adj.慢慢的，缓慢的",
+  "group": 19
+ },
+ {
+  "id": 191,
+  "word": "usually",
+  "phonetic": "[ˈjuːʒuəli; ˈjuːʒəli]",
+  "meaning": "通常地",
+  "group": 20
+ },
+ {
+  "id": 192,
+  "word": "certainly",
+  "phonetic": "[ˈsɜːtnli]",
+  "meaning": "adv.当然，是的；一定，无疑",
+  "group": 20
+ },
+ {
+  "id": 193,
+  "word": "pasta",
+  "phonetic": "[ˈpæstə]",
+  "meaning": "意大利面",
+  "group": 20
+ },
+ {
+  "id": 194,
+  "word": "hard",
+  "phonetic": "[hɑːd]",
+  "meaning": "努力/艰难的（地）",
+  "group": 20
+ },
+ {
+  "id": 195,
+  "word": "text",
+  "phonetic": "[tekst]",
+  "meaning": "n.文本",
+  "group": 20
+ },
+ {
+  "id": 196,
+  "word": "free",
+  "phonetic": "[friː]",
+  "meaning": "adj.免费的",
+  "group": 20
+ },
+ {
+  "id": 197,
+  "word": "fast food",
+  "phonetic": "",
+  "meaning": "快餐食品",
+  "group": 20
+ },
+ {
+  "id": 198,
+  "word": "carpet",
+  "phonetic": "[ˈkɑːpɪt]",
+  "meaning": "n.地毯",
+  "group": 20
+ },
+ {
+  "id": 199,
+  "word": "good-looking",
+  "phonetic": "[ˌɡʊd ˈlʊkɪŋ]",
+  "meaning": "adj.漂亮的，好看的",
+  "group": 20
+ },
+ {
+  "id": 200,
+  "word": "bad",
+  "phonetic": "[bæd]",
+  "meaning": "adj.坏的;糟的",
+  "group": 20
+ },
+ {
+  "id": 201,
+  "word": "hall",
+  "phonetic": "[hɔːl]",
+  "meaning": "大厅；会堂；走廊",
+  "group": 21
+ },
+ {
+  "id": 202,
+  "word": "good evening",
+  "phonetic": "",
+  "meaning": "晚上好！",
+  "group": 21
+ },
+ {
+  "id": 203,
+  "word": "soap",
+  "phonetic": "[səʊp]",
+  "meaning": "n.肥皂",
+  "group": 21
+ },
+ {
+  "id": 204,
+  "word": "save",
+  "phonetic": "[seɪv]",
+  "meaning": "解救；节省",
+  "group": 21
+ },
+ {
+  "id": 205,
+  "word": "of course not",
+  "phonetic": "",
+  "meaning": "当然（不）",
+  "group": 21
+ },
+ {
+  "id": 206,
+  "word": "tall",
+  "phonetic": "[tɔːl]",
+  "meaning": "adj.高的",
+  "group": 21
+ },
+ {
+  "id": 207,
+  "word": "bored",
+  "phonetic": "[bɔːd]",
+  "meaning": "adj.感到乏味的；厌倦的",
+  "group": 21
+ },
+ {
+  "id": 208,
+  "word": "over",
+  "phonetic": "[ˈəʊvər]",
+  "meaning": "在那边",
+  "group": 21
+ },
+ {
+  "id": 209,
+  "word": "fast",
+  "phonetic": "[fɑːst]",
+  "meaning": "adv.快地，迅速地",
+  "group": 21
+ },
+ {
+  "id": 210,
+  "word": "digital camera",
+  "phonetic": "",
+  "meaning": "n. 数码相机",
+  "group": 21
+ },
+ {
+  "id": 211,
+  "word": "play",
+  "phonetic": "[pleɪ]",
+  "meaning": "n.戏剧，剧本",
+  "group": 22
+ },
+ {
+  "id": 212,
+  "word": "site",
+  "phonetic": "[saɪt]",
+  "meaning": "n.建筑工地",
+  "group": 22
+ },
+ {
+  "id": 213,
+  "word": "use",
+  "phonetic": "[juːz]",
+  "meaning": "v.使用;运用",
+  "group": 22
+ },
+ {
+  "id": 214,
+  "word": "download",
+  "phonetic": "[daʊn'ləʊd]",
+  "meaning": "v.下载",
+  "group": 22
+ },
+ {
+  "id": 215,
+  "word": "building",
+  "phonetic": "[ˈbɪldɪŋ]",
+  "meaning": "n.建筑物，大楼",
+  "group": 22
+ },
+ {
+  "id": 216,
+  "word": "sit down",
+  "phonetic": "[sɪt daʊn]",
+  "meaning": "坐下",
+  "group": 22
+ },
+ {
+  "id": 217,
+  "word": "sunny",
+  "phonetic": "[ˈsʌni]",
+  "meaning": "adj.晴朗的",
+  "group": 22
+ },
+ {
+  "id": 218,
+  "word": "buy",
+  "phonetic": "[baɪ]",
+  "meaning": "v.买(bought, bought)",
+  "group": 22
+ },
+ {
+  "id": 219,
+  "word": "CD",
+  "phonetic": "[ˌsiː ˈdiː]",
+  "meaning": "n.激光唱片；光盘",
+  "group": 22
+ },
+ {
+  "id": 220,
+  "word": "uniform",
+  "phonetic": "[ˈjuːnɪfɔːm]",
+  "meaning": "制服",
+  "group": 22
+ },
+ {
+  "id": 221,
+  "word": "serve",
+  "phonetic": "[sɜːv]",
+  "meaning": "v.招待(顾客等)；为......服务",
+  "group": 23
+ },
+ {
+  "id": 222,
+  "word": "dry",
+  "phonetic": "[draɪ]",
+  "meaning": "adj.干燥的",
+  "group": 23
+ },
+ {
+  "id": 223,
+  "word": "skiing",
+  "phonetic": "[ˈskiːɪŋ]",
+  "meaning": "n.滑雪",
+  "group": 23
+ },
+ {
+  "id": 224,
+  "word": "pleased",
+  "phonetic": "[pliːzd]",
+  "meaning": "adj.感到高兴的；感到满意的",
+  "group": 23
+ },
+ {
+  "id": 225,
+  "word": "slice",
+  "phonetic": "[slaɪs]",
+  "meaning": "n. 薄片",
+  "group": 23
+ },
+ {
+  "id": 226,
+  "word": "dangerous",
+  "phonetic": "[ˈdeɪndʒərəs]",
+  "meaning": "adj.危险的",
+  "group": 23
+ },
+ {
+  "id": 227,
+  "word": "Mrs.",
+  "phonetic": "[misiz]",
+  "meaning": "(用于女子的姓氏或姓名前)太太;夫人",
+  "group": 23
+ },
+ {
+  "id": 228,
+  "word": "difference",
+  "phonetic": "[ˈdɪfrəns]",
+  "meaning": "n.差别，不同（之处）",
+  "group": 23
+ },
+ {
+  "id": 229,
+  "word": "weekend",
+  "phonetic": "[ˌwiːkˈend]",
+  "meaning": "周末",
+  "group": 23
+ },
+ {
+  "id": 230,
+  "word": "arm",
+  "phonetic": "[ɑːm]",
+  "meaning": "n.手臂",
+  "group": 23
+ },
+ {
+  "id": 231,
+  "word": "living room",
+  "phonetic": "['lɪvɪŋ ru:m]",
+  "meaning": "客厅",
+  "group": 24
+ },
+ {
+  "id": 232,
+  "word": "diploma",
+  "phonetic": "[dɪˈpləʊmə]",
+  "meaning": "n. 毕业文凭；学位证书",
+  "group": 24
+ },
+ {
+  "id": 233,
+  "word": "cleaner",
+  "phonetic": "[ˈkliːnər]",
+  "meaning": "n. 清洁工人",
+  "group": 24
+ },
+ {
+  "id": 234,
+  "word": "pool",
+  "phonetic": "[puːl]",
+  "meaning": "n.游泳池;水池",
+  "group": 24
+ },
+ {
+  "id": 235,
+  "word": "port",
+  "phonetic": "[pɔːt]",
+  "meaning": "n.港口",
+  "group": 24
+ },
+ {
+  "id": 236,
+  "word": "else",
+  "phonetic": "[els]",
+  "meaning": "adv.其他的，别的",
+  "group": 24
+ },
+ {
+  "id": 237,
+  "word": "his",
+  "phonetic": "[hɪz; ɪz]",
+  "meaning": "pron.他的",
+  "group": 24
+ },
+ {
+  "id": 238,
+  "word": "burger",
+  "phonetic": "[ˈbɜːɡər]",
+  "meaning": "n.(=hamburger)汉堡包",
+  "group": 24
+ },
+ {
+  "id": 239,
+  "word": "cafeteria",
+  "phonetic": "[ˈkæfiˈtiəriə]",
+  "meaning": "n.形状；情况；vt.形成",
+  "group": 24
+ },
+ {
+  "id": 240,
+  "word": "fashion",
+  "phonetic": "[ˈfæʃn]",
+  "meaning": "n.时尚",
+  "group": 24
+ },
+ {
+  "id": 241,
+  "word": "library",
+  "phonetic": "[ˈlaɪbrəri; ˈlaɪbri]",
+  "meaning": "n.图书馆，图书室",
+  "group": 25
+ },
+ {
+  "id": 242,
+  "word": "spare",
+  "phonetic": "[speər]",
+  "meaning": "adj. 空闲的；多余的",
+  "group": 25
+ },
+ {
+  "id": 243,
+  "word": "fried",
+  "phonetic": "[fraɪd]",
+  "meaning": "adj.油煎的",
+  "group": 25
+ },
+ {
+  "id": 244,
+  "word": "tooth",
+  "phonetic": "[tuːθ]",
+  "meaning": "n.(pl.teeth)牙齿",
+  "group": 25
+ },
+ {
+  "id": 245,
+  "word": "jacket",
+  "phonetic": "[ˈdʒækɪt]",
+  "meaning": "夹克",
+  "group": 25
+ },
+ {
+  "id": 246,
+  "word": "sports centre",
+  "phonetic": "",
+  "meaning": "体育中心",
+  "group": 25
+ },
+ {
+  "id": 247,
+  "word": "white",
+  "phonetic": "[waɪt]",
+  "meaning": "n.白色",
+  "group": 25
+ },
+ {
+  "id": 248,
+  "word": "bear",
+  "phonetic": "[beər]",
+  "meaning": "n.熊",
+  "group": 25
+ },
+ {
+  "id": 249,
+  "word": "seat",
+  "phonetic": "[siːt]",
+  "meaning": "n.座位",
+  "group": 25
+ },
+ {
+  "id": 250,
+  "word": "smoking",
+  "phonetic": "[ˈsməʊkɪŋ]",
+  "meaning": "吸烟",
+  "group": 25
+ },
+ {
+  "id": 251,
+  "word": "summer",
+  "phonetic": "[ˈsʌmər]",
+  "meaning": "n.夏天;夏季",
+  "group": 26
+ },
+ {
+  "id": 252,
+  "word": "frightened",
+  "phonetic": "[ˈfraɪtnd]",
+  "meaning": "adj.受惊吓的；吃惊的",
+  "group": 26
+ },
+ {
+  "id": 253,
+  "word": "midday",
+  "phonetic": "[ˈmiddei]",
+  "meaning": "n.正午，中午",
+  "group": 26
+ },
+ {
+  "id": 254,
+  "word": "gift",
+  "phonetic": "[ɡɪft]",
+  "meaning": "礼物",
+  "group": 26
+ },
+ {
+  "id": 255,
+  "word": "DVD",
+  "phonetic": "[ˌdiː viː ˈdiː]",
+  "meaning": "n.数码影碟",
+  "group": 26
+ },
+ {
+  "id": 256,
+  "word": "bridge",
+  "phonetic": "[brɪdʒ]",
+  "meaning": "n.桥",
+  "group": 26
+ },
+ {
+  "id": 257,
+  "word": "cool",
+  "phonetic": "[kuːl]",
+  "meaning": "adj.妙极的;酷的",
+  "group": 26
+ },
+ {
+  "id": 258,
+  "word": "thing",
+  "phonetic": "[θɪŋ]",
+  "meaning": "东西；事情",
+  "group": 26
+ },
+ {
+  "id": 259,
+  "word": "department",
+  "phonetic": "[diˈpɑːtmənt]",
+  "meaning": "n.部,司,局,处,系",
+  "group": 26
+ },
+ {
+  "id": 260,
+  "word": "find",
+  "phonetic": "[faɪnd]",
+  "meaning": "v.找到；发现；发觉(found, found)",
+  "group": 26
+ },
+ {
+  "id": 261,
+  "word": "out of",
+  "phonetic": "",
+  "meaning": "从......里出来；缺乏",
+  "group": 27
+ },
+ {
+  "id": 262,
+  "word": "heavy",
+  "phonetic": "[ˈhevi]",
+  "meaning": "adj.重的",
+  "group": 27
+ },
+ {
+  "id": 263,
+  "word": "theatre",
+  "phonetic": "[ˈθɪətər]",
+  "meaning": "剧院",
+  "group": 27
+ },
+ {
+  "id": 264,
+  "word": "DVD player",
+  "phonetic": "",
+  "meaning": "DVD播放器",
+  "group": 27
+ },
+ {
+  "id": 265,
+  "word": "coat",
+  "phonetic": "[kəʊt]",
+  "meaning": "n.外套；上衣",
+  "group": 27
+ },
+ {
+  "id": 266,
+  "word": "successful",
+  "phonetic": "[səkˈsesfl]",
+  "meaning": "adj.获得成功的",
+  "group": 27
+ },
+ {
+  "id": 267,
+  "word": "duck",
+  "phonetic": "[dʌk]",
+  "meaning": "n.鸭子",
+  "group": 27
+ },
+ {
+  "id": 268,
+  "word": "other",
+  "phonetic": "[ˈʌðər]",
+  "meaning": "pron. 其他；另外 adj. 其他的",
+  "group": 27
+ },
+ {
+  "id": 269,
+  "word": "desk",
+  "phonetic": "[desk]",
+  "meaning": "n.书桌，写字台",
+  "group": 27
+ },
+ {
+  "id": 270,
+  "word": "driving licence",
+  "phonetic": "[ˈdraɪvɪŋ laɪsns]",
+  "meaning": "驾驶执照",
+  "group": 27
+ },
+ {
+  "id": 271,
+  "word": "cycle",
+  "phonetic": "[ˈsaɪkl]",
+  "meaning": "v. 骑自行车",
+  "group": 28
+ },
+ {
+  "id": 272,
+  "word": "funny",
+  "phonetic": "[ˈfʌni]",
+  "meaning": "adj.滑稽的，好笑的",
+  "group": 28
+ },
+ {
+  "id": 273,
+  "word": "girl",
+  "phonetic": "[ɡɜːl]",
+  "meaning": "n.女孩",
+  "group": 28
+ },
+ {
+  "id": 274,
+  "word": "him",
+  "phonetic": "[hɪm; ɪm]",
+  "meaning": "pron.他(he的宾格)",
+  "group": 28
+ },
+ {
+  "id": 275,
+  "word": "adult",
+  "phonetic": "[ˈædʌlt; əˈdʌlt]",
+  "meaning": "n.成年人",
+  "group": 28
+ },
+ {
+  "id": 276,
+  "word": "comfortable",
+  "phonetic": "[ˈkʌmftəbl; ˈkʌmfətəbl]",
+  "meaning": "adj.使人舒服的，舒适的",
+  "group": 28
+ },
+ {
+  "id": 277,
+  "word": "toy",
+  "phonetic": "[tɔɪ]",
+  "meaning": "n.玩具",
+  "group": 28
+ },
+ {
+  "id": 278,
+  "word": "flower",
+  "phonetic": "[ˈflaʊər]",
+  "meaning": "n.花",
+  "group": 28
+ },
+ {
+  "id": 279,
+  "word": "washing-up",
+  "phonetic": "[ˈwɒʃɪŋˌʌp]",
+  "meaning": "n.(饭后的)刷洗餐具",
+  "group": 28
+ },
+ {
+  "id": 280,
+  "word": "bath",
+  "phonetic": "[bɑːθ]",
+  "meaning": "n.洗澡",
+  "group": 28
+ },
+ {
+  "id": 281,
+  "word": "house",
+  "phonetic": "[haʊs]",
+  "meaning": "n.房子",
+  "group": 29
+ },
+ {
+  "id": 282,
+  "word": "must",
+  "phonetic": "[məst; mʌst]",
+  "meaning": "modal v.应该，必须；一定",
+  "group": 29
+ },
+ {
+  "id": 283,
+  "word": "vegetable",
+  "phonetic": "[ˈvedʒtəbl]",
+  "meaning": "n.蔬菜",
+  "group": 29
+ },
+ {
+  "id": 284,
+  "word": "afraid",
+  "phonetic": "[əˈfreɪd]",
+  "meaning": "adj.害怕；惧怕",
+  "group": 29
+ },
+ {
+  "id": 285,
+  "word": "chips",
+  "phonetic": "[tʃɪps]",
+  "meaning": "n.（常复）炸薯条",
+  "group": 29
+ },
+ {
+  "id": 286,
+  "word": "subject",
+  "phonetic": "[ˈsʌbdʒɪkt; ˈsʌbdʒekt]",
+  "meaning": "n.学科;科目",
+  "group": 29
+ },
+ {
+  "id": 287,
+  "word": "clear",
+  "phonetic": "[klɪər]",
+  "meaning": "v.清除；清扫",
+  "group": 29
+ },
+ {
+  "id": 288,
+  "word": "fantastic",
+  "phonetic": "[fænˈtæstɪk]",
+  "meaning": "adj. 极好的，美妙的",
+  "group": 29
+ },
+ {
+  "id": 289,
+  "word": "little",
+  "phonetic": "[ˈlɪtl]",
+  "meaning": "n.没有多少，一点",
+  "group": 29
+ },
+ {
+  "id": 290,
+  "word": "chemistry",
+  "phonetic": "[ˈkemɪstri]",
+  "meaning": "n. 化学",
+  "group": 29
+ },
+ {
+  "id": 291,
+  "word": "century",
+  "phonetic": "[ˈsentʃəri]",
+  "meaning": "n.世纪",
+  "group": 30
+ },
+ {
+  "id": 292,
+  "word": "worker",
+  "phonetic": "[ˈwɜːkər]",
+  "meaning": "n. 工作者；工人",
+  "group": 30
+ },
+ {
+  "id": 293,
+  "word": "discount",
+  "phonetic": "[ˈdɪskaʊnt]",
+  "meaning": "n. (价格、债款等)折扣； v. 不信，把...打折扣，怀疑地看待",
+  "group": 30
+ },
+ {
+  "id": 294,
+  "word": "lunchtime",
+  "phonetic": "[ˈlʌntʃtaɪm]",
+  "meaning": "n.午餐时间",
+  "group": 30
+ },
+ {
+  "id": 295,
+  "word": "electricity",
+  "phonetic": "[ɪˌlekˈtrɪsəti]",
+  "meaning": "n.电",
+  "group": 30
+ },
+ {
+  "id": 296,
+  "word": "woman",
+  "phonetic": "[ˈwʊmən]",
+  "meaning": "n.妇女，女人(复women)",
+  "group": 30
+ },
+ {
+  "id": 297,
+  "word": "important",
+  "phonetic": "[ɪmˈpɔːtnt]",
+  "meaning": "adj.重要的",
+  "group": 30
+ },
+ {
+  "id": 298,
+  "word": "shower",
+  "phonetic": "[ˈʃaʊər]",
+  "meaning": "n.淋浴",
+  "group": 30
+ },
+ {
+  "id": 299,
+  "word": "glove",
+  "phonetic": "[ɡlʌv]",
+  "meaning": "手套",
+  "group": 30
+ },
+ {
+  "id": 300,
+  "word": "street",
+  "phonetic": "[striːt]",
+  "meaning": "n.大街",
+  "group": 30
+ },
+ {
+  "id": 301,
+  "word": "travel",
+  "phonetic": "[ˈtrævl]",
+  "meaning": "v. 行走；旅行",
+  "group": 31
+ },
+ {
+  "id": 302,
+  "word": "cookie",
+  "phonetic": "[ˈkʊki]",
+  "meaning": "饼干",
+  "group": 31
+ },
+ {
+  "id": 303,
+  "word": "open",
+  "phonetic": "[ˈəʊpən]",
+  "meaning": "adj.开着的，开口的；敞开的；营业中的",
+  "group": 31
+ },
+ {
+  "id": 304,
+  "word": "watch",
+  "phonetic": "[wɒtʃ]",
+  "meaning": "v.观看，注视；当心",
+  "group": 31
+ },
+ {
+  "id": 305,
+  "word": "improve",
+  "phonetic": "[ɪmˈpruːv]",
+  "meaning": "v.改进，改善",
+  "group": 31
+ },
+ {
+  "id": 306,
+  "word": "credit card",
+  "phonetic": "",
+  "meaning": "信用卡",
+  "group": 31
+ },
+ {
+  "id": 307,
+  "word": "road",
+  "phonetic": "[rəʊd]",
+  "meaning": "n.路",
+  "group": 31
+ },
+ {
+  "id": 308,
+  "word": "litre",
+  "phonetic": "[ˈliːtər]",
+  "meaning": "公升",
+  "group": 31
+ },
+ {
+  "id": 309,
+  "word": "field",
+  "phonetic": "[fiːld]",
+  "meaning": "n.田地；牧场；场地",
+  "group": 31
+ },
+ {
+  "id": 310,
+  "word": "nearly",
+  "phonetic": "[ˈnɪəli]",
+  "meaning": "adv.将近；几乎；差不多",
+  "group": 31
+ },
+ {
+  "id": 311,
+  "word": "inside",
+  "phonetic": "[ˌɪnˈsaɪd]",
+  "meaning": "在里面",
+  "group": 32
+ },
+ {
+  "id": 312,
+  "word": "business",
+  "phonetic": "[ˈbɪznəs]",
+  "meaning": "n.公事；商业；生意",
+  "group": 32
+ },
+ {
+  "id": 313,
+  "word": "rock",
+  "phonetic": "[rɒk]",
+  "meaning": "n.岩石",
+  "group": 32
+ },
+ {
+  "id": 314,
+  "word": "bill",
+  "phonetic": "[bɪl]",
+  "meaning": "n.账单；钞票，纸币",
+  "group": 32
+ },
+ {
+  "id": 315,
+  "word": "sweet",
+  "phonetic": "[swiːt]",
+  "meaning": "甜的",
+  "group": 32
+ },
+ {
+  "id": 316,
+  "word": "immediately",
+  "phonetic": "[ɪˈmiːdiətli]",
+  "meaning": "adv.立即，马上",
+  "group": 32
+ },
+ {
+  "id": 317,
+  "word": "bus stop",
+  "phonetic": "[bʌs stɒp]",
+  "meaning": "n.公共汽车站",
+  "group": 32
+ },
+ {
+  "id": 318,
+  "word": "store",
+  "phonetic": "[stɔːr]",
+  "meaning": "商店",
+  "group": 32
+ },
+ {
+  "id": 319,
+  "word": "ice",
+  "phonetic": "[aɪs]",
+  "meaning": "n. 冰",
+  "group": 32
+ },
+ {
+  "id": 320,
+  "word": "near",
+  "phonetic": "[nɪər]",
+  "meaning": "prep.在......附近",
+  "group": 32
+ },
+ {
+  "id": 321,
+  "word": "because",
+  "phonetic": "[bɪˈkəz; bɪˈkɒz]",
+  "meaning": "conj.因为",
+  "group": 33
+ },
+ {
+  "id": 322,
+  "word": "boring",
+  "phonetic": "[ˈbɔːrɪŋ]",
+  "meaning": "无聊的",
+  "group": 33
+ },
+ {
+  "id": 323,
+  "word": "at",
+  "phonetic": "[ət; æt]",
+  "meaning": "prep.在(几点钟)；在(某处)；(表示动作的目标和方向)",
+  "group": 33
+ },
+ {
+  "id": 324,
+  "word": "refrigerator",
+  "phonetic": "[riˈfridʒəreitə]",
+  "meaning": "n.冰箱，冷藏库",
+  "group": 33
+ },
+ {
+  "id": 325,
+  "word": "class",
+  "phonetic": "[klɑːs]",
+  "meaning": "n.(学校里的)班级；课；等级",
+  "group": 33
+ },
+ {
+  "id": 326,
+  "word": "map",
+  "phonetic": "[mæp]",
+  "meaning": "n.地图",
+  "group": 33
+ },
+ {
+  "id": 327,
+  "word": "mirror",
+  "phonetic": "[ˈmɪrər]",
+  "meaning": "n.镜子",
+  "group": 33
+ },
+ {
+  "id": 328,
+  "word": "licence",
+  "phonetic": "[ˈlaɪsns]",
+  "meaning": "执照，许可证",
+  "group": 33
+ },
+ {
+  "id": 329,
+  "word": "paint",
+  "phonetic": "[peɪnt]",
+  "meaning": "绘画；涂料",
+  "group": 33
+ },
+ {
+  "id": 330,
+  "word": "already",
+  "phonetic": "[ɔːlˈredi]",
+  "meaning": "adv.已经，早已",
+  "group": 33
+ },
+ {
+  "id": 331,
+  "word": "yes",
+  "phonetic": "[jes]",
+  "meaning": "ad.是，好，同意",
+  "group": 34
+ },
+ {
+  "id": 332,
+  "word": "PC",
+  "phonetic": "",
+  "meaning": "个人电脑",
+  "group": 34
+ },
+ {
+  "id": 333,
+  "word": "phone",
+  "phonetic": "[fəʊn]",
+  "meaning": "v.打电话",
+  "group": 34
+ },
+ {
+  "id": 334,
+  "word": "violin",
+  "phonetic": "[ˌvaɪəˈlɪn]",
+  "meaning": "n.小提琴",
+  "group": 34
+ },
+ {
+  "id": 335,
+  "word": "begin",
+  "phonetic": "[bɪˈɡɪn]",
+  "meaning": "v.开始，着手 (began, begun)",
+  "group": 34
+ },
+ {
+  "id": 336,
+  "word": "earn",
+  "phonetic": "[ɜːn]",
+  "meaning": "v.挣得；挣钱",
+  "group": 34
+ },
+ {
+  "id": 337,
+  "word": "say",
+  "phonetic": "[seɪ]",
+  "meaning": "v.说；讲",
+  "group": 34
+ },
+ {
+  "id": 338,
+  "word": "stomach ache",
+  "phonetic": "[ˈstʌmək eɪk]",
+  "meaning": "n. 胃痛",
+  "group": 34
+ },
+ {
+  "id": 339,
+  "word": "advice",
+  "phonetic": "[ədˈvaɪs]",
+  "meaning": "n.建议",
+  "group": 34
+ },
+ {
+  "id": 340,
+  "word": "family",
+  "phonetic": "[ˈfæməli]",
+  "meaning": "n.家庭；家族；家人",
+  "group": 34
+ },
+ {
+  "id": 341,
+  "word": "smoke",
+  "phonetic": "[sməʊk]",
+  "meaning": "n.烟",
+  "group": 35
+ },
+ {
+  "id": 342,
+  "word": "go",
+  "phonetic": "[ɡəʊ]",
+  "meaning": "v.去；走；驶；通到；到达(went,gone)",
+  "group": 35
+ },
+ {
+  "id": 343,
+  "word": "trouble",
+  "phonetic": "[ˈtrʌbl]",
+  "meaning": "n.困难",
+  "group": 35
+ },
+ {
+  "id": 344,
+  "word": "keyboard",
+  "phonetic": "[ˈkiːbɔːd]",
+  "meaning": "n.（计算机或打字机）键盘",
+  "group": 35
+ },
+ {
+  "id": 345,
+  "word": "notice",
+  "phonetic": "[ˈnəʊtɪs]",
+  "meaning": "n.通告，布告",
+  "group": 35
+ },
+ {
+  "id": 346,
+  "word": "roast",
+  "phonetic": "[rəʊst]",
+  "meaning": "v.烤(肉)",
+  "group": 35
+ },
+ {
+  "id": 347,
+  "word": "calendar",
+  "phonetic": "[ˈkælɪndər]",
+  "meaning": "日历",
+  "group": 35
+ },
+ {
+  "id": 348,
+  "word": "each",
+  "phonetic": "[iːtʃ]",
+  "meaning": "adj.&pron.每人；每个；每件",
+  "group": 35
+ },
+ {
+  "id": 349,
+  "word": "knife",
+  "phonetic": "[naɪf]",
+  "meaning": "n.小刀(复knives)",
+  "group": 35
+ },
+ {
+  "id": 350,
+  "word": "health",
+  "phonetic": "[helθ]",
+  "meaning": "n.健康",
+  "group": 35
+ },
+ {
+  "id": 351,
+  "word": "song",
+  "phonetic": "[sɒŋ]",
+  "meaning": "n.歌唱；歌曲",
+  "group": 36
+ },
+ {
+  "id": 352,
+  "word": "yoghurt",
+  "phonetic": "[ˈjəʊɡət]",
+  "meaning": "n.酸奶",
+  "group": 36
+ },
+ {
+  "id": 353,
+  "word": "short",
+  "phonetic": "[ʃɔːt]",
+  "meaning": "adj.短的；矮的；短缺的",
+  "group": 36
+ },
+ {
+  "id": 354,
+  "word": "coffee",
+  "phonetic": "[ˈkɒfi]",
+  "meaning": "n.咖啡",
+  "group": 36
+ },
+ {
+  "id": 355,
+  "word": "poor you",
+  "phonetic": "",
+  "meaning": "(adj) 可怜的你",
+  "group": 36
+ },
+ {
+  "id": 356,
+  "word": "unusual",
+  "phonetic": "[ʌnˈjuːʒuəl; ʌnˈjuːʒəl]",
+  "meaning": "adj.不寻常的",
+  "group": 36
+ },
+ {
+  "id": 357,
+  "word": "entrance",
+  "phonetic": "[ˈentrəns]",
+  "meaning": "n. 入口处",
+  "group": 36
+ },
+ {
+  "id": 358,
+  "word": "ID card",
+  "phonetic": "",
+  "meaning": "学生证;身份证",
+  "group": 36
+ },
+ {
+  "id": 359,
+  "word": "terrible",
+  "phonetic": "[ˈterəbl]",
+  "meaning": "adj.非常讨厌的;可怕的",
+  "group": 36
+ },
+ {
+  "id": 360,
+  "word": "candy",
+  "phonetic": "[ˈkændi]",
+  "meaning": "n.糖果",
+  "group": 36
+ },
+ {
+  "id": 361,
+  "word": "excuse",
+  "phonetic": "[ɪkˈskjuːs]",
+  "meaning": "原谅",
+  "group": 37
+ },
+ {
+  "id": 362,
+  "word": "west",
+  "phonetic": "[west]",
+  "meaning": "西方",
+  "group": 37
+ },
+ {
+  "id": 363,
+  "word": "cow",
+  "phonetic": "[kaʊ]",
+  "meaning": "n.母牛，奶牛",
+  "group": 37
+ },
+ {
+  "id": 364,
+  "word": "glasses",
+  "phonetic": "['ɡlɑːsɪz]",
+  "meaning": "n.(pl.)眼镜",
+  "group": 37
+ },
+ {
+  "id": 365,
+  "word": "nothing",
+  "phonetic": "[ˈnʌθɪŋ]",
+  "meaning": "pron.没有什么，没有一件东西",
+  "group": 37
+ },
+ {
+  "id": 366,
+  "word": "hers",
+  "phonetic": "[hɜːz; ɜːz]",
+  "meaning": "pron.她的",
+  "group": 37
+ },
+ {
+  "id": 367,
+  "word": "skirt",
+  "phonetic": "[skɜːt]",
+  "meaning": "n.女裙",
+  "group": 37
+ },
+ {
+  "id": 368,
+  "word": "not",
+  "phonetic": "[nɒt]",
+  "meaning": "ad.不，没",
+  "group": 37
+ },
+ {
+  "id": 369,
+  "word": "cousin",
+  "phonetic": "[ˈkʌzn]",
+  "meaning": "n.堂(表)兄弟，堂(表)姐妹",
+  "group": 37
+ },
+ {
+  "id": 370,
+  "word": "match",
+  "phonetic": "[mætʃ]",
+  "meaning": "v.与......匹配",
+  "group": 37
+ },
+ {
+  "id": 371,
+  "word": "sauce",
+  "phonetic": "[sɔːs]",
+  "meaning": "n. 酱油；酱汁；调味汁",
+  "group": 38
+ },
+ {
+  "id": 372,
+  "word": "line",
+  "phonetic": "[laɪn]",
+  "meaning": "v.排队",
+  "group": 38
+ },
+ {
+  "id": 373,
+  "word": "shut",
+  "phonetic": "[ʃʌt]",
+  "meaning": "v.关上，封闭(shut,shut)",
+  "group": 38
+ },
+ {
+  "id": 374,
+  "word": "camera",
+  "phonetic": "[ˈkæmrə]",
+  "meaning": "照相机",
+  "group": 38
+ },
+ {
+  "id": 375,
+  "word": "fresh",
+  "phonetic": "[freʃ]",
+  "meaning": "新鲜的",
+  "group": 38
+ },
+ {
+  "id": 376,
+  "word": "under",
+  "phonetic": "[ˈʌndər]",
+  "meaning": "adv.&prep.在......下面，向......下 面",
+  "group": 38
+ },
+ {
+  "id": 377,
+  "word": "bye",
+  "phonetic": "[baɪ]",
+  "meaning": "int.再见",
+  "group": 38
+ },
+ {
+  "id": 378,
+  "word": "minus",
+  "phonetic": "[ˈmaɪnəs]",
+  "meaning": "prep.&adj.负的，减去的",
+  "group": 38
+ },
+ {
+  "id": 379,
+  "word": "poor",
+  "phonetic": "[pɔːr; pʊər]",
+  "meaning": "adj.贫穷的，贫寒的",
+  "group": 38
+ },
+ {
+  "id": 380,
+  "word": "barbecue",
+  "phonetic": "[ˈbɑːbɪkjuː]",
+  "meaning": "n. 烧烤",
+  "group": 38
+ },
+ {
+  "id": 381,
+  "word": "card",
+  "phonetic": "[kɑːd]",
+  "meaning": "n.卡片",
+  "group": 39
+ },
+ {
+  "id": 382,
+  "word": "glad",
+  "phonetic": "[ɡlæd]",
+  "meaning": "adj.高兴，愉快",
+  "group": 39
+ },
+ {
+  "id": 383,
+  "word": "than",
+  "phonetic": "[ðən; ðæn]",
+  "meaning": "conj. 比",
+  "group": 39
+ },
+ {
+  "id": 384,
+  "word": "how",
+  "phonetic": "[haʊ]",
+  "meaning": "adv.(方法、手段、状态)怎样；如何；(程度、数量、价钱)多少；(感叹)多么",
+  "group": 39
+ },
+ {
+  "id": 385,
+  "word": "language",
+  "phonetic": "[ˈlæŋɡwɪdʒ]",
+  "meaning": "语言",
+  "group": 39
+ },
+ {
+  "id": 386,
+  "word": "indoors",
+  "phonetic": "[ˈinˈdɔːz]",
+  "meaning": "ad.在室内，在屋里",
+  "group": 39
+ },
+ {
+  "id": 387,
+  "word": "hear",
+  "phonetic": "[hɪər]",
+  "meaning": "v.听见；听说；得知(heard,heard)",
+  "group": 39
+ },
+ {
+  "id": 388,
+  "word": "pocket",
+  "phonetic": "[ˈpɒkɪt]",
+  "meaning": "n.(衣服的)口袋",
+  "group": 39
+ },
+ {
+  "id": 389,
+  "word": "volleyball",
+  "phonetic": "[ˈvɒlibɔːl]",
+  "meaning": "n.排球",
+  "group": 39
+ },
+ {
+  "id": 390,
+  "word": "dollar",
+  "phonetic": "[ˈdɒlər]",
+  "meaning": "n.元（美国、加拿大等国货币单位）",
+  "group": 39
+ },
+ {
+  "id": 391,
+  "word": "today",
+  "phonetic": "[təˈdeɪ]",
+  "meaning": "adv.在今天",
+  "group": 40
+ },
+ {
+  "id": 392,
+  "word": "bookstore",
+  "phonetic": "['bʊkstɔː]",
+  "meaning": "书店",
+  "group": 40
+ },
+ {
+  "id": 393,
+  "word": "weekly",
+  "phonetic": "[ˈwiːkli]",
+  "meaning": "adj.&adv.每周（地）",
+  "group": 40
+ },
+ {
+  "id": 394,
+  "word": "lorry",
+  "phonetic": "[ˈlɒri]",
+  "meaning": "n.卡车",
+  "group": 40
+ },
+ {
+  "id": 395,
+  "word": "birth",
+  "phonetic": "[bɜːθ]",
+  "meaning": "n. 出生",
+  "group": 40
+ },
+ {
+  "id": 396,
+  "word": "cloudy",
+  "phonetic": "[ˈklaʊdi]",
+  "meaning": "adj.多云的",
+  "group": 40
+ },
+ {
+  "id": 397,
+  "word": "drugstore",
+  "phonetic": "[ˈdrʌɡstɔː(r)]",
+  "meaning": "n. [药] 药房；（美）杂货店",
+  "group": 40
+ },
+ {
+  "id": 398,
+  "word": "tablet",
+  "phonetic": "[ˈtæblət]",
+  "meaning": "平板电脑",
+  "group": 40
+ },
+ {
+  "id": 399,
+  "word": "winter",
+  "phonetic": "[ˈwɪntər]",
+  "meaning": "n.冬天;冬季",
+  "group": 40
+ },
+ {
+  "id": 400,
+  "word": "furniture",
+  "phonetic": "[ˈfɜːnɪtʃər]",
+  "meaning": "n.家具",
+  "group": 40
+ },
+ {
+  "id": 401,
+  "word": "side",
+  "phonetic": "[saɪd]",
+  "meaning": "n.侧面",
+  "group": 41
+ },
+ {
+  "id": 402,
+  "word": "die",
+  "phonetic": "[daɪ]",
+  "meaning": "v.死",
+  "group": 41
+ },
+ {
+  "id": 403,
+  "word": "dentist",
+  "phonetic": "[ˈdentɪst]",
+  "meaning": "n. 牙医",
+  "group": 41
+ },
+ {
+  "id": 404,
+  "word": "centimetre",
+  "phonetic": "[ˈsentɪmiːtər]",
+  "meaning": "n. 厘米",
+  "group": 41
+ },
+ {
+  "id": 405,
+  "word": "everything",
+  "phonetic": "[ˈevriθɪŋ]",
+  "meaning": "一切事物",
+  "group": 41
+ },
+ {
+  "id": 406,
+  "word": "thin",
+  "phonetic": "[θɪn]",
+  "meaning": "adj.薄的；瘦的；细的",
+  "group": 41
+ },
+ {
+  "id": 407,
+  "word": "partner",
+  "phonetic": "[ˈpɑːtnər]",
+  "meaning": "搭档；同伴",
+  "group": 41
+ },
+ {
+  "id": 408,
+  "word": "shall",
+  "phonetic": "[ʃəl; ʃæl]",
+  "meaning": "v. 将要",
+  "group": 41
+ },
+ {
+  "id": 409,
+  "word": "sitting room",
+  "phonetic": "",
+  "meaning": "客厅",
+  "group": 41
+ },
+ {
+  "id": 410,
+  "word": "look after",
+  "phonetic": "[lʊk ˈɑːftə(r)]",
+  "meaning": "照顾；照看",
+  "group": 41
+ },
+ {
+  "id": 411,
+  "word": "cap",
+  "phonetic": "[kæp]",
+  "meaning": "（尤指有帽舌的）帽子",
+  "group": 42
+ },
+ {
+  "id": 412,
+  "word": "top",
+  "phonetic": "[tɒp]",
+  "meaning": "adj.最上面的；居首位的",
+  "group": 42
+ },
+ {
+  "id": 413,
+  "word": "draw",
+  "phonetic": "[drɔː]",
+  "meaning": "v.画",
+  "group": 42
+ },
+ {
+  "id": 414,
+  "word": "collect",
+  "phonetic": "[kəˈlekt]",
+  "meaning": "v. 收集",
+  "group": 42
+ },
+ {
+  "id": 415,
+  "word": "walking",
+  "phonetic": "[ˈwɔːkɪŋ]",
+  "meaning": "n.散步，步行",
+  "group": 42
+ },
+ {
+  "id": 416,
+  "word": "gate",
+  "phonetic": "[ɡeɪt]",
+  "meaning": "n.大门",
+  "group": 42
+ },
+ {
+  "id": 417,
+  "word": "sister",
+  "phonetic": "[ˈsɪstər]",
+  "meaning": "n.姐；妹",
+  "group": 42
+ },
+ {
+  "id": 418,
+  "word": "enjoy",
+  "phonetic": "[ɪnˈdʒɔɪ]",
+  "meaning": "v.享受;喜爱",
+  "group": 42
+ },
+ {
+  "id": 419,
+  "word": "path",
+  "phonetic": "[pɑːθ]",
+  "meaning": "n.小道，小径",
+  "group": 42
+ },
+ {
+  "id": 420,
+  "word": "windsurfing",
+  "phonetic": "[ˈwɪndˌsɜːfɪŋ]",
+  "meaning": "(n)风帆冲浪",
+  "group": 42
+ },
+ {
+  "id": 421,
+  "word": "spoon",
+  "phonetic": "[spuːn]",
+  "meaning": "n.调羹",
+  "group": 43
+ },
+ {
+  "id": 422,
+  "word": "meeting",
+  "phonetic": "[ˈmiːtɪŋ]",
+  "meaning": "n.会；集会；会见",
+  "group": 43
+ },
+ {
+  "id": 423,
+  "word": "tour",
+  "phonetic": "[tʊər; tɔːr]",
+  "meaning": "v.在...旅行",
+  "group": 43
+ },
+ {
+  "id": 424,
+  "word": "reading",
+  "phonetic": "[ˈriːdɪŋ]",
+  "meaning": "n.阅读",
+  "group": 43
+ },
+ {
+  "id": 425,
+  "word": "apartment building",
+  "phonetic": "",
+  "meaning": "公寓楼",
+  "group": 43
+ },
+ {
+  "id": 426,
+  "word": "afternoon",
+  "phonetic": "[ˌɑːftəˈnuːn]",
+  "meaning": "n.下午",
+  "group": 43
+ },
+ {
+  "id": 427,
+  "word": "high",
+  "phonetic": "[haɪ]",
+  "meaning": "adj.高的",
+  "group": 43
+ },
+ {
+  "id": 428,
+  "word": "stop",
+  "phonetic": "[stɒp]",
+  "meaning": "n.车站；停止",
+  "group": 43
+ },
+ {
+  "id": 429,
+  "word": "get dressed",
+  "phonetic": "",
+  "meaning": "穿上衣服",
+  "group": 43
+ },
+ {
+  "id": 430,
+  "word": "post office",
+  "phonetic": "[ˈpəust ɔfis]",
+  "meaning": "邮局",
+  "group": 43
+ },
+ {
+  "id": 431,
+  "word": "most",
+  "phonetic": "[məʊst]",
+  "meaning": "n.大部分，大多数",
+  "group": 44
+ },
+ {
+  "id": 432,
+  "word": "film",
+  "phonetic": "[fɪlm]",
+  "meaning": "n.电影；影片；胶卷",
+  "group": 44
+ },
+ {
+  "id": 433,
+  "word": "floor",
+  "phonetic": "[flɔːr]",
+  "meaning": "n.地面，地板；(楼房的)层",
+  "group": 44
+ },
+ {
+  "id": 434,
+  "word": "market",
+  "phonetic": "[ˈmɑːkɪt]",
+  "meaning": "市场",
+  "group": 44
+ },
+ {
+  "id": 435,
+  "word": "police car",
+  "phonetic": "",
+  "meaning": "警车",
+  "group": 44
+ },
+ {
+  "id": 436,
+  "word": "to",
+  "phonetic": "[tə; tu; tuː]",
+  "meaning": "prep.(表示接受动作的人或物)给......；对......，向......，到......",
+  "group": 44
+ },
+ {
+  "id": 437,
+  "word": "soccer",
+  "phonetic": "[ˈsɒkər]",
+  "meaning": "n.〈美〉英式足球",
+  "group": 44
+ },
+ {
+  "id": 438,
+  "word": "give somebody a ring",
+  "phonetic": "",
+  "meaning": "给某人打电话",
+  "group": 44
+ },
+ {
+  "id": 439,
+  "word": "engine",
+  "phonetic": "[ˈendʒɪn]",
+  "meaning": "n.发动机，引擎",
+  "group": 44
+ },
+ {
+  "id": 440,
+  "word": "mushroom",
+  "phonetic": "[ˈmʌʃrʊm; ˈmʌʃruːm]",
+  "meaning": "n. 蘑菇",
+  "group": 44
+ },
+ {
+  "id": 441,
+  "word": "party",
+  "phonetic": "[ˈpɑːti]",
+  "meaning": "n.聚会;晚会",
+  "group": 45
+ },
+ {
+  "id": 442,
+  "word": "instructions",
+  "phonetic": "[ɪn'strʌkʃənz]",
+  "meaning": "n.[pl.]指示，命令",
+  "group": 45
+ },
+ {
+  "id": 443,
+  "word": "stay",
+  "phonetic": "[steɪ]",
+  "meaning": "停留",
+  "group": 45
+ },
+ {
+  "id": 444,
+  "word": "look at",
+  "phonetic": "[luk æt]",
+  "meaning": "看；观看",
+  "group": 45
+ },
+ {
+  "id": 445,
+  "word": "dream",
+  "phonetic": "[driːm]",
+  "meaning": "梦；梦想；做梦",
+  "group": 45
+ },
+ {
+  "id": 446,
+  "word": "child",
+  "phonetic": "[tʃaɪld]",
+  "meaning": "n.(pl. children)儿童",
+  "group": 45
+ },
+ {
+  "id": 447,
+  "word": "zoo",
+  "phonetic": "[zuː]",
+  "meaning": "n.动物园",
+  "group": 45
+ },
+ {
+  "id": 448,
+  "word": "player",
+  "phonetic": "[ˈpleɪər]",
+  "meaning": "运动员；选手",
+  "group": 45
+ },
+ {
+  "id": 449,
+  "word": "lost",
+  "phonetic": "[lɒst]",
+  "meaning": "迷路的",
+  "group": 45
+ },
+ {
+  "id": 450,
+  "word": "ice skating",
+  "phonetic": "",
+  "meaning": "滑冰",
+  "group": 45
+ },
+ {
+  "id": 451,
+  "word": "bring back",
+  "phonetic": "",
+  "meaning": "恢复；使想起；归还",
+  "group": 46
+ },
+ {
+  "id": 452,
+  "word": "fat",
+  "phonetic": "[fæt]",
+  "meaning": "n.脂肪",
+  "group": 46
+ },
+ {
+  "id": 453,
+  "word": "purple",
+  "phonetic": "[ˈpɜːpl]",
+  "meaning": "紫色（的）",
+  "group": 46
+ },
+ {
+  "id": 454,
+  "word": "college",
+  "phonetic": "[ˈkɒlɪdʒ]",
+  "meaning": "n.学院",
+  "group": 46
+ },
+ {
+  "id": 455,
+  "word": "out",
+  "phonetic": "[aʊt]",
+  "meaning": "在外面",
+  "group": 46
+ },
+ {
+  "id": 456,
+  "word": "experience",
+  "phonetic": "[ɪkˈspɪəriəns]",
+  "meaning": "n.（一次）经历，体验",
+  "group": 46
+ },
+ {
+  "id": 457,
+  "word": "soup",
+  "phonetic": "[suːp]",
+  "meaning": "n.汤",
+  "group": 46
+ },
+ {
+  "id": 458,
+  "word": "Olympic",
+  "phonetic": "[əˈlɪmpɪk]",
+  "meaning": "n.奥林匹克(运动会)",
+  "group": 46
+ },
+ {
+  "id": 459,
+  "word": "backpack",
+  "phonetic": "[ˈbækpæk]",
+  "meaning": "n.背包；旅行包",
+  "group": 46
+ },
+ {
+  "id": 460,
+  "word": "swim",
+  "phonetic": "[swɪm]",
+  "meaning": "v.游泳",
+  "group": 46
+ },
+ {
+  "id": 461,
+  "word": "wooden",
+  "phonetic": "[ˈwʊdn]",
+  "meaning": "adj.木质的",
+  "group": 47
+ },
+ {
+  "id": 462,
+  "word": "fog",
+  "phonetic": "[fɒɡ]",
+  "meaning": "n.雾",
+  "group": 47
+ },
+ {
+  "id": 463,
+  "word": "problem",
+  "phonetic": "[ˈprɒbləm]",
+  "meaning": "问题；难题",
+  "group": 47
+ },
+ {
+  "id": 464,
+  "word": "poor thing",
+  "phonetic": "",
+  "meaning": "(adj) 可怜的事",
+  "group": 47
+ },
+ {
+  "id": 465,
+  "word": "another",
+  "phonetic": "[əˈnʌðər]",
+  "meaning": "adj. 另外的",
+  "group": 47
+ },
+ {
+  "id": 466,
+  "word": "actually",
+  "phonetic": "[ˈæktʃuəli]",
+  "meaning": "adv.事实上",
+  "group": 47
+ },
+ {
+  "id": 467,
+  "word": "cycling",
+  "phonetic": "[ˈsaɪklɪŋ]",
+  "meaning": "n.骑自行车运动",
+  "group": 47
+ },
+ {
+  "id": 468,
+  "word": "nationality",
+  "phonetic": "[ˌnæʃəˈnæləti]",
+  "meaning": "n.国籍",
+  "group": 47
+ },
+ {
+  "id": 469,
+  "word": "aged",
+  "phonetic": "[eɪdʒd]",
+  "meaning": "(adj)年老的",
+  "group": 47
+ },
+ {
+  "id": 470,
+  "word": "as well",
+  "phonetic": "[æz wel]",
+  "meaning": "除...之外，也",
+  "group": 47
+ },
+ {
+  "id": 471,
+  "word": "from",
+  "phonetic": "[frəm; frɒm]",
+  "meaning": "prep.(表示开始的时间)从......开始",
+  "group": 48
+ },
+ {
+  "id": 472,
+  "word": "winner",
+  "phonetic": "[ˈwɪnər]",
+  "meaning": "n.优胜者",
+  "group": 48
+ },
+ {
+  "id": 473,
+  "word": "wife",
+  "phonetic": "[waɪf]",
+  "meaning": "(pl. wives) 妻子",
+  "group": 48
+ },
+ {
+  "id": 474,
+  "word": "garage",
+  "phonetic": "[ˈɡærɑːʒ; ˈɡærɑːdʒ; ˈɡærɪdʒ]",
+  "meaning": "n.停车房;车库",
+  "group": 48
+ },
+ {
+  "id": 475,
+  "word": "beach",
+  "phonetic": "[biːtʃ]",
+  "meaning": "沙滩",
+  "group": 48
+ },
+ {
+  "id": 476,
+  "word": "first of all",
+  "phonetic": "",
+  "meaning": "首先",
+  "group": 48
+ },
+ {
+  "id": 477,
+  "word": "parking lot",
+  "phonetic": "",
+  "meaning": "停车场；停车区",
+  "group": 48
+ },
+ {
+  "id": 478,
+  "word": "small",
+  "phonetic": "[smɔːl]",
+  "meaning": "adj.小的；少的",
+  "group": 48
+ },
+ {
+  "id": 479,
+  "word": "cheese",
+  "phonetic": "[tʃiːz]",
+  "meaning": "n. 奶酪",
+  "group": 48
+ },
+ {
+  "id": 480,
+  "word": "or",
+  "phonetic": "[ɔːr]",
+  "meaning": "conj.或者",
+  "group": 48
+ },
+ {
+  "id": 481,
+  "word": "shame",
+  "phonetic": "[ʃeɪm]",
+  "meaning": "n.遗憾的事；羞愧",
+  "group": 49
+ },
+ {
+  "id": 482,
+  "word": "black",
+  "phonetic": "[blæk]",
+  "meaning": "adj.黑色的",
+  "group": 49
+ },
+ {
+  "id": 483,
+  "word": "week",
+  "phonetic": "[wiːk]",
+  "meaning": "n.星期",
+  "group": 49
+ },
+ {
+  "id": 484,
+  "word": "blanket",
+  "phonetic": "[ˈblæŋkɪt]",
+  "meaning": "n.毯子",
+  "group": 49
+ },
+ {
+  "id": 485,
+  "word": "stadium",
+  "phonetic": "[ˈsteɪdiəm]",
+  "meaning": "n.体育场",
+  "group": 49
+ },
+ {
+  "id": 486,
+  "word": "curry",
+  "phonetic": "[ˈkʌri]",
+  "meaning": "n.咖哩粉, 咖哩饭菜 vt.用咖哩粉调味",
+  "group": 49
+ },
+ {
+  "id": 487,
+  "word": "colleague",
+  "phonetic": "[ˈkɒliːɡ]",
+  "meaning": "n.同事,同僚",
+  "group": 49
+ },
+ {
+  "id": 488,
+  "word": "anyway",
+  "phonetic": "[ˈeniweɪ]",
+  "meaning": "adv.尽管，即使这样",
+  "group": 49
+ },
+ {
+  "id": 489,
+  "word": "discuss",
+  "phonetic": "[dɪˈskʌs]",
+  "meaning": "v. 讨论",
+  "group": 49
+ },
+ {
+  "id": 490,
+  "word": "penfriend",
+  "phonetic": "[ˈpenfrend]",
+  "meaning": "n.笔友",
+  "group": 49
+ },
+ {
+  "id": 491,
+  "word": "many",
+  "phonetic": "[ˈmeni]",
+  "meaning": "adj.&pron.许多",
+  "group": 50
+ },
+ {
+  "id": 492,
+  "word": "menu",
+  "phonetic": "[ˈmenjuː]",
+  "meaning": "菜单",
+  "group": 50
+ },
+ {
+  "id": 493,
+  "word": "lovely",
+  "phonetic": "[ˈlʌvli]",
+  "meaning": "可爱的",
+  "group": 50
+ },
+ {
+  "id": 494,
+  "word": "sheep",
+  "phonetic": "[ʃiːp]",
+  "meaning": "n.(绵)羊(复sheep)",
+  "group": 50
+ },
+ {
+  "id": 495,
+  "word": "move",
+  "phonetic": "[muːv]",
+  "meaning": "v.移动；搬动；搬家；感动",
+  "group": 50
+ },
+ {
+  "id": 496,
+  "word": "exciting",
+  "phonetic": "[ɪkˈsaɪtɪŋ]",
+  "meaning": "adj.使人兴奋的",
+  "group": 50
+ },
+ {
+  "id": 497,
+  "word": "dancer",
+  "phonetic": "[ˈdɑːnsər]",
+  "meaning": "n.跳舞者，舞蹈演员",
+  "group": 50
+ },
+ {
+  "id": 498,
+  "word": "it",
+  "phonetic": "[ɪt]",
+  "meaning": "pron它",
+  "group": 50
+ },
+ {
+  "id": 499,
+  "word": "lend",
+  "phonetic": "[lend]",
+  "meaning": "v.借(出)；把......借给(lent, lent)",
+  "group": 50
+ },
+ {
+  "id": 500,
+  "word": "about",
+  "phonetic": "[əˈbaʊt]",
+  "meaning": "adv. 大约",
+  "group": 50
+ },
+ {
+  "id": 501,
+  "word": "golden",
+  "phonetic": "[ˈɡəʊldən]",
+  "meaning": "adj. 金（黄）色的",
+  "group": 51
+ },
+ {
+  "id": 502,
+  "word": "fit",
+  "phonetic": "[fɪt]",
+  "meaning": "adj. 健康的",
+  "group": 51
+ },
+ {
+  "id": 503,
+  "word": "everybody",
+  "phonetic": "[ˈevribɒdi]",
+  "meaning": "pron.每人，人人",
+  "group": 51
+ },
+ {
+  "id": 504,
+  "word": "her",
+  "phonetic": "[hər; ɜːr; ər; hɜːr]",
+  "meaning": "pron.她(宾格)，她的",
+  "group": 51
+ },
+ {
+  "id": 505,
+  "word": "have",
+  "phonetic": "[həv; əv; hæv]",
+  "meaning": "v.有；吃；喝；进行(had, had)",
+  "group": 51
+ },
+ {
+  "id": 506,
+  "word": "downstairs",
+  "phonetic": "[ˌdaʊnˈsteəz]",
+  "meaning": "adv.在楼下；到楼下",
+  "group": 51
+ },
+ {
+  "id": 507,
+  "word": "job",
+  "phonetic": "[dʒɒb]",
+  "meaning": "工作",
+  "group": 51
+ },
+ {
+  "id": 508,
+  "word": "king",
+  "phonetic": "[kɪŋ]",
+  "meaning": "n.国王",
+  "group": 51
+ },
+ {
+  "id": 509,
+  "word": "someone",
+  "phonetic": "[ˈsʌmwʌn]",
+  "meaning": "pron.某人；有人",
+  "group": 51
+ },
+ {
+  "id": 510,
+  "word": "swimming pool",
+  "phonetic": "[ˈswɪmɪŋ puːl]",
+  "meaning": "n.游泳池",
+  "group": 51
+ },
+ {
+  "id": 511,
+  "word": "become",
+  "phonetic": "[bɪˈkʌm]",
+  "meaning": "v.变得；成为 (became, become)",
+  "group": 52
+ },
+ {
+  "id": 512,
+  "word": "petrol",
+  "phonetic": "[ˈpetrəl]",
+  "meaning": "n.汽油",
+  "group": 52
+ },
+ {
+  "id": 513,
+  "word": "company",
+  "phonetic": "[ˈkʌmpəni]",
+  "meaning": "n.公司",
+  "group": 52
+ },
+ {
+  "id": 514,
+  "word": "passport",
+  "phonetic": "[ˈpɑːspɔːt]",
+  "meaning": "n.护照",
+  "group": 52
+ },
+ {
+  "id": 515,
+  "word": "its",
+  "phonetic": "[ɪts]",
+  "meaning": "它的",
+  "group": 52
+ },
+ {
+  "id": 516,
+  "word": "further",
+  "phonetic": "[ˈfɜːðər]",
+  "meaning": "adj. 进一步的",
+  "group": 52
+ },
+ {
+  "id": 517,
+  "word": "salad",
+  "phonetic": "[ˈsæləd]",
+  "meaning": "色拉",
+  "group": 52
+ },
+ {
+  "id": 518,
+  "word": "healthy",
+  "phonetic": "[ˈhelθi]",
+  "meaning": "adj. 健康的",
+  "group": 52
+ },
+ {
+  "id": 519,
+  "word": "extra",
+  "phonetic": "[ˈekstrə]",
+  "meaning": "adj.额外的",
+  "group": 52
+ },
+ {
+  "id": 520,
+  "word": "Yeah",
+  "phonetic": "[jeə]",
+  "meaning": "adv.是",
+  "group": 52
+ },
+ {
+  "id": 521,
+  "word": "earring",
+  "phonetic": "[ˈɪərɪŋ]",
+  "meaning": "n.耳环；耳饰",
+  "group": 53
+ },
+ {
+  "id": 522,
+  "word": "instrument",
+  "phonetic": "[ˈɪnstrəmənt]",
+  "meaning": "乐器；仪器",
+  "group": 53
+ },
+ {
+  "id": 523,
+  "word": "scissors",
+  "phonetic": "[ˈsɪzəz]",
+  "meaning": "剪刀",
+  "group": 53
+ },
+ {
+  "id": 524,
+  "word": "beautiful",
+  "phonetic": "[ˈbjuːtɪfl]",
+  "meaning": "adj.美丽的;美好的",
+  "group": 53
+ },
+ {
+  "id": 525,
+  "word": "snack",
+  "phonetic": "[snæk]",
+  "meaning": "n. 小吃；点心",
+  "group": 53
+ },
+ {
+  "id": 526,
+  "word": "police",
+  "phonetic": "[pəˈliːs]",
+  "meaning": "n.警察",
+  "group": 53
+ },
+ {
+  "id": 527,
+  "word": "polite",
+  "phonetic": "[pəˈlaɪt]",
+  "meaning": "有礼貌的；客气的",
+  "group": 53
+ },
+ {
+  "id": 528,
+  "word": "dinner",
+  "phonetic": "[ˈdɪnər]",
+  "meaning": "n.正餐",
+  "group": 53
+ },
+ {
+  "id": 529,
+  "word": "soft",
+  "phonetic": "[sɒft]",
+  "meaning": "软的",
+  "group": 53
+ },
+ {
+  "id": 530,
+  "word": "ours",
+  "phonetic": "[ɑːz; ˈaʊəz]",
+  "meaning": "pron我们的",
+  "group": 53
+ },
+ {
+  "id": 531,
+  "word": "anyone",
+  "phonetic": "[ˈeniwʌn]",
+  "meaning": "pron.任何人",
+  "group": 54
+ },
+ {
+  "id": 532,
+  "word": "OK",
+  "phonetic": "[əʊˈkeɪ]",
+  "meaning": "ad.(口语)好，对，不错",
+  "group": 54
+ },
+ {
+  "id": 533,
+  "word": "carry",
+  "phonetic": "[ˈkæri]",
+  "meaning": "携带；搬运",
+  "group": 54
+ },
+ {
+  "id": 534,
+  "word": "oh",
+  "phonetic": "[əʊ]",
+  "meaning": "interj.哦；啊",
+  "group": 54
+ },
+ {
+  "id": 535,
+  "word": "break",
+  "phonetic": "[breɪk]",
+  "meaning": "n.休息；间隙",
+  "group": 54
+ },
+ {
+  "id": 536,
+  "word": "invite",
+  "phonetic": "[ɪnˈvaɪt]",
+  "meaning": "邀请",
+  "group": 54
+ },
+ {
+  "id": 537,
+  "word": "slim",
+  "phonetic": "[slɪm]",
+  "meaning": "adj.苗条的, 无价值的, 细长的 v.变细, 减肥",
+  "group": 54
+ },
+ {
+  "id": 538,
+  "word": "sink",
+  "phonetic": "[sɪŋk]",
+  "meaning": "v. 下沉",
+  "group": 54
+ },
+ {
+  "id": 539,
+  "word": "head",
+  "phonetic": "[hed]",
+  "meaning": "n.头；头脑；首脑；",
+  "group": 54
+ },
+ {
+  "id": 540,
+  "word": "snowboard",
+  "phonetic": "[ˈsnəʊˌbɔːd]",
+  "meaning": "n.滑雪板",
+  "group": 54
+ },
+ {
+  "id": 541,
+  "word": "suitcase",
+  "phonetic": "[ˈsuːtkeɪs; ˈsjuːtkeɪs]",
+  "meaning": "n. 手提箱",
+  "group": 55
+ },
+ {
+  "id": 542,
+  "word": "amazing",
+  "phonetic": "[əˈmeɪzɪŋ]",
+  "meaning": "adj.令人惊讶的；令人赞叹的",
+  "group": 55
+ },
+ {
+  "id": 543,
+  "word": "us",
+  "phonetic": "[əs,ʌs]",
+  "meaning": "pron. 我们",
+  "group": 55
+ },
+ {
+  "id": 544,
+  "word": "tights",
+  "phonetic": "[taɪts]",
+  "meaning": "紧身裤",
+  "group": 55
+ },
+ {
+  "id": 545,
+  "word": "email",
+  "phonetic": "[ˈiːmeɪl]",
+  "meaning": "n.电子邮件",
+  "group": 55
+ },
+ {
+  "id": 546,
+  "word": "plate",
+  "phonetic": "[pleɪt]",
+  "meaning": "n.盘子；碟子；板；牌",
+  "group": 55
+ },
+ {
+  "id": 547,
+  "word": "mistake",
+  "phonetic": "[mɪˈsteɪk]",
+  "meaning": "v.弄错，误解",
+  "group": 55
+ },
+ {
+  "id": 548,
+  "word": "thank you",
+  "phonetic": "[θæŋk ju:]",
+  "meaning": "谢谢",
+  "group": 55
+ },
+ {
+  "id": 549,
+  "word": "movie",
+  "phonetic": "[ˈmuːvi]",
+  "meaning": "电影",
+  "group": 55
+ },
+ {
+  "id": 550,
+  "word": "very",
+  "phonetic": "[ˈveri]",
+  "meaning": "adv.很，非常",
+  "group": 55
+ },
+ {
+  "id": 551,
+  "word": "catch",
+  "phonetic": "[kætʃ]",
+  "meaning": "抓住；染上（病）",
+  "group": 56
+ },
+ {
+  "id": 552,
+  "word": "drum",
+  "phonetic": "[drʌm]",
+  "meaning": "n.鼓",
+  "group": 56
+ },
+ {
+  "id": 553,
+  "word": "expensive",
+  "phonetic": "[ɪkˈspensɪv]",
+  "meaning": "adj.昂贵的，价格高的",
+  "group": 56
+ },
+ {
+  "id": 554,
+  "word": "ride",
+  "phonetic": "[raɪd]",
+  "meaning": "乘坐",
+  "group": 56
+ },
+ {
+  "id": 555,
+  "word": "carrot",
+  "phonetic": "[ˈkærət]",
+  "meaning": "胡萝卜",
+  "group": 56
+ },
+ {
+  "id": 556,
+  "word": "member",
+  "phonetic": "[ˈmembər]",
+  "meaning": "成员",
+  "group": 56
+ },
+ {
+  "id": 557,
+  "word": "feelings",
+  "phonetic": "[ˈfiːlɪŋz]",
+  "meaning": "(n)［生理］感觉；［心理］情感；意见",
+  "group": 56
+ },
+ {
+  "id": 558,
+  "word": "pair",
+  "phonetic": "[peər]",
+  "meaning": "双；对",
+  "group": 56
+ },
+ {
+  "id": 559,
+  "word": "good night",
+  "phonetic": "",
+  "meaning": "晚安。",
+  "group": 56
+ },
+ {
+  "id": 560,
+  "word": "jazz",
+  "phonetic": "[dʒæz]",
+  "meaning": "n.爵士乐",
+  "group": 56
+ },
+ {
+  "id": 561,
+  "word": "appointment",
+  "phonetic": "[əˈpɔintmənt]",
+  "meaning": "n.火；火灾；vi.开火",
+  "group": 57
+ },
+ {
+  "id": 562,
+  "word": "oh dear!",
+  "phonetic": "",
+  "meaning": "天啊！",
+  "group": 57
+ },
+ {
+  "id": 563,
+  "word": "assistant",
+  "phonetic": "[əˈsistənt]",
+  "meaning": "vt.守卫；看守；n.卫兵",
+  "group": 57
+ },
+ {
+  "id": 564,
+  "word": "skateboarding",
+  "phonetic": "[ˈskeɪtbɔːdɪŋ]",
+  "meaning": "玩滑板",
+  "group": 57
+ },
+ {
+  "id": 565,
+  "word": "businessman",
+  "phonetic": "[ˈbɪznəsmæn; ˈbɪznəsmən]",
+  "meaning": "商人",
+  "group": 57
+ },
+ {
+  "id": 566,
+  "word": "career",
+  "phonetic": "[kəˈrɪər]",
+  "meaning": "n. 事业；职业",
+  "group": 57
+ },
+ {
+  "id": 567,
+  "word": "key",
+  "phonetic": "[kiː]",
+  "meaning": "n.钥匙；答案；关键",
+  "group": 57
+ },
+ {
+  "id": 568,
+  "word": "examination",
+  "phonetic": "[ɪɡˌzæmɪˈneɪʃn]",
+  "meaning": "考试；审查",
+  "group": 57
+ },
+ {
+  "id": 569,
+  "word": "passenger",
+  "phonetic": "[ˈpæsɪndʒər]",
+  "meaning": "n.乘客，旅客",
+  "group": 57
+ },
+ {
+  "id": 570,
+  "word": "lots",
+  "phonetic": "",
+  "meaning": "大量，许多",
+  "group": 57
+ },
+ {
+  "id": 571,
+  "word": "climbing",
+  "phonetic": "[ˈklaɪmɪŋ]",
+  "meaning": "（正在）攀爬",
+  "group": 58
+ },
+ {
+  "id": 572,
+  "word": "ready",
+  "phonetic": "[ˈredi]",
+  "meaning": "准备好的",
+  "group": 58
+ },
+ {
+  "id": 573,
+  "word": "wind",
+  "phonetic": "[wɪnd]",
+  "meaning": "n.风",
+  "group": 58
+ },
+ {
+  "id": 574,
+  "word": "married",
+  "phonetic": "[ˈmærid]",
+  "meaning": "adj. 已婚的，结婚的",
+  "group": 58
+ },
+ {
+  "id": 575,
+  "word": "include",
+  "phonetic": "[ɪnˈkluːd]",
+  "meaning": "v.包括，包含",
+  "group": 58
+ },
+ {
+  "id": 576,
+  "word": "lose",
+  "phonetic": "[luːz]",
+  "meaning": "v.丧失，失去",
+  "group": 58
+ },
+ {
+  "id": 577,
+  "word": "whale",
+  "phonetic": "[weɪl]",
+  "meaning": "n.鲸",
+  "group": 58
+ },
+ {
+  "id": 578,
+  "word": "cell phone",
+  "phonetic": "",
+  "meaning": "手机",
+  "group": 58
+ },
+ {
+  "id": 579,
+  "word": "onion",
+  "phonetic": "[ˈʌnjən]",
+  "meaning": "n. 洋葱",
+  "group": 58
+ },
+ {
+  "id": 580,
+  "word": "welcome",
+  "phonetic": "[ˈwelkəm]",
+  "meaning": "int.欢迎",
+  "group": 58
+ },
+ {
+  "id": 581,
+  "word": "somewhere",
+  "phonetic": "[ˈsʌmweər]",
+  "meaning": "ad.在某处",
+  "group": 59
+ },
+ {
+  "id": 582,
+  "word": "lemonade",
+  "phonetic": "[ˌleməˈneɪd]",
+  "meaning": "n.柠檬水",
+  "group": 59
+ },
+ {
+  "id": 583,
+  "word": "screen",
+  "phonetic": "[skriːn]",
+  "meaning": "n.显示屏，屏幕",
+  "group": 59
+ },
+ {
+  "id": 584,
+  "word": "tent",
+  "phonetic": "[tent]",
+  "meaning": "n.帐篷",
+  "group": 59
+ },
+ {
+  "id": 585,
+  "word": "tomorrow",
+  "phonetic": "[təˈmɒrəʊ]",
+  "meaning": "adv.&n.在明天;明天;未来",
+  "group": 59
+ },
+ {
+  "id": 586,
+  "word": "colour",
+  "phonetic": "[ˈkʌlər]",
+  "meaning": "v.涂色",
+  "group": 59
+ },
+ {
+  "id": 587,
+  "word": "beard",
+  "phonetic": "[biəd]",
+  "meaning": "num.百万；n.许多",
+  "group": 59
+ },
+ {
+  "id": 588,
+  "word": "bathroom",
+  "phonetic": "[ˈbɑːθruːm; ˈbɑːθrʊm]",
+  "meaning": "浴室；洗手间",
+  "group": 59
+ },
+ {
+  "id": 589,
+  "word": "MP3 player",
+  "phonetic": "",
+  "meaning": "n. MP3播放器",
+  "group": 59
+ },
+ {
+  "id": 590,
+  "word": "insect",
+  "phonetic": "[ˈɪnsekt]",
+  "meaning": "昆虫",
+  "group": 59
+ },
+ {
+  "id": 591,
+  "word": "feel",
+  "phonetic": "[fiːl]",
+  "meaning": "v.感受;觉得",
+  "group": 60
+ },
+ {
+  "id": 592,
+  "word": "get on",
+  "phonetic": "[ɡet ɒn]",
+  "meaning": "上车",
+  "group": 60
+ },
+ {
+  "id": 593,
+  "word": "chilli",
+  "phonetic": "[ˈtʃɪli]",
+  "meaning": "n. 辣椒",
+  "group": 60
+ },
+ {
+  "id": 594,
+  "word": "outdoor",
+  "phonetic": "[ˈaʊtdɔːr]",
+  "meaning": "adj.室外的",
+  "group": 60
+ },
+ {
+  "id": 595,
+  "word": "kind",
+  "phonetic": "[kaɪnd]",
+  "meaning": "n. 种类",
+  "group": 60
+ },
+ {
+  "id": 596,
+  "word": "they",
+  "phonetic": "[ðeɪ]",
+  "meaning": "pron.他(她)们；它们；人们",
+  "group": 60
+ },
+ {
+  "id": 597,
+  "word": "campsite",
+  "phonetic": "[ˈkæmpsaɪt]",
+  "meaning": "n.（野）营地",
+  "group": 60
+ },
+ {
+  "id": 598,
+  "word": "paragraph",
+  "phonetic": "[ˈpærəɡrɑːf]",
+  "meaning": "n.段落",
+  "group": 60
+ },
+ {
+  "id": 599,
+  "word": "oil",
+  "phonetic": "[ɔɪl]",
+  "meaning": "n.石油；原油；食用油",
+  "group": 60
+ },
+ {
+  "id": 600,
+  "word": "table",
+  "phonetic": "[ˈteɪbl]",
+  "meaning": "n.桌子；表格",
+  "group": 60
+ },
+ {
+  "id": 601,
+  "word": "without",
+  "phonetic": "[wɪˈðaʊt]",
+  "meaning": "prep.没有",
+  "group": 61
+ },
+ {
+  "id": 602,
+  "word": "yours",
+  "phonetic": "[jɔːz]",
+  "meaning": "你的；你们的",
+  "group": 61
+ },
+ {
+  "id": 603,
+  "word": "bag",
+  "phonetic": "[bæɡ]",
+  "meaning": "n.书包；提包；袋子",
+  "group": 61
+ },
+ {
+  "id": 604,
+  "word": "cartoon",
+  "phonetic": "[kɑːˈtuːn]",
+  "meaning": "n.卡通片，动画片",
+  "group": 61
+ },
+ {
+  "id": 605,
+  "word": "mind",
+  "phonetic": "[maɪnd]",
+  "meaning": "n.头脑，大脑",
+  "group": 61
+ },
+ {
+  "id": 606,
+  "word": "my",
+  "phonetic": "[maɪ]",
+  "meaning": "pron.我的",
+  "group": 61
+ },
+ {
+  "id": 607,
+  "word": "too",
+  "phonetic": "[tuː]",
+  "meaning": "adv.也，还；又；太，过分；很，非常",
+  "group": 61
+ },
+ {
+  "id": 608,
+  "word": "purse",
+  "phonetic": "[pɜːs]",
+  "meaning": "n.钱包",
+  "group": 61
+ },
+ {
+  "id": 609,
+  "word": "flight",
+  "phonetic": "[flaɪt]",
+  "meaning": "n.航班；航行",
+  "group": 61
+ },
+ {
+  "id": 610,
+  "word": "playground",
+  "phonetic": "[ˈpleɪɡraʊnd]",
+  "meaning": "n.操场，运动场",
+  "group": 61
+ },
+ {
+  "id": 611,
+  "word": "quickly",
+  "phonetic": "[ˈkwɪkli]",
+  "meaning": "迅速地",
+  "group": 62
+ },
+ {
+  "id": 612,
+  "word": "delay",
+  "phonetic": "[dɪˈleɪ]",
+  "meaning": "v. n.耽误",
+  "group": 62
+ },
+ {
+  "id": 613,
+  "word": "nobody",
+  "phonetic": "[ˈnəʊbədi]",
+  "meaning": "pron.没有人",
+  "group": 62
+ },
+ {
+  "id": 614,
+  "word": "pence",
+  "phonetic": "[pens]",
+  "meaning": "便士（英货币）",
+  "group": 62
+ },
+ {
+  "id": 615,
+  "word": "swimsuit",
+  "phonetic": "[ˈswɪmsuːt; ˈswɪmsjuːt]",
+  "meaning": "游泳衣",
+  "group": 62
+ },
+ {
+  "id": 616,
+  "word": "perfume",
+  "phonetic": "[ˈpɜːfjuːm; pəˈfjuːm]",
+  "meaning": "n.香水",
+  "group": 62
+ },
+ {
+  "id": 617,
+  "word": "dive",
+  "phonetic": "[daɪv]",
+  "meaning": "v.俯冲",
+  "group": 62
+ },
+ {
+  "id": 618,
+  "word": "invitation",
+  "phonetic": "[ˌɪnvɪˈteɪʃn]",
+  "meaning": "n. 请柬",
+  "group": 62
+ },
+ {
+  "id": 619,
+  "word": "school",
+  "phonetic": "[skuːl]",
+  "meaning": "n.学校",
+  "group": 62
+ },
+ {
+  "id": 620,
+  "word": "close to",
+  "phonetic": "",
+  "meaning": "离...很近",
+  "group": 62
+ },
+ {
+  "id": 621,
+  "word": "ski",
+  "phonetic": "[skiː]",
+  "meaning": "v.滑雪",
+  "group": 63
+ },
+ {
+  "id": 622,
+  "word": "surprised",
+  "phonetic": "[səˈpraɪzd]",
+  "meaning": "adj.感到惊奇的",
+  "group": 63
+ },
+ {
+  "id": 623,
+  "word": "after",
+  "phonetic": "[ˈɑːftər]",
+  "meaning": "conj.在......以后",
+  "group": 63
+ },
+ {
+  "id": 624,
+  "word": "piano",
+  "phonetic": "[piˈænəʊ]",
+  "meaning": "n.钢琴",
+  "group": 63
+ },
+ {
+  "id": 625,
+  "word": "beginning",
+  "phonetic": "[bɪˈɡɪnɪŋ]",
+  "meaning": "n.开始；开端",
+  "group": 63
+ },
+ {
+  "id": 626,
+  "word": "television",
+  "phonetic": "[ˈtelɪvɪʒn]",
+  "meaning": "n.电视；电视机",
+  "group": 63
+ },
+ {
+  "id": 627,
+  "word": "missing",
+  "phonetic": "[ˈmɪsɪŋ]",
+  "meaning": "adj.失踪的；缺少的",
+  "group": 63
+ },
+ {
+  "id": 628,
+  "word": "might",
+  "phonetic": "[maɪt]",
+  "meaning": "v.可能；可以",
+  "group": 63
+ },
+ {
+  "id": 629,
+  "word": "first name",
+  "phonetic": "",
+  "meaning": "名字",
+  "group": 63
+ },
+ {
+  "id": 630,
+  "word": "mad",
+  "phonetic": "[mæd]",
+  "meaning": "adj.发疯的；生气的",
+  "group": 63
+ },
+ {
+  "id": 631,
+  "word": "board game",
+  "phonetic": "",
+  "meaning": "棋类游戏",
+  "group": 64
+ },
+ {
+  "id": 632,
+  "word": "rubbish",
+  "phonetic": "[ˈrʌbɪʃ]",
+  "meaning": "n.垃圾；废物",
+  "group": 64
+ },
+ {
+  "id": 633,
+  "word": "doll",
+  "phonetic": "[dɒl]",
+  "meaning": "n.玩偶，玩具娃娃",
+  "group": 64
+ },
+ {
+  "id": 634,
+  "word": "more",
+  "phonetic": "[mɔːr]",
+  "meaning": "adj.&pron.更多(的)",
+  "group": 64
+ },
+ {
+  "id": 635,
+  "word": "bother",
+  "phonetic": "[ˈbɑːðər]",
+  "meaning": "vt. 烦扰，打扰；使......不安；使......恼怒vi. 操心，麻烦；烦恼n. 麻烦；烦恼",
+  "group": 64
+ },
+ {
+  "id": 636,
+  "word": "fall",
+  "phonetic": "[fɔːl]",
+  "meaning": "n. （常pl.）瀑布",
+  "group": 64
+ },
+ {
+  "id": 637,
+  "word": "snow",
+  "phonetic": "[snəʊ]",
+  "meaning": "v.&n.下雪;雪",
+  "group": 64
+ },
+ {
+  "id": 638,
+  "word": "ceiling",
+  "phonetic": "[ˈsiːlɪŋ]",
+  "meaning": "n.天花板；顶棚",
+  "group": 64
+ },
+ {
+  "id": 639,
+  "word": "grow up",
+  "phonetic": "",
+  "meaning": "长大",
+  "group": 64
+ },
+ {
+  "id": 640,
+  "word": "unfortunately",
+  "phonetic": "[ʌnˈfɔːtʃənətli]",
+  "meaning": "adv. 不幸地；不巧地",
+  "group": 64
+ },
+ {
+  "id": 641,
+  "word": "back",
+  "phonetic": "[bæk]",
+  "meaning": "adv.回来;回原处",
+  "group": 65
+ },
+ {
+  "id": 642,
+  "word": "single",
+  "phonetic": "[ˈsɪŋɡl]",
+  "meaning": "adj.单一的，单个的；单身的",
+  "group": 65
+ },
+ {
+  "id": 643,
+  "word": "silver",
+  "phonetic": "[ˈsɪlvər]",
+  "meaning": "n.银；银牌",
+  "group": 65
+ },
+ {
+  "id": 644,
+  "word": "weather",
+  "phonetic": "[ˈweðər]",
+  "meaning": "n.天气",
+  "group": 65
+ },
+ {
+  "id": 645,
+  "word": "clown",
+  "phonetic": "[klaʊn]",
+  "meaning": "n.小丑",
+  "group": 65
+ },
+ {
+  "id": 646,
+  "word": "tell",
+  "phonetic": "[tel]",
+  "meaning": "v.&n.讲述；告诉",
+  "group": 65
+ },
+ {
+  "id": 647,
+  "word": "dolphin",
+  "phonetic": "[ˈdɒlfɪn]",
+  "meaning": "n.海豚",
+  "group": 65
+ },
+ {
+  "id": 648,
+  "word": "angry",
+  "phonetic": "[ˈæŋɡri]",
+  "meaning": "adj.生气的，愤怒的",
+  "group": 65
+ },
+ {
+  "id": 649,
+  "word": "programme",
+  "phonetic": "[ˈprəʊɡræm]",
+  "meaning": "n. 活动安排",
+  "group": 65
+ },
+ {
+  "id": 650,
+  "word": "granny",
+  "phonetic": "[ˈɡræni]",
+  "meaning": "n.老奶奶；祖母；外婆",
+  "group": 65
+ },
+ {
+  "id": 651,
+  "word": "hockey",
+  "phonetic": "[ˈhɒki]",
+  "meaning": "冰球；曲棍球",
+  "group": 66
+ },
+ {
+  "id": 652,
+  "word": "computer",
+  "phonetic": "[kəmˈpjuːtər]",
+  "meaning": "n.电脑",
+  "group": 66
+ },
+ {
+  "id": 653,
+  "word": "follow",
+  "phonetic": "[ˈfɒləʊ]",
+  "meaning": "跟随；明白",
+  "group": 66
+ },
+ {
+  "id": 654,
+  "word": "all",
+  "phonetic": "[ɔːl]",
+  "meaning": "n.全部；全体人员",
+  "group": 66
+ },
+ {
+  "id": 655,
+  "word": "letter",
+  "phonetic": "[ˈletər]",
+  "meaning": "n.字母",
+  "group": 66
+ },
+ {
+  "id": 656,
+  "word": "sun",
+  "phonetic": "[sʌn]",
+  "meaning": "n.太阳；阳光",
+  "group": 66
+ },
+ {
+  "id": 657,
+  "word": "except",
+  "phonetic": "[ɪkˈsept]",
+  "meaning": "prep.除...之外",
+  "group": 66
+ },
+ {
+  "id": 658,
+  "word": "sort",
+  "phonetic": "[sɔːt]",
+  "meaning": "vt把......分类，拣选;n.种类，类别",
+  "group": 66
+ },
+ {
+  "id": 659,
+  "word": "test",
+  "phonetic": "[test]",
+  "meaning": "v.测试",
+  "group": 66
+ },
+ {
+  "id": 660,
+  "word": "old",
+  "phonetic": "[əʊld]",
+  "meaning": "adj.年老的;旧的",
+  "group": 66
+ },
+ {
+  "id": 661,
+  "word": "blood",
+  "phonetic": "[blʌd]",
+  "meaning": "n.血，血统",
+  "group": 67
+ },
+ {
+  "id": 662,
+  "word": "themselves",
+  "phonetic": "[ðəmˈselvz]",
+  "meaning": "pron.他／她／它们自己",
+  "group": 67
+ },
+ {
+  "id": 663,
+  "word": "cricket",
+  "phonetic": "[ˈkrɪkɪt]",
+  "meaning": "n.板球（运动）",
+  "group": 67
+ },
+ {
+  "id": 664,
+  "word": "especially",
+  "phonetic": "[ɪˈspeʃəli]",
+  "meaning": "adv.特别，尤其",
+  "group": 67
+ },
+ {
+  "id": 665,
+  "word": "guitar",
+  "phonetic": "[ɡɪˈtɑːr]",
+  "meaning": "n.吉他",
+  "group": 67
+ },
+ {
+  "id": 666,
+  "word": "book",
+  "phonetic": "[bʊk]",
+  "meaning": "vt.预订,订 n.书籍,本子",
+  "group": 67
+ },
+ {
+  "id": 667,
+  "word": "crowd",
+  "phonetic": "[kraʊd]",
+  "meaning": "n.人群",
+  "group": 67
+ },
+ {
+  "id": 668,
+  "word": "wheel",
+  "phonetic": "[wiːl]",
+  "meaning": "n.车轮，轮子",
+  "group": 67
+ },
+ {
+  "id": 669,
+  "word": "sandwich",
+  "phonetic": "[ˈsænwɪtʃ; ˈsænwɪdʒ]",
+  "meaning": "三明治",
+  "group": 67
+ },
+ {
+  "id": 670,
+  "word": "people",
+  "phonetic": "[ˈpiːpl]",
+  "meaning": "n.人；人们",
+  "group": 67
+ },
+ {
+  "id": 671,
+  "word": "bring",
+  "phonetic": "[brɪŋ]",
+  "meaning": "v.带来;取来",
+  "group": 68
+ },
+ {
+  "id": 672,
+  "word": "tonight",
+  "phonetic": "[təˈnaɪt]",
+  "meaning": "adv.&n.今晚，今夜",
+  "group": 68
+ },
+ {
+  "id": 673,
+  "word": "good",
+  "phonetic": "[ɡʊd]",
+  "meaning": "adj.好；良好(比较级better，最高级best)",
+  "group": 68
+ },
+ {
+  "id": 674,
+  "word": "sweater",
+  "phonetic": "[ˈswetər]",
+  "meaning": "n.厚运动衫，毛衣",
+  "group": 68
+ },
+ {
+  "id": 675,
+  "word": "morning",
+  "phonetic": "[ˈmɔːnɪŋ]",
+  "meaning": "n.早晨，上午",
+  "group": 68
+ },
+ {
+  "id": 676,
+  "word": "moment",
+  "phonetic": "[ˈməʊmənt]",
+  "meaning": "n.瞬间，片刻",
+  "group": 68
+ },
+ {
+  "id": 677,
+  "word": "T-shirt",
+  "phonetic": "[ˈtiː ʃɜːt]",
+  "meaning": "短袖汗衫",
+  "group": 68
+ },
+ {
+  "id": 678,
+  "word": "course",
+  "phonetic": "[kɔːs]",
+  "meaning": "过程；经过",
+  "group": 68
+ },
+ {
+  "id": 679,
+  "word": "size",
+  "phonetic": "[saɪz]",
+  "meaning": "n.尺寸；大小",
+  "group": 68
+ },
+ {
+  "id": 680,
+  "word": "wood",
+  "phonetic": "[wʊd]",
+  "meaning": "n.木头，木材；(复)树林",
+  "group": 68
+ },
+ {
+  "id": 681,
+  "word": "start",
+  "phonetic": "[stɑːt]",
+  "meaning": "n.开端，开始",
+  "group": 69
+ },
+ {
+  "id": 682,
+  "word": "project",
+  "phonetic": "[ˈprɒdʒekt]",
+  "meaning": "n. 习作项目",
+  "group": 69
+ },
+ {
+  "id": 683,
+  "word": "vocabulary",
+  "phonetic": "[vəˈkæbjələri]",
+  "meaning": "n.词汇，词汇量",
+  "group": 69
+ },
+ {
+  "id": 684,
+  "word": "write",
+  "phonetic": "[raɪt]",
+  "meaning": "v.写作，写字",
+  "group": 69
+ },
+ {
+  "id": 685,
+  "word": "camp",
+  "phonetic": "[kæmp]",
+  "meaning": "n.(夏令)营；野营",
+  "group": 69
+ },
+ {
+  "id": 686,
+  "word": "sick",
+  "phonetic": "[sɪk]",
+  "meaning": "生病的",
+  "group": 69
+ },
+ {
+  "id": 687,
+  "word": "useful",
+  "phonetic": "[ˈjuːsfl]",
+  "meaning": "adj.有用的;有益的",
+  "group": 69
+ },
+ {
+  "id": 688,
+  "word": "as",
+  "phonetic": "[əz; æz]",
+  "meaning": "和......一样；作为",
+  "group": 69
+ },
+ {
+  "id": 689,
+  "word": "festival",
+  "phonetic": "[ˈfestɪvl]",
+  "meaning": "节日",
+  "group": 69
+ },
+ {
+  "id": 690,
+  "word": "even",
+  "phonetic": "[ˈiːvn]",
+  "meaning": "adv.（强调出乎意料）甚至",
+  "group": 69
+ },
+ {
+  "id": 691,
+  "word": "turn on",
+  "phonetic": "[tɜ:n ɒn]",
+  "meaning": "开，旋开(电灯，电视，收音机等)",
+  "group": 70
+ },
+ {
+  "id": 692,
+  "word": "unhappy",
+  "phonetic": "[ʌnˈhæpi]",
+  "meaning": "adj.不开心的，不幸福的，难过的",
+  "group": 70
+ },
+ {
+  "id": 693,
+  "word": "gas",
+  "phonetic": "[ɡæs]",
+  "meaning": "n.气体",
+  "group": 70
+ },
+ {
+  "id": 694,
+  "word": "brush",
+  "phonetic": "[brʌʃ]",
+  "meaning": "v.&n.刷;刷净;刷子",
+  "group": 70
+ },
+ {
+  "id": 695,
+  "word": "countryside",
+  "phonetic": "[ˈkʌntrisaɪd]",
+  "meaning": "n.乡村",
+  "group": 70
+ },
+ {
+  "id": 696,
+  "word": "bean",
+  "phonetic": "[biːn]",
+  "meaning": "n.豆, 豆形果实",
+  "group": 70
+ },
+ {
+  "id": 697,
+  "word": "hat",
+  "phonetic": "[hæt]",
+  "meaning": "（有边的）帽子",
+  "group": 70
+ },
+ {
+  "id": 698,
+  "word": "put on",
+  "phonetic": "[pʊt ɒn]",
+  "meaning": "上演",
+  "group": 70
+ },
+ {
+  "id": 699,
+  "word": "get off",
+  "phonetic": "[ɡet ɒf]",
+  "meaning": "下车",
+  "group": 70
+ },
+ {
+  "id": 700,
+  "word": "ice cream",
+  "phonetic": "[aɪs kri:m]",
+  "meaning": "n.冰激凌",
+  "group": 70
+ },
+ {
+  "id": 701,
+  "word": "identification",
+  "phonetic": "[aɪˌdentɪfɪˈkeɪʃn]",
+  "meaning": "n. 识别，鉴定，验明，身份证明",
+  "group": 71
+ },
+ {
+  "id": 702,
+  "word": "wish",
+  "phonetic": "[wɪʃ]",
+  "meaning": "v.希望",
+  "group": 71
+ },
+ {
+  "id": 703,
+  "word": "grade",
+  "phonetic": "[ɡreɪd]",
+  "meaning": "n.等级；(中小学的)学年；成绩，分数",
+  "group": 71
+ },
+ {
+  "id": 704,
+  "word": "chess",
+  "phonetic": "[tʃes]",
+  "meaning": "n.国际象棋",
+  "group": 71
+ },
+ {
+  "id": 705,
+  "word": "awful",
+  "phonetic": "[ˈɔːfl]",
+  "meaning": "adj.可怕的",
+  "group": 71
+ },
+ {
+  "id": 706,
+  "word": "Mr",
+  "phonetic": "",
+  "meaning": "【原表缺失】",
+  "group": 71
+ },
+ {
+  "id": 707,
+  "word": "monthly",
+  "phonetic": "[ˈmʌnθli]",
+  "meaning": "adj.每月的",
+  "group": 71
+ },
+ {
+  "id": 708,
+  "word": "all sorts of",
+  "phonetic": "",
+  "meaning": "各种各样的",
+  "group": 71
+ },
+ {
+  "id": 709,
+  "word": "pleasant",
+  "phonetic": "[ˈpleznt]",
+  "meaning": "adj.令人愉快的，舒适的",
+  "group": 71
+ },
+ {
+  "id": 710,
+  "word": "gramme",
+  "phonetic": "[græm]",
+  "meaning": "n.克(重量单位)",
+  "group": 71
+ },
+ {
+  "id": 711,
+  "word": "walk",
+  "phonetic": "[wɔːk]",
+  "meaning": "n.&v.行走;步行",
+  "group": 72
+ },
+ {
+  "id": 712,
+  "word": "Dr",
+  "phonetic": "[ˈdɒktə / ˈdɑːktə]",
+  "meaning": "博士（用于医生、博士等职称）",
+  "group": 72
+ },
+ {
+  "id": 713,
+  "word": "kid",
+  "phonetic": "[kɪd]",
+  "meaning": "n.小孩",
+  "group": 72
+ },
+ {
+  "id": 714,
+  "word": "try on",
+  "phonetic": "",
+  "meaning": "试穿",
+  "group": 72
+ },
+ {
+  "id": 715,
+  "word": "loud",
+  "phonetic": "[laʊd]",
+  "meaning": "adj.大声的",
+  "group": 72
+ },
+ {
+  "id": 716,
+  "word": "kitchen",
+  "phonetic": "[ˈkɪtʃɪn]",
+  "meaning": "n.厨房",
+  "group": 72
+ },
+ {
+  "id": 717,
+  "word": "then",
+  "phonetic": "[ðen]",
+  "meaning": "adv.当时，那时；然后，后来；那么(通常用于句首或句尾)",
+  "group": 72
+ },
+ {
+  "id": 718,
+  "word": "behind",
+  "phonetic": "[bɪˈhaɪnd]",
+  "meaning": "prep.在......后面",
+  "group": 72
+ },
+ {
+  "id": 719,
+  "word": "prize",
+  "phonetic": "[praɪz]",
+  "meaning": "n.奖赏，奖品",
+  "group": 72
+ },
+ {
+  "id": 720,
+  "word": "outdoors",
+  "phonetic": "[autˈdɔːz]",
+  "meaning": "ad.在户外，在野外",
+  "group": 72
+ },
+ {
+  "id": 721,
+  "word": "change",
+  "phonetic": "[tʃeɪndʒ]",
+  "meaning": "n.找给的零钱，找头",
+  "group": 73
+ },
+ {
+  "id": 722,
+  "word": "read",
+  "phonetic": "[riːd]",
+  "meaning": "v.读;阅读",
+  "group": 73
+ },
+ {
+  "id": 723,
+  "word": "password",
+  "phonetic": "[ˈpɑːswɜːd]",
+  "meaning": "n.密码，口令",
+  "group": 73
+ },
+ {
+  "id": 724,
+  "word": "check",
+  "phonetic": "[tʃek]",
+  "meaning": "v.检查，核实",
+  "group": 73
+ },
+ {
+  "id": 725,
+  "word": "yet",
+  "phonetic": "[jet]",
+  "meaning": "adv.尚未，仍未",
+  "group": 73
+ },
+ {
+  "id": 726,
+  "word": "ring",
+  "phonetic": "[rɪŋ]",
+  "meaning": "v.(钟、铃等)响；摇铃；打电话(rang, rung)，n.戒指",
+  "group": 73
+ },
+ {
+  "id": 727,
+  "word": "journalist",
+  "phonetic": "[ˈdʒɜːnəlɪst]",
+  "meaning": "n.记者，新闻工作者",
+  "group": 73
+ },
+ {
+  "id": 728,
+  "word": "we",
+  "phonetic": "[wi; wiː]",
+  "meaning": "pron.我们",
+  "group": 73
+ },
+ {
+  "id": 729,
+  "word": "zero",
+  "phonetic": "[ˈzɪərəʊ]",
+  "meaning": "n.&num.零；零度；零点",
+  "group": 73
+ },
+ {
+  "id": 730,
+  "word": "theirs",
+  "phonetic": "[ðeəz]",
+  "meaning": "pron.他们的",
+  "group": 73
+ },
+ {
+  "id": 731,
+  "word": "traffic light",
+  "phonetic": "['træfɪk'laɪt]",
+  "meaning": "交通灯",
+  "group": 74
+ },
+ {
+  "id": 732,
+  "word": "safe",
+  "phonetic": "[seɪf]",
+  "meaning": "n.保险柜",
+  "group": 74
+ },
+ {
+  "id": 733,
+  "word": "mean",
+  "phonetic": "[miːn]",
+  "meaning": "刻薄的；意思是",
+  "group": 74
+ },
+ {
+  "id": 734,
+  "word": "rap",
+  "phonetic": "[ræp]",
+  "meaning": "n.叩击,轻拍,斥责v.敲,拍,打,斥责,使着迷",
+  "group": 74
+ },
+ {
+  "id": 735,
+  "word": "quiet",
+  "phonetic": "[ˈkwaɪət]",
+  "meaning": "安静的",
+  "group": 74
+ },
+ {
+  "id": 736,
+  "word": "low",
+  "phonetic": "[ləʊ]",
+  "meaning": "adj. & adv.低；矮",
+  "group": 74
+ },
+ {
+  "id": 737,
+  "word": "cabinet",
+  "phonetic": "[ˈkæbɪnət]",
+  "meaning": "n. 内阁；橱柜",
+  "group": 74
+ },
+ {
+  "id": 738,
+  "word": "every",
+  "phonetic": "[ˈevri]",
+  "meaning": "adj.每一；每个",
+  "group": 74
+ },
+ {
+  "id": 739,
+  "word": "would",
+  "phonetic": "[wʊd; wəd; əd]",
+  "meaning": "将；愿意",
+  "group": 74
+ },
+ {
+  "id": 740,
+  "word": "badminton",
+  "phonetic": "[ˈbædmɪntən]",
+  "meaning": "n. 羽毛球",
+  "group": 74
+ },
+ {
+  "id": 741,
+  "word": "however",
+  "phonetic": "[haʊˈevər]",
+  "meaning": "adv.然而",
+  "group": 75
+ },
+ {
+  "id": 742,
+  "word": "bird",
+  "phonetic": "[bɜːd]",
+  "meaning": "n.鸟",
+  "group": 75
+ },
+ {
+  "id": 743,
+  "word": "pencil case",
+  "phonetic": "[ˈpensl keɪs]",
+  "meaning": "n.笔盒",
+  "group": 75
+ },
+ {
+  "id": 744,
+  "word": "anywhere",
+  "phonetic": "[ˈeniweər]",
+  "meaning": "adv.任何地方",
+  "group": 75
+ },
+ {
+  "id": 745,
+  "word": "take off",
+  "phonetic": "[teɪk ɒf]",
+  "meaning": "脱掉(衣物等)；起飞",
+  "group": 75
+ },
+ {
+  "id": 746,
+  "word": "barbeque",
+  "phonetic": "[ˈbɑːbɪkjuː]",
+  "meaning": "烧烤",
+  "group": 75
+ },
+ {
+  "id": 747,
+  "word": "artist",
+  "phonetic": "[ˈɑːtɪst]",
+  "meaning": "n.艺术家；画家",
+  "group": 75
+ },
+ {
+  "id": 748,
+  "word": "grey",
+  "phonetic": "[ɡreɪ]",
+  "meaning": "adj.（天空）阴沉的；昏暗的；灰色的",
+  "group": 75
+ },
+ {
+  "id": 749,
+  "word": "cheap",
+  "phonetic": "[tʃiːp]",
+  "meaning": "adj.便宜的",
+  "group": 75
+ },
+ {
+  "id": 750,
+  "word": "a lot",
+  "phonetic": "",
+  "meaning": "许多",
+  "group": 75
+ },
+ {
+  "id": 751,
+  "word": "table tennis",
+  "phonetic": "['teɪb(ə)l'tenɪs]",
+  "meaning": "n.乒乓球",
+  "group": 76
+ },
+ {
+  "id": 752,
+  "word": "dressed",
+  "phonetic": "[drɛst]",
+  "meaning": "v. 装饰；给...穿衣；布置（dress的过去分词）adj. 穿好衣服的；打扮好的",
+  "group": 76
+ },
+ {
+  "id": 753,
+  "word": "in front of",
+  "phonetic": "[ɪn frʌnt əv]",
+  "meaning": "在......前面",
+  "group": 76
+ },
+ {
+  "id": 754,
+  "word": "kite",
+  "phonetic": "[kaɪt]",
+  "meaning": "n. 风筝",
+  "group": 76
+ },
+ {
+  "id": 755,
+  "word": "keep",
+  "phonetic": "[kiːp]",
+  "meaning": "v. 保持",
+  "group": 76
+ },
+ {
+  "id": 756,
+  "word": "biology",
+  "phonetic": "[baɪˈɒlədʒi]",
+  "meaning": "n．生物（学）",
+  "group": 76
+ },
+ {
+  "id": 757,
+  "word": "finally",
+  "phonetic": "[ˈfaɪnəli]",
+  "meaning": "adv. 最后",
+  "group": 76
+ },
+ {
+  "id": 758,
+  "word": "necklace",
+  "phonetic": "[ˈnekləs]",
+  "meaning": "n.项链",
+  "group": 76
+ },
+ {
+  "id": 759,
+  "word": "TRUE",
+  "phonetic": "[truː]",
+  "meaning": "adj.真的;符合事实的",
+  "group": 76
+ },
+ {
+  "id": 760,
+  "word": "visit",
+  "phonetic": "[ˈvɪzɪt]",
+  "meaning": "v.拜访;参观",
+  "group": 76
+ },
+ {
+  "id": 761,
+  "word": "million",
+  "phonetic": "[ˈmɪljən]",
+  "meaning": "num. 一百万",
+  "group": 77
+ },
+ {
+  "id": 762,
+  "word": "sometimes",
+  "phonetic": "[ˈsʌmtaɪmz]",
+  "meaning": "adv.有时",
+  "group": 77
+ },
+ {
+  "id": 763,
+  "word": "best",
+  "phonetic": "[best]",
+  "meaning": "最好的",
+  "group": 77
+ },
+ {
+  "id": 764,
+  "word": "daily",
+  "phonetic": "[ˈdeɪli]",
+  "meaning": "n.日报",
+  "group": 77
+ },
+ {
+  "id": 765,
+  "word": "program",
+  "phonetic": "[ˈprəʊɡræm]",
+  "meaning": "v.编写程序",
+  "group": 77
+ },
+ {
+  "id": 766,
+  "word": "strange",
+  "phonetic": "[streɪndʒ]",
+  "meaning": "adj. 奇怪的；陌生的",
+  "group": 77
+ },
+ {
+  "id": 767,
+  "word": "a few",
+  "phonetic": "[ə fjuː]",
+  "meaning": "几个",
+  "group": 77
+ },
+ {
+  "id": 768,
+  "word": "who",
+  "phonetic": "[huː]",
+  "meaning": "pron.谁",
+  "group": 77
+ },
+ {
+  "id": 769,
+  "word": "door",
+  "phonetic": "[dɔːr]",
+  "meaning": "n.门；通道",
+  "group": 77
+ },
+ {
+  "id": 770,
+  "word": "luggage",
+  "phonetic": "[ˈlʌgidʒ]",
+  "meaning": "n.行李；皮箱，皮包",
+  "group": 77
+ },
+ {
+  "id": 771,
+  "word": "chair",
+  "phonetic": "[tʃeər]",
+  "meaning": "n.椅子",
+  "group": 78
+ },
+ {
+  "id": 772,
+  "word": "eat",
+  "phonetic": "[iːt]",
+  "meaning": "v.吃(ate, eaten)",
+  "group": 78
+ },
+ {
+  "id": 773,
+  "word": "car",
+  "phonetic": "[kɑːr]",
+  "meaning": "n.小汽车；轿车",
+  "group": 78
+ },
+ {
+  "id": 774,
+  "word": "would prefer",
+  "phonetic": "",
+  "meaning": "(v) 更喜欢",
+  "group": 78
+ },
+ {
+  "id": 775,
+  "word": "could",
+  "phonetic": "[kəd; kʊd]",
+  "meaning": "modal v.能;可以",
+  "group": 78
+ },
+ {
+  "id": 776,
+  "word": "factory",
+  "phonetic": "[ˈfæktri; ˈfæktəri]",
+  "meaning": "n.工厂",
+  "group": 78
+ },
+ {
+  "id": 777,
+  "word": "upstairs",
+  "phonetic": "[ˌʌpˈsteəz]",
+  "meaning": "adv. 向楼上；在楼上",
+  "group": 78
+ },
+ {
+  "id": 778,
+  "word": "shout",
+  "phonetic": "[ʃaʊt]",
+  "meaning": "n.&v.喊；高声呼喊",
+  "group": 78
+ },
+ {
+  "id": 779,
+  "word": "life",
+  "phonetic": "[laɪf]",
+  "meaning": "n.(pl. lives)生活;生命",
+  "group": 78
+ },
+ {
+  "id": 780,
+  "word": "curtain",
+  "phonetic": "[ˈkɜːtn]",
+  "meaning": "n.窗帘；门帘；帘子",
+  "group": 78
+ },
+ {
+  "id": 781,
+  "word": "brother",
+  "phonetic": "[ˈbrʌðər]",
+  "meaning": "n.兄；弟",
+  "group": 79
+ },
+ {
+  "id": 782,
+  "word": "rest",
+  "phonetic": "[rest]",
+  "meaning": "n.剩余部分",
+  "group": 79
+ },
+ {
+  "id": 783,
+  "word": "end",
+  "phonetic": "[end]",
+  "meaning": "v.结束，终止",
+  "group": 79
+ },
+ {
+  "id": 784,
+  "word": "surprise",
+  "phonetic": "[səˈpraɪz]",
+  "meaning": "v.使惊奇，使诧异",
+  "group": 79
+ },
+ {
+  "id": 785,
+  "word": "skating",
+  "phonetic": "[ˈskeɪtɪŋ]",
+  "meaning": "滑冰",
+  "group": 79
+ },
+ {
+  "id": 786,
+  "word": "castle",
+  "phonetic": "[ˈkɑːsl]",
+  "meaning": "n.城堡",
+  "group": 79
+ },
+ {
+  "id": 787,
+  "word": "set",
+  "phonetic": "[set]",
+  "meaning": "摆放；落下",
+  "group": 79
+ },
+ {
+  "id": 788,
+  "word": "desert",
+  "phonetic": "['dezət]",
+  "meaning": "沙漠",
+  "group": 79
+ },
+ {
+  "id": 789,
+  "word": "information",
+  "phonetic": "[ˌɪnfəˈmeɪʃn]",
+  "meaning": "n.信息；情报；资料",
+  "group": 79
+ },
+ {
+  "id": 790,
+  "word": "fire",
+  "phonetic": "[ˈfaɪər]",
+  "meaning": "v.开火，开(枪，炮等)，射击",
+  "group": 79
+ },
+ {
+  "id": 791,
+  "word": "raincoat",
+  "phonetic": "[ˈreɪnkəʊt]",
+  "meaning": "n.雨衣",
+  "group": 80
+ },
+ {
+  "id": 792,
+  "word": "twice",
+  "phonetic": "[twaɪs]",
+  "meaning": "adv.两次；两倍",
+  "group": 80
+ },
+ {
+  "id": 793,
+  "word": "off",
+  "phonetic": "[ɒf]",
+  "meaning": "离开；关上",
+  "group": 80
+ },
+ {
+  "id": 794,
+  "word": "turn",
+  "phonetic": "[tɜːn]",
+  "meaning": "v.转向;翻",
+  "group": 80
+ },
+ {
+  "id": 795,
+  "word": "apartment",
+  "phonetic": "[əˈpɑːtmənt]",
+  "meaning": "n.公寓套房",
+  "group": 80
+ },
+ {
+  "id": 796,
+  "word": "granddaughter",
+  "phonetic": "[ˈɡrændɔːtər]",
+  "meaning": "n. 孙女，外孙女",
+  "group": 80
+ },
+ {
+  "id": 797,
+  "word": "photo",
+  "phonetic": "[ˈfəʊtəʊ]",
+  "meaning": "n.照片(=photograph)",
+  "group": 80
+ },
+ {
+  "id": 798,
+  "word": "have to",
+  "phonetic": "",
+  "meaning": "必须；不得不；只好",
+  "group": 80
+ },
+ {
+  "id": 799,
+  "word": "climb",
+  "phonetic": "[klaɪm]",
+  "meaning": "攀登",
+  "group": 80
+ },
+ {
+  "id": 800,
+  "word": "water",
+  "phonetic": "[ˈwɔːtər]",
+  "meaning": "n.水",
+  "group": 80
+ },
+ {
+  "id": 801,
+  "word": "local",
+  "phonetic": "[ˈləʊkl]",
+  "meaning": "adj.当地的，地方的",
+  "group": 81
+ },
+ {
+  "id": 802,
+  "word": "tourist information",
+  "phonetic": "",
+  "meaning": "旅游信息中心",
+  "group": 81
+ },
+ {
+  "id": 803,
+  "word": "believe",
+  "phonetic": "[bɪˈliːv]",
+  "meaning": "v.相信，认为",
+  "group": 81
+ },
+ {
+  "id": 804,
+  "word": "sightseeing",
+  "phonetic": "[ˈsaɪtsiːɪŋ]",
+  "meaning": "n.游览，观光",
+  "group": 81
+ },
+ {
+  "id": 805,
+  "word": "add",
+  "phonetic": "[æd]",
+  "meaning": "v.增加，添加",
+  "group": 81
+ },
+ {
+  "id": 806,
+  "word": "ID",
+  "phonetic": "[ˌaɪ ˈdiː]",
+  "meaning": "身份证明",
+  "group": 81
+ },
+ {
+  "id": 807,
+  "word": "offer",
+  "phonetic": "[ˈɒfər]",
+  "meaning": "n.&v.提供",
+  "group": 81
+ },
+ {
+  "id": 808,
+  "word": "degree",
+  "phonetic": "[dɪˈɡriː]",
+  "meaning": "n. (大学)学位；度",
+  "group": 81
+ },
+ {
+  "id": 809,
+  "word": "present",
+  "phonetic": "[ˈpreznt]",
+  "meaning": "礼物",
+  "group": 81
+ },
+ {
+  "id": 810,
+  "word": "available",
+  "phonetic": "[əˈveɪləbl]",
+  "meaning": "adj.可用的；可得到的",
+  "group": 81
+ },
+ {
+  "id": 811,
+  "word": "bin",
+  "phonetic": "[bɪn]",
+  "meaning": "n.箱子；垃圾箱",
+  "group": 82
+ },
+ {
+  "id": 812,
+  "word": "me",
+  "phonetic": "[miː]",
+  "meaning": "pron我(宾格)",
+  "group": 82
+ },
+ {
+  "id": 813,
+  "word": "since",
+  "phonetic": "[sɪns]",
+  "meaning": "prep.自从",
+  "group": 82
+ },
+ {
+  "id": 814,
+  "word": "boil",
+  "phonetic": "[bɔɪl]",
+  "meaning": "v. 用沸水煮",
+  "group": 82
+ },
+ {
+  "id": 815,
+  "word": "elephant",
+  "phonetic": "[ˈelɪfənt]",
+  "meaning": "n.大象",
+  "group": 82
+ },
+ {
+  "id": 816,
+  "word": "channel",
+  "phonetic": "[ˈtʃænl]",
+  "meaning": "n.频道",
+  "group": 82
+ },
+ {
+  "id": 817,
+  "word": "everywhere",
+  "phonetic": "[ˈevriweər]",
+  "meaning": "adv.到处",
+  "group": 82
+ },
+ {
+  "id": 818,
+  "word": "full",
+  "phonetic": "[fʊl]",
+  "meaning": "满的",
+  "group": 82
+ },
+ {
+  "id": 819,
+  "word": "main course",
+  "phonetic": "",
+  "meaning": "主菜",
+  "group": 82
+ },
+ {
+  "id": 820,
+  "word": "pop",
+  "phonetic": "[pɒp]",
+  "meaning": "a.=popular (口语)(音乐、艺术等)大众的，通俗的",
+  "group": 82
+ },
+ {
+  "id": 821,
+  "word": "brave",
+  "phonetic": "[breɪv]",
+  "meaning": "adj.勇敢的",
+  "group": 83
+ },
+ {
+  "id": 822,
+  "word": "horror",
+  "phonetic": "[ˈhɒrər]",
+  "meaning": "n.恐怖",
+  "group": 83
+ },
+ {
+  "id": 823,
+  "word": "swimming costume",
+  "phonetic": "",
+  "meaning": "n. 泳衣",
+  "group": 83
+ },
+ {
+  "id": 824,
+  "word": "middle",
+  "phonetic": "[ˈmɪdl]",
+  "meaning": "n. 中间；中央",
+  "group": 83
+ },
+ {
+  "id": 825,
+  "word": "mouth",
+  "phonetic": "[maʊθ]",
+  "meaning": "n.嘴，口",
+  "group": 83
+ },
+ {
+  "id": 826,
+  "word": "everyone",
+  "phonetic": "[ˈevriwʌn]",
+  "meaning": "每个人",
+  "group": 83
+ },
+ {
+  "id": 827,
+  "word": "cloud",
+  "phonetic": "[klaʊd]",
+  "meaning": "n.云",
+  "group": 83
+ },
+ {
+  "id": 828,
+  "word": "post",
+  "phonetic": "[pəʊst]",
+  "meaning": "n.邮政",
+  "group": 83
+ },
+ {
+  "id": 829,
+  "word": "have got to",
+  "phonetic": "",
+  "meaning": "不得不",
+  "group": 83
+ },
+ {
+  "id": 830,
+  "word": "computer",
+  "phonetic": "[kəmˈpjuːtər]",
+  "meaning": "n.电脑",
+  "group": 83
+ },
+ {
+  "id": 831,
+  "word": "neighbour",
+  "phonetic": "[ˈneɪbər]",
+  "meaning": "n.邻居(美neighbor)",
+  "group": 84
+ },
+ {
+  "id": 832,
+  "word": "sunglasses",
+  "phonetic": "[ˈsʌnɡlɑːsɪz]",
+  "meaning": "n.太阳镜， 墨镜",
+  "group": 84
+ },
+ {
+  "id": 833,
+  "word": "dog",
+  "phonetic": "[dɒɡ]",
+  "meaning": "n.狗",
+  "group": 84
+ },
+ {
+  "id": 834,
+  "word": "look out",
+  "phonetic": "[lʊk aʊt]",
+  "meaning": "小心，当心",
+  "group": 84
+ },
+ {
+  "id": 835,
+  "word": "classroom",
+  "phonetic": "[ˈklɑːsruːm; ˈklɑːsrʊm]",
+  "meaning": "教室",
+  "group": 84
+ },
+ {
+  "id": 836,
+  "word": "be",
+  "phonetic": "[bi; biː]",
+  "meaning": "v.是；成为",
+  "group": 84
+ },
+ {
+  "id": 837,
+  "word": "grape",
+  "phonetic": "[ɡreɪp]",
+  "meaning": "葡萄",
+  "group": 84
+ },
+ {
+  "id": 838,
+  "word": "arrive",
+  "phonetic": "[əˈraɪv]",
+  "meaning": "v. 到达",
+  "group": 84
+ },
+ {
+  "id": 839,
+  "word": "guide",
+  "phonetic": "[ɡaɪd]",
+  "meaning": "n.导游，向导",
+  "group": 84
+ },
+ {
+  "id": 840,
+  "word": "double",
+  "phonetic": "[ˈdʌbl]",
+  "meaning": "v.（使）加倍",
+  "group": 84
+ },
+ {
+  "id": 841,
+  "word": "tennis",
+  "phonetic": "[ˈtenɪs]",
+  "meaning": "n.网球",
+  "group": 85
+ },
+ {
+  "id": 842,
+  "word": "beside",
+  "phonetic": "[bɪˈsaɪd]",
+  "meaning": "prep.在......旁边；靠近",
+  "group": 85
+ },
+ {
+  "id": 843,
+  "word": "see",
+  "phonetic": "[siː]",
+  "meaning": "v.看见，看到；领会，理解；拜访，会见(saw,seen)",
+  "group": 85
+ },
+ {
+  "id": 844,
+  "word": "certainly not",
+  "phonetic": "",
+  "meaning": "当然不",
+  "group": 85
+ },
+ {
+  "id": 845,
+  "word": "born",
+  "phonetic": "[bɔːn]",
+  "meaning": "v.出生",
+  "group": 85
+ },
+ {
+  "id": 846,
+  "word": "leather",
+  "phonetic": "[ˈleðər]",
+  "meaning": "n.皮革, 皮革制品",
+  "group": 85
+ },
+ {
+  "id": 847,
+  "word": "special",
+  "phonetic": "[ˈspeʃl]",
+  "meaning": "adj.特殊的，特别的",
+  "group": 85
+ },
+ {
+  "id": 848,
+  "word": "sea",
+  "phonetic": "[siː]",
+  "meaning": "n.海，海洋",
+  "group": 85
+ },
+ {
+  "id": 849,
+  "word": "doctor",
+  "phonetic": "[ˈdɒktər]",
+  "meaning": "n.医生",
+  "group": 85
+ },
+ {
+  "id": 850,
+  "word": "big",
+  "phonetic": "[bɪɡ]",
+  "meaning": "adj.大的",
+  "group": 85
+ },
+ {
+  "id": 851,
+  "word": "fact",
+  "phonetic": "[fækt]",
+  "meaning": "n.事实，现实；实际",
+  "group": 86
+ },
+ {
+  "id": 852,
+  "word": "motorway",
+  "phonetic": "[ˈməʊtəweɪ]",
+  "meaning": "高速公路",
+  "group": 86
+ },
+ {
+  "id": 853,
+  "word": "note",
+  "phonetic": "[nəʊt]",
+  "meaning": "n.纸币",
+  "group": 86
+ },
+ {
+  "id": 854,
+  "word": "go out",
+  "phonetic": "[ɡəu aut]",
+  "meaning": "外出(娱乐)",
+  "group": 86
+ },
+ {
+  "id": 855,
+  "word": "advertisement",
+  "phonetic": "[ədˈvɜːtɪsmənt]",
+  "meaning": "n.广告",
+  "group": 86
+ },
+ {
+  "id": 856,
+  "word": "hate",
+  "phonetic": "[heɪt]",
+  "meaning": "v. & n.不喜欢；恨；讨厌",
+  "group": 86
+ },
+ {
+  "id": 857,
+  "word": "number",
+  "phonetic": "[ˈnʌmbər]",
+  "meaning": "n.数字",
+  "group": 86
+ },
+ {
+  "id": 858,
+  "word": "guess",
+  "phonetic": "[ɡes]",
+  "meaning": "猜测",
+  "group": 86
+ },
+ {
+  "id": 859,
+  "word": "maths",
+  "phonetic": "[mæθs]",
+  "meaning": "n.(通常作单数用)数学(=mathematics，美math)",
+  "group": 86
+ },
+ {
+  "id": 860,
+  "word": "against",
+  "phonetic": "[əˈɡenst; əˈɡeɪnst]",
+  "meaning": "靠着；反对",
+  "group": 86
+ },
+ {
+  "id": 861,
+  "word": "give back",
+  "phonetic": "",
+  "meaning": "送还;恢复",
+  "group": 87
+ },
+ {
+  "id": 862,
+  "word": "which",
+  "phonetic": "[wɪtʃ]",
+  "meaning": "adj.&pron.那(哪)一个(些)",
+  "group": 87
+ },
+ {
+  "id": 863,
+  "word": "plan",
+  "phonetic": "[plæn]",
+  "meaning": "计划",
+  "group": 87
+ },
+ {
+  "id": 864,
+  "word": "laptop",
+  "phonetic": "[ˈlæptɒp]",
+  "meaning": "n.手提电脑",
+  "group": 87
+ },
+ {
+  "id": 865,
+  "word": "train",
+  "phonetic": "[treɪn]",
+  "meaning": "v.训练，接受训练",
+  "group": 87
+ },
+ {
+  "id": 866,
+  "word": "soon",
+  "phonetic": "[suːn]",
+  "meaning": "不久",
+  "group": 87
+ },
+ {
+  "id": 867,
+  "word": "grandfather",
+  "phonetic": "[ˈɡrænfɑːðər]",
+  "meaning": "n.（外）祖父",
+  "group": 87
+ },
+ {
+  "id": 868,
+  "word": "wear",
+  "phonetic": "[weər]",
+  "meaning": "v.穿;戴",
+  "group": 87
+ },
+ {
+  "id": 869,
+  "word": "cent",
+  "phonetic": "[sent]",
+  "meaning": "n.美分(100 cents =1 dollar)",
+  "group": 87
+ },
+ {
+  "id": 870,
+  "word": "brain",
+  "phonetic": "[breɪn]",
+  "meaning": "n.脑",
+  "group": 87
+ },
+ {
+  "id": 871,
+  "word": "above",
+  "phonetic": "[əˈbʌv]",
+  "meaning": "在......之上",
+  "group": 88
+ },
+ {
+  "id": 872,
+  "word": "gym",
+  "phonetic": "[dʒɪm]",
+  "meaning": "n.=gymnasium 体操；体育馆；健身房",
+  "group": 88
+ },
+ {
+  "id": 873,
+  "word": "wow",
+  "phonetic": "[waʊ]",
+  "meaning": "int.(表示惊奇或敬佩)哇;呀",
+  "group": 88
+ },
+ {
+  "id": 874,
+  "word": "on",
+  "phonetic": "[ɒn]",
+  "meaning": "prep.表示已连接、处于工作状态或使用中",
+  "group": 88
+ },
+ {
+  "id": 875,
+  "word": "get back",
+  "phonetic": "",
+  "meaning": "回来",
+  "group": 88
+ },
+ {
+  "id": 876,
+  "word": "scary",
+  "phonetic": "[ˈskeəri]",
+  "meaning": "adj.吓人的;恐怖的",
+  "group": 88
+ },
+ {
+  "id": 877,
+  "word": "just",
+  "phonetic": "[dʒʌst]",
+  "meaning": "恰恰；刚刚",
+  "group": 88
+ },
+ {
+  "id": 878,
+  "word": "opposite",
+  "phonetic": "[ˈɒpəzɪt; ˈɒpəsɪt]",
+  "meaning": "prep.在...对面；与...相反",
+  "group": 88
+ },
+ {
+  "id": 879,
+  "word": "really",
+  "phonetic": "[ˈriːəli; ˈrɪəli]",
+  "meaning": "真正地",
+  "group": 88
+ },
+ {
+  "id": 880,
+  "word": "possibly",
+  "phonetic": "[ˈpɒsəbli]",
+  "meaning": "adv. 可能，或许",
+  "group": 88
+ },
+ {
+  "id": 881,
+  "word": "cupboard",
+  "phonetic": "[ˈkʌbəd]",
+  "meaning": "n.橱柜，食物柜",
+  "group": 89
+ },
+ {
+  "id": 882,
+  "word": "red",
+  "phonetic": "[red]",
+  "meaning": "n.红色",
+  "group": 89
+ },
+ {
+  "id": 883,
+  "word": "schoolchild",
+  "phonetic": "[ˈskuːltʃaɪld]",
+  "meaning": "n. 学童",
+  "group": 89
+ },
+ {
+  "id": 884,
+  "word": "prefer",
+  "phonetic": "[prɪˈfɜːr]",
+  "meaning": "v.更喜欢",
+  "group": 89
+ },
+ {
+  "id": 885,
+  "word": "comic",
+  "phonetic": "[ˈkɒmɪk]",
+  "meaning": "n.连环画杂志",
+  "group": 89
+ },
+ {
+  "id": 886,
+  "word": "share",
+  "phonetic": "[ʃeər]",
+  "meaning": "v.分享；共同使用",
+  "group": 89
+ },
+ {
+  "id": 887,
+  "word": "understand",
+  "phonetic": "[ˌʌndəˈstænd]",
+  "meaning": "v.懂，理解",
+  "group": 89
+ },
+ {
+  "id": 888,
+  "word": "early",
+  "phonetic": "[ˈɜːli]",
+  "meaning": "adv.&adj.早(的)",
+  "group": 89
+ },
+ {
+  "id": 889,
+  "word": "competition",
+  "phonetic": "[ˌkɒmpəˈtɪʃn]",
+  "meaning": "n.比赛，竞赛",
+  "group": 89
+ },
+ {
+  "id": 890,
+  "word": "finger",
+  "phonetic": "[ˈfɪŋɡər]",
+  "meaning": "手指",
+  "group": 89
+ },
+ {
+  "id": 891,
+  "word": "cold",
+  "phonetic": "[kəʊld]",
+  "meaning": "adj.寒冷的;冷的",
+  "group": 90
+ },
+ {
+  "id": 892,
+  "word": "station",
+  "phonetic": "[ˈsteɪʃn]",
+  "meaning": "n.电(视)台;车站",
+  "group": 90
+ },
+ {
+  "id": 893,
+  "word": "bus station",
+  "phonetic": "",
+  "meaning": "公交车站",
+  "group": 90
+ },
+ {
+  "id": 894,
+  "word": "tourist",
+  "phonetic": "[ˈtʊərɪst; ˈtɔːrɪst]",
+  "meaning": "n.游客，旅客，旅行者",
+  "group": 90
+ },
+ {
+  "id": 895,
+  "word": "university",
+  "phonetic": "[ˌjuːnɪˈvɜːsəti]",
+  "meaning": "n. 大学",
+  "group": 90
+ },
+ {
+  "id": 896,
+  "word": "an",
+  "phonetic": "[ən; æn]",
+  "meaning": "art.一（个，件...）",
+  "group": 90
+ },
+ {
+  "id": 897,
+  "word": "jam",
+  "phonetic": "[dʒæm]",
+  "meaning": "n.果酱；阻塞",
+  "group": 90
+ },
+ {
+  "id": 898,
+  "word": "tomato",
+  "phonetic": "[təˈmɑːtəʊ]",
+  "meaning": "n.番茄，西红柿",
+  "group": 90
+ },
+ {
+  "id": 899,
+  "word": "event",
+  "phonetic": "[ɪˈvent]",
+  "meaning": "n.（运动）比赛项目；大事",
+  "group": 90
+ },
+ {
+  "id": 900,
+  "word": "round",
+  "phonetic": "[raʊnd]",
+  "meaning": "prep.环绕一周，围着",
+  "group": 90
+ },
+ {
+  "id": 901,
+  "word": "worry",
+  "phonetic": "[ˈwʌri]",
+  "meaning": "n.烦恼，担忧",
+  "group": 91
+ },
+ {
+  "id": 902,
+  "word": "hurt",
+  "phonetic": "[hɜːt]",
+  "meaning": "痛的；疼痛",
+  "group": 91
+ },
+ {
+  "id": 903,
+  "word": "before",
+  "phonetic": "[bɪˈfɔːr]",
+  "meaning": "conj. 在...之前",
+  "group": 91
+ },
+ {
+  "id": 904,
+  "word": "fruit",
+  "phonetic": "[fruːt]",
+  "meaning": "n.水果；果实",
+  "group": 91
+ },
+ {
+  "id": 905,
+  "word": "country",
+  "phonetic": "[ˈkʌntri]",
+  "meaning": "国家",
+  "group": 91
+ },
+ {
+  "id": 906,
+  "word": "wash up",
+  "phonetic": "[ˈwɒʃ.ʌp]",
+  "meaning": "na. 饭后洗碗；洗脸；将...冲上岸；(出人意料地)出现",
+  "group": 91
+ },
+ {
+  "id": 907,
+  "word": "closed",
+  "phonetic": "[kləʊzd]",
+  "meaning": "adj.关闭的",
+  "group": 91
+ },
+ {
+  "id": 908,
+  "word": "pet",
+  "phonetic": "[pet]",
+  "meaning": "n.宠物",
+  "group": 91
+ },
+ {
+  "id": 909,
+  "word": "belt",
+  "phonetic": "[belt]",
+  "meaning": "n.(皮)带；带子",
+  "group": 91
+ },
+ {
+  "id": 910,
+  "word": "wallet",
+  "phonetic": "[ˈwɒlɪt]",
+  "meaning": "n.钱包，皮夹子",
+  "group": 91
+ },
+ {
+  "id": 911,
+  "word": "comb",
+  "phonetic": "[kəʊm]",
+  "meaning": "n. 梳子；v. 梳理（头发）",
+  "group": 92
+ },
+ {
+  "id": 912,
+  "word": "hi",
+  "phonetic": "[haɪ]",
+  "meaning": "interj.喂",
+  "group": 92
+ },
+ {
+  "id": 913,
+  "word": "meal",
+  "phonetic": "[miːl]",
+  "meaning": "n.一餐(饭)",
+  "group": 92
+ },
+ {
+  "id": 914,
+  "word": "birthday",
+  "phonetic": "[ˈbɜːθdeɪ]",
+  "meaning": "n.生日",
+  "group": 92
+ },
+ {
+  "id": 915,
+  "word": "quite",
+  "phonetic": "[kwaɪt]",
+  "meaning": "adv.完全；十分；相当",
+  "group": 92
+ },
+ {
+  "id": 916,
+  "word": "each other",
+  "phonetic": "",
+  "meaning": "pron. 互相",
+  "group": 92
+ },
+ {
+  "id": 917,
+  "word": "ear",
+  "phonetic": "[ɪər]",
+  "meaning": "n.耳朵",
+  "group": 92
+ },
+ {
+  "id": 918,
+  "word": "right",
+  "phonetic": "[raɪt]",
+  "meaning": "adv.&n.向右边;右边",
+  "group": 92
+ },
+ {
+  "id": 919,
+  "word": "question",
+  "phonetic": "[ˈkwestʃən]",
+  "meaning": "问题",
+  "group": 92
+ },
+ {
+  "id": 920,
+  "word": "dad",
+  "phonetic": "[dæd]",
+  "meaning": "n.(口语)爸爸",
+  "group": 92
+ },
+ {
+  "id": 921,
+  "word": "this",
+  "phonetic": "[ðɪs]",
+  "meaning": "adj.&pron.这；这个",
+  "group": 93
+ },
+ {
+  "id": 922,
+  "word": "bathing suit",
+  "phonetic": "",
+  "meaning": "n. 泳衣",
+  "group": 93
+ },
+ {
+  "id": 923,
+  "word": "far",
+  "phonetic": "[fɑːr]",
+  "meaning": "adv.&adj远；远的",
+  "group": 93
+ },
+ {
+  "id": 924,
+  "word": "bookcase",
+  "phonetic": "[ˈbʊkkeɪs]",
+  "meaning": "n.书架;书柜",
+  "group": 93
+ },
+ {
+  "id": 925,
+  "word": "kick",
+  "phonetic": "[kɪk]",
+  "meaning": "v. & n.踢",
+  "group": 93
+ },
+ {
+  "id": 926,
+  "word": "rubber",
+  "phonetic": "[ˈrʌbər]",
+  "meaning": "n.橡胶；合成橡胶",
+  "group": 93
+ },
+ {
+  "id": 927,
+  "word": "hand",
+  "phonetic": "[hænd]",
+  "meaning": "vi.交；递，给",
+  "group": 93
+ },
+ {
+  "id": 928,
+  "word": "only",
+  "phonetic": "[ˈəʊnli]",
+  "meaning": "仅仅；只",
+  "group": 93
+ },
+ {
+  "id": 929,
+  "word": "nose",
+  "phonetic": "[nəʊz]",
+  "meaning": "n.鼻子",
+  "group": 93
+ },
+ {
+  "id": 930,
+  "word": "opera",
+  "phonetic": "[ˈɒprə]",
+  "meaning": "歌剧（院）",
+  "group": 93
+ },
+ {
+  "id": 931,
+  "word": "point",
+  "phonetic": "[pɔɪnt]",
+  "meaning": "指向",
+  "group": 94
+ },
+ {
+  "id": 932,
+  "word": "metal",
+  "phonetic": "[ˈmetl]",
+  "meaning": "n.金属",
+  "group": 94
+ },
+ {
+  "id": 933,
+  "word": "listen",
+  "phonetic": "[ˈlɪsn]",
+  "meaning": "v.听;倾听",
+  "group": 94
+ },
+ {
+  "id": 934,
+  "word": "animal",
+  "phonetic": "[ˈænɪml]",
+  "meaning": "n.动物",
+  "group": 94
+ },
+ {
+  "id": 935,
+  "word": "town",
+  "phonetic": "[taʊn]",
+  "meaning": "n.镇;市镇",
+  "group": 94
+ },
+ {
+  "id": 936,
+  "word": "pharmacy",
+  "phonetic": "[ˈfɑːməsi]",
+  "meaning": "n.药房,药剂学,制药业,配药业,备用药品",
+  "group": 94
+ },
+ {
+  "id": 937,
+  "word": "singing",
+  "phonetic": "[ˈsɪŋɪŋ]",
+  "meaning": "唱歌",
+  "group": 94
+ },
+ {
+  "id": 938,
+  "word": "you",
+  "phonetic": "[ju; juː]",
+  "meaning": "pron.你；你们",
+  "group": 94
+ },
+ {
+  "id": 939,
+  "word": "cat",
+  "phonetic": "[kæt]",
+  "meaning": "n.猫",
+  "group": 94
+ },
+ {
+  "id": 940,
+  "word": "advanced",
+  "phonetic": "[ədˈvænst]",
+  "meaning": "adj. 先进的，高级的",
+  "group": 94
+ },
+ {
+  "id": 941,
+  "word": "glass",
+  "phonetic": "[ɡlɑːs]",
+  "meaning": "玻璃；眼镜（-es）",
+  "group": 95
+ },
+ {
+  "id": 942,
+  "word": "stairs",
+  "phonetic": "[stɛəz]",
+  "meaning": "n.[pl.]楼梯",
+  "group": 95
+ },
+ {
+  "id": 943,
+  "word": "throw",
+  "phonetic": "[θrəʊ]",
+  "meaning": "v.投，掷，扔(threw,thrown)",
+  "group": 95
+ },
+ {
+  "id": 944,
+  "word": "suit",
+  "phonetic": "[suːt; sjuːt]",
+  "meaning": "v.合适, 适合, 相配, 合式, 适宜于 n.一套衣服",
+  "group": 95
+ },
+ {
+  "id": 945,
+  "word": "staff",
+  "phonetic": "[stɑːf]",
+  "meaning": "管理人员；职工",
+  "group": 95
+ },
+ {
+  "id": 946,
+  "word": "boiled",
+  "phonetic": "[boild]",
+  "meaning": "adj.煮沸的",
+  "group": 95
+ },
+ {
+  "id": 947,
+  "word": "also",
+  "phonetic": "[ˈɔːlsəʊ]",
+  "meaning": "adv. 也",
+  "group": 95
+ },
+ {
+  "id": 948,
+  "word": "railway",
+  "phonetic": "[ˈreɪlweɪ]",
+  "meaning": "n.铁路系统",
+  "group": 95
+ },
+ {
+  "id": 949,
+  "word": "tram",
+  "phonetic": "[træm]",
+  "meaning": "n. 电车轨道；煤车vt. 用煤车运载vi.乘电车",
+  "group": 95
+ },
+ {
+  "id": 950,
+  "word": "biscuit",
+  "phonetic": "[ˈbɪskɪt]",
+  "meaning": "n.饼干",
+  "group": 95
+ },
+ {
+  "id": 951,
+  "word": "per",
+  "phonetic": "[pər; pɜːr]",
+  "meaning": "prep.每，每一",
+  "group": 96
+ },
+ {
+  "id": 952,
+  "word": "date",
+  "phonetic": "[deɪt]",
+  "meaning": "日期；约会",
+  "group": 96
+ },
+ {
+  "id": 953,
+  "word": "total",
+  "phonetic": "[ˈtəʊtl]",
+  "meaning": "n.总额，合计",
+  "group": 96
+ },
+ {
+  "id": 954,
+  "word": "advert",
+  "phonetic": "[ˈædvɜːt]",
+  "meaning": "n.广告",
+  "group": 96
+ },
+ {
+  "id": 955,
+  "word": "final",
+  "phonetic": "[ˈfaɪnl]",
+  "meaning": "adj.最后的；终极的",
+  "group": 96
+ },
+ {
+  "id": 956,
+  "word": "cash",
+  "phonetic": "[kæʃ]",
+  "meaning": "n. 现款，现金vt. 将...兑现；支付现款n. (Cash)人名；(英)卡什",
+  "group": 96
+ },
+ {
+  "id": 957,
+  "word": "stand",
+  "phonetic": "[stænd]",
+  "meaning": "v.站；起立(stood,stood)",
+  "group": 96
+ },
+ {
+  "id": 958,
+  "word": "no one",
+  "phonetic": "",
+  "meaning": "没有人(谁也不)",
+  "group": 96
+ },
+ {
+  "id": 959,
+  "word": "painter",
+  "phonetic": "[ˈpeɪntər]",
+  "meaning": "n.画家",
+  "group": 96
+ },
+ {
+  "id": 960,
+  "word": "balloon",
+  "phonetic": "[bəˈluːn]",
+  "meaning": "气球",
+  "group": 96
+ },
+ {
+  "id": 961,
+  "word": "penny",
+  "phonetic": "[ˈpeni]",
+  "meaning": "n. (pl.pence)（英）便士；美分",
+  "group": 97
+ },
+ {
+  "id": 962,
+  "word": "foggy",
+  "phonetic": "[ˈfɒɡi]",
+  "meaning": "adj.有雾的，多雾的",
+  "group": 97
+ },
+ {
+  "id": 963,
+  "word": "spend",
+  "phonetic": "[spend]",
+  "meaning": "v. 度过",
+  "group": 97
+ },
+ {
+  "id": 964,
+  "word": "salt",
+  "phonetic": "[sɔːlt; sɒlt]",
+  "meaning": "n. 盐",
+  "group": 97
+ },
+ {
+  "id": 965,
+  "word": "group",
+  "phonetic": "[ɡruːp]",
+  "meaning": "n.组，群",
+  "group": 97
+ },
+ {
+  "id": 966,
+  "word": "restaurant",
+  "phonetic": "[ˈrestrɒnt]",
+  "meaning": "餐馆",
+  "group": 97
+ },
+ {
+  "id": 967,
+  "word": "actor",
+  "phonetic": "[ˈæktər]",
+  "meaning": "n.男演员",
+  "group": 97
+ },
+ {
+  "id": 968,
+  "word": "up",
+  "phonetic": "[ʌp]",
+  "meaning": "adv.向上",
+  "group": 97
+ },
+ {
+  "id": 969,
+  "word": "beginner",
+  "phonetic": "[biˈginə]",
+  "meaning": "n.钉；指甲；vt.钉",
+  "group": 97
+ },
+ {
+  "id": 970,
+  "word": "scarf",
+  "phonetic": "[skɑːf]",
+  "meaning": "围巾",
+  "group": 97
+ },
+ {
+  "id": 971,
+  "word": "guest",
+  "phonetic": "[ɡest]",
+  "meaning": "n.客人，宾客",
+  "group": 98
+ },
+ {
+  "id": 972,
+  "word": "modern",
+  "phonetic": "[ˈmɒdn]",
+  "meaning": "adj.现代的",
+  "group": 98
+ },
+ {
+  "id": 973,
+  "word": "right hand",
+  "phonetic": "",
+  "meaning": "右手",
+  "group": 98
+ },
+ {
+  "id": 974,
+  "word": "bike",
+  "phonetic": "[baɪk]",
+  "meaning": "n.自行车",
+  "group": 98
+ },
+ {
+  "id": 975,
+  "word": "alarm clock",
+  "phonetic": "",
+  "meaning": "闹钟",
+  "group": 98
+ },
+ {
+  "id": 976,
+  "word": "horse",
+  "phonetic": "[hɔːs]",
+  "meaning": "n.马",
+  "group": 98
+ },
+ {
+  "id": 977,
+  "word": "that",
+  "phonetic": "[ðæt]",
+  "meaning": "conj.引导宾语从句",
+  "group": 98
+ },
+ {
+  "id": 978,
+  "word": "timetable",
+  "phonetic": "[ˈtaɪmteɪbl]",
+  "meaning": "时间表",
+  "group": 98
+ },
+ {
+  "id": 979,
+  "word": "laugh",
+  "phonetic": "[lɑːf]",
+  "meaning": "笑",
+  "group": 98
+ },
+ {
+  "id": 980,
+  "word": "night",
+  "phonetic": "[naɪt]",
+  "meaning": "n.晚上;夜晚",
+  "group": 98
+ },
+ {
+  "id": 981,
+  "word": "good afternoon",
+  "phonetic": "",
+  "meaning": "下午好！",
+  "group": 99
+ },
+ {
+  "id": 982,
+  "word": "pain",
+  "phonetic": "[peɪn]",
+  "meaning": "n.痛，疼痛",
+  "group": 99
+ },
+ {
+  "id": 983,
+  "word": "hold",
+  "phonetic": "[həʊld]",
+  "meaning": "vt.容纳 v.拿住,握住,保留",
+  "group": 99
+ },
+ {
+  "id": 984,
+  "word": "shop assistant",
+  "phonetic": "[ʃɒp əˈsɪstənt]",
+  "meaning": "n. 店员；售货员",
+  "group": 99
+ },
+ {
+  "id": 985,
+  "word": "ship",
+  "phonetic": "[ʃɪp]",
+  "meaning": "n.船，轮船",
+  "group": 99
+ },
+ {
+  "id": 986,
+  "word": "pen",
+  "phonetic": "[pen]",
+  "meaning": "n.钢笔；笔",
+  "group": 99
+ },
+ {
+  "id": 987,
+  "word": "lake",
+  "phonetic": "[leɪk]",
+  "meaning": "n.湖",
+  "group": 99
+ },
+ {
+  "id": 988,
+  "word": "river",
+  "phonetic": "[ˈrɪvər]",
+  "meaning": "n.河；江",
+  "group": 99
+ },
+ {
+  "id": 989,
+  "word": "hospital",
+  "phonetic": "[ˈhɒspɪtl]",
+  "meaning": "n.医院",
+  "group": 99
+ },
+ {
+  "id": 990,
+  "word": "euro",
+  "phonetic": "[ˈjʊərəʊ]",
+  "meaning": "n. 欧元",
+  "group": 99
+ },
+ {
+  "id": 991,
+  "word": "alone",
+  "phonetic": "[əˈləʊn]",
+  "meaning": "adv.独自",
+  "group": 100
+ },
+ {
+  "id": 992,
+  "word": "variety",
+  "phonetic": "[vəˈraɪəti]",
+  "meaning": "n.种种，种类",
+  "group": 100
+ },
+ {
+  "id": 993,
+  "word": "fail",
+  "phonetic": "[feɪl]",
+  "meaning": "失败；未能（做到）",
+  "group": 100
+ },
+ {
+  "id": 994,
+  "word": "contact",
+  "phonetic": "[ˈkɒntækt]",
+  "meaning": "v.与......来往，联系",
+  "group": 100
+ },
+ {
+  "id": 995,
+  "word": "difficult",
+  "phonetic": "[ˈdɪfɪkəlt]",
+  "meaning": "adj.困难的，费力的",
+  "group": 100
+ },
+ {
+  "id": 996,
+  "word": "kilogramme",
+  "phonetic": "",
+  "meaning": "千克",
+  "group": 100
+ },
+ {
+  "id": 997,
+  "word": "medicine",
+  "phonetic": "[ˈmedsn; ˈmedɪsn]",
+  "meaning": "药",
+  "group": 100
+ },
+ {
+  "id": 998,
+  "word": "towel",
+  "phonetic": "[ˈtaʊəl]",
+  "meaning": "n.毛巾",
+  "group": 100
+ },
+ {
+  "id": 999,
+  "word": "concert",
+  "phonetic": "[ˈkɒnsət]",
+  "meaning": "n.音乐会；演奏会",
+  "group": 100
+ },
+ {
+  "id": 1000,
+  "word": "sock",
+  "phonetic": "[sɒk]",
+  "meaning": "n.短袜",
+  "group": 100
+ },
+ {
+  "id": 1001,
+  "word": "p.m.",
+  "phonetic": "",
+  "meaning": "下午;午后",
+  "group": 101
+ },
+ {
+  "id": 1002,
+  "word": "pity",
+  "phonetic": "[ˈpɪti]",
+  "meaning": "n.怜悯；同情；可惜",
+  "group": 101
+ },
+ {
+  "id": 1003,
+  "word": "case",
+  "phonetic": "[keɪs]",
+  "meaning": "n.病例；案列",
+  "group": 101
+ },
+ {
+  "id": 1004,
+  "word": "below",
+  "phonetic": "[bɪˈləʊ]",
+  "meaning": "adv. & prep. 在......下面",
+  "group": 101
+ },
+ {
+  "id": 1005,
+  "word": "should",
+  "phonetic": "[ʃəd; ʃʊd]",
+  "meaning": "v. 应该",
+  "group": 101
+ },
+ {
+  "id": 1006,
+  "word": "myself",
+  "phonetic": "[maɪˈself]",
+  "meaning": "pron.我自己",
+  "group": 101
+ },
+ {
+  "id": 1007,
+  "word": "grilled",
+  "phonetic": "[ɡrɪld]",
+  "meaning": "adj.烤过的",
+  "group": 101
+ },
+ {
+  "id": 1008,
+  "word": "net",
+  "phonetic": "[net]",
+  "meaning": "n.网",
+  "group": 101
+ },
+ {
+  "id": 1009,
+  "word": "circus",
+  "phonetic": "[ˈsɜːkəs]",
+  "meaning": "n.马戏团",
+  "group": 101
+ },
+ {
+  "id": 1010,
+  "word": "Lesson",
+  "phonetic": "[ˈlesn]",
+  "meaning": "n.课;一节课",
+  "group": 101
+ },
+ {
+  "id": 1011,
+  "word": "swimming",
+  "phonetic": "[ˈswɪmɪŋ]",
+  "meaning": "游泳",
+  "group": 102
+ },
+ {
+  "id": 1012,
+  "word": "those",
+  "phonetic": "[ðəʊz]",
+  "meaning": "adj.&pron.那些",
+  "group": 102
+ },
+ {
+  "id": 1013,
+  "word": "fill in",
+  "phonetic": "",
+  "meaning": "填充；填写",
+  "group": 102
+ },
+ {
+  "id": 1014,
+  "word": "brilliant",
+  "phonetic": "[ˈbrɪliənt]",
+  "meaning": "adj.光辉的，明亮的，灿烂的，卓越的，杰出的",
+  "group": 102
+ },
+ {
+  "id": 1015,
+  "word": "past",
+  "phonetic": "[pɑːst]",
+  "meaning": "prep.&adj.晚于;过(时间);过去的",
+  "group": 102
+ },
+ {
+  "id": 1016,
+  "word": "look for",
+  "phonetic": "[ˈlʊk fɔː(r)]",
+  "meaning": "寻找",
+  "group": 102
+ },
+ {
+  "id": 1017,
+  "word": "handbag",
+  "phonetic": "[ˈhændbæɡ]",
+  "meaning": "小手提包",
+  "group": 102
+ },
+ {
+  "id": 1018,
+  "word": "closet",
+  "phonetic": "[ˈklɑːzɪt]",
+  "meaning": "n. 壁橱；议事室，密室；小房间adj. 秘密的，私下的；空谈的vt. 把...关在私室中",
+  "group": 102
+ },
+ {
+  "id": 1019,
+  "word": "carefully",
+  "phonetic": "[ˈkeəfəli]",
+  "meaning": "adv.小心地；仔细地",
+  "group": 102
+ },
+ {
+  "id": 1020,
+  "word": "why",
+  "phonetic": "[waɪ]",
+  "meaning": "adv.为什么",
+  "group": 102
+ },
+ {
+  "id": 1021,
+  "word": "later",
+  "phonetic": "[ˈleɪtər]",
+  "meaning": "后来",
+  "group": 103
+ },
+ {
+  "id": 1022,
+  "word": "copy",
+  "phonetic": "[ˈkɒpi]",
+  "meaning": "v.抄写，誊写",
+  "group": 103
+ },
+ {
+  "id": 1023,
+  "word": "battery",
+  "phonetic": "[ˈbætri; ˈbætəri]",
+  "meaning": "n.电池",
+  "group": 103
+ },
+ {
+  "id": 1024,
+  "word": "exhibition",
+  "phonetic": "[ˌeksɪˈbɪʃn]",
+  "meaning": "n. 展览；展出",
+  "group": 103
+ },
+ {
+  "id": 1025,
+  "word": "grandchild",
+  "phonetic": "[ˈɡræntʃaɪld]",
+  "meaning": "n.（外）孙或孙女；孙辈",
+  "group": 103
+ },
+ {
+  "id": 1026,
+  "word": "what",
+  "phonetic": "[wɒt]",
+  "meaning": "conj.引导宾语从句",
+  "group": 103
+ },
+ {
+  "id": 1027,
+  "word": "writer",
+  "phonetic": "[ˈraɪtər]",
+  "meaning": "n.作者，作家",
+  "group": 103
+ },
+ {
+  "id": 1028,
+  "word": "type",
+  "phonetic": "[taɪp]",
+  "meaning": "v.打字",
+  "group": 103
+ },
+ {
+  "id": 1029,
+  "word": "sofa",
+  "phonetic": "[ˈsəʊfə]",
+  "meaning": "a.（长）沙发",
+  "group": 103
+ },
+ {
+  "id": 1030,
+  "word": "heating",
+  "phonetic": "[ˈhiːtiŋ]",
+  "meaning": "n.加热，供暖",
+  "group": 103
+ },
+ {
+  "id": 1031,
+  "word": "ago",
+  "phonetic": "[əˈɡəʊ]",
+  "meaning": "adv.以前",
+  "group": 104
+ },
+ {
+  "id": 1032,
+  "word": "know",
+  "phonetic": "[nəʊ]",
+  "meaning": "v.知道；了解；认识；懂得(knew,known)",
+  "group": 104
+ },
+ {
+  "id": 1033,
+  "word": "sale",
+  "phonetic": "[seɪl]",
+  "meaning": "出售",
+  "group": 104
+ },
+ {
+  "id": 1034,
+  "word": "international",
+  "phonetic": "[ˌɪntəˈnæʃnəl]",
+  "meaning": "国际的",
+  "group": 104
+ },
+ {
+  "id": 1035,
+  "word": "spelling",
+  "phonetic": "[ˈspelɪŋ]",
+  "meaning": "n.拼写，拼法",
+  "group": 104
+ },
+ {
+  "id": 1036,
+  "word": "sorry",
+  "phonetic": "[ˈsɒri]",
+  "meaning": "adj.抱歉的;难过的;惋惜的",
+  "group": 104
+ },
+ {
+  "id": 1037,
+  "word": "address",
+  "phonetic": "[əˈdres]",
+  "meaning": "n.地址",
+  "group": 104
+ },
+ {
+  "id": 1038,
+  "word": "ever",
+  "phonetic": "[ˈevər]",
+  "meaning": "adv.曾经，永远，这以前",
+  "group": 104
+ },
+ {
+  "id": 1039,
+  "word": "all right",
+  "phonetic": "",
+  "meaning": "好的。",
+  "group": 104
+ },
+ {
+  "id": 1040,
+  "word": "block",
+  "phonetic": "[blɒk]",
+  "meaning": "n. 街区",
+  "group": 104
+ },
+ {
+  "id": 1041,
+  "word": "neck",
+  "phonetic": "[nek]",
+  "meaning": "n.颈，脖子",
+  "group": 105
+ },
+ {
+  "id": 1042,
+  "word": "learn",
+  "phonetic": "[lɜːn]",
+  "meaning": "学习",
+  "group": 105
+ },
+ {
+  "id": 1043,
+  "word": "guidebook",
+  "phonetic": "[ˈɡaɪdbʊk]",
+  "meaning": "n.导游手册；旅行指南",
+  "group": 105
+ },
+ {
+  "id": 1044,
+  "word": "straight",
+  "phonetic": "[streɪt]",
+  "meaning": "直的/地",
+  "group": 105
+ },
+ {
+  "id": 1045,
+  "word": "future",
+  "phonetic": "[ˈfjuːtʃər]",
+  "meaning": "n.将来，未来",
+  "group": 105
+ },
+ {
+  "id": 1046,
+  "word": "mark",
+  "phonetic": "[mɑːk]",
+  "meaning": "标记",
+  "group": 105
+ },
+ {
+  "id": 1047,
+  "word": "may",
+  "phonetic": "[meɪ]",
+  "meaning": "可以",
+  "group": 105
+ },
+ {
+  "id": 1048,
+  "word": "camel",
+  "phonetic": "[ˈkæml]",
+  "meaning": "n.骆驼",
+  "group": 105
+ },
+ {
+  "id": 1049,
+  "word": "grocery store",
+  "phonetic": "",
+  "meaning": "食品杂货店",
+  "group": 105
+ },
+ {
+  "id": 1050,
+  "word": "world",
+  "phonetic": "[wɜːld]",
+  "meaning": "世界",
+  "group": 105
+ },
+ {
+  "id": 1051,
+  "word": "dark",
+  "phonetic": "[dɑːk]",
+  "meaning": "adj.黑暗的",
+  "group": 106
+ },
+ {
+  "id": 1052,
+  "word": "teenager",
+  "phonetic": "[ˈtiːneɪdʒər]",
+  "meaning": "n.(13~19岁的)青少年，十几岁的少年",
+  "group": 106
+ },
+ {
+  "id": 1053,
+  "word": "receptionist",
+  "phonetic": "[rɪˈsepʃənɪst]",
+  "meaning": "n.接待员",
+  "group": 106
+ },
+ {
+  "id": 1054,
+  "word": "body",
+  "phonetic": "[ˈbɒdi]",
+  "meaning": "n.身体",
+  "group": 106
+ },
+ {
+  "id": 1055,
+  "word": "same",
+  "phonetic": "[seɪm]",
+  "meaning": "相同的",
+  "group": 106
+ },
+ {
+  "id": 1056,
+  "word": "hello",
+  "phonetic": "[həˈləʊ]",
+  "meaning": "int.喂；你好",
+  "group": 106
+ },
+ {
+  "id": 1057,
+  "word": "dirty",
+  "phonetic": "[ˈdɜːti]",
+  "meaning": "adj.脏的",
+  "group": 106
+ },
+ {
+  "id": 1058,
+  "word": "anything",
+  "phonetic": "[ˈeniθɪŋ]",
+  "meaning": "pron.什么事(物)；任何事(物)",
+  "group": 106
+ },
+ {
+  "id": 1059,
+  "word": "sausage",
+  "phonetic": "[ˈsɒsɪdʒ]",
+  "meaning": "n.香肠；腊肠",
+  "group": 106
+ },
+ {
+  "id": 1060,
+  "word": "skateboard",
+  "phonetic": "[ˈskeɪtbɔːd]",
+  "meaning": "滑板",
+  "group": 106
+ },
+ {
+  "id": 1061,
+  "word": "classmate",
+  "phonetic": "[ˈklɑːsmeɪt]",
+  "meaning": "同班同学",
+  "group": 107
+ },
+ {
+  "id": 1062,
+  "word": "shorts",
+  "phonetic": "[ʃɔːts]",
+  "meaning": "n.短裤；运动短裤",
+  "group": 107
+ },
+ {
+  "id": 1063,
+  "word": "receipt",
+  "phonetic": "[riˈsiːt]",
+  "meaning": "n.收到；收条，收据",
+  "group": 107
+ },
+ {
+  "id": 1064,
+  "word": "chatroom",
+  "phonetic": "[ˈʧætruːm]",
+  "meaning": "（电脑网络上的）聊天室，交谈室",
+  "group": 107
+ },
+ {
+  "id": 1065,
+  "word": "driver",
+  "phonetic": "[ˈdraɪvər]",
+  "meaning": "n.司机，驾驶员",
+  "group": 107
+ },
+ {
+  "id": 1066,
+  "word": "app",
+  "phonetic": "[æp]",
+  "meaning": "应用程序",
+  "group": 107
+ },
+ {
+  "id": 1067,
+  "word": "bookshelf",
+  "phonetic": "[ˈbʊkʃelf]",
+  "meaning": "书架",
+  "group": 107
+ },
+ {
+  "id": 1068,
+  "word": "speak",
+  "phonetic": "[spiːk]",
+  "meaning": "v.说；说话",
+  "group": 107
+ },
+ {
+  "id": 1069,
+  "word": "scooter",
+  "phonetic": "[ˈskuːtə(r)]",
+  "meaning": "n.小型摩托车",
+  "group": 107
+ },
+ {
+  "id": 1070,
+  "word": "popular",
+  "phonetic": "[ˈpɒpjələr]",
+  "meaning": "adj.受喜爱的，受欢迎的",
+  "group": 107
+ },
+ {
+  "id": 1071,
+  "word": "goal",
+  "phonetic": "[ɡəʊl]",
+  "meaning": "n.目标",
+  "group": 108
+ },
+ {
+  "id": 1072,
+  "word": "striped",
+  "phonetic": "[straɪpt]",
+  "meaning": "有条纹的",
+  "group": 108
+ },
+ {
+  "id": 1073,
+  "word": "online",
+  "phonetic": "[ˌɒnˈlaɪn]",
+  "meaning": "adv.在线，联网",
+  "group": 108
+ },
+ {
+  "id": 1074,
+  "word": "magazine",
+  "phonetic": "[ˌmæɡəˈziːn]",
+  "meaning": "n.杂志",
+  "group": 108
+ },
+ {
+  "id": 1075,
+  "word": "fine",
+  "phonetic": "[faɪn]",
+  "meaning": "vt.罚款 adj.美好(优秀)的",
+  "group": 108
+ },
+ {
+  "id": 1076,
+  "word": "space",
+  "phonetic": "[speɪs]",
+  "meaning": "n. 太空",
+  "group": 108
+ },
+ {
+  "id": 1077,
+  "word": "dinosaur",
+  "phonetic": "[ˈdaɪnəsɔːr]",
+  "meaning": "n.恐龙",
+  "group": 108
+ },
+ {
+  "id": 1078,
+  "word": "bottom",
+  "phonetic": "[ˈbɒtəm]",
+  "meaning": "n. 底，底部；adj. 底部的；最后的，尽头的",
+  "group": 108
+ },
+ {
+  "id": 1079,
+  "word": "action",
+  "phonetic": "[ˈækʃn]",
+  "meaning": "n.行动",
+  "group": 108
+ },
+ {
+  "id": 1080,
+  "word": "bright",
+  "phonetic": "[braɪt]",
+  "meaning": "明亮的；耀眼的",
+  "group": 108
+ },
+ {
+  "id": 1081,
+  "word": "repeat",
+  "phonetic": "[rɪˈpiːt]",
+  "meaning": "重复；重做",
+  "group": 109
+ },
+ {
+  "id": 1082,
+  "word": "thunderstorm",
+  "phonetic": "[ˈθʌndəstɔːm]",
+  "meaning": "雷雨",
+  "group": 109
+ },
+ {
+  "id": 1083,
+  "word": "autumn",
+  "phonetic": "[ˈɔːtəm]",
+  "meaning": "n.秋天，秋季",
+  "group": 109
+ },
+ {
+  "id": 1084,
+  "word": "lemon",
+  "phonetic": "[ˈlemən]",
+  "meaning": "n. 柠檬",
+  "group": 109
+ },
+ {
+  "id": 1085,
+  "word": "together",
+  "phonetic": "[təˈɡeðər]",
+  "meaning": "一起",
+  "group": 109
+ },
+ {
+  "id": 1086,
+  "word": "area",
+  "phonetic": "[ˈeəriə]",
+  "meaning": "区域；面积",
+  "group": 109
+ },
+ {
+  "id": 1087,
+  "word": "grandparent",
+  "phonetic": "[ˈɡrænpeərənt]",
+  "meaning": "（外）祖父母",
+  "group": 109
+ },
+ {
+  "id": 1088,
+  "word": "oven",
+  "phonetic": "[ˈʌvn]",
+  "meaning": "n. 烤箱",
+  "group": 109
+ },
+ {
+  "id": 1089,
+  "word": "there",
+  "phonetic": "[ðeər]",
+  "meaning": "adv.(在)那里",
+  "group": 109
+ },
+ {
+  "id": 1090,
+  "word": "write down",
+  "phonetic": "",
+  "meaning": "写下；记录下",
+  "group": 109
+ },
+ {
+  "id": 1091,
+  "word": "flat",
+  "phonetic": "[flæt]",
+  "meaning": "水平地",
+  "group": 110
+ },
+ {
+  "id": 1092,
+  "word": "clearly",
+  "phonetic": "[ˈklɪəli]",
+  "meaning": "adv.清晰地，明亮地；清楚地",
+  "group": 110
+ },
+ {
+  "id": 1093,
+  "word": "board",
+  "phonetic": "[bɔːd]",
+  "meaning": "n. 栏；板；v.寄宿",
+  "group": 110
+ },
+ {
+  "id": 1094,
+  "word": "wonderful",
+  "phonetic": "[ˈwʌndəfl]",
+  "meaning": "adj.美妙的，精彩的；太好了",
+  "group": 110
+ },
+ {
+  "id": 1095,
+  "word": "ill",
+  "phonetic": "[ɪl]",
+  "meaning": "adj.有病的；不健康的",
+  "group": 110
+ },
+ {
+  "id": 1096,
+  "word": "guest-house",
+  "phonetic": "[ˈɡestˌhaʊs]",
+  "meaning": "n.小旅馆",
+  "group": 110
+ },
+ {
+  "id": 1097,
+  "word": "like",
+  "phonetic": "[laɪk]",
+  "meaning": "prep.像；怎么样",
+  "group": 110
+ },
+ {
+  "id": 1098,
+  "word": "CD player",
+  "phonetic": "",
+  "meaning": "激光唱片",
+  "group": 110
+ },
+ {
+  "id": 1099,
+  "word": "large",
+  "phonetic": "[lɑːdʒ]",
+  "meaning": "adj.大的；巨大的",
+  "group": 110
+ },
+ {
+  "id": 1100,
+  "word": "picnic",
+  "phonetic": "[ˈpɪknɪk]",
+  "meaning": "野餐",
+  "group": 110
+ },
+ {
+  "id": 1101,
+  "word": "shop",
+  "phonetic": "[ʃɒp]",
+  "meaning": "v. 购物",
+  "group": 111
+ },
+ {
+  "id": 1102,
+  "word": "fridge",
+  "phonetic": "[frɪdʒ]",
+  "meaning": "冰箱",
+  "group": 111
+ },
+ {
+  "id": 1103,
+  "word": "crossing",
+  "phonetic": "[ˈkrɒsɪŋ]",
+  "meaning": "n.十字路口",
+  "group": 111
+ },
+ {
+  "id": 1104,
+  "word": "least",
+  "phonetic": "[liːst]",
+  "meaning": "n.最少，最少量",
+  "group": 111
+ },
+ {
+  "id": 1105,
+  "word": "runner",
+  "phonetic": "[ˈrʌnər]",
+  "meaning": "n.赛跑的人",
+  "group": 111
+ },
+ {
+  "id": 1106,
+  "word": "boy",
+  "phonetic": "[bɔɪ]",
+  "meaning": "n.男孩",
+  "group": 111
+ },
+ {
+  "id": 1107,
+  "word": "park",
+  "phonetic": "[pɑːk]",
+  "meaning": "n.公园",
+  "group": 111
+ },
+ {
+  "id": 1108,
+  "word": "no",
+  "phonetic": "[nəʊ]",
+  "meaning": "ad.不，不是;a.没有，无，不",
+  "group": 111
+ },
+ {
+  "id": 1109,
+  "word": "grandmother",
+  "phonetic": "[ˈɡrænmʌðər]",
+  "meaning": "n.（外）祖母",
+  "group": 111
+ },
+ {
+  "id": 1110,
+  "word": "harbour",
+  "phonetic": "[ˈhɑːbər]",
+  "meaning": "n.港口，港湾",
+  "group": 111
+ },
+ {
+  "id": 1111,
+  "word": "something",
+  "phonetic": "[ˈsʌmθɪŋ]",
+  "meaning": "某事物",
+  "group": 112
+ },
+ {
+  "id": 1112,
+  "word": "drawer",
+  "phonetic": "[ˈdrɔːə]",
+  "meaning": "n.抽屉",
+  "group": 112
+ },
+ {
+  "id": 1113,
+  "word": "way",
+  "phonetic": "[weɪ]",
+  "meaning": "n.路，路线；路途；方式，手段",
+  "group": 112
+ },
+ {
+  "id": 1114,
+  "word": "for",
+  "phonetic": "[fər; fɔːr]",
+  "meaning": "conj.因为，由于",
+  "group": 112
+ },
+ {
+  "id": 1115,
+  "word": "city",
+  "phonetic": "[ˈsɪti]",
+  "meaning": "n.城市",
+  "group": 112
+ },
+ {
+  "id": 1116,
+  "word": "fork",
+  "phonetic": "[fɔːk]",
+  "meaning": "n.餐叉，叉子",
+  "group": 112
+ },
+ {
+  "id": 1117,
+  "word": "writing",
+  "phonetic": "[ˈraɪtɪŋ]",
+  "meaning": "n.文章，著作",
+  "group": 112
+ },
+ {
+  "id": 1118,
+  "word": "rich",
+  "phonetic": "[rɪtʃ]",
+  "meaning": "adj.富有的，富裕的",
+  "group": 112
+ },
+ {
+  "id": 1119,
+  "word": "try",
+  "phonetic": "[traɪ]",
+  "meaning": "n.试；努力",
+  "group": 112
+ },
+ {
+  "id": 1120,
+  "word": "put",
+  "phonetic": "[pʊt]",
+  "meaning": "增加（体重）；发胖",
+  "group": 112
+ },
+ {
+  "id": 1121,
+  "word": "blackboard",
+  "phonetic": "[ˈblækbɔːd]",
+  "meaning": "n.黑板",
+  "group": 113
+ },
+ {
+  "id": 1122,
+  "word": "idea",
+  "phonetic": "[aɪˈdɪə]",
+  "meaning": "adj. 完美的：理想的；最合适的",
+  "group": 113
+ },
+ {
+  "id": 1123,
+  "word": "show",
+  "phonetic": "[ʃəʊ]",
+  "meaning": "指示；带路",
+  "group": 113
+ },
+ {
+  "id": 1124,
+  "word": "mouse",
+  "phonetic": "[maʊs]",
+  "meaning": "n.（计算机）鼠标，老鼠",
+  "group": 113
+ },
+ {
+  "id": 1125,
+  "word": "borrow",
+  "phonetic": "[ˈbɒrəʊ]",
+  "meaning": "借",
+  "group": 113
+ },
+ {
+  "id": 1126,
+  "word": "warm",
+  "phonetic": "[wɔːm]",
+  "meaning": "adj.温暖的",
+  "group": 113
+ },
+ {
+  "id": 1127,
+  "word": "mango",
+  "phonetic": "[ˈmæŋɡəʊ]",
+  "meaning": "芒果",
+  "group": 113
+ },
+ {
+  "id": 1128,
+  "word": "shoe",
+  "phonetic": "[ʃuː]",
+  "meaning": "n.鞋",
+  "group": 113
+ },
+ {
+  "id": 1129,
+  "word": "fishing",
+  "phonetic": "[ˈfɪʃɪŋ]",
+  "meaning": "n.钓鱼",
+  "group": 113
+ },
+ {
+  "id": 1130,
+  "word": "surfing",
+  "phonetic": "[ˈsɜːfɪŋ]",
+  "meaning": "冲浪运动",
+  "group": 113
+ },
+ {
+  "id": 1131,
+  "word": "broken",
+  "phonetic": "[ˈbrəʊkən]",
+  "meaning": "坏的",
+  "group": 114
+ },
+ {
+  "id": 1132,
+  "word": "chef",
+  "phonetic": "[ʃef]",
+  "meaning": "n. 主厨，厨师",
+  "group": 114
+ },
+ {
+  "id": 1133,
+  "word": "get fit",
+  "phonetic": "",
+  "meaning": "保持健康；健身；去健身",
+  "group": 114
+ },
+ {
+  "id": 1134,
+  "word": "poster",
+  "phonetic": "[ˈpəʊstər]",
+  "meaning": "n.海报",
+  "group": 114
+ },
+ {
+  "id": 1135,
+  "word": "wardrobe",
+  "phonetic": "[ˈwɔːdrəʊb]",
+  "meaning": "n.衣柜，衣橱",
+  "group": 114
+ },
+ {
+  "id": 1136,
+  "word": "accident",
+  "phonetic": "[ˈæksɪdənt]",
+  "meaning": "n.（交通）事故",
+  "group": 114
+ },
+ {
+  "id": 1137,
+  "word": "continue",
+  "phonetic": "[kənˈtɪnjuː]",
+  "meaning": "v.继续",
+  "group": 114
+ },
+ {
+  "id": 1138,
+  "word": "game",
+  "phonetic": "[ɡeɪm]",
+  "meaning": "n.游戏；运动；比赛",
+  "group": 114
+ },
+ {
+  "id": 1139,
+  "word": "wool",
+  "phonetic": "[wʊl]",
+  "meaning": "n. 羊毛",
+  "group": 114
+ },
+ {
+  "id": 1140,
+  "word": "well known",
+  "phonetic": "",
+  "meaning": "(adv) 众所周知",
+  "group": 114
+ },
+ {
+  "id": 1141,
+  "word": "taxi",
+  "phonetic": "[ˈtæksi]",
+  "meaning": "n.出租汽车",
+  "group": 115
+ },
+ {
+  "id": 1142,
+  "word": "window",
+  "phonetic": "[ˈwɪndəʊ]",
+  "meaning": "n.窗户；视窗",
+  "group": 115
+ },
+ {
+  "id": 1143,
+  "word": "various",
+  "phonetic": "[ˈveəriəs]",
+  "meaning": "adj.各种各样的，不同的",
+  "group": 115
+ },
+ {
+  "id": 1144,
+  "word": "guy",
+  "phonetic": "[ɡaɪ]",
+  "meaning": "n. 家伙；男人；小伙子",
+  "group": 115
+ },
+ {
+  "id": 1145,
+  "word": "sell",
+  "phonetic": "[sel]",
+  "meaning": "v.出售，售卖",
+  "group": 115
+ },
+ {
+  "id": 1146,
+  "word": "thirsty",
+  "phonetic": "[ˈθɜːsti]",
+  "meaning": "adj.渴",
+  "group": 115
+ },
+ {
+  "id": 1147,
+  "word": "roof",
+  "phonetic": "[ruːf]",
+  "meaning": "n.屋顶, 房顶, 顶",
+  "group": 115
+ },
+ {
+  "id": 1148,
+  "word": "postcard",
+  "phonetic": "[ˈpəʊstkɑːd]",
+  "meaning": "明信片",
+  "group": 115
+ },
+ {
+  "id": 1149,
+  "word": "dance",
+  "phonetic": "[dɑːns]",
+  "meaning": "v.跳舞；舞蹈",
+  "group": 115
+ },
+ {
+  "id": 1150,
+  "word": "milk",
+  "phonetic": "[mɪlk]",
+  "meaning": "n.牛奶",
+  "group": 115
+ },
+ {
+  "id": 1151,
+  "word": "art",
+  "phonetic": "[ɑːt]",
+  "meaning": "n.艺术;美术",
+  "group": 116
+ },
+ {
+  "id": 1152,
+  "word": "lift",
+  "phonetic": "[lɪft]",
+  "meaning": "n. 电梯",
+  "group": 116
+ },
+ {
+  "id": 1153,
+  "word": "never",
+  "phonetic": "[ˈnevər]",
+  "meaning": "adv. 从不",
+  "group": 116
+ },
+ {
+  "id": 1154,
+  "word": "left-hand",
+  "phonetic": "[lɛft-hænd]",
+  "meaning": "adj. 左手的；左侧的",
+  "group": 116
+ },
+ {
+  "id": 1155,
+  "word": "IT",
+  "phonetic": "[ɪt]",
+  "meaning": "pron它",
+  "group": 116
+ },
+ {
+  "id": 1156,
+  "word": "hungry",
+  "phonetic": "[ˈhʌŋɡri]",
+  "meaning": "adj.饥饿的",
+  "group": 116
+ },
+ {
+  "id": 1157,
+  "word": "sleep",
+  "phonetic": "[sliːp]",
+  "meaning": "v.&n.睡觉",
+  "group": 116
+ },
+ {
+  "id": 1158,
+  "word": "waiter",
+  "phonetic": "[ˈweɪtər]",
+  "meaning": "n.（男）侍者，服务员",
+  "group": 116
+ },
+ {
+  "id": 1159,
+  "word": "worse",
+  "phonetic": "[wɜːs]",
+  "meaning": "adj.更差的，更坏的",
+  "group": 116
+ },
+ {
+  "id": 1160,
+  "word": "dot",
+  "phonetic": "[dɒt]",
+  "meaning": "点",
+  "group": 116
+ },
+ {
+  "id": 1161,
+  "word": "farm",
+  "phonetic": "[fɑːm]",
+  "meaning": "n.农场；农庄",
+  "group": 117
+ },
+ {
+  "id": 1162,
+  "word": "picture",
+  "phonetic": "[ˈpɪktʃər]",
+  "meaning": "n.图片，画片，照片；影片",
+  "group": 117
+ },
+ {
+  "id": 1163,
+  "word": "centimet",
+  "phonetic": "",
+  "meaning": "厘米",
+  "group": 117
+ },
+ {
+  "id": 1164,
+  "word": "girlfriend",
+  "phonetic": "[ˈɡɜːlfrend]",
+  "meaning": "n.女朋友",
+  "group": 117
+ },
+ {
+  "id": 1165,
+  "word": "motorbike",
+  "phonetic": "[ˈməʊtəbaɪk]",
+  "meaning": "n.摩托车",
+  "group": 117
+ },
+ {
+  "id": 1166,
+  "word": "kiss",
+  "phonetic": "[kɪs]",
+  "meaning": "n. & v. 吻，亲吻",
+  "group": 117
+ },
+ {
+  "id": 1167,
+  "word": "do",
+  "phonetic": "[du]",
+  "meaning": "v. & aux.做，干(did，done)",
+  "group": 117
+ },
+ {
+  "id": 1168,
+  "word": "example",
+  "phonetic": "[ɪɡˈzɑːmpl]",
+  "meaning": "n.例子",
+  "group": 117
+ },
+ {
+  "id": 1169,
+  "word": "happen",
+  "phonetic": "[ˈhæpən]",
+  "meaning": "v.(偶然)发生；碰巧",
+  "group": 117
+ },
+ {
+  "id": 1170,
+  "word": "exit",
+  "phonetic": "[ˈeksɪt; ˈeɡzɪt]",
+  "meaning": "n. 出口",
+  "group": 117
+ },
+ {
+  "id": 1171,
+  "word": "housewife",
+  "phonetic": "[ˈhauswaif]",
+  "meaning": "n.家庭主妇",
+  "group": 118
+ },
+ {
+  "id": 1172,
+  "word": "first",
+  "phonetic": "[fɜːst]",
+  "meaning": "第一；首先",
+  "group": 118
+ },
+ {
+  "id": 1173,
+  "word": "fly",
+  "phonetic": "[flaɪ]",
+  "meaning": "n.飞行；苍蝇",
+  "group": 118
+ },
+ {
+  "id": 1174,
+  "word": "cup",
+  "phonetic": "[kʌp]",
+  "meaning": "杯子",
+  "group": 118
+ },
+ {
+  "id": 1175,
+  "word": "daughter",
+  "phonetic": "[ˈdɔːtər]",
+  "meaning": "女儿",
+  "group": 118
+ },
+ {
+  "id": 1176,
+  "word": "several",
+  "phonetic": "[ˈsevrəl]",
+  "meaning": "det.几个，一些",
+  "group": 118
+ },
+ {
+  "id": 1177,
+  "word": "need",
+  "phonetic": "[niːd]",
+  "meaning": "需要",
+  "group": 118
+ },
+ {
+  "id": 1178,
+  "word": "push",
+  "phonetic": "[pʊʃ]",
+  "meaning": "vi.&vt.推，挤",
+  "group": 118
+ },
+ {
+  "id": 1179,
+  "word": "headache",
+  "phonetic": "[ˈhedeɪk]",
+  "meaning": "头痛",
+  "group": 118
+ },
+ {
+  "id": 1180,
+  "word": "mail",
+  "phonetic": "[meɪl]",
+  "meaning": "邮寄；发电子邮件n.",
+  "group": 118
+ },
+ {
+  "id": 1181,
+  "word": "by",
+  "phonetic": "[baɪ]",
+  "meaning": "prep.(表示方式）乘（交通工具）",
+  "group": 119
+ },
+ {
+  "id": 1182,
+  "word": "story",
+  "phonetic": "[ˈstɔːri]",
+  "meaning": "n.故事；小说",
+  "group": 119
+ },
+ {
+  "id": 1183,
+  "word": "newspaper",
+  "phonetic": "[ˈnjuːzpeɪpər]",
+  "meaning": "n.报纸",
+  "group": 119
+ },
+ {
+  "id": 1184,
+  "word": "hour",
+  "phonetic": "[ˈaʊər]",
+  "meaning": "n. 小时",
+  "group": 119
+ },
+ {
+  "id": 1185,
+  "word": "memory",
+  "phonetic": "[ˈmeməri]",
+  "meaning": "n.记忆力，记性，回忆，记忆",
+  "group": 119
+ },
+ {
+  "id": 1186,
+  "word": "son",
+  "phonetic": "[sʌn]",
+  "meaning": "n.儿子",
+  "group": 119
+ },
+ {
+  "id": 1187,
+  "word": "pink",
+  "phonetic": "[pɪŋk]",
+  "meaning": "粉色（的）",
+  "group": 119
+ },
+ {
+  "id": 1188,
+  "word": "trip",
+  "phonetic": "[trɪp]",
+  "meaning": "n. 旅行",
+  "group": 119
+ },
+ {
+  "id": 1189,
+  "word": "boss",
+  "phonetic": "[bɒs]",
+  "meaning": "n.领班；老板",
+  "group": 119
+ },
+ {
+  "id": 1190,
+  "word": "remember",
+  "phonetic": "[rɪˈmembər]",
+  "meaning": "v.记住;记起",
+  "group": 119
+ },
+ {
+  "id": 1191,
+  "word": "ad",
+  "phonetic": "[æd]",
+  "meaning": "abbr. 优势 (advantage)n. 广告；促销活动；预告片（advertisement，非正式）",
+  "group": 120
+ },
+ {
+  "id": 1192,
+  "word": "upset",
+  "phonetic": "[ʌpˈset]",
+  "meaning": "adj.心烦的，难过的",
+  "group": 120
+ },
+ {
+  "id": 1193,
+  "word": "take part",
+  "phonetic": "",
+  "meaning": "参加，参与",
+  "group": 120
+ },
+ {
+  "id": 1194,
+  "word": "telephone",
+  "phonetic": "[ˈtelɪfəʊn]",
+  "meaning": "n.电话，电话机",
+  "group": 120
+ },
+ {
+  "id": 1195,
+  "word": "stripes",
+  "phonetic": "[straɪps]",
+  "meaning": "(n)条子布；条纹布(stripe复数形式)",
+  "group": 120
+ },
+ {
+  "id": 1196,
+  "word": "bowl",
+  "phonetic": "[bəʊl]",
+  "meaning": "n.碗",
+  "group": 120
+ },
+ {
+  "id": 1197,
+  "word": "cooking",
+  "phonetic": "[ˈkʊkɪŋ]",
+  "meaning": "n.烹饪，烹调",
+  "group": 120
+ },
+ {
+  "id": 1198,
+  "word": "digital",
+  "phonetic": "[ˈdɪdʒɪtl]",
+  "meaning": "adj.数码的,数字的",
+  "group": 120
+ },
+ {
+  "id": 1199,
+  "word": "one",
+  "phonetic": "[wʌn]",
+  "meaning": "一",
+  "group": 120
+ },
+ {
+  "id": 1200,
+  "word": "worst",
+  "phonetic": "[wɜːst]",
+  "meaning": "adj.最差的，最坏的",
+  "group": 120
+ },
+ {
+  "id": 1201,
+  "word": "opinion",
+  "phonetic": "[əˈpɪnjən]",
+  "meaning": "n.意见，想法",
+  "group": 121
+ },
+ {
+  "id": 1202,
+  "word": "year",
+  "phonetic": "[jɪər; jɜːr]",
+  "meaning": "n.年；岁",
+  "group": 121
+ },
+ {
+  "id": 1203,
+  "word": "grandpa",
+  "phonetic": "[ˈɡrænpɑː]",
+  "meaning": "n.爷爷；外公(=grandfather)",
+  "group": 121
+ },
+ {
+  "id": 1204,
+  "word": "make",
+  "phonetic": "[meɪk]",
+  "meaning": "v.使成为；制造",
+  "group": 121
+ },
+ {
+  "id": 1205,
+  "word": "trousers",
+  "phonetic": "[ˈtraʊzəz]",
+  "meaning": "n.裤子，长裤",
+  "group": 121
+ },
+ {
+  "id": 1206,
+  "word": "chocolate",
+  "phonetic": "[ˈtʃɒklət]",
+  "meaning": "巧克力",
+  "group": 121
+ },
+ {
+  "id": 1207,
+  "word": "part",
+  "phonetic": "[pɑːt]",
+  "meaning": "部分",
+  "group": 121
+ },
+ {
+  "id": 1208,
+  "word": "green",
+  "phonetic": "[ɡriːn]",
+  "meaning": "n.绿色",
+  "group": 121
+ },
+ {
+  "id": 1209,
+  "word": "alright",
+  "phonetic": "[ɔːlˈraɪt]",
+  "meaning": "adv.好吧",
+  "group": 121
+ },
+ {
+  "id": 1210,
+  "word": "drive",
+  "phonetic": "[draɪv]",
+  "meaning": "驾驶",
+  "group": 121
+ },
+ {
+  "id": 1211,
+  "word": "stuff",
+  "phonetic": "[stʌf]",
+  "meaning": "n. 东西；材料；填充物；素材资料vt. 塞满；填塞；让吃饱vi. 吃得过",
+  "group": 122
+ },
+ {
+  "id": 1212,
+  "word": "pass",
+  "phonetic": "[pɑːs]",
+  "meaning": "传递；经过",
+  "group": 122
+ },
+ {
+  "id": 1213,
+  "word": "midnight",
+  "phonetic": "[ˈmɪdnaɪt]",
+  "meaning": "n.午夜，子夜",
+  "group": 122
+ },
+ {
+  "id": 1214,
+  "word": "perfect",
+  "phonetic": "[ˈpɜːfɪkt]",
+  "meaning": "adj.完美的",
+  "group": 122
+ },
+ {
+  "id": 1215,
+  "word": "always",
+  "phonetic": "[ˈɔːlweɪz]",
+  "meaning": "adv.总是；一直；永远",
+  "group": 122
+ },
+ {
+  "id": 1216,
+  "word": "envelope",
+  "phonetic": "[ˈenvələʊp; ˈɒnvələʊp]",
+  "meaning": "n.信封",
+  "group": 122
+ },
+ {
+  "id": 1217,
+  "word": "work",
+  "phonetic": "[wɜːk]",
+  "meaning": "v.&n.工作",
+  "group": 122
+ },
+ {
+  "id": 1218,
+  "word": "thank",
+  "phonetic": "[θæŋk]",
+  "meaning": "n.(复)感谢，谢意",
+  "group": 122
+ },
+ {
+  "id": 1219,
+  "word": "mountain",
+  "phonetic": "[ˈmaʊntən]",
+  "meaning": "山脉",
+  "group": 122
+ },
+ {
+  "id": 1220,
+  "word": "mechanic",
+  "phonetic": "[miˈkænik]",
+  "meaning": "n.技工，机械，机修工",
+  "group": 122
+ },
+ {
+  "id": 1221,
+  "word": "website",
+  "phonetic": "[ˈwebsaɪt]",
+  "meaning": "n.网站",
+  "group": 123
+ },
+ {
+  "id": 1222,
+  "word": "supermarket",
+  "phonetic": "[ˈsuːpəmɑːkɪt; ˈsjuːpəmɑːkɪt]",
+  "meaning": "n.超市",
+  "group": 123
+ },
+ {
+  "id": 1223,
+  "word": "science",
+  "phonetic": "[ˈsaɪəns]",
+  "meaning": "n.科学",
+  "group": 123
+ },
+ {
+  "id": 1224,
+  "word": "musical",
+  "phonetic": "[ˈmjuːzɪkl]",
+  "meaning": "n.音乐剧",
+  "group": 123
+ },
+ {
+  "id": 1225,
+  "word": "take",
+  "phonetic": "[teɪk]",
+  "meaning": "v.拿；拿走；做；吃，服用；乘坐(车、船)；花费(时间)；拍照(took）",
+  "group": 123
+ },
+ {
+  "id": 1226,
+  "word": "seem",
+  "phonetic": "[siːm]",
+  "meaning": "v.似乎，好像",
+  "group": 123
+ },
+ {
+  "id": 1227,
+  "word": "maybe",
+  "phonetic": "[ˈmeɪbi]",
+  "meaning": "也许",
+  "group": 123
+ },
+ {
+  "id": 1228,
+  "word": "fill",
+  "phonetic": "[fɪl]",
+  "meaning": "v.填空；装满；充满",
+  "group": 123
+ },
+ {
+  "id": 1229,
+  "word": "cry",
+  "phonetic": "[kraɪ]",
+  "meaning": "n.叫喊；哭声",
+  "group": 123
+ },
+ {
+  "id": 1230,
+  "word": "mile",
+  "phonetic": "[maɪl]",
+  "meaning": "n.英里",
+  "group": 123
+ },
+ {
+  "id": 1231,
+  "word": "pound",
+  "phonetic": "[paʊnd]",
+  "meaning": "n. 英镑",
+  "group": 124
+ },
+ {
+  "id": 1232,
+  "word": "think",
+  "phonetic": "[θɪŋk]",
+  "meaning": "v.想；思考；认为；考虑(thought,thought)",
+  "group": 124
+ },
+ {
+  "id": 1233,
+  "word": "room",
+  "phonetic": "[ruːm; rʊm]",
+  "meaning": "n.房间，室；空间；地方",
+  "group": 124
+ },
+ {
+  "id": 1234,
+  "word": "hit",
+  "phonetic": "[hɪt]",
+  "meaning": "v.打，撞，击中，碰撞(hit, hit)",
+  "group": 124
+ },
+ {
+  "id": 1235,
+  "word": "return",
+  "phonetic": "[rɪˈtɜːn]",
+  "meaning": "v.归还",
+  "group": 124
+ },
+ {
+  "id": 1236,
+  "word": "breakfast",
+  "phonetic": "[ˈbrekfəst]",
+  "meaning": "n.早餐",
+  "group": 124
+ },
+ {
+  "id": 1237,
+  "word": "tiger",
+  "phonetic": "[ˈtaɪɡə(r)]",
+  "meaning": "n.老虎",
+  "group": 124
+ },
+ {
+  "id": 1238,
+  "word": "engineer",
+  "phonetic": "[ˌendʒɪˈnɪər]",
+  "meaning": "n.工程师；技师",
+  "group": 124
+ },
+ {
+  "id": 1239,
+  "word": "history",
+  "phonetic": "[ˈhɪstri]",
+  "meaning": "历史",
+  "group": 124
+ },
+ {
+  "id": 1240,
+  "word": "movie theater",
+  "phonetic": "",
+  "meaning": "电影院",
+  "group": 124
+ },
+ {
+  "id": 1241,
+  "word": "record",
+  "phonetic": "[ˈrekɔːd]",
+  "meaning": "v.录制，录音；记录",
+  "group": 125
+ },
+ {
+  "id": 1242,
+  "word": "dish",
+  "phonetic": "[dɪʃ]",
+  "meaning": "n.碟;盘",
+  "group": 125
+ },
+ {
+  "id": 1243,
+  "word": "bottle",
+  "phonetic": "[ˈbɒtl]",
+  "meaning": "瓶子",
+  "group": 125
+ },
+ {
+  "id": 1244,
+  "word": "including",
+  "phonetic": "[ɪnˈkluːdɪŋ]",
+  "meaning": "prep.包括，包含",
+  "group": 125
+ },
+ {
+  "id": 1245,
+  "word": "run",
+  "phonetic": "[rʌn]",
+  "meaning": "v.跑;奔",
+  "group": 125
+ },
+ {
+  "id": 1246,
+  "word": "capital",
+  "phonetic": "[ˈkæpɪtl]",
+  "meaning": "首都",
+  "group": 125
+ },
+ {
+  "id": 1247,
+  "word": "directions",
+  "phonetic": "[dɪ'rekʃ(ə)nz]",
+  "meaning": "方向",
+  "group": 125
+ },
+ {
+  "id": 1248,
+  "word": "disco",
+  "phonetic": "[ˈdɪskəʊ]",
+  "meaning": "n．迪斯科(一种舞曲)",
+  "group": 125
+ },
+ {
+  "id": 1249,
+  "word": "half-price",
+  "phonetic": "[ˌhɑːf-ˈpraɪs]",
+  "meaning": "adv. 半价；半价的",
+  "group": 125
+ },
+ {
+  "id": 1250,
+  "word": "queen",
+  "phonetic": "[kwiːn]",
+  "meaning": "n.王后",
+  "group": 125
+ },
+ {
+  "id": 1251,
+  "word": "rent",
+  "phonetic": "[rent]",
+  "meaning": "v．租借；出租",
+  "group": 126
+ },
+ {
+  "id": 1252,
+  "word": "view",
+  "phonetic": "[vjuː]",
+  "meaning": "n.景色，风景",
+  "group": 126
+ },
+ {
+  "id": 1253,
+  "word": "cheque",
+  "phonetic": "[tʃek]",
+  "meaning": "n. 支票",
+  "group": 126
+ },
+ {
+  "id": 1254,
+  "word": "tired",
+  "phonetic": "[ˈtaɪəd]",
+  "meaning": "adj.疲劳的，累的",
+  "group": 126
+ },
+ {
+  "id": 1255,
+  "word": "wide",
+  "phonetic": "[waɪd]",
+  "meaning": "adj.宽的；广泛的",
+  "group": 126
+ },
+ {
+  "id": 1256,
+  "word": "bat",
+  "phonetic": "[bæt]",
+  "meaning": "n.蝙蝠",
+  "group": 126
+ },
+ {
+  "id": 1257,
+  "word": "news",
+  "phonetic": "[njuːz]",
+  "meaning": "n.新闻；消息",
+  "group": 126
+ },
+ {
+  "id": 1258,
+  "word": "shirt",
+  "phonetic": "[ʃɜːt]",
+  "meaning": "n.男衬衫",
+  "group": 126
+ },
+ {
+  "id": 1259,
+  "word": "able",
+  "phonetic": "[ˈeɪbl]",
+  "meaning": "adj.能够；有能力的",
+  "group": 126
+ },
+ {
+  "id": 1260,
+  "word": "customer",
+  "phonetic": "[ˈkʌstəmər]",
+  "meaning": "n. 顾客",
+  "group": 126
+ },
+ {
+  "id": 1261,
+  "word": "rugby",
+  "phonetic": "[ˈrʌɡbi]",
+  "meaning": "橄榄球",
+  "group": 127
+ },
+ {
+  "id": 1262,
+  "word": "department store",
+  "phonetic": "",
+  "meaning": "n. 百货商店",
+  "group": 127
+ },
+ {
+  "id": 1263,
+  "word": "museum",
+  "phonetic": "[mjuˈziːəm]",
+  "meaning": "博物馆",
+  "group": 127
+ },
+ {
+  "id": 1264,
+  "word": "while",
+  "phonetic": "[waɪl]",
+  "meaning": "n.一会儿",
+  "group": 127
+ },
+ {
+  "id": 1265,
+  "word": "exam",
+  "phonetic": "[ɪɡˈzæm]",
+  "meaning": "n.考试，测试；检查",
+  "group": 127
+ },
+ {
+  "id": 1266,
+  "word": "adventure",
+  "phonetic": "[ədˈventʃər]",
+  "meaning": "n. 冒险；冒险经历；奇遇",
+  "group": 127
+ },
+ {
+  "id": 1267,
+  "word": "wait",
+  "phonetic": "[weɪt]",
+  "meaning": "v.等，等候",
+  "group": 127
+ },
+ {
+  "id": 1268,
+  "word": "our",
+  "phonetic": "[ɑːr; ˈaʊər]",
+  "meaning": "pron我们的",
+  "group": 127
+ },
+ {
+  "id": 1269,
+  "word": "probably",
+  "phonetic": "[ˈprɒbəbli]",
+  "meaning": "adv.很可能",
+  "group": 127
+ },
+ {
+  "id": 1270,
+  "word": "car park",
+  "phonetic": "",
+  "meaning": "停车场",
+  "group": 127
+ },
+ {
+  "id": 1271,
+  "word": "money",
+  "phonetic": "[ˈmʌni]",
+  "meaning": "钱",
+  "group": 128
+ },
+ {
+  "id": 1272,
+  "word": "chemist",
+  "phonetic": "[ˈkemist]",
+  "meaning": "a.这；今；pron.这",
+  "group": 128
+ },
+ {
+  "id": 1273,
+  "word": "with",
+  "phonetic": "[wɪð; wɪθ]",
+  "meaning": "prep.与......一道；跟......一起；带有，具有；关于；以；和；用；有",
+  "group": 128
+ },
+ {
+  "id": 1274,
+  "word": "afterwards",
+  "phonetic": "[ˈɑːftəwədz]",
+  "meaning": "adv.以后，后来",
+  "group": 128
+ },
+ {
+  "id": 1275,
+  "word": "plus",
+  "phonetic": "[plʌs]",
+  "meaning": "prep.加，加上",
+  "group": 128
+ },
+ {
+  "id": 1276,
+  "word": "excited",
+  "phonetic": "[ɪkˈsaɪtɪd]",
+  "meaning": "兴奋的",
+  "group": 128
+ },
+ {
+  "id": 1277,
+  "word": "here",
+  "phonetic": "[hɪər]",
+  "meaning": "adv.这里，在这里；向这里",
+  "group": 128
+ },
+ {
+  "id": 1278,
+  "word": "butter",
+  "phonetic": "[ˈbʌtər]",
+  "meaning": "n.黄油，奶油",
+  "group": 128
+ },
+ {
+  "id": 1279,
+  "word": "suddenly",
+  "phonetic": "[ˈsʌdənli]",
+  "meaning": "adv.突然，忽然",
+  "group": 128
+ },
+ {
+  "id": 1280,
+  "word": "dictionary",
+  "phonetic": "[ˈdɪkʃənri]",
+  "meaning": "字典",
+  "group": 128
+ },
+ {
+  "id": 1281,
+  "word": "time",
+  "phonetic": "[taɪm]",
+  "meaning": "n.时间",
+  "group": 129
+ },
+ {
+  "id": 1282,
+  "word": "steak",
+  "phonetic": "[steɪk]",
+  "meaning": "n.牛排",
+  "group": 129
+ },
+ {
+  "id": 1283,
+  "word": "attractive",
+  "phonetic": "[əˈtræktɪv]",
+  "meaning": "adj.有吸引力的",
+  "group": 129
+ },
+ {
+  "id": 1284,
+  "word": "piece",
+  "phonetic": "[piːs]",
+  "meaning": "n.一块(片，张，件，段......)；碎片；部件",
+  "group": 129
+ },
+ {
+  "id": 1285,
+  "word": "repair",
+  "phonetic": "[rɪˈpeər]",
+  "meaning": "n.&v.修理",
+  "group": 129
+ },
+ {
+  "id": 1286,
+  "word": "melon",
+  "phonetic": "[ˈmelən]",
+  "meaning": "n. 瓜；甜瓜；大肚子；圆鼓鼓像瓜似的东西n. (Melon)人名；(意、西",
+  "group": 129
+ },
+ {
+  "id": 1287,
+  "word": "often",
+  "phonetic": "[ˈɒfn; ˈɒftən]",
+  "meaning": "adv.时常;常常",
+  "group": 129
+ },
+ {
+  "id": 1288,
+  "word": "but",
+  "phonetic": "[bət; bʌt]",
+  "meaning": "conj.但是",
+  "group": 129
+ },
+ {
+  "id": 1289,
+  "word": "printer",
+  "phonetic": "[ˈprɪntə(r)]",
+  "meaning": "n.［计］打印机；印刷工",
+  "group": 129
+ },
+ {
+  "id": 1290,
+  "word": "hey",
+  "phonetic": "[heɪ]",
+  "meaning": "excl.嘿，喂",
+  "group": 129
+ },
+ {
+  "id": 1291,
+  "word": "stamp",
+  "phonetic": "[stæmp]",
+  "meaning": "邮票；印章",
+  "group": 130
+ },
+ {
+  "id": 1292,
+  "word": "whose",
+  "phonetic": "[huːz]",
+  "meaning": "pron.谁的",
+  "group": 130
+ },
+ {
+  "id": 1293,
+  "word": "call",
+  "phonetic": "[kɔːl]",
+  "meaning": "n.喊；叫；电话；通话",
+  "group": 130
+ },
+ {
+  "id": 1294,
+  "word": "father",
+  "phonetic": "[ˈfɑːðər]",
+  "meaning": "n.父亲",
+  "group": 130
+ },
+ {
+  "id": 1295,
+  "word": "much",
+  "phonetic": "[mʌtʃ]",
+  "meaning": "n.(表示不可数名词)许多；大量",
+  "group": 130
+ },
+ {
+  "id": 1296,
+  "word": "correct",
+  "phonetic": "[kəˈrekt]",
+  "meaning": "正确的；恰当的",
+  "group": 130
+ },
+ {
+  "id": 1297,
+  "word": "make sure",
+  "phonetic": "",
+  "meaning": "确保，设法保证",
+  "group": 130
+ },
+ {
+  "id": 1298,
+  "word": "platform",
+  "phonetic": "[ˈplætfɔːm]",
+  "meaning": "n.讲台；站台",
+  "group": 130
+ },
+ {
+  "id": 1299,
+  "word": "sad",
+  "phonetic": "[sæd]",
+  "meaning": "adj.悲伤的",
+  "group": 130
+ },
+ {
+  "id": 1300,
+  "word": "eye",
+  "phonetic": "[aɪ]",
+  "meaning": "n.眼睛",
+  "group": 130
+ },
+ {
+  "id": 1301,
+  "word": "aeroplane",
+  "phonetic": "[ˈeərəpleɪn]",
+  "meaning": "n.飞机",
+  "group": 131
+ },
+ {
+  "id": 1302,
+  "word": "strawberry",
+  "phonetic": "[ˈstrɔːbəri]",
+  "meaning": "n.草莓",
+  "group": 131
+ },
+ {
+  "id": 1303,
+  "word": "juice",
+  "phonetic": "[dʒuːs]",
+  "meaning": "n.果汁;饮料",
+  "group": 131
+ },
+ {
+  "id": 1304,
+  "word": "enter",
+  "phonetic": "[ˈentər]",
+  "meaning": "v.进来，进入",
+  "group": 131
+ },
+ {
+  "id": 1305,
+  "word": "pick up",
+  "phonetic": "",
+  "meaning": "捡起；拾起",
+  "group": 131
+ },
+ {
+  "id": 1306,
+  "word": "photography",
+  "phonetic": "[fəˈtɒɡrəfi]",
+  "meaning": "n.照相术，摄影",
+  "group": 131
+ },
+ {
+  "id": 1307,
+  "word": "sugar",
+  "phonetic": "[ˈʃʊɡər]",
+  "meaning": "糖",
+  "group": 131
+ },
+ {
+  "id": 1308,
+  "word": "hip hop",
+  "phonetic": "",
+  "meaning": "说唱；嘻哈乐（节奏强烈，说唱形式的一种流行伴舞音乐）",
+  "group": 131
+ },
+ {
+  "id": 1309,
+  "word": "snake",
+  "phonetic": "[sneɪk]",
+  "meaning": "n.蛇",
+  "group": 131
+ },
+ {
+  "id": 1310,
+  "word": "tea",
+  "phonetic": "[tiː]",
+  "meaning": "n.茶;茶叶",
+  "group": 131
+ },
+ {
+  "id": 1311,
+  "word": "sit",
+  "phonetic": "[sɪt]",
+  "meaning": "v.坐",
+  "group": 132
+ },
+ {
+  "id": 1312,
+  "word": "himself",
+  "phonetic": "[hɪmˈself]",
+  "meaning": "pron.他自己",
+  "group": 132
+ },
+ {
+  "id": 1313,
+  "word": "text message",
+  "phonetic": "",
+  "meaning": "短信",
+  "group": 132
+ },
+ {
+  "id": 1314,
+  "word": "fish",
+  "phonetic": "[fɪʃ]",
+  "meaning": "v.钓鱼；捕鱼",
+  "group": 132
+ },
+ {
+  "id": 1315,
+  "word": "by the way",
+  "phonetic": "",
+  "meaning": "顺便说；顺便问一下",
+  "group": 132
+ },
+ {
+  "id": 1316,
+  "word": "surf",
+  "phonetic": "[sɜːf]",
+  "meaning": "冲浪",
+  "group": 132
+ },
+ {
+  "id": 1317,
+  "word": "roundabout",
+  "phonetic": "[ˈraʊndəbaʊt]",
+  "meaning": "a.迂回的,转弯抹角的n.环状交叉路口",
+  "group": 132
+ },
+ {
+  "id": 1318,
+  "word": "kit",
+  "phonetic": "[kɪt]",
+  "meaning": "n. 工具箱；成套工具vt. 装备vi. 装备n. (Kit)人名；(俄)基特；(东南亚",
+  "group": 132
+ },
+ {
+  "id": 1319,
+  "word": "hope",
+  "phonetic": "[həʊp]",
+  "meaning": "希望",
+  "group": 132
+ },
+ {
+  "id": 1320,
+  "word": "usual",
+  "phonetic": "[ˈjuːʒuəl; ˈjuːʒəl]",
+  "meaning": "adj.通常的，平常的",
+  "group": 132
+ },
+ {
+  "id": 1321,
+  "word": "sign",
+  "phonetic": "[saɪn]",
+  "meaning": "v.签名，署名",
+  "group": 133
+ },
+ {
+  "id": 1322,
+  "word": "jewellery",
+  "phonetic": "[ˈdʒuːəlri]",
+  "meaning": "n.珠宝",
+  "group": 133
+ },
+ {
+  "id": 1323,
+  "word": "happy",
+  "phonetic": "[ˈhæpi]",
+  "meaning": "adj.愉快的;高兴的",
+  "group": 133
+ },
+ {
+  "id": 1324,
+  "word": "leg",
+  "phonetic": "[leɡ]",
+  "meaning": "n.腿",
+  "group": 133
+ },
+ {
+  "id": 1325,
+  "word": "anybody",
+  "phonetic": "[ˈenibɒdi]",
+  "meaning": "pron.任何人",
+  "group": 133
+ },
+ {
+  "id": 1326,
+  "word": "studies",
+  "phonetic": "['stʌdiz]",
+  "meaning": "学习",
+  "group": 133
+ },
+ {
+  "id": 1327,
+  "word": "island",
+  "phonetic": "[ˈaɪlənd]",
+  "meaning": "n. 岛屿",
+  "group": 133
+ },
+ {
+  "id": 1328,
+  "word": "noisy",
+  "phonetic": "[ˈnɔɪzi]",
+  "meaning": "adj.吵闹的",
+  "group": 133
+ },
+ {
+  "id": 1329,
+  "word": "exactly",
+  "phonetic": "[ɪɡˈzæktli]",
+  "meaning": "adv.（答语）正是，没错",
+  "group": 133
+ },
+ {
+  "id": 1330,
+  "word": "complete",
+  "phonetic": "[kəmˈpliːt]",
+  "meaning": "v. 结束，完成；adj. 完整的；彻底的",
+  "group": 133
+ },
+ {
+  "id": 1331,
+  "word": "ticket",
+  "phonetic": "[ˈtɪkɪt]",
+  "meaning": "n.票；券",
+  "group": 134
+ },
+ {
+  "id": 1332,
+  "word": "mix",
+  "phonetic": "[mɪks]",
+  "meaning": "混合",
+  "group": 134
+ },
+ {
+  "id": 1333,
+  "word": "as well as",
+  "phonetic": "",
+  "meaning": "也，还有",
+  "group": 134
+ },
+ {
+  "id": 1334,
+  "word": "foot",
+  "phonetic": "[fʊt]",
+  "meaning": "n.足，脚；英尺(复feet)",
+  "group": 134
+ },
+ {
+  "id": 1335,
+  "word": "occupation",
+  "phonetic": "[ˌɒkjuˈpeɪʃn]",
+  "meaning": "n.职业",
+  "group": 134
+ },
+ {
+  "id": 1336,
+  "word": "ourselves",
+  "phonetic": "[ɑːˈselvz; ˌaʊəˈselvz]",
+  "meaning": "pron我们自己",
+  "group": 134
+ },
+ {
+  "id": 1337,
+  "word": "real",
+  "phonetic": "[ˈriːəl; rɪəl]",
+  "meaning": "adj.真实的，确实的；真正的",
+  "group": 134
+ },
+ {
+  "id": 1338,
+  "word": "plastic",
+  "phonetic": "[ˈplæstɪk]",
+  "meaning": "n.塑料",
+  "group": 134
+ },
+ {
+  "id": 1339,
+  "word": "potato",
+  "phonetic": "[pəˈteɪtəʊ]",
+  "meaning": "n.土豆，马铃薯",
+  "group": 134
+ },
+ {
+  "id": 1340,
+  "word": "clever",
+  "phonetic": "[ˈklevər]",
+  "meaning": "adj.聪明的",
+  "group": 134
+ },
+ {
+  "id": 1341,
+  "word": "armchair",
+  "phonetic": "[ˈɑːmtʃeər]",
+  "meaning": "n.扶手椅",
+  "group": 135
+ },
+ {
+  "id": 1342,
+  "word": "success",
+  "phonetic": "[səkˈses]",
+  "meaning": "n成功",
+  "group": 135
+ },
+ {
+  "id": 1343,
+  "word": "hurry",
+  "phonetic": "[ˈhʌri]",
+  "meaning": "n.赶紧；急忙",
+  "group": 135
+ },
+ {
+  "id": 1344,
+  "word": "footballer",
+  "phonetic": "[ˈfʊtbɔːlə(r)]",
+  "meaning": "n.足球运动员",
+  "group": 135
+ },
+ {
+  "id": 1345,
+  "word": "electric",
+  "phonetic": "[ɪˈlektrɪk]",
+  "meaning": "adj.电的",
+  "group": 135
+ },
+ {
+  "id": 1346,
+  "word": "matter",
+  "phonetic": "[ˈmætər]",
+  "meaning": "问题",
+  "group": 135
+ },
+ {
+  "id": 1347,
+  "word": "surname",
+  "phonetic": "[ˈsəːneim]",
+  "meaning": "n.姓",
+  "group": 135
+ },
+ {
+  "id": 1348,
+  "word": "pizza",
+  "phonetic": "[ˈpiːtsə]",
+  "meaning": "n.比萨饼",
+  "group": 135
+ },
+ {
+  "id": 1349,
+  "word": "wild",
+  "phonetic": "[waɪld]",
+  "meaning": "adj.野生的；荒凉的",
+  "group": 135
+ },
+ {
+  "id": 1350,
+  "word": "find out",
+  "phonetic": "",
+  "meaning": "了解（到），弄清",
+  "group": 135
+ },
+ {
+  "id": 1351,
+  "word": "umbrella",
+  "phonetic": "[ʌmˈbrelə]",
+  "meaning": "n.伞",
+  "group": 136
+ },
+ {
+  "id": 1352,
+  "word": "skate",
+  "phonetic": "[skeɪt]",
+  "meaning": "滑冰",
+  "group": 136
+ },
+ {
+  "id": 1353,
+  "word": "easy",
+  "phonetic": "[ˈiːzi]",
+  "meaning": "adj.容易的，不费力的",
+  "group": 136
+ },
+ {
+  "id": 1354,
+  "word": "photograph",
+  "phonetic": "[ˈfəʊtəɡrɑːf]",
+  "meaning": "照片",
+  "group": 136
+ },
+ {
+  "id": 1355,
+  "word": "drawing",
+  "phonetic": "[ˈdrɔːɪŋ]",
+  "meaning": "n. 绘画；图画",
+  "group": 136
+ },
+ {
+  "id": 1356,
+  "word": "aunt",
+  "phonetic": "[ɑːnt]",
+  "meaning": "n.姑；姨；伯母；舅母；婶",
+  "group": 136
+ },
+ {
+  "id": 1357,
+  "word": "pilot",
+  "phonetic": "[ˈpaɪlət]",
+  "meaning": "n. 飞行员",
+  "group": 136
+ },
+ {
+  "id": 1358,
+  "word": "French fries",
+  "phonetic": "",
+  "meaning": "炸薯条",
+  "group": 136
+ },
+ {
+  "id": 1359,
+  "word": "normal",
+  "phonetic": "[ˈnɔːml]",
+  "meaning": "n.&a.正常的（状态）",
+  "group": 136
+ },
+ {
+  "id": 1360,
+  "word": "get",
+  "phonetic": "[ɡet]",
+  "meaning": "v.成为，变得；得到；到达；(用于have got短语中)具有(got, got)",
+  "group": 136
+ },
+ {
+  "id": 1361,
+  "word": "pencil",
+  "phonetic": "[ˈpensl]",
+  "meaning": "n.铅笔",
+  "group": 137
+ },
+ {
+  "id": 1362,
+  "word": "famous",
+  "phonetic": "[ˈfeɪməs]",
+  "meaning": "著名的",
+  "group": 137
+ },
+ {
+  "id": 1363,
+  "word": "chain",
+  "phonetic": "[tʃeɪn]",
+  "meaning": "n. 链子；一系列；连锁商店",
+  "group": 137
+ },
+ {
+  "id": 1364,
+  "word": "meet",
+  "phonetic": "[miːt]",
+  "meaning": "n.会，集会",
+  "group": 137
+ },
+ {
+  "id": 1365,
+  "word": "hotel",
+  "phonetic": "[həʊˈtel]",
+  "meaning": "旅馆",
+  "group": 137
+ },
+ {
+  "id": 1366,
+  "word": "leave",
+  "phonetic": "[liːv]",
+  "meaning": "v. 留下",
+  "group": 137
+ },
+ {
+  "id": 1367,
+  "word": "race",
+  "phonetic": "[reɪs]",
+  "meaning": "n.竞赛",
+  "group": 137
+ },
+ {
+  "id": 1368,
+  "word": "boot",
+  "phonetic": "[buːt]",
+  "meaning": "n.<美> (长统)靴, 靴子 v.导入",
+  "group": 137
+ },
+ {
+  "id": 1369,
+  "word": "mine",
+  "phonetic": "[maɪn]",
+  "meaning": "pron我的(物主代词)",
+  "group": 137
+ },
+ {
+  "id": 1370,
+  "word": "rain",
+  "phonetic": "[reɪn]",
+  "meaning": "v.&n.下雨;雨水",
+  "group": 137
+ },
+ {
+  "id": 1371,
+  "word": "send",
+  "phonetic": "[send]",
+  "meaning": "v.打发，派遣；送，邮寄(sent,sent)",
+  "group": 138
+ },
+ {
+  "id": 1372,
+  "word": "circle",
+  "phonetic": "[ˈsɜːkl]",
+  "meaning": "n.循环",
+  "group": 138
+ },
+ {
+  "id": 1373,
+  "word": "love",
+  "phonetic": "[lʌv]",
+  "meaning": "n. & v.爱；热爱；很喜欢",
+  "group": 138
+ },
+ {
+  "id": 1374,
+  "word": "awesome",
+  "phonetic": "[ˈɔːsəm]",
+  "meaning": "adj.令人敬畏的，可怕的，极好的",
+  "group": 138
+ },
+ {
+  "id": 1375,
+  "word": "singer",
+  "phonetic": "[ˈsɪŋər]",
+  "meaning": "歌手",
+  "group": 138
+ },
+ {
+  "id": 1376,
+  "word": "national",
+  "phonetic": "[ˈnæʃnəl]",
+  "meaning": "国家的；民族的",
+  "group": 138
+ },
+ {
+  "id": 1377,
+  "word": "machine",
+  "phonetic": "[məˈʃiːn]",
+  "meaning": "n.机器",
+  "group": 138
+ },
+ {
+  "id": 1378,
+  "word": "better",
+  "phonetic": "[ˈbetər]",
+  "meaning": "更好的",
+  "group": 138
+ },
+ {
+  "id": 1379,
+  "word": "scared",
+  "phonetic": "[skeəd]",
+  "meaning": "恐惧的",
+  "group": 138
+ },
+ {
+  "id": 1380,
+  "word": "some",
+  "phonetic": "[səm; sʌm]",
+  "meaning": "pron.若干，一些",
+  "group": 138
+ },
+ {
+  "id": 1381,
+  "word": "dancing",
+  "phonetic": "[ˈdɑːnsɪŋ]",
+  "meaning": "n.跳舞，舞蹈",
+  "group": 139
+ },
+ {
+  "id": 1382,
+  "word": "cake",
+  "phonetic": "[keɪk]",
+  "meaning": "n.蛋糕，糕点；饼",
+  "group": 139
+ },
+ {
+  "id": 1383,
+  "word": "granddad",
+  "phonetic": "[ˈɡrændæd]",
+  "meaning": "(n)爷爷；姥爷",
+  "group": 139
+ },
+ {
+  "id": 1384,
+  "word": "goodbye",
+  "phonetic": "[gudbai]",
+  "meaning": "interj.再见",
+  "group": 139
+ },
+ {
+  "id": 1385,
+  "word": "gas station n. （",
+  "phonetic": "",
+  "meaning": "汽车）加油站",
+  "group": 139
+ },
+ {
+  "id": 1386,
+  "word": "want",
+  "phonetic": "[wɒnt]",
+  "meaning": "v.要，想要；需要",
+  "group": 139
+ },
+ {
+  "id": 1387,
+  "word": "toothbrush",
+  "phonetic": "[ˈtuːθbrʌʃ]",
+  "meaning": "n.牙刷",
+  "group": 139
+ },
+ {
+  "id": 1388,
+  "word": "these",
+  "phonetic": "[ðiːz]",
+  "meaning": "adj.&pron.这些",
+  "group": 139
+ },
+ {
+  "id": 1389,
+  "word": "blond",
+  "phonetic": "[blɒnd]",
+  "meaning": "金色（的）",
+  "group": 139
+ },
+ {
+  "id": 1390,
+  "word": "till",
+  "phonetic": "[tɪl]",
+  "meaning": "prep. & conj. 直到......为止",
+  "group": 139
+ },
+ {
+  "id": 1391,
+  "word": "good morning",
+  "phonetic": "",
+  "meaning": "早上好",
+  "group": 140
+ },
+ {
+  "id": 1392,
+  "word": "football",
+  "phonetic": "[ˈfʊtbɔːl]",
+  "meaning": "n.(英式)足球；(美式)橄榄球",
+  "group": 140
+ },
+ {
+  "id": 1393,
+  "word": "decide",
+  "phonetic": "[dɪˈsaɪd]",
+  "meaning": "v.决定",
+  "group": 140
+ },
+ {
+  "id": 1394,
+  "word": "bread",
+  "phonetic": "[bred]",
+  "meaning": "n.面包",
+  "group": 140
+ },
+ {
+  "id": 1395,
+  "word": "practise",
+  "phonetic": "[ˈpræktɪs]",
+  "meaning": "v.(美 practice)练习；实践",
+  "group": 140
+ },
+ {
+  "id": 1396,
+  "word": "along",
+  "phonetic": "[əˈlɒŋ]",
+  "meaning": "prep.沿着",
+  "group": 140
+ },
+ {
+  "id": 1397,
+  "word": "folder",
+  "phonetic": "[ˈfəʊldə(r)]",
+  "meaning": "(n)文件夹；折叠机；折叠式印刷品",
+  "group": 140
+ },
+ {
+  "id": 1398,
+  "word": "mobile phone",
+  "phonetic": "",
+  "meaning": "n. 移动电话，手机",
+  "group": 140
+ },
+ {
+  "id": 1399,
+  "word": "grandson",
+  "phonetic": "[ˈɡrænsʌn]",
+  "meaning": "n. 孙子；外孙",
+  "group": 140
+ },
+ {
+  "id": 1400,
+  "word": "across",
+  "phonetic": "[əˈkrɒs]",
+  "meaning": "adv.&prep.过;穿过",
+  "group": 140
+ },
+ {
+  "id": 1401,
+  "word": "waitress",
+  "phonetic": "[ˈweɪtrəs]",
+  "meaning": "n.女服务员",
+  "group": 141
+ },
+ {
+  "id": 1402,
+  "word": "lie down",
+  "phonetic": "",
+  "meaning": "躺下",
+  "group": 141
+ },
+ {
+  "id": 1403,
+  "word": "ruler",
+  "phonetic": "[ˈruːlər]",
+  "meaning": "n.统治者；管理者",
+  "group": 141
+ },
+ {
+  "id": 1404,
+  "word": "center",
+  "phonetic": "[ˈsentər]",
+  "meaning": "n.(=centre)中心;中央",
+  "group": 141
+ },
+ {
+  "id": 1405,
+  "word": "band",
+  "phonetic": "[bænd]",
+  "meaning": "n.乐队",
+  "group": 141
+ },
+ {
+  "id": 1406,
+  "word": "in",
+  "phonetic": "[ɪn]",
+  "meaning": "adv.在家，在内，向内",
+  "group": 141
+ },
+ {
+  "id": 1407,
+  "word": "diving",
+  "phonetic": "[ˈdaɪvɪŋ]",
+  "meaning": "n.跳水，跳水运动",
+  "group": 141
+ },
+ {
+  "id": 1408,
+  "word": "all kinds of",
+  "phonetic": "",
+  "meaning": "各种各样的",
+  "group": 141
+ },
+ {
+  "id": 1409,
+  "word": "during",
+  "phonetic": "[ˈdjʊərɪŋ]",
+  "meaning": "在......期间",
+  "group": 141
+ },
+ {
+  "id": 1410,
+  "word": "clean",
+  "phonetic": "[kliːn]",
+  "meaning": "v.&adj.打扫;弄干净;干净的",
+  "group": 141
+ },
+ {
+  "id": 1411,
+  "word": "bake",
+  "phonetic": "[beɪk]",
+  "meaning": "v. 烘烤",
+  "group": 142
+ },
+ {
+  "id": 1412,
+  "word": "spring",
+  "phonetic": "[sprɪŋ]",
+  "meaning": "n.春天，春季",
+  "group": 142
+ },
+ {
+  "id": 1413,
+  "word": "few",
+  "phonetic": "[fjuː]",
+  "meaning": "adj.不多的；少数的",
+  "group": 142
+ },
+ {
+  "id": 1414,
+  "word": "upload",
+  "phonetic": "[ʌpˈləʊd]",
+  "meaning": "v.上载，上传n.上传的数据",
+  "group": 142
+ },
+ {
+  "id": 1415,
+  "word": "lunch",
+  "phonetic": "[lʌntʃ]",
+  "meaning": "n.午餐；午饭",
+  "group": 142
+ },
+ {
+  "id": 1416,
+  "word": "suggest",
+  "phonetic": "[səˈdʒest]",
+  "meaning": "v. 建议：提议",
+  "group": 142
+ },
+ {
+  "id": 1417,
+  "word": "camping",
+  "phonetic": "[ˈkæmpɪŋ]",
+  "meaning": "n.野营",
+  "group": 142
+ },
+ {
+  "id": 1418,
+  "word": "web",
+  "phonetic": "[web]",
+  "meaning": "n.网，网状物",
+  "group": 142
+ },
+ {
+  "id": 1419,
+  "word": "close",
+  "phonetic": "[kləʊs]",
+  "meaning": "adj.亲密的；严密的",
+  "group": 142
+ },
+ {
+  "id": 1420,
+  "word": "uncle",
+  "phonetic": "[ˈʌŋkl]",
+  "meaning": "n.叔；伯；舅；姑夫；姨父",
+  "group": 142
+ },
+ {
+  "id": 1421,
+  "word": "luck",
+  "phonetic": "[lʌk]",
+  "meaning": "幸运",
+  "group": 143
+ },
+ {
+  "id": 1422,
+  "word": "their",
+  "phonetic": "[ðeər]",
+  "meaning": "pron.他(或她、它)们的",
+  "group": 143
+ },
+ {
+  "id": 1423,
+  "word": "miss",
+  "phonetic": "[mɪs]",
+  "meaning": "想念；错过",
+  "group": 143
+ },
+ {
+  "id": 1424,
+  "word": "egg",
+  "phonetic": "[eɡ]",
+  "meaning": "n.蛋；卵",
+  "group": 143
+ },
+ {
+  "id": 1425,
+  "word": "grass",
+  "phonetic": "[ɡrɑːs]",
+  "meaning": "草；草地",
+  "group": 143
+ },
+ {
+  "id": 1426,
+  "word": "windy",
+  "phonetic": "[ˈwɪndi]",
+  "meaning": "adj.多风的",
+  "group": 143
+ },
+ {
+  "id": 1427,
+  "word": "act",
+  "phonetic": "[ækt]",
+  "meaning": "v.扮演（戏剧、电影中的角色）",
+  "group": 143
+ },
+ {
+  "id": 1428,
+  "word": "mineral water",
+  "phonetic": "",
+  "meaning": "矿泉水",
+  "group": 143
+ },
+ {
+  "id": 1429,
+  "word": "give",
+  "phonetic": "[ɡɪv]",
+  "meaning": "v.给；递给；付出；给予(gave,given)",
+  "group": 143
+ },
+ {
+  "id": 1430,
+  "word": "holiday",
+  "phonetic": "[ˈhɒlədeɪ; ˈhɒlədi]",
+  "meaning": "n.假日；假期",
+  "group": 143
+ },
+ {
+  "id": 1431,
+  "word": "minute",
+  "phonetic": "[ˈmɪnɪt]",
+  "meaning": "n. 分钟",
+  "group": 144
+ },
+ {
+  "id": 1432,
+  "word": "suppose",
+  "phonetic": "[səˈpəʊz]",
+  "meaning": "v. 假定，假设；推断",
+  "group": 144
+ },
+ {
+  "id": 1433,
+  "word": "visitor",
+  "phonetic": "[ˈvɪzɪtər]",
+  "meaning": "n.参观者；访问者",
+  "group": 144
+ },
+ {
+  "id": 1434,
+  "word": "spell",
+  "phonetic": "[spel]",
+  "meaning": "v.用字母拼，拼写",
+  "group": 144
+ },
+ {
+  "id": 1435,
+  "word": "washing machine",
+  "phonetic": "",
+  "meaning": "洗衣机",
+  "group": 144
+ },
+ {
+  "id": 1436,
+  "word": "forest",
+  "phonetic": "[ˈfɒrɪst]",
+  "meaning": "森林",
+  "group": 144
+ },
+ {
+  "id": 1437,
+  "word": "wall",
+  "phonetic": "[wɔːl]",
+  "meaning": "墙",
+  "group": 144
+ },
+ {
+  "id": 1438,
+  "word": "crowded",
+  "phonetic": "[ˈkraʊdɪd]",
+  "meaning": "adj.拥挤的",
+  "group": 144
+ },
+ {
+  "id": 1439,
+  "word": "lucky",
+  "phonetic": "[ˈlʌki]",
+  "meaning": "adj. 好运的；幸运的",
+  "group": 144
+ },
+ {
+  "id": 1440,
+  "word": "pepper",
+  "phonetic": "[ˈpepər]",
+  "meaning": "n.胡椒粉；柿子椒",
+  "group": 144
+ },
+ {
+  "id": 1441,
+  "word": "late",
+  "phonetic": "[leɪt]",
+  "meaning": "adv.晚地；迟地",
+  "group": 145
+ },
+ {
+  "id": 1442,
+  "word": "still",
+  "phonetic": "[stɪl]",
+  "meaning": "adv.还;仍然",
+  "group": 145
+ },
+ {
+  "id": 1443,
+  "word": "speaker",
+  "phonetic": "[ˈspiːkər]",
+  "meaning": "n.扬声器",
+  "group": 145
+ },
+ {
+  "id": 1444,
+  "word": "trainer",
+  "phonetic": "[ˈtreɪnər]",
+  "meaning": "n.驯兽师，教练员，运动鞋",
+  "group": 145
+ },
+ {
+  "id": 1445,
+  "word": "pillow",
+  "phonetic": "[ˈpɪləʊ]",
+  "meaning": "n.枕头",
+  "group": 145
+ },
+ {
+  "id": 1446,
+  "word": "hot",
+  "phonetic": "[hɒt]",
+  "meaning": "adj.热的",
+  "group": 145
+ },
+ {
+  "id": 1447,
+  "word": "indoor",
+  "phonetic": "[ˈɪndɔːr]",
+  "meaning": "adj. （在）室内的",
+  "group": 145
+ },
+ {
+  "id": 1448,
+  "word": "diary",
+  "phonetic": "[ˈdaɪəri]",
+  "meaning": "n.日记；日记簿",
+  "group": 145
+ },
+ {
+  "id": 1449,
+  "word": "of",
+  "phonetic": "[əv; ɒv]",
+  "meaning": "prep.(表示所属，数量，其中等)......的",
+  "group": 145
+ },
+ {
+  "id": 1450,
+  "word": "come back",
+  "phonetic": "",
+  "meaning": "回来；返回",
+  "group": 145
+ },
+ {
+  "id": 1451,
+  "word": "web page",
+  "phonetic": "",
+  "meaning": "n. 网页",
+  "group": 146
+ },
+ {
+  "id": 1452,
+  "word": "young",
+  "phonetic": "[jʌŋ]",
+  "meaning": "adj.幼小的;年轻的",
+  "group": 146
+ },
+ {
+  "id": 1453,
+  "word": "running",
+  "phonetic": "[ˈrʌnɪŋ]",
+  "meaning": "adj. 流动的",
+  "group": 146
+ },
+ {
+  "id": 1454,
+  "word": "I",
+  "phonetic": "[aɪ]",
+  "meaning": "pron.我",
+  "group": 146
+ },
+ {
+  "id": 1455,
+  "word": "underground",
+  "phonetic": "[ˌʌndəˈɡraʊnd]",
+  "meaning": "adj. 地下的，n. 地铁",
+  "group": 146
+ },
+ {
+  "id": 1456,
+  "word": "tree",
+  "phonetic": "[triː]",
+  "meaning": "n.树",
+  "group": 146
+ },
+ {
+  "id": 1457,
+  "word": "simple",
+  "phonetic": "[ˈsɪmpl]",
+  "meaning": "adj.简单的",
+  "group": 146
+ },
+ {
+  "id": 1458,
+  "word": "cook",
+  "phonetic": "[kʊk]",
+  "meaning": "v.做饭，n.厨师",
+  "group": 146
+ },
+ {
+  "id": 1459,
+  "word": "sure",
+  "phonetic": "[ʃʊər; ʃɔːr]",
+  "meaning": "当然",
+  "group": 146
+ },
+ {
+  "id": 1460,
+  "word": "businesswoman",
+  "phonetic": "[ˈbɪznəswʊmən]",
+  "meaning": "n.妇女实业家",
+  "group": 146
+ },
+ {
+  "id": 1461,
+  "word": "give somebody a call",
+  "phonetic": "",
+  "meaning": "给某人打电话",
+  "group": 147
+ },
+ {
+  "id": 1462,
+  "word": "will",
+  "phonetic": "[wɪl]",
+  "meaning": "将要",
+  "group": 147
+ },
+ {
+  "id": 1463,
+  "word": "badly",
+  "phonetic": "[ˈbædli]",
+  "meaning": "adv.严重地；差；非常",
+  "group": 147
+ },
+ {
+  "id": 1464,
+  "word": "month",
+  "phonetic": "[mʌnθ]",
+  "meaning": "n.月;月份",
+  "group": 147
+ },
+ {
+  "id": 1465,
+  "word": "classical",
+  "phonetic": "[ˈklæsɪkl]",
+  "meaning": "adj. 古典的",
+  "group": 147
+ },
+ {
+  "id": 1466,
+  "word": "moon",
+  "phonetic": "[muːn]",
+  "meaning": "n.月球，月亮",
+  "group": 147
+ },
+ {
+  "id": 1467,
+  "word": "print",
+  "phonetic": "[prɪnt]",
+  "meaning": "vi.&vt.打印；印刷",
+  "group": 147
+ },
+ {
+  "id": 1468,
+  "word": "bed",
+  "phonetic": "[bed]",
+  "meaning": "n.床",
+  "group": 147
+ },
+ {
+  "id": 1469,
+  "word": "exercise",
+  "phonetic": "[ˈeksəsaɪz]",
+  "meaning": "n. 活动；运动；锻炼",
+  "group": 147
+ },
+ {
+  "id": 1470,
+  "word": "almost",
+  "phonetic": "[ˈɔːlməʊst]",
+  "meaning": "几乎",
+  "group": 147
+ },
+ {
+  "id": 1471,
+  "word": "boyfriend",
+  "phonetic": "[ˈbɔɪfrend]",
+  "meaning": "n.男朋友",
+  "group": 148
+ },
+ {
+  "id": 1472,
+  "word": "receive",
+  "phonetic": "[rɪˈsiːv]",
+  "meaning": "vt.收到，接到",
+  "group": 148
+ },
+ {
+  "id": 1473,
+  "word": "sentence",
+  "phonetic": "[ˈsentəns]",
+  "meaning": "句子",
+  "group": 148
+ },
+ {
+  "id": 1474,
+  "word": "pay",
+  "phonetic": "[peɪ]",
+  "meaning": "v.&n.付费",
+  "group": 148
+ },
+ {
+  "id": 1475,
+  "word": "herself",
+  "phonetic": "[hɜːˈself; həˈself]",
+  "meaning": "pron.她自己",
+  "group": 148
+ },
+ {
+  "id": 1476,
+  "word": "lamp",
+  "phonetic": "[læmp]",
+  "meaning": "n.灯",
+  "group": 148
+ },
+ {
+  "id": 1477,
+  "word": "talk",
+  "phonetic": "[tɔːk]",
+  "meaning": "v.&n.说话；谈话",
+  "group": 148
+ },
+ {
+  "id": 1478,
+  "word": "paper",
+  "phonetic": "[ˈpeɪpər]",
+  "meaning": "纸张",
+  "group": 148
+ },
+ {
+  "id": 1479,
+  "word": "nature",
+  "phonetic": "[ˈneɪtʃər]",
+  "meaning": "n.自然；本质",
+  "group": 148
+ },
+ {
+  "id": 1480,
+  "word": "now",
+  "phonetic": "[naʊ]",
+  "meaning": "adv.现在",
+  "group": 148
+ },
+ {
+  "id": 1481,
+  "word": "rabbit",
+  "phonetic": "[ˈræbɪt]",
+  "meaning": "n.兔，家兔",
+  "group": 149
+ },
+ {
+  "id": 1482,
+  "word": "interesting",
+  "phonetic": "[ˈɪntrəstɪŋ; ˈɪntrestɪŋ]",
+  "meaning": "adj.有趣的；有意思的",
+  "group": 149
+ },
+ {
+  "id": 1483,
+  "word": "message",
+  "phonetic": "[ˈmesɪdʒ]",
+  "meaning": "n.信息;消息",
+  "group": 149
+ },
+ {
+  "id": 1484,
+  "word": "wrong",
+  "phonetic": "[rɒŋ]",
+  "meaning": "adj.错误的；不正常的；有病的",
+  "group": 149
+ },
+ {
+  "id": 1485,
+  "word": "airport",
+  "phonetic": "[ˈeəpɔːt]",
+  "meaning": "飞机场",
+  "group": 149
+ },
+ {
+  "id": 1486,
+  "word": "careful",
+  "phonetic": "[ˈkeəfl]",
+  "meaning": "adj.小心的；仔细的",
+  "group": 149
+ },
+ {
+  "id": 1487,
+  "word": "friend",
+  "phonetic": "[frend]",
+  "meaning": "n.朋友",
+  "group": 149
+ },
+ {
+  "id": 1488,
+  "word": "kids",
+  "phonetic": "[kɪdz]",
+  "meaning": "孩子（复数）",
+  "group": 149
+ },
+ {
+  "id": 1489,
+  "word": "notebook",
+  "phonetic": "[ˈnəʊtbʊk]",
+  "meaning": "n.笔记本",
+  "group": 149
+ },
+ {
+  "id": 1490,
+  "word": "farmer",
+  "phonetic": "[ˈfɑːmər]",
+  "meaning": "n.农民，农夫",
+  "group": 149
+ },
+ {
+  "id": 1491,
+  "word": "practice",
+  "phonetic": "[ˈpræktɪs]",
+  "meaning": "v.&n.练习",
+  "group": 150
+ },
+ {
+  "id": 1492,
+  "word": "album",
+  "phonetic": "[ˈælbəm]",
+  "meaning": "n. 照片簿；集邮册",
+  "group": 150
+ },
+ {
+  "id": 1493,
+  "word": "headteacher",
+  "phonetic": "[ˈhedˌtiːʧər]",
+  "meaning": "n. 中小学的校长",
+  "group": 150
+ },
+ {
+  "id": 1494,
+  "word": "lazy",
+  "phonetic": "[ˈleɪzi]",
+  "meaning": "adj.懒散的;懒惰的",
+  "group": 150
+ },
+ {
+  "id": 1495,
+  "word": "musician",
+  "phonetic": "[mjuˈzɪʃn]",
+  "meaning": "n.音乐家",
+  "group": 150
+ },
+ {
+  "id": 1496,
+  "word": "journey",
+  "phonetic": "[ˈdʒɜːni]",
+  "meaning": "n.旅行，旅程",
+  "group": 150
+ },
+ {
+  "id": 1497,
+  "word": "bit",
+  "phonetic": "[bɪt]",
+  "meaning": "少量；小量",
+  "group": 150
+ },
+ {
+  "id": 1498,
+  "word": "metre",
+  "phonetic": "[ˈmiːtər]",
+  "meaning": "米",
+  "group": 150
+ },
+ {
+  "id": 1499,
+  "word": "reason",
+  "phonetic": "[ˈriːzn]",
+  "meaning": "n.理由；原因",
+  "group": 150
+ },
+ {
+  "id": 1500,
+  "word": "any",
+  "phonetic": "[ˈeni]",
+  "meaning": "adj.&pron.任何的;任一的;任何;任一",
+  "group": 150
+ },
+ {
+  "id": 1501,
+  "word": "strong",
+  "phonetic": "[strɒŋ]",
+  "meaning": "adj.强(壮)的；坚固的；强烈的；坚强的",
+  "group": 151
+ },
+ {
+  "id": 1502,
+  "word": "video",
+  "phonetic": "[ˈvɪdiəʊ]",
+  "meaning": "n.录像；视频",
+  "group": 151
+ },
+ {
+  "id": 1503,
+  "word": "dead",
+  "phonetic": "[ded]",
+  "meaning": "adj. 死的",
+  "group": 151
+ },
+ {
+  "id": 1504,
+  "word": "can",
+  "phonetic": "[kæn]",
+  "meaning": "（装饮料的）金属罐",
+  "group": 151
+ },
+ {
+  "id": 1505,
+  "word": "document",
+  "phonetic": "[ˈdɒkjumənt]",
+  "meaning": "n.文件",
+  "group": 151
+ },
+ {
+  "id": 1506,
+  "word": "cost",
+  "phonetic": "[kɒst]",
+  "meaning": "v. 花费；n. 花费",
+  "group": 151
+ },
+ {
+  "id": 1507,
+  "word": "explain",
+  "phonetic": "[ɪkˈspleɪn]",
+  "meaning": "vt.&vi.解释",
+  "group": 151
+ },
+ {
+  "id": 1508,
+  "word": "less",
+  "phonetic": "[les]",
+  "meaning": "adj.较少的，更少的",
+  "group": 151
+ },
+ {
+  "id": 1509,
+  "word": "box",
+  "phonetic": "[bɒks]",
+  "meaning": "n.盒子；箱子",
+  "group": 151
+ },
+ {
+  "id": 1510,
+  "word": "friendly",
+  "phonetic": "[ˈfrendli]",
+  "meaning": "有好的",
+  "group": 151
+ },
+ {
+  "id": 1511,
+  "word": "worried",
+  "phonetic": "[ˈwʌrid]",
+  "meaning": "adj.闷闷不乐的",
+  "group": 152
+ },
+ {
+  "id": 1512,
+  "word": "teach",
+  "phonetic": "[tiːtʃ]",
+  "meaning": "v. 教",
+  "group": 152
+ },
+ {
+  "id": 1513,
+  "word": "video game",
+  "phonetic": "[ˈvidiəu ɡeim]",
+  "meaning": "电子游戏",
+  "group": 152
+ },
+ {
+  "id": 1514,
+  "word": "perhaps",
+  "phonetic": "[pəˈhæps; præps]",
+  "meaning": "adv.可能，大概",
+  "group": 152
+ },
+ {
+  "id": 1515,
+  "word": "the",
+  "phonetic": "[ðə; ði; ðiː]",
+  "meaning": "art.这(那)个，这(那)些(用于特定人或物、序数词、最高级、专有名词，世上独一无二事物前)",
+  "group": 152
+ },
+ {
+  "id": 1516,
+  "word": "length",
+  "phonetic": "[leŋkθ]",
+  "meaning": "n. 长，长度",
+  "group": 152
+ },
+ {
+  "id": 1517,
+  "word": "heart",
+  "phonetic": "[hɑːt]",
+  "meaning": "n.心；心脏",
+  "group": 152
+ },
+ {
+  "id": 1518,
+  "word": "latest",
+  "phonetic": "[ˈleɪtɪst]",
+  "meaning": "adj.最新的；最近的",
+  "group": 152
+ },
+ {
+  "id": 1519,
+  "word": "butterfly",
+  "phonetic": "[ˈbʌtəflaɪ]",
+  "meaning": "n.蝴蝶",
+  "group": 152
+ },
+ {
+  "id": 1520,
+  "word": "so",
+  "phonetic": "[səʊ]",
+  "meaning": "非常；那么",
+  "group": 152
+ },
+ {
+  "id": 1521,
+  "word": "monkey",
+  "phonetic": "[ˈmʌŋki]",
+  "meaning": "n.猴子",
+  "group": 153
+ },
+ {
+  "id": 1522,
+  "word": "them",
+  "phonetic": "[ðəm; ðem]",
+  "meaning": "pron.他／她／它们(宾格)",
+  "group": 153
+ },
+ {
+  "id": 1523,
+  "word": "win",
+  "phonetic": "[wɪn]",
+  "meaning": "v.获胜，赢",
+  "group": 153
+ },
+ {
+  "id": 1524,
+  "word": "boat",
+  "phonetic": "[bəʊt]",
+  "meaning": "n.小船",
+  "group": 153
+ },
+ {
+  "id": 1525,
+  "word": "mathematics",
+  "phonetic": "[ˌmæθəˈmætɪks]",
+  "meaning": "数学",
+  "group": 153
+ },
+ {
+  "id": 1526,
+  "word": "hobby",
+  "phonetic": "[ˈhɒbi]",
+  "meaning": "n.爱好，嗜好",
+  "group": 153
+ },
+ {
+  "id": 1527,
+  "word": "wifi",
+  "phonetic": "[ˈwaɪˌfaɪ]",
+  "meaning": "无线网络",
+  "group": 153
+ },
+ {
+  "id": 1528,
+  "word": "square",
+  "phonetic": "[skweər]",
+  "meaning": "adj.平方的；方形的",
+  "group": 153
+ },
+ {
+  "id": 1529,
+  "word": "own",
+  "phonetic": "[əʊn]",
+  "meaning": "v.拥有",
+  "group": 153
+ },
+ {
+  "id": 1530,
+  "word": "where",
+  "phonetic": "[weər]",
+  "meaning": "adv.在哪里",
+  "group": 153
+ },
+ {
+  "id": 1531,
+  "word": "cream",
+  "phonetic": "[kriːm]",
+  "meaning": "n.奶油，乳脂",
+  "group": 154
+ },
+ {
+  "id": 1532,
+  "word": "noon",
+  "phonetic": "[nuːn]",
+  "meaning": "n. 正午",
+  "group": 154
+ },
+ {
+  "id": 1533,
+  "word": "yourself",
+  "phonetic": "[jɔːˈself; jəˈself]",
+  "meaning": "pron.你自己",
+  "group": 154
+ },
+ {
+  "id": 1534,
+  "word": "business person",
+  "phonetic": "",
+  "meaning": "(n) 商务人士",
+  "group": 154
+ },
+ {
+  "id": 1535,
+  "word": "well",
+  "phonetic": "[wel]",
+  "meaning": "n.井，水井",
+  "group": 154
+ },
+ {
+  "id": 1536,
+  "word": "article",
+  "phonetic": "[ˈɑːtɪkl]",
+  "meaning": "n.文章",
+  "group": 154
+ },
+ {
+  "id": 1537,
+  "word": "centre",
+  "phonetic": "[ˈsentər]",
+  "meaning": "中心",
+  "group": 154
+ },
+ {
+  "id": 1538,
+  "word": "easily",
+  "phonetic": "[ˈiːzəli]",
+  "meaning": "adv.容易地",
+  "group": 154
+ },
+ {
+  "id": 1539,
+  "word": "term",
+  "phonetic": "[tɜːm]",
+  "meaning": "n.学期",
+  "group": 154
+ },
+ {
+  "id": 1540,
+  "word": "costume",
+  "phonetic": "[ˈkɒstjuːm]",
+  "meaning": "n.装束, 服装",
+  "group": 154
+ },
+ {
+  "id": 1541,
+  "word": "temperature",
+  "phonetic": "[ˈtemprətʃər]",
+  "meaning": "n.温度",
+  "group": 155
+ },
+ {
+  "id": 1542,
+  "word": "new",
+  "phonetic": "[njuː]",
+  "meaning": "adj.新的；刚出现的",
+  "group": 155
+ },
+ {
+  "id": 1543,
+  "word": "title",
+  "phonetic": "[ˈtaɪtl]",
+  "meaning": "n.标题，题目",
+  "group": 155
+ },
+ {
+  "id": 1544,
+  "word": "puzzle",
+  "phonetic": "[ˈpʌzl]",
+  "meaning": "n.谜，智力游戏；疑问",
+  "group": 155
+ },
+ {
+  "id": 1545,
+  "word": "dining room",
+  "phonetic": "[ˈdaɪnɪŋ ruːm]",
+  "meaning": "餐厅",
+  "group": 155
+ },
+ {
+  "id": 1546,
+  "word": "possible",
+  "phonetic": "[ˈpɒsəbl]",
+  "meaning": "adj.可能的",
+  "group": 155
+ },
+ {
+  "id": 1547,
+  "word": "stage",
+  "phonetic": "[steɪdʒ]",
+  "meaning": "n.舞台, 戏剧, 活动场所 vt.上演, 筹备, 举行",
+  "group": 155
+ },
+ {
+  "id": 1548,
+  "word": "yesterday",
+  "phonetic": "[ˈjestədeɪ; ˈjestədi]",
+  "meaning": "adv. 昨天",
+  "group": 155
+ },
+ {
+  "id": 1549,
+  "word": "quick",
+  "phonetic": "[kwɪk]",
+  "meaning": "迅速的；快速地；",
+  "group": 155
+ },
+ {
+  "id": 1550,
+  "word": "itself",
+  "phonetic": "[ɪtˈself]",
+  "meaning": "pron它自己",
+  "group": 155
+ },
+ {
+  "id": 1551,
+  "word": "brown",
+  "phonetic": "[braʊn]",
+  "meaning": "adj.褐色的，棕色的",
+  "group": 156
+ },
+ {
+  "id": 1552,
+  "word": "painting",
+  "phonetic": "[ˈpeɪntɪŋ]",
+  "meaning": "绘画",
+  "group": 156
+ },
+ {
+  "id": 1553,
+  "word": "textbook",
+  "phonetic": "[ˈtekstbʊk]",
+  "meaning": "教科书；课本",
+  "group": 156
+ },
+ {
+  "id": 1554,
+  "word": "sport",
+  "phonetic": "[spɔːt]",
+  "meaning": "n.体育运动；锻炼",
+  "group": 156
+ },
+ {
+  "id": 1555,
+  "word": "fair",
+  "phonetic": "[feər]",
+  "meaning": "adj.公平的，合理的；金色的",
+  "group": 156
+ },
+ {
+  "id": 1556,
+  "word": "activity",
+  "phonetic": "[ækˈtɪvəti]",
+  "meaning": "n. 活动",
+  "group": 156
+ },
+ {
+  "id": 1557,
+  "word": "Ms",
+  "phonetic": "[mˈes]",
+  "meaning": "女士",
+  "group": 156
+ },
+ {
+  "id": 1558,
+  "word": "please",
+  "phonetic": "[pliːz]",
+  "meaning": "v.请",
+  "group": 156
+ },
+ {
+  "id": 1559,
+  "word": "gold",
+  "phonetic": "[ɡəʊld]",
+  "meaning": "n.金子，黄金",
+  "group": 156
+ },
+ {
+  "id": 1560,
+  "word": "conversation",
+  "phonetic": "[ˌkɒnvəˈseɪʃn]",
+  "meaning": "n.谈话",
+  "group": 156
+ },
+ {
+  "id": 1561,
+  "word": "crazy",
+  "phonetic": "[ˈkreɪzi]",
+  "meaning": "adj.疯狂的",
+  "group": 157
+ },
+ {
+  "id": 1562,
+  "word": "secretary",
+  "phonetic": "[ˈsekrətri]",
+  "meaning": "n. 秘书",
+  "group": 157
+ },
+ {
+  "id": 1563,
+  "word": "sheet",
+  "phonetic": "[ʃiːt]",
+  "meaning": "n.一张(纸)",
+  "group": 157
+ },
+ {
+  "id": 1564,
+  "word": "bank",
+  "phonetic": "[bæŋk]",
+  "meaning": "n. 银行",
+  "group": 157
+ },
+ {
+  "id": 1565,
+  "word": "pupil",
+  "phonetic": "[ˈpjuːpl]",
+  "meaning": "n.(小)学生",
+  "group": 157
+ },
+ {
+  "id": 1566,
+  "word": "last",
+  "phonetic": "[lɑːst]",
+  "meaning": "v.持续",
+  "group": 157
+ },
+ {
+  "id": 1567,
+  "word": "explorer",
+  "phonetic": "[ɪkˈsplɔːrər]",
+  "meaning": "n.探险者",
+  "group": 157
+ },
+ {
+  "id": 1568,
+  "word": "ball",
+  "phonetic": "[bɔːl]",
+  "meaning": "n.球",
+  "group": 157
+ },
+ {
+  "id": 1569,
+  "word": "dress",
+  "phonetic": "[dres]",
+  "meaning": "v.&n.穿衣服;连衣裙",
+  "group": 157
+ },
+ {
+  "id": 1570,
+  "word": "corner",
+  "phonetic": "[ˈkɔːnər]",
+  "meaning": "n.角",
+  "group": 157
+ },
+ {
+  "id": 1571,
+  "word": "sky",
+  "phonetic": "[skaɪ]",
+  "meaning": "天空",
+  "group": 158
+ },
+ {
+  "id": 1572,
+  "word": "alright",
+  "phonetic": "[ɔːlˈraɪt]",
+  "meaning": "adv.好吧",
+  "group": 158
+ },
+ {
+  "id": 1573,
+  "word": "fan",
+  "phonetic": "[fæn]",
+  "meaning": "n.(电影、运动等的)迷；热心的爱好者(支持者)；扇子",
+  "group": 158
+ },
+ {
+  "id": 1574,
+  "word": "toilet",
+  "phonetic": "[ˈtɔɪlət]",
+  "meaning": "n.厕所",
+  "group": 158
+ },
+ {
+  "id": 1575,
+  "word": "surfboard",
+  "phonetic": "[ˈsɜːfbɔːd]",
+  "meaning": "冲浪板",
+  "group": 158
+ },
+ {
+  "id": 1576,
+  "word": "dear",
+  "phonetic": "[dɪər]",
+  "meaning": "adj.亲爱的",
+  "group": 158
+ },
+ {
+  "id": 1577,
+  "word": "file",
+  "phonetic": "[faɪl]",
+  "meaning": "n.档案",
+  "group": 158
+ },
+ {
+  "id": 1578,
+  "word": "eraser",
+  "phonetic": "[ɪˈreɪzər]",
+  "meaning": "橡皮擦",
+  "group": 158
+ },
+ {
+  "id": 1579,
+  "word": "snowboarding",
+  "phonetic": "[ˈsnəʊˌbɔːdɪŋ]",
+  "meaning": "滑雪板运动",
+  "group": 158
+ },
+ {
+  "id": 1580,
+  "word": "quiz",
+  "phonetic": "[kwɪz]",
+  "meaning": "n. 测试",
+  "group": 158
+ },
+ {
+  "id": 1581,
+  "word": "basketball",
+  "phonetic": "[ˈbɑːskɪtbɔːl]",
+  "meaning": "n.篮球",
+  "group": 159
+ },
+ {
+  "id": 1582,
+  "word": "comedy",
+  "phonetic": "[ˈkɒmədi]",
+  "meaning": "n. 喜剧；喜剧片",
+  "group": 159
+ },
+ {
+  "id": 1583,
+  "word": "interested",
+  "phonetic": "[ˈɪntrəstɪd; ˈɪntrestɪd]",
+  "meaning": "adj.感兴趣的",
+  "group": 159
+ },
+ {
+  "id": 1584,
+  "word": "jeans",
+  "phonetic": "[dʒiːnz]",
+  "meaning": "n.牛仔裤",
+  "group": 159
+ },
+ {
+  "id": 1585,
+  "word": "sing",
+  "phonetic": "[sɪŋ]",
+  "meaning": "v.唱；唱歌",
+  "group": 159
+ },
+ {
+  "id": 1586,
+  "word": "elevator",
+  "phonetic": "[ˈelɪveɪtər]",
+  "meaning": "n.电梯;升降机",
+  "group": 159
+ },
+ {
+  "id": 1587,
+  "word": "left",
+  "phonetic": "[left]",
+  "meaning": "adv.&n.向左边;左边",
+  "group": 159
+ },
+ {
+  "id": 1588,
+  "word": "into",
+  "phonetic": "[ˈɪntə; ˈɪntu; ˈɪntuː]",
+  "meaning": "prep. 到...里面",
+  "group": 159
+ },
+ {
+  "id": 1589,
+  "word": "age",
+  "phonetic": "[eɪdʒ]",
+  "meaning": "n. 年龄",
+  "group": 159
+ },
+ {
+  "id": 1590,
+  "word": "tie",
+  "phonetic": "[taɪ]",
+  "meaning": "vt.捆，绑",
+  "group": 159
+ },
+ {
+  "id": 1591,
+  "word": "next",
+  "phonetic": "[nekst]",
+  "meaning": "adv. 紧接着；随后",
+  "group": 160
+ },
+ {
+  "id": 1592,
+  "word": "outside",
+  "phonetic": "[ˌaʊtˈsaɪd]",
+  "meaning": "在外面",
+  "group": 160
+ },
+ {
+  "id": 1593,
+  "word": "around",
+  "phonetic": "[əˈraʊnd]",
+  "meaning": "到处",
+  "group": 160
+ },
+ {
+  "id": 1594,
+  "word": "thanks",
+  "phonetic": "[θæŋks]",
+  "meaning": "谢谢",
+  "group": 160
+ },
+ {
+  "id": 1595,
+  "word": "teacher",
+  "phonetic": "[ˈtiːtʃər]",
+  "meaning": "n.教师",
+  "group": 160
+ },
+ {
+  "id": 1596,
+  "word": "belong",
+  "phonetic": "[bɪˈlɒŋ]",
+  "meaning": "v.属；附属",
+  "group": 160
+ },
+ {
+  "id": 1597,
+  "word": "o'clock",
+  "phonetic": "[ə'klɒk]",
+  "meaning": "adv. ...点钟",
+  "group": 160
+ },
+ {
+  "id": 1598,
+  "word": "plane",
+  "phonetic": "[pleɪn]",
+  "meaning": "n.飞机",
+  "group": 160
+ },
+ {
+  "id": 1599,
+  "word": "bracelet",
+  "phonetic": "[ˈbreɪslət]",
+  "meaning": "n.手镯",
+  "group": 160
+ },
+ {
+  "id": 1600,
+  "word": "deep",
+  "phonetic": "[diːp]",
+  "meaning": "adj.深",
+  "group": 160
+ },
+ {
+  "id": 1601,
+  "word": "jump",
+  "phonetic": "[dʒʌmp]",
+  "meaning": "n. & v.跳；跳跃",
+  "group": 161
+ },
+ {
+  "id": 1602,
+  "word": "cinema",
+  "phonetic": "[ˈsɪnəmə; ˈsɪnəmɑː]",
+  "meaning": "n.电影院；电影",
+  "group": 161
+ },
+ {
+  "id": 1603,
+  "word": "let",
+  "phonetic": "[let]",
+  "meaning": "v.让(let, let)",
+  "group": 161
+ },
+ {
+  "id": 1604,
+  "word": "page",
+  "phonetic": "[peɪdʒ]",
+  "meaning": "n.页；页码",
+  "group": 161
+ },
+ {
+  "id": 1605,
+  "word": "omelette",
+  "phonetic": "[ˈɒmlət]",
+  "meaning": "n.煎蛋卷",
+  "group": 161
+ },
+ {
+  "id": 1606,
+  "word": "movie star",
+  "phonetic": "",
+  "meaning": "电影明星",
+  "group": 161
+ },
+ {
+  "id": 1607,
+  "word": "cooker",
+  "phonetic": "[ˈkʊkər]",
+  "meaning": "n.厨灶，炉具",
+  "group": 161
+ },
+ {
+  "id": 1608,
+  "word": "bathtub",
+  "phonetic": "[ˈbɑːθtʌb]",
+  "meaning": "浴缸",
+  "group": 161
+ },
+ {
+  "id": 1609,
+  "word": "noise",
+  "phonetic": "[nɔɪz]",
+  "meaning": "响声；噪音",
+  "group": 161
+ },
+ {
+  "id": 1610,
+  "word": "tidy",
+  "phonetic": "[ˈtaɪdi]",
+  "meaning": "v.使整洁，使整齐",
+  "group": 161
+ },
+ {
+  "id": 1611,
+  "word": "once",
+  "phonetic": "[wʌns]",
+  "meaning": "adv.&conj.&n.一次，一度，从前",
+  "group": 162
+ },
+ {
+  "id": 1612,
+  "word": "grow",
+  "phonetic": "[ɡrəʊ]",
+  "meaning": "v.生长；发育；种植；变成(grew,grown)",
+  "group": 162
+ }
+]

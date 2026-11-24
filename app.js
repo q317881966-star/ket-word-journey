@@ -29,7 +29,7 @@ function freshDB() {
     profile: {
       streak: 0, longest: 0, lastActive: null, totalXp: 0,
       dailyNew: 10, reviewCap: 80, autoAudio: true,
-      sfx: true, voice: true, theme: "auto", created: today(),
+      sfx: true, voice: true, theme: "auto", specialDone: {}, created: today(),
     },
   };
 }
@@ -341,6 +341,51 @@ function renderHome() {
   Buddy.renderChest();
 }
 
+const SPECIALS = {
+  wrong:  { label: "错题复习", icon: "📕", cls: "sp-wrong" },
+  recall: { label: "回忆复习", icon: "🧠", cls: "sp-recall" },
+  day7:   { label: "7 天回顾", icon: "📅", cls: "sp-d7" },
+  day10:  { label: "10 天回顾", icon: "🏆", cls: "sp-d10" },
+};
+const SPECIAL_POS = { 3: "wrong", 5: "recall", 7: "day7", 10: "day10" };
+
+function startSpecial(kind, unit) {
+  const unitWords = WORDS.filter(w => Math.ceil(w.group / 10) === unit);
+  const learned = unitWords.filter(w => isLearned(w.id));
+  const allWrong = wrongWords();
+  const uniq = arr => [...new Map(arr.map(w => [w.id, w])).values()];
+  let pool = [];
+  let label = SPECIALS[kind].label;
+
+  if (kind === "wrong") {
+    // 错题优先，不足 15 题时用到期词 / 已学词补足
+    pool = uniq([...allWrong, ...dueWords(), ...learned, ...unitWords]);
+  } else if (kind === "recall") {
+    pool = learned.length ? learned : unitWords;
+  } else if (kind === "day7") {
+    pool = uniq([...dueWords(), ...learned, ...allWrong]);
+    if (!pool.length) pool = unitWords;
+  } else {
+    pool = uniq([...learned, ...allWrong, ...unitWords]);
+  }
+  if (!pool.length) return toast("这一单元还没有可复习的词");
+
+  const picked = weightedPick(pool, 15);
+  const qs = picked.map(w => {
+    if (kind === "recall") return { kind: "reveal", word: w };
+    if (kind === "wrong") {
+      const by = DB.states[w.id]?.wrongBy || {};
+      const top = Object.entries(by).sort((a, b) => b[1] - a[1])[0]?.[0];
+      if (top === "spell") return { kind: "spell", word: w };
+      if (top === "listen") return makeListen(w);
+      if (top === "meaning") return makeChoice(w, "en2cn");
+      if (top === "recall") return { kind: "reveal", word: w };
+    }
+    return makeReviewQuestion(w);
+  });
+  beginSession(qs, `第 ${unit} 单元 · ${label}`, { special: { kind, unit } });
+}
+
 function gameStation() {
   return `<div class="game-station">
     <button data-gmode="pair"><span>🔤</span>配对</button>
@@ -393,6 +438,18 @@ function renderMap() {
       </button>
       ${gameBtn}
     </div>`;
+    const posInUnit = ((g - 1) % 10) + 1;
+    const unit = Math.ceil(g / 10);
+    if (SPECIAL_POS[posInUnit]) {
+      const kind = SPECIAL_POS[posInUnit];
+      const done = DB.profile.specialDone?.[`${unit}-${kind}`];
+      html += `<div class="path-row special-row">
+        <button class="snode ${SPECIALS[kind].cls} ${done ? "done" : ""}" data-special="${kind}" data-unit="${unit}">
+          <span class="s-ico">${done ? "✓" : SPECIALS[kind].icon}</span>
+          <span class="s-label">${SPECIALS[kind].label}</span>
+        </button>
+      </div>`;
+    }
   }
   map.innerHTML = html;
 
@@ -408,6 +465,8 @@ $("#map").addEventListener("click", e => {
     const map = { spell: "spell", listenWrong: "listen", meaning: "meaning" };
     startDrill(map[di.dataset.drillImg]); return;
   }
+  const sp = e.target.closest("[data-special]");
+  if (sp) { startSpecial(sp.dataset.special, Number(sp.dataset.unit)); return; }
   const gm = e.target.closest("[data-gmode]");
   if (gm) { Game.start(gm.dataset.gmode); return; }
   const b = e.target.closest(".pnode");
@@ -832,6 +891,11 @@ function finishSession() {
   $("#resStreak").textContent = DB.profile.streak;
   $("#lesson").classList.remove("open");
   $("#result").classList.add("open");
+  if (s.special) {
+    DB.profile.specialDone = DB.profile.specialDone || {};
+    DB.profile.specialDone[`${s.special.unit}-${s.special.kind}`] = true;
+    save(true);
+  }
   confetti();
   sfx("done");
   if (s.title === "今日学习") speakKind("finish");

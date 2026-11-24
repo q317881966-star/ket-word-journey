@@ -201,6 +201,23 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
   content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   border: 7px solid transparent; border-top-color: var(--line);
 }
+/* 单元特殊复习关 */
+.special-row { height: 112px; }
+.snode {
+  width: 104px; height: 104px; border-radius: 30px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  font-weight: 900; position: relative; border: none;
+  box-shadow: 0 5px 0 rgba(0,0,0,.10);
+}
+.snode .s-ico { font-size: 28px; line-height: 1; }
+.snode .s-label { font-size: 11px; }
+.snode.done { opacity: .82; }
+.snode:active { transform: scale(.95); }
+.sp-wrong { background: #ffe1e1; color: #c93434; }
+.sp-recall { background: #f3e8ff; color: #7c4dff; }
+.sp-d7 { background: var(--blue-l); color: var(--blue-d); }
+.sp-d10 { background: #fff3cc; color: #a07a00; }
+
 .game-station {
   display: flex; justify-content: center; gap: 10px;
   margin: 4px auto 16px; max-width: 400px; padding: 0 16px;

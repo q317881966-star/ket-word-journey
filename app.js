@@ -396,7 +396,7 @@ function startSpecial(kind, unit) {
 
   const picked = weightedPick(pool, Math.min(qn, pool.length));
   const qs = picked.map(w => {
-    if (kind === "recall") return { kind: "reveal", word: w };
+    if (kind === "recall") return makeRecallQuestion(w);
     if (kind === "wrong") {
       const by = DB.states[w.id]?.wrongBy || {};
       const top = Object.entries(by).sort((a, b) => b[1] - a[1])[0]?.[0];
@@ -540,6 +540,12 @@ function makeListen(word) {
   return { kind: "listen", word, opts: shuffle(opts), answer: word.word };
 }
 const KINDS_REVIEW = ["choice", "choice", "listen", "spell", "reveal", "reveal"];
+function makeRecallQuestion(word) {
+  const r = Math.random();
+  if (r < 0.4) return { kind: "reveal", word };          // 看英回想中
+  if (r < 0.7) return { kind: "spell", word };           // 看中写英
+  return { kind: "listenSpell", word };                  // 听音写英
+}
 function makeReviewQuestion(word) {
   const k = KINDS_REVIEW[Math.floor(Math.random() * KINDS_REVIEW.length)];
   if (k === "reveal") return { kind: "reveal", word };
@@ -723,15 +729,19 @@ function renderQuestion() {
     return;
   }
 
-  if (q.kind === "spell") {
+  if (q.kind === "spell" || q.kind === "listenSpell") {
+    const listenMode = q.kind === "listenSpell";
     body.innerHTML = `
-      <p class="q-prompt">根据释义拼出单词</p>
-      <div class="q-cn">${esc(q.word.meaning)}</div>
+      <p class="q-prompt">${listenMode ? "听发音，拼出这个单词" : "根据释义拼出单词"}</p>
+      ${listenMode
+        ? `<button class="spk-big" data-spk="${q.word.id}">🔊</button>`
+        : `<div class="q-cn">${esc(q.word.meaning)}</div>`}
       <div class="spell-wrap">
         <input id="spellInput" class="spell-input" autocomplete="off" autocorrect="off"
                autocapitalize="off" spellcheck="false" placeholder="输入英文单词">
         <div class="spell-hint">${q.word.word.length} 个字母${q.word.word.includes(" ") ? "，含空格" : ""}</div>
       </div>`;
+    if (listenMode) setTimeout(() => playAudio(q.word.id), 250);
     setTimeout(() => { const el = $("#spellInput"); if (el) el.focus(); }, 200);
     $("#spellInput").addEventListener("input", e => {
       check.disabled = !e.target.value.trim();
@@ -765,7 +775,9 @@ $("#qbody").addEventListener("click", e => {
     // 回忆关：自评「记住了」的词，隔几题再抽查一次，验证不是短期印象
     if (g === 2 && s.special?.kind === "recall" && !s.recheck.has(q.word.id)) {
       s.recheck.add(q.word.id);
-      s.queue.splice(Math.min(s.i + 4, s.queue.length), 0, { kind: "reveal", word: q.word, recheck: true });
+      const rq = makeRecallQuestion(q.word);
+      rq.recheck = true;
+      s.queue.splice(Math.min(s.i + 4, s.queue.length), 0, rq);
       s.total = s.queue.length;
     }
     if (!(s.newIds || []).includes(q.word.id)) s.reviewed.add(q.word.id);
@@ -815,7 +827,7 @@ $("#checkBtn").addEventListener("click", () => {
 
   const wordId = q.word.id;
   if (!s.firstTry[wordId]) s.firstTry[wordId] = correct;
-  if (q.kind === "spell") {
+  if (q.kind === "spell" || q.kind === "listenSpell") {
     const el = $("#spellInput");
     el.classList.add(correct ? "ok" : "bad");
     el.disabled = true;
@@ -831,7 +843,7 @@ $("#checkBtn").addEventListener("click", () => {
   if (!correct) recordWrong(wordId, q.kind);
   const st = DB.states[wordId];
   const noAdv = !!s.special && st && st.due && st.due > today();
-  gradeWord(wordId, correct ? (s.retried[wordId] ? 1 : (q.kind === "spell" ? 2 : 1)) : 0, noAdv);
+  gradeWord(wordId, correct ? (s.retried[wordId] ? 1 : ((q.kind === "spell" || q.kind === "listenSpell") ? 2 : 1)) : 0, noAdv);
   if (!(s.newIds || []).includes(wordId)) s.reviewed.add(wordId);   // 复习过的不同词数
   if (correct) s.xp += 10; else s.xp += 2;
 
@@ -840,7 +852,7 @@ $("#checkBtn").addEventListener("click", () => {
   if (!correct && !s.retried[wordId]) {
     // 同词最多追加一次重试（换个题型），避免连续答错无限刷题
     s.retried[wordId] = true;
-    const retry = q.kind === "spell" ? makeChoice(q.word, "en2cn") : { kind: "spell", word: q.word };
+    const retry = (q.kind === "spell" || q.kind === "listenSpell") ? makeChoice(q.word, "en2cn") : { kind: "spell", word: q.word };
     s.queue.splice(Math.min(s.i + 2, s.queue.length), 0, retry);
     s.total = s.queue.length;
   }
@@ -857,7 +869,7 @@ $("#skipBtn").addEventListener("click", () => {
 });
 
 function isCorrect(q) {
-  if (q.kind === "spell") return norm($("#spellInput").value) === norm(q.word.word);
+  if (q.kind === "spell" || q.kind === "listenSpell") return norm($("#spellInput").value) === norm(q.word.word);
   if (q.kind === "listen" || q.kind === "choice") return session.pick != null && q.opts[session.pick] === q.answer;
   return false;
 }

@@ -213,6 +213,7 @@ function showPage(name) {
   $$("#tabs button").forEach(b => b.classList.toggle("active", b.dataset.page === name));
   $("#app").scrollTop = 0;
   if (name === "wrong") renderWrong();
+  if (name === "buddy") Buddy.render();
   if (name === "stats") renderStats();
   if (name === "settings") renderSettings();
 }
@@ -225,7 +226,7 @@ $("#tabs").addEventListener("click", e => {
 function renderHome() {
   $("#streakNum").textContent = DB.profile.streak;
   $("#xpNum").textContent = DB.profile.totalXp;
-  $("#masterNum").textContent = masteredCount();
+  $("#masterNum").textContent = DB.profile.stars || 0;
 
   const due = dueWords().length;
   const newNeeded = Math.max(0, DB.profile.dailyNew - todayNewDone());
@@ -234,6 +235,11 @@ function renderHome() {
   const pct = Math.round(total / WORDS.length * 100);
 
   $("#todayCard").innerHTML = `
+    <div class="home-buddy" id="homeBuddy" role="button">
+      <div class="hb-art">${Buddy.avatar()}</div>
+      <div class="hb-line">${esc(Buddy.line("idle"))}</div>
+      <div class="hb-stars">⭐ ${DB.profile.stars || 0}</div>
+    </div>
     <div class="today ${dailyDone ? "done" : ""}">
       <h2>${dailyDone ? "今日任务完成 🎉" : "今天的学习"}</h2>
       <p class="sub">${dailyDone ? "想多练几组？点下面的按钮继续复习。" : "完成新词和到期复习，就能守住连胜。"}</p>
@@ -256,8 +262,10 @@ function renderHome() {
     </div>`;
   $("#startDaily").onclick = () => startDaily();
   $("#todayCard").querySelector(".goal[data-due]")?.addEventListener("click", startDueReview);
+  $("#homeBuddy")?.addEventListener("click", () => showPage("buddy"));
 
   renderMap();
+  Buddy.renderChest();
 }
 
 function renderMap() {
@@ -464,7 +472,8 @@ function renderQuestion() {
         ${q.word.phonetic ? `<div class="ph">${esc(q.word.phonetic)}</div>` : ""}
         <div class="cn">${esc(q.word.meaning)}</div>
       </div>
-      <p class="spell-hint">点 🔊 听发音，记住后点下面的按钮</p>`;
+      <p class="spell-hint">点 🔊 听发音，记住后点下面的按钮</p>
+      <div style="text-align:center;margin-top:6px"><button class="btn btn-blue btn-sm" id="speakBtn">🎤 跟读练习</button></div>`;
     check.textContent = "我记住了"; check.disabled = false; check.className = "btn btn-green btn-block";
     $("#skipBtn").style.display = "none";
     if (DB.profile.autoAudio) setTimeout(() => playAudio(q.word.id), 120);
@@ -540,6 +549,11 @@ $("#qbody").addEventListener("click", e => {
   ensureAudio();
   const spk = e.target.closest("[data-spk]");
   if (spk) { playAudio(Number(spk.dataset.spk), spk); return; }
+  if (e.target.closest("#speakBtn")) {
+    const q = session?.queue?.[session.i];
+    if (q?.word) Buddy.showSpeech(q.word);
+    return;
+  }
 
   // 主动回忆自评
   const gbtn = e.target.closest("[data-grade]");
@@ -558,6 +572,7 @@ $("#qbody").addEventListener("click", e => {
     $$("[data-grade]", $("#qbody")).forEach(b => b.disabled = true);
     gbtn.classList.add("sel");
     showFeedback(correct, q);
+    Buddy.onAnswer(correct, q);
     return;
   }
 
@@ -613,6 +628,7 @@ $("#checkBtn").addEventListener("click", () => {
   if (correct) s.xp += 10; else s.xp += 2;
 
   showFeedback(correct, q);
+  Buddy.onAnswer(correct, q);
   if (!correct && !s.retried[wordId]) {
     // 同词最多追加一次重试（换个题型），避免连续答错无限刷题
     s.retried[wordId] = true;
@@ -643,7 +659,7 @@ function showFeedback(ok, q) {
   sfx(ok ? "ok" : "bad");
   const fb = $("#feedback");
   fb.className = `feedback ${ok ? "good" : "bad"} show`;
-  $("#fbTitle").textContent = ok ? pick(["太棒了！", "完全正确！", "漂亮！", "就是这样！"]) : "再记一下";
+  $("#fbTitle").textContent = Buddy.line(ok ? "correct" : "wrong");
   $("#fbAnswer").textContent = ok
     ? (q.kind === "card" ? "" : `${q.word.word} · ${q.word.meaning}`)
     : `${q.word.word}${q.word.phonetic ? " " + q.word.phonetic : ""} · ${q.word.meaning}`;
@@ -709,6 +725,7 @@ function finishSession() {
   $("#result").classList.add("open");
   confetti();
   sfx("done");
+  Buddy.onSessionEnd(s);
   session = null;
   renderHome();
 }
@@ -808,6 +825,7 @@ function renderSettings() {
   $("#reviewCapVal").textContent = p.reviewCap;
   $("#autoAudio").checked = p.autoAudio;
   $("#sfxOn").checked = p.sfx;
+  $("#learnerName").value = p.name || "ZOE";
   $$("#themeSeg button").forEach(b => b.classList.toggle("on", b.dataset.theme === (p.theme || "auto")));
   updateOfflineState();
 }
@@ -847,6 +865,12 @@ $("#sfxOn").addEventListener("change", e => {
   DB.profile.sfx = e.target.checked; save(true);
   if (e.target.checked) { ensureAudio(); sfx("ok"); }
 });
+$("#learnerName").addEventListener("input", e => {
+  DB.profile.name = e.target.value.trim() || "ZOE";
+  save();
+});
+$("#reportBtn").addEventListener("click", () => Buddy.openReport());
+$("#reportClose").addEventListener("click", () => $("#report").classList.remove("open"));
 $("#themeSeg").addEventListener("click", e => {
   const b = e.target.closest("button");
   if (!b) return;
@@ -920,6 +944,7 @@ async function boot() {
   }
   DB = loadDB();
   DB.profile.streak = computeStreak();
+  Buddy.init();
   applyTheme();
   renderHome();
   showPage("home");

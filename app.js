@@ -213,7 +213,7 @@ function tone(freq, dur, type = "sine", vol = .06, delay = 0) {
   o.connect(g); g.connect(actx.destination);
   o.start(t); o.stop(t + dur + .03);
 }
-const SFX_FILES = { ok: "audio/sfx/ok.wav", bad: "audio/sfx/bad.wav", done: "audio/sfx/done.wav", tap: "audio/sfx/tap.wav" };
+const SFX_FILES = { ok: "audio/sfx/ok-v2.wav", bad: "audio/sfx/bad-v2.wav", done: "audio/sfx/done-v2.wav", tap: "audio/sfx/tap-v2.wav" };
 function sfx(kind) {
   if (!DB?.profile?.sfx) return;
   const src = SFX_FILES[kind];

@@ -158,10 +158,10 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
   position: absolute; left: 50%; top: 50%; width: 54px; height: 54px;
   margin: -27px 0 0 -27px; transform: translateX(var(--sx, 0px));
   border-radius: 16px; border: 2px solid var(--blue); border-bottom-width: 4px;
-  background: var(--blue-l); font-size: 24px; z-index: 2;
+  background: var(--card); font-size: 24px; z-index: 2; overflow: hidden;
 }
 .side-game:active { transform: translateX(var(--sx, 0px)) scale(.94); }
-.side-game .bicon { width: 76%; height: 76%; display: block; margin: 0 auto; }
+.side-game .bicon { width: 92%; height: 92%; display: block; margin: 0 auto; }
 .pnode {
   width: 84px; height: 84px; border-radius: 50%; position: relative;
   display: grid; place-items: center; font-size: 26px; font-weight: 900;

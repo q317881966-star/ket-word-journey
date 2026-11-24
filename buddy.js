@@ -671,6 +671,18 @@ const Buddy = (() => {
       <path d="M8 25 a16 16 0 0 1 32 0" fill="none" stroke="#1CB0F6" stroke-width="4" stroke-linecap="round"/>
       <rect x="4" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
       <rect x="36" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>`;
+    if (mode === "spell") prop = `
+      <path d="M31 6 l11 7 -15 19 -9 -5z" fill="#FFC800" stroke="#E5A900" stroke-width="1.5"/>
+      <path d="M27 31 l9 5 -3 5 -9 -5z" fill="#F4A261"/>`;
+    if (mode === "listenWrong") prop = `
+      <path d="M8 25 a16 16 0 0 1 32 0" fill="none" stroke="#1CB0F6" stroke-width="4" stroke-linecap="round"/>
+      <rect x="4" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
+      <rect x="36" y="23" width="8" height="13" rx="4" fill="#1CB0F6"/>
+      <text x="38" y="13" font-size="15" fill="#FF4B4B" font-weight="bold">?</text>`;
+    if (mode === "meaning") prop = `
+      <path d="M5 9 h14 v18 h-14z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(-6 12 18)"/>
+      <path d="M19 9 h14 v18 h-14z" fill="#fff" stroke="#58CC02" stroke-width="2" transform="rotate(6 26 18)"/>
+      <text x="39" y="14" font-size="14" fill="#FF4B4B" font-weight="bold">?</text>`;
     if (mode === "daily") prop = `
       <path d="M33 5 h11 v5 a5.5 5.5 0 0 1 -11 0z" fill="#FFC800" stroke="#E5A900" stroke-width="1.5"/>
       <rect x="36.5" y="15" width="4" height="6" fill="#E5A900"/>

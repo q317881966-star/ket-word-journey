@@ -377,12 +377,14 @@ function renderMap() {
     else if (isCur) cls += " current";
     else if (g > (curGroup ?? groups)) cls += " locked";
     const x = Math.round(Math.sin(g * 0.62) * 74);
-    const GAME_MODES = ["pair", "listen", "daily"];
-    const GAME_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战" };
+    const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
+    const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
     let gameBtn = "";
-    if (g % 5 === 0 && g < groups) {
-      const mode = GAME_MODES[Math.floor(g / 5 - 1) % 3];
-      gameBtn = `<button class="side-game" data-gstart="${mode}" style="--sx:${x >= 0 ? -112 : 112}px" title="${GAME_NAMES[mode]}">${Buddy.gameIcon(mode)}</button>`;
+    if (g % 3 === 0 && g < groups) {
+      const key = STATIONS[Math.floor(g / 3 - 1) % STATIONS.length];
+      const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
+      const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
+      gameBtn = `<button class="side-game" ${attr} style="--sx:${x >= 0 ? -118 : 118}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
     }
     html += `<div class="path-row">
       <button class="${cls}" data-group="${g}" style="--x:${x}px">
@@ -401,6 +403,11 @@ function renderMap() {
 $("#map").addEventListener("click", e => {
   const gs = e.target.closest("[data-gstart]");
   if (gs) { Game.start(gs.dataset.gstart); return; }
+  const di = e.target.closest("[data-drill-img]");
+  if (di) {
+    const map = { spell: "spell", listenWrong: "listen", meaning: "meaning" };
+    startDrill(map[di.dataset.drillImg]); return;
+  }
   const gm = e.target.closest("[data-gmode]");
   if (gm) { Game.start(gm.dataset.gmode); return; }
   const b = e.target.closest(".pnode");

@@ -535,8 +535,37 @@ function makeChoice(word, dir) {
   const opts = shuffle([answer, ...distill(word, key).map(w => w[key])]);
   return { kind: "choice", word, dir, opts, answer };
 }
-function makeListen(word) {
-  const opts = [word.word, ...distill(word, "word").map(w => w.word)];
+function lev(a, b) {
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({ length: n + 1 }, (_, i) => i);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+/** 拼写相近的干扰项：编辑距离小、长度接近、首字母相同优先 */
+function distillSimilar(word) {
+  const w0 = word.word.toLowerCase();
+  const scored = [];
+  for (const w of WORDS) {
+    if (w.id === word.id) continue;
+    const s = w.word.toLowerCase();
+    if (s === w0) continue;
+    let score = -lev(w0, s) * 10 - Math.abs(s.length - w0.length) * 2;
+    if (s[0] === w0[0]) score += 10;
+    scored.push({ w, score });
+  }
+  scored.sort((a, b) => b.score - a.score);
+  return shuffle(scored.slice(0, 20)).slice(0, 3).map(x => x.w);
+}
+function makeListen(word, similar = false) {
+  const picks = similar ? distillSimilar(word) : distill(word, "word");
+  const opts = [word.word, ...picks.map(w => w.word)];
   return { kind: "listen", word, opts: shuffle(opts), answer: word.word };
 }
 const KINDS_REVIEW = ["choice", "choice", "listen", "spell", "reveal", "reveal"];
@@ -544,7 +573,7 @@ function makeRecallQuestion(word) {
   const r = Math.random();
   if (r < 0.4) return { kind: "reveal", word };          // 看英回想中
   if (r < 0.7) return { kind: "spell", word };           // 看中写英
-  return { kind: "listenSpell", word };                  // 听音写英
+  return makeListen(word, true);                         // 听音选英（相似词干扰）
 }
 function makeReviewQuestion(word) {
   const k = KINDS_REVIEW[Math.floor(Math.random() * KINDS_REVIEW.length)];

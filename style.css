@@ -147,7 +147,12 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 .today-bar .tb-main span { font-size: 12px; color: var(--ink-2); }
 .today-bar .btn-sm { flex: none; }
 
-.path { max-width: 520px; margin: 0 auto; padding: 0 8px 70px; }
+.path {
+  max-width: 520px; margin: 0 auto; padding: 0 8px 70px;
+  background-image: radial-gradient(circle, rgba(88,204,2,.07) 1.6px, transparent 1.7px);
+  background-size: 30px 30px;
+  border-radius: 24px;
+}
 .unit-head {
   display: flex; align-items: baseline; justify-content: space-between;
   padding: 20px 16px 6px;
@@ -164,8 +169,8 @@ h1 { font-weight: 900; letter-spacing: -.02em; }
 
 .path-row { height: 90px; display: flex; justify-content: center; align-items: center; position: relative; }
 .side-game {
-  position: absolute; left: 50%; top: calc(50% + 18px); width: 104px; height: 104px;
-  margin: -52px 0 0 -52px; transform: translateX(var(--sx, 0px));
+  position: absolute; left: 50%; top: calc(50% + 30px); width: 120px; height: 120px;
+  margin: -60px 0 0 -60px; transform: translateX(var(--sx, 0px));
   border: none; background: transparent; box-shadow: none; z-index: 2;
 }
 .side-game:active { transform: translateX(var(--sx, 0px)) scale(.94); }

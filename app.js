@@ -423,17 +423,15 @@ function renderMap() {
     const posInUnit = ((g - 1) % 10) + 1;
     const x = Math.round(Math.sin((posInUnit - 1) * 0.7) * 62);
     let sideBtn = "";
-    if ((posInUnit === 2 || posInUnit === 5) && g < groups) {
+    if ((posInUnit === 3 || posInUnit === 8) && g < groups) {
       const STATIONS = ["pair", "listen", "daily", "spell", "listenWrong", "meaning"];
       const STATION_NAMES = { pair: "单词配对", listen: "听音配对", daily: "每日挑战", spell: "拼写错题", listenWrong: "听音错题", meaning: "词义错题" };
       const key = STATIONS[stationIdx % STATIONS.length];
       const isDrill = ["spell", "listenWrong", "meaning"].includes(key);
       const attr = isDrill ? `data-drill-img="${key}"` : `data-gstart="${key}"`;
-      // 优先一左一右交替；该侧会撞到节点时自动换到对侧
-      let side = stationIdx % 2 === 0 ? -1 : 1;
-      const nodeSide = x >= 0 ? 1 : -1;
-      if (side === nodeSide && Math.abs(x) > 34) side = -side;
-      const sx = side * 138;
+      // 放在 S 弯道最深处的对侧凹位
+      const side = x >= 0 ? -1 : 1;
+      const sx = side * 134;
       stationIdx++;
       sideBtn = `<button class="side-game" ${attr} style="--sx:${sx}px" title="${STATION_NAMES[key]}">${Buddy.gameIcon(key)}</button>`;
     }

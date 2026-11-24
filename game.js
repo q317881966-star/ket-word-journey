@@ -190,6 +190,7 @@ const Game = (() => {
           floatText("+2 秒");
         }
         sfx("ok");
+        if (G.combo === 5) speakKind("game");
         G.sel = [];
         G.locked = false;
         updateHUD();

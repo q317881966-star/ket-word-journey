@@ -173,6 +173,22 @@ function sayZh(text) {
   } catch {}
 }
 
+/* ---------- 预生成的可爱语音 ---------- */
+const VOICE_BANK = { correct: 7, wrong: 7, chest: 2, levelup: 2, game: 3 };
+const lastVoice = {};
+function speakKind(kind, fallback) {
+  if (!DB?.profile?.voice) return;
+  const n = VOICE_BANK[kind];
+  if (!n) { sayZh(fallback || ""); return; }
+  let i = 1 + Math.floor(Math.random() * n);
+  if (n > 1 && i === lastVoice[kind]) i = (i % n) + 1;
+  lastVoice[kind] = i;
+  try {
+    const a = new Audio(`audio/voice/${kind}-${i}.mp3`);
+    a.play().catch(() => sayZh(fallback || ""));
+  } catch { sayZh(fallback || ""); }
+}
+
 /* ---------- 音效（Web Audio 合成，无需音频文件） ---------- */
 let actx = null;
 function ensureAudio() {
@@ -691,7 +707,7 @@ function showFeedback(ok, q) {
   $("#fbAnswer").textContent = ok
     ? (q.kind === "card" ? "" : `${q.word.word} · ${q.word.meaning}`)
     : `${q.word.word}${q.word.phonetic ? " " + q.word.phonetic : ""} · ${q.word.meaning}`;
-  sayZh(line);
+  speakKind(ok ? "correct" : "wrong", line);
   const check = $("#checkBtn");
   check.textContent = "继续";
   check.className = "btn btn-blue btn-block";
@@ -984,6 +1000,7 @@ async function boot() {
   showPage("home");
   setTimeout(() => $("#boot").classList.add("hide"), 250);
   if (DB.profile.autoAudio) preloadNextAudio();
+  ["correct-1", "wrong-1"].forEach(f => { const a = new Audio(); a.src = `audio/voice/${f}.mp3`; a.preload = "auto"; });
 }
 
 function computeStreak() {

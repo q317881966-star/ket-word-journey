@@ -289,6 +289,7 @@ const Buddy = (() => {
       DB.profile.buddy.lastStage = now;
       toast(`🎉 进化成功！现在是「${STAGE_NAME[now]}」！`);
       sfx("done");
+      speakKind("levelup");
     }
     save();
     checkAchievements();
@@ -387,6 +388,7 @@ const Buddy = (() => {
     save(true);
     sfx("done");
     confetti();
+    speakKind("chest");
     toast(msg);
     renderChest();
     checkAchievements();

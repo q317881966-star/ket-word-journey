@@ -216,9 +216,19 @@ function tone(freq, dur, type = "sine", vol = .06, delay = 0) {
 function sfx(kind) {
   if (!DB?.profile?.sfx) return;
   ensureAudio(); if (!actx) return;
-  if (kind === "ok") { tone(784, .08); tone(1175, .13, "sine", .05, .07); }
-  else if (kind === "bad") { tone(196, .18, "sawtooth", .04); }
-  else if (kind === "done") { [523, 659, 784, 1047].forEach((f, i) => tone(f, .18, "sine", .055, i * .11)); }
+  if (kind === "ok") {
+    // 清亮的三连上行音：配对成功 / 答对
+    [659.25, 783.99, 1046.5].forEach((f, i) => tone(f, .15, "sine", .075, i * .065));
+    tone(1318.5, .18, "sine", .04, .2);
+  } else if (kind === "bad") {
+    // 两声下行：配对失败 / 答错
+    tone(311.13, .13, "triangle", .065, 0);
+    tone(233.08, .22, "triangle", .065, .12);
+  } else if (kind === "done") {
+    [523.25, 659.25, 783.99, 1046.5, 1318.5].forEach((f, i) => tone(f, .2, "sine", .06, i * .1));
+  } else if (kind === "tap") {
+    tone(660, .05, "sine", .035);
+  }
 }
 
 /* ---------- 主题 ---------- */

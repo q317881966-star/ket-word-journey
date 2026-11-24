@@ -33,12 +33,27 @@ iPad 本地单词闯关 App。每天 10 个新词 + 艾宾浩斯/SM-2 智能复�
 >
 > 注意：局域网 http 地址下浏览器**不允许 Service Worker**，所以只能在线用，不能完全离线。设置页的「离线缓存」会显示「未启用（需 HTTPS）」。
 
-### 方式 B：Vercel HTTPS（推荐长期使用，完整离线）
+### 方式 B：GitHub Pages（推荐，国内直连稳定）
 
-1. 双击 `deploy-vercel.command`（首次需在浏览器登录 Vercel）
-2. 终端会输出 `https://xxx.vercel.app`
-3. iPad Safari 打开这个 https 地址 → 分享 → 添加到主屏幕
-4. 首次加载后即可断网使用，设置页「离线缓存」显示「已启用」
+**线上地址：https://q317881966-star.github.io/ket-word-journey/**
+
+1. iPad Safari 打开上面的地址
+2. 分享 → 添加到主屏幕
+3. 首次加载后即可断网使用，设置页「离线缓存」显示「已启用」
+
+更新线上版本：
+
+```bash
+cd ~/Desktop/claude-code/ket-app
+git add -A && git commit -m "更新说明"
+git push
+```
+
+推送后 GitHub Pages 会自动重新构建（约 1 分钟）。注意：改过 `app.js` / `style.css` 后记得先把 `sw.js` 的 `VERSION` 加一。
+
+### 方式 C：Vercel（备用，可能需要代理）
+
+已部署到 https://ket-word-journey.vercel.app ，但当前网络直连不稳定，一般用不上。
 
 ## 更新与版本
 

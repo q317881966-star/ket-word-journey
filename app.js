@@ -741,7 +741,10 @@ function renderQuestion() {
       </div>
       <p class="spell-hint">点 🔊 听发音，记住后点下面的按钮</p>
       <div id="cardVerify" class="card-verify"></div>
-      <div style="text-align:center;margin-top:6px"><button class="btn btn-blue btn-sm" id="speakBtn">🎤 跟读练习</button></div>`;
+      <div style="text-align:center;margin-top:6px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-blue btn-sm" id="cardSpeakBtn">🎤 语音输入</button>
+        <button class="btn btn-ghost btn-sm" id="speakBtn">跟读练习</button>
+      </div>`;
     const canSay = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
     check.textContent = (canSay && DB.profile.cardSpeech !== false) ? "🎤 点击读出单词" : "我记住了";
     check.disabled = false; check.className = "btn btn-green btn-block";
@@ -828,6 +831,11 @@ $("#qbody").addEventListener("click", e => {
   if (e.target.closest("#speakBtn")) {
     const q = session?.queue?.[session.i];
     if (q?.word) Buddy.showSpeech(q.word);
+    return;
+  }
+  if (e.target.closest("#cardSpeakBtn")) {
+    const q = session?.queue?.[session.i];
+    if (q?.word) cardSpeechVerify(q);
     return;
   }
 
@@ -1062,8 +1070,17 @@ function cardSpeechVerify(q) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const box = $("#cardVerify");
   const check = $("#checkBtn");
+  if (!SR) {
+    toast("这台设备暂不支持自动识别，可以用跟读练习录音对比");
+    Buddy.showSpeech(q.word);
+    return;
+  }
   if (!box) return advance(true);
-  try { cardSR = new SR(); } catch { return advance(true); }
+  try { cardSR = new SR(); } catch {
+    toast("语音识别启动失败，可以用跟读练习录音对比");
+    Buddy.showSpeech(q.word);
+    return;
+  }
   cardSR.lang = "en-GB";
   cardSR.interimResults = false;
   cardSR.maxAlternatives = 3;
